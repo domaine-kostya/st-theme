@@ -1,0 +1,186 @@
+{
+  "sections": {
+    "16566001450b7d44b2": {
+      "type": "hero",
+      "blocks": {
+        "5fe99853-2306-4bcc-8ff9-9fd2703d5575": {
+          "type": "hero_slide",
+          "settings": {
+            "desktop_layout": "image_top_content",
+            "desktop_image_1": "shopify:\/\/shop_images\/220718-hero-banner-special-discounts.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/220718-hero-banner-special-discounts-mobile.jpg",
+            "title": "ID.Me Special Discount Programs",
+            "mobile_title": "ID.Me Special Discount Programs",
+            "title_size": "heading-2",
+            "content": "We're proud to offer a 20% discount every day to all ID.me eligible healthcare professionals, teachers, first responders and military members.",
+            "mobile_content": "We're proud to offer a 20% discount every day to all ID.me eligible healthcare professionals, teachers, first responders and military members.",
+            "title_color": "#1c59a8",
+            "content_color": "#313133",
+            "background_color": "#f6f6f6",
+            "cta_1_text": "",
+            "cta_1_link": "",
+            "cta_1_color": "",
+            "cta_2_text": "",
+            "cta_2_link": "",
+            "cta_2_color": "",
+            "cta_3_text": "",
+            "cta_3_link": "",
+            "cta_3_color": "",
+            "image_link": "",
+            "btn_display": "d-flex"
+          }
+        }
+      },
+      "block_order": [
+        "5fe99853-2306-4bcc-8ff9-9fd2703d5575"
+      ],
+      "settings": {
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "0",
+        "margin_bottom_mobile": "0",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "16px",
+        "padding_bottom_mobile": "0"
+      }
+    },
+    "1656600190625995c0": {
+      "type": "content-blocks",
+      "blocks": {
+        "0d86f218-8fe8-46a5-a961-c4a888c9e396": {
+          "type": "content_block",
+          "settings": {
+            "mobile_image": "shopify:\/\/shop_images\/220804-special-discounts-collection-page-mobile-mi.jpg",
+            "image": "shopify:\/\/shop_images\/220804-special-discounts-collection-page-military.jpg",
+            "video_file_url": "",
+            "mobile_video_file_url": "",
+            "enable_full_width_video": false,
+            "video_embed": "",
+            "video_description": "",
+            "mobile_video_embed": "",
+            "background_color": "#cde0f1",
+            "width": "full",
+            "content_position": "right",
+            "headline": "Military Discount",
+            "content": "We're honored to give a 20% discount to active military personnel, veterans and military spouses.",
+            "cta_1_text": "Learn More",
+            "cta_1_link": "https:\/\/southerntide.com\/pages\/military-discount",
+            "cta_1_style": "solid",
+            "cta_2_text": "Sign Up",
+            "cta_2_link": "https:\/\/www.id.me\/",
+            "cta_2_style": "outline",
+            "feature_1_text": "",
+            "feature_2_text": "",
+            "feature_3_text": "",
+            "feature_4_text": ""
+          }
+        },
+        "8dc4d961-aa42-4659-b0a6-496a2dbe7fa3": {
+          "type": "content_block",
+          "settings": {
+            "mobile_image": "shopify:\/\/shop_images\/220804-special-discounts-collection-page-mobile-te.jpg",
+            "image": "shopify:\/\/shop_images\/220804-special-discounts-collection-page-teacher.jpg",
+            "video_file_url": "",
+            "mobile_video_file_url": "",
+            "enable_full_width_video": false,
+            "video_embed": "",
+            "video_description": "",
+            "mobile_video_embed": "",
+            "background_color": "#f2f2f2",
+            "width": "full",
+            "content_position": "left",
+            "headline": "Teacher Discount",
+            "content": "To support our educators, we offer all registered teachers a 20% off discount.",
+            "cta_1_text": "Learn More",
+            "cta_1_link": "https:\/\/southerntide.com\/pages\/teacher-discount",
+            "cta_1_style": "solid",
+            "cta_2_text": "Sign Up",
+            "cta_2_link": "https:\/\/www.id.me\/",
+            "cta_2_style": "outline",
+            "feature_1_text": "",
+            "feature_2_text": "",
+            "feature_3_text": "",
+            "feature_4_text": ""
+          }
+        },
+        "7301df1b-6f63-4321-8772-e317e3fe85f0": {
+          "type": "content_block",
+          "settings": {
+            "mobile_image": "shopify:\/\/shop_images\/220804-special-discounts-collection-page-mobile-he.jpg",
+            "image": "shopify:\/\/shop_images\/220804-special-discounts-collection-page-healthcar.jpg",
+            "video_file_url": "",
+            "mobile_video_file_url": "",
+            "enable_full_width_video": false,
+            "video_embed": "",
+            "video_description": "",
+            "mobile_video_embed": "",
+            "background_color": "#cde0f1",
+            "width": "full",
+            "content_position": "right",
+            "headline": "Health Care Providers Discount",
+            "content": "To show our appreciation, we offer 20% off to all doctors, nurses, and healthcare professionals.",
+            "cta_1_text": "Learn More",
+            "cta_1_link": "https:\/\/southerntide.com\/pages\/health-care-providers-discount",
+            "cta_1_style": "solid",
+            "cta_2_text": "Sign Up",
+            "cta_2_link": "https:\/\/www.id.me\/",
+            "cta_2_style": "outline",
+            "feature_1_text": "",
+            "feature_2_text": "",
+            "feature_3_text": "",
+            "feature_4_text": ""
+          }
+        },
+        "5ab8d5a7-f23e-4f3a-8652-fd4bc606ea93": {
+          "type": "content_block",
+          "settings": {
+            "mobile_image": "shopify:\/\/shop_images\/220804-special-discounts-collection-page-mobile-fi.jpg",
+            "image": "shopify:\/\/shop_images\/220804-special-discounts-collection-page-first-res.jpg",
+            "video_file_url": "",
+            "mobile_video_file_url": "",
+            "enable_full_width_video": false,
+            "video_embed": "",
+            "video_description": "",
+            "mobile_video_embed": "",
+            "background_color": "#f6f6f6",
+            "width": "full",
+            "content_position": "left",
+            "headline": "First Responders Discount",
+            "content": "We’re proud to offer a 20% discount to all the EMT, firefighter and police first responders we count on to help our communities every single day.",
+            "cta_1_text": "Learn More",
+            "cta_1_link": "shopify:\/\/pages\/first-responders-discount",
+            "cta_1_style": "solid",
+            "cta_2_text": "Sign Up",
+            "cta_2_link": "https:\/\/www.id.me\/",
+            "cta_2_style": "outline",
+            "feature_1_text": "",
+            "feature_2_text": "",
+            "feature_3_text": "",
+            "feature_4_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "0d86f218-8fe8-46a5-a961-c4a888c9e396",
+        "8dc4d961-aa42-4659-b0a6-496a2dbe7fa3",
+        "7301df1b-6f63-4321-8772-e317e3fe85f0",
+        "5ab8d5a7-f23e-4f3a-8652-fd4bc606ea93"
+      ],
+      "settings": {
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    }
+  },
+  "order": [
+    "16566001450b7d44b2",
+    "1656600190625995c0"
+  ]
+}

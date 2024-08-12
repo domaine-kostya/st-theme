@@ -1,0 +1,154 @@
+/* ============================================================================
+  Stores
+============================================================================== */
+
+.stores {
+  padding: 50px 0 8px;
+
+  @include media-query($min, $large) {
+    padding: 97px 0 16px;
+  }
+
+  .row {
+    justify-content: center;
+  }
+}
+
+.stores__header {
+  text-align: center;
+
+  h2 {
+    margin-bottom: 28px;
+  }
+
+  p {
+    max-width: 580px;
+    margin: 0 auto 28px;
+  }
+}
+
+.stores__block {
+  margin-bottom: 42px;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+
+  @include media-query($min, $large) {
+    margin-bottom: 90px;
+  }
+
+  .stores__block-image {
+    position: relative;
+  }
+
+  .stores__block-image-wrapper {
+    max-height: 189px;
+    margin-bottom: 16px;
+    overflow: hidden;
+
+    @include media-query($min, $large) {
+      max-height: 240px;
+    }
+  }
+
+  .stores__block-image-overlay {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    background-color: $color-primary;
+  }
+
+  .stores__block-image-content {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0 20px;
+    transform: translateY(-50%);
+    color: $color-white;
+    text-align: center;
+
+    .stores__block-image-address {
+      width: 100%;
+      max-width: 200px;
+      margin: 0 auto;
+      font-size: 1.4rem;
+      line-height: 2rem;
+      text-align: center;
+    }
+  }
+
+  strong {
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+  }
+
+  .ui-link {
+    margin-top: 17px;
+  }
+}
+
+.stores__carousel {
+  position: relative;
+
+  @include media-query($min, $large) {
+    padding: 0 40px;
+  }
+
+  @include media-query($min, 1400px) {
+    padding: 0;
+  }
+
+  .swiper-container {
+    overflow: visible;
+
+    @include media-query($min, $large) {
+      overflow: hidden;
+    }
+  }
+
+  .swiper-slide {
+    width: 304px;
+
+    @include media-query($min, $large) {
+      width: 100%;
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    z-index: 10;
+    top: 142px;
+    width: 40px;
+    height: 40px;
+    transform: translateY(-50%);
+    line-height: 52px;
+    text-align: center;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .swiper-button-prev {
+    left: -19px;
+
+    @include media-query($min, 1400px) {
+      left: -57px;
+    }
+  }
+
+  .swiper-button-next {
+    right: -19px;
+
+    @include media-query($min, 1400px) {
+      right: -57px;
+    }
+  }
+}

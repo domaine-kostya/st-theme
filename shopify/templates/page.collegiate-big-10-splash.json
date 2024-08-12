@@ -1,0 +1,126 @@
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+      }
+    },
+    "d4d34632-8e9d-4f60-a0f8-76da05237086": {
+      "type": "featured-collections",
+      "blocks": {
+        "bfe59e06-db62-4921-956b-64979346382d": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-07-26_at_9.28.01_AM.png",
+            "title": "",
+            "content": "",
+            "cta_text": "",
+            "link": ""
+          }
+        },
+        "6fd6ac2a-fc7b-42b3-8e56-ff6f1decb814": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Michigan-State-University-1280resize-07282023.png",
+            "title": "",
+            "content": "",
+            "cta_text": "Michigan State University",
+            "link": "shopify:\/\/collections\/michigan-spartans-apparel"
+          }
+        },
+        "2271aa0a-c4a3-44ff-9492-e49b9318e2f4": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Ohio-State-University-1280resize-07282023.png",
+            "title": "",
+            "content": "",
+            "cta_text": "Ohio State University",
+            "link": "shopify:\/\/collections\/ohio-state-buckeyes-apparel"
+          }
+        },
+        "f388127e-7c2b-496e-b837-551f42879930": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-07-26_at_9.28.01_AM.png",
+            "title": "",
+            "content": "",
+            "cta_text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "bfe59e06-db62-4921-956b-64979346382d",
+        "6fd6ac2a-fc7b-42b3-8e56-ff6f1decb814",
+        "2271aa0a-c4a3-44ff-9492-e49b9318e2f4",
+        "f388127e-7c2b-496e-b837-551f42879930"
+      ],
+      "settings": {
+        "headline": "Big 10",
+        "headline_size": "small",
+        "content": "<hr>",
+        "section_width": "container",
+        "button_style": "link",
+        "margin_top": "32px",
+        "margin_top_mobile": "32px",
+        "margin_bottom": "16px",
+        "margin_bottom_mobile": "16px",
+        "padding_top": "32px",
+        "padding_top_mobile": "32px",
+        "padding_bottom": "32px",
+        "padding_bottom_mobile": "32px"
+      }
+    },
+    "092f53f9-b83c-412f-bda6-10e79b05e67e": {
+      "type": "content-blocks",
+      "blocks": {
+        "b4f50c07-81a1-4510-b938-cd9caf7eb8ef": {
+          "type": "content_block",
+          "settings": {
+            "mobile_image": "shopify:\/\/shop_images\/230811-navigation-collegiate.jpg",
+            "image": "shopify:\/\/shop_images\/230811-navigation-collegiate.jpg",
+            "video_file_url": "",
+            "mobile_video_file_url": "",
+            "enable_full_width_video": false,
+            "video_embed": "",
+            "video_description": "",
+            "mobile_video_embed": "",
+            "background_color": "#CDE0F1",
+            "width": "full",
+            "content_position": "right",
+            "headline": "Don't See Your Team?",
+            "content": "",
+            "cta_1_text": "Explore All Schools",
+            "cta_1_link": "shopify:\/\/pages\/collegiate-conferences",
+            "cta_1_style": "solid",
+            "cta_2_text": "",
+            "cta_2_link": "",
+            "cta_2_style": "outline",
+            "feature_1_text": "",
+            "feature_2_text": "",
+            "feature_3_text": "",
+            "feature_4_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "b4f50c07-81a1-4510-b938-cd9caf7eb8ef"
+      ],
+      "settings": {
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "d4d34632-8e9d-4f60-a0f8-76da05237086",
+    "092f53f9-b83c-412f-bda6-10e79b05e67e"
+  ]
+}

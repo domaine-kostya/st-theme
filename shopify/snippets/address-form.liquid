@@ -1,0 +1,161 @@
+<div class="account__address-form hide" data-address="{{ id }}">
+  <div class="account__back-link-wrapper d-lg-none">
+    <button class="account__back-link ui-link" type="button" data-edit-address-cancel>
+      {{ 'customer.addresses.back_to_addresses' | t }}
+    </button>
+  </div>
+
+  <h2 class="account__headline heading-3">
+    {{ title }}
+  </h2>
+
+  <br>
+
+  {% form 'customer_address', address %}
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-input-group" data-form-input-group>
+          <label class="visually-hidden" for="addressFirstName_{{ form.id }}">{{ 'customer.addresses.first_name' | t }}</label>
+          <input type="text"
+            name="address[first_name]"
+            id="addressFirstName_{{ form.id }}"
+            value="{{ form.first_name }}"
+            autocapitalize="words"
+            placeholder="{{ 'customer.addresses.first_name' | t }}"
+            data-form-input=""
+          >
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-input-group" data-form-input-group>
+          <label class="visually-hidden" for="addressLastName_{{ form.id }}">{{ 'customer.addresses.last_name' | t }}</label>
+          <input type="text"
+            name="address[last_name]"
+            id="addressLastName_{{ form.id }}"
+            value="{{ form.last_name }}"
+            autocapitalize="words"
+            placeholder="{{ 'customer.addresses.last_name' | t }}"
+            data-form-input
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="form-input-group" data-form-input-group>
+      <label class="visually-hidden" for="addressAddress1_{{ form.id }}">{{ 'customer.addresses.address1' | t }}</label>
+      <input type="text"
+        name="address[address1]"
+        id="addressAddress1_{{ form.id }}"
+        value="{{ form.address1 }}"
+        autocapitalize="words"
+        placeholder="{{ 'customer.addresses.address1' | t }}"
+        data-form-input
+      >
+    </div>
+
+    <div class="form-input-group" data-form-input-group>
+      <label class="visually-hidden" for="addressAddress2_{{ form.id }}">{{ 'customer.addresses.address2' | t }}</label>
+      <input type="text"
+        name="address[address2]"
+        id="addressAddress2_{{ form.id }}"
+        value="{{ form.address2 }}"
+        autocapitalize="words"
+        placeholder="{{ 'customer.addresses.address2' | t }}"
+        data-form-input
+      >
+    </div>
+
+    <div class="form-input-group" data-form-input-group>
+      <label class="visually-hidden" for="addressCity_{{ form.id }}">{{ 'customer.addresses.city' | t }}</label>
+      <input type="text"
+        name="address[city]"
+        id="addressCity_{{ form.id }}"
+        value="{{ form.city }}"
+        autocapitalize="words"
+        placeholder="{{ 'customer.addresses.city' | t }}"
+        data-form-input
+      >
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-input-group has-select" data-form-input-group>
+          <label class="visually-hidden" for="addressCountry_{{ form.id }}">{{ 'customer.addresses.country' | t }}</label>
+          <select data-address-country
+            name="address[country]"
+            id="addressCountry_{{ form.id }}"
+            class="address-country-option"
+            data-form-id="{{ form.id }}"
+            data-form-input
+            {% if form.country != blank %}data-default="{{ form.country }}"{% endif %}
+          >
+          </select>
+        </div>
+      </div>
+
+      <div class="col-md-6 hide" data-address-province-wrapper data-form-input-group>
+        <div class="form-input-group has-select" id="addressProvinceContainer_{{ form.id }}">
+          <label class="visually-hidden" for="addressProvince_{{ form.id }}">{{ 'customer.addresses.province' | t }}</label>
+          <select data-address-province
+            name="address[province]"
+            id="addressProvince_{{ form.id }}"
+            data-form-input
+            {% if form.province != blank %}data-default="{{ form.province }}"{% endif %}
+          >
+          </select>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-input-group" data-form-input-group>
+          <label class="visually-hidden" for="addressZip_{{ form.id }}">{{ 'customer.addresses.zip' | t }}</label>
+          <input type="text"
+            name="address[zip]"
+            id="addressZip_{{ form.id }}"
+            value="{{ form.zip }}"
+            autocapitalize="characters"
+            placeholder="{{ 'customer.addresses.zip' | t }}"
+            data-form-input
+          >
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-input-group" data-form-input-group>
+          <label class="visually-hidden" for="addressPhone_{{ form.id }}">{{ 'customer.addresses.phone' | t }}</label>
+          <input type="tel"
+            name="address[phone]"
+            id="addressPhone_{{ form.id }}"
+            value="{{ form.phone }}"
+            pattern="[0-9\-]*"
+            placeholder="{{ 'customer.addresses.phone' | t }}"
+            data-form-input
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="checkbox {% if address == customer.default_address %}active{% endif %}">
+      {{ form.set_as_default_checkbox }}
+      <label for="address_default_address_{{ form.id }}">{{ 'customer.addresses.set_default' | t }}</label>
+      <span class="checkmark"></span>
+    </div>
+
+    <div class="text-center">
+      <button type="submit" class="btn">
+        {% if id == 'add-new-address' %}
+          {{ 'customer.addresses.add' | t }}
+        {% else %}
+          {{ 'customer.addresses.update' | t }}
+        {% endif %}
+      </button>
+
+      <br>
+
+      <button class="ui-link" type="button" data-edit-address-cancel>
+        {{ 'customer.addresses.cancel' | t }}
+      </button>
+    </div>
+  {% endform %}
+</div>

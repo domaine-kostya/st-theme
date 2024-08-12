@@ -1,0 +1,77 @@
+/* ============================================================================
+  Newsletter Form (Klaviyo)
+============================================================================== */
+
+.newsletter-form {
+  &__container {
+    display: flex;
+    align-items: center;
+
+    @include media-query($max, $medium) {
+      display: block;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    margin-right: 18px;
+
+    @include media-query($max, $medium) {
+      margin: 0 0 12px 0;
+    }
+  }
+
+  .klaviyo_messages {
+    .success_message {
+      color: $color-success;
+    }
+
+    .error_message {
+      color: $color-error;
+    }
+
+    p {
+      margin: 10px 0 20px;
+      font-size: 1.6rem;
+
+      @include media-query($min, $medium) {
+        margin: 10px 0 0;
+      }
+    }
+  }
+
+  input {
+    padding: 9px 25px;
+    border: none;
+    color: $color-black;
+    font-size: 1.4rem;
+
+    @include media-query($min, $medium) {
+      padding: 13px 25px;
+    }
+
+    &::placeholder {
+      color: $color-black;
+    }
+  }
+}
+
+.newsletter-form__cta-wrapper {
+  @include media-query($min, $medium) {
+    display: flex;
+    justify-content: space-between;
+
+    input {
+      margin: 0 18px 0 0;
+    }
+  }
+
+  .btn {
+    margin-bottom: 13px;
+
+    @include media-query($min, $medium) {
+      height: 49px;
+      margin-bottom: 0;
+    }
+  }
+}

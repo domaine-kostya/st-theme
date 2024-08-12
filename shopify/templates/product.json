@@ -1,0 +1,142 @@
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+      }
+    },
+    "main": {
+      "type": "product",
+      "blocks": {
+        "52e13714-647d-4132-b666-ea6d5f959104": {
+          "type": "size_chart",
+          "settings": {
+            "size_chart_tag_suffix": "men",
+            "size_chart": "size-chart-men"
+          }
+        },
+        "74c18f1c-8045-4668-a160-c0c3cb073d3b": {
+          "type": "size_chart",
+          "settings": {
+            "size_chart_tag_suffix": "women",
+            "size_chart": "size-chart-women"
+          }
+        },
+        "ee2c0011-89b5-440f-997b-59ec15013c8b": {
+          "type": "size_chart",
+          "settings": {
+            "size_chart_tag_suffix": "kids",
+            "size_chart": "size-chart-kids"
+          }
+        },
+        "ac72d887-e950-42f1-aa98-4fce89d0c2f8": {
+          "type": "size_chart",
+          "settings": {
+            "size_chart_tag_suffix": "general",
+            "size_chart": "size-charts"
+          }
+        },
+        "f0851281-15f7-44c1-a7ad-0feb0bf5504b": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "a8bc41f4-4253-4b5b-8d6c-5b3d4ec38ebe": {
+          "type": "shopify:\/\/apps\/yotpo-product-reviews-ugc\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "6ae4f379-6be4-4bb9-b928-58e42115feff": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "a4ba93e7-2c7e-4532-88a8-dc029ea43f32": {
+          "type": "options",
+          "settings": {
+          }
+        },
+        "a1c28a70-d9c0-4e9e-8b9b-be9f79c19522": {
+          "type": "add_to_cart",
+          "settings": {
+          }
+        },
+        "c9413d59-b223-4202-a1d0-05bbc135ecda": {
+          "type": "add_to_wishlist",
+          "settings": {
+          }
+        },
+        "f07bbc0f-1fe5-41a5-a5c5-a9585933c0b1": {
+          "type": "description",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "52e13714-647d-4132-b666-ea6d5f959104",
+        "74c18f1c-8045-4668-a160-c0c3cb073d3b",
+        "ee2c0011-89b5-440f-997b-59ec15013c8b",
+        "ac72d887-e950-42f1-aa98-4fce89d0c2f8",
+        "f0851281-15f7-44c1-a7ad-0feb0bf5504b",
+        "a8bc41f4-4253-4b5b-8d6c-5b3d4ec38ebe",
+        "6ae4f379-6be4-4bb9-b928-58e42115feff",
+        "a4ba93e7-2c7e-4532-88a8-dc029ea43f32",
+        "a1c28a70-d9c0-4e9e-8b9b-be9f79c19522",
+        "c9413d59-b223-4202-a1d0-05bbc135ecda",
+        "f07bbc0f-1fe5-41a5-a5c5-a9585933c0b1"
+      ],
+      "settings": {
+      }
+    },
+    "1701792211d4477eb5": {
+      "type": "apps",
+      "blocks": {
+        "e6d4a7c8-1204-4a5f-aeff-979eeeea704b": {
+          "type": "shopify:\/\/apps\/yotpo-product-reviews-ugc\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "e6d4a7c8-1204-4a5f-aeff-979eeeea704b"
+      ],
+      "settings": {
+      }
+    },
+    "product-image-content": {
+      "type": "product-image-content",
+      "settings": {
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "1654697965bad16f38": {
+      "type": "limespot",
+      "settings": {
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "1701792211d4477eb5",
+    "product-image-content",
+    "1654697965bad16f38"
+  ]
+}

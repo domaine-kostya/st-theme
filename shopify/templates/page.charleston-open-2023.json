@@ -1,0 +1,212 @@
+{
+  "sections": {
+    "6ad11db5-e3f0-4954-8076-131d350b4d1a": {
+      "type": "hero",
+      "blocks": {
+        "5ddf0900-7c24-4f51-b409-4b225c188be3": {
+          "type": "hero_slide",
+          "settings": {
+            "desktop_layout": "image_top_content",
+            "desktop_image_1": "shopify:\/\/shop_images\/230320-co-lp-hero-v3.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/230320-co-lp-hero-mobile-v3.jpg",
+            "title": "Southern Tide + Credit One Charleston Open",
+            "title_size": "heading-2",
+            "content": "We’re proud to be the official style sponsor of The Credit One Charleston Open, the largest women’s only tennis tournament in North America. Tennis fans from across the country will head to picturesque Daniel Island, SC - just minutes away from historic Charleston, SC -  for the highly anticipated event held April 1-9, 2023. To celebrate our love of the game, our brand will be on site at our pop-up shop with the latest spring styles. Be on the lookout - April 4th is Southern Tide Day on the courts!",
+            "title_color": "#2c5872",
+            "background_color": "#ffffff",
+            "cta_1_text": "",
+            "cta_1_link": "",
+            "cta_1_color": "",
+            "cta_2_text": "",
+            "cta_2_link": "",
+            "cta_2_color": "",
+            "image_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "5ddf0900-7c24-4f51-b409-4b225c188be3"
+      ],
+      "settings": {
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "0",
+        "margin_bottom_mobile": "0",
+        "padding_top": "32px",
+        "padding_top_mobile": "32px",
+        "padding_bottom": "0",
+        "padding_bottom_mobile": "0"
+      }
+    },
+    "1657810214275f20ee": {
+      "type": "banner",
+      "disabled": true,
+      "settings": {
+        "background_color": "#ffffff",
+        "overlay_opacity": 0,
+        "overlay_color": "#313133",
+        "mobile_headline": "Southern Tide + Credit One Charleston Open",
+        "headline": "Southern Tide + Credit One Charleston Open",
+        "headline_color": "#2c5872",
+        "mobile_content": "We’re proud to be the official style sponsor of The Credit One Charleston Open, the largest women’s only tennis tournament in North America. Tennis fans from across the country will head to picturesque Daniel Island, SC - just minutes away from historic Charleston, SC -  for the highly anticipated event held April 1-9, 2023. To celebrate our love of the game, our brand will be on site at our pop-up shop with the latest spring styles. Be on the lookout - April 4th is Southern Tide Day on the courts!",
+        "content": "We’re proud to be the official style sponsor of The Credit One Charleston Open, the largest women’s only tennis tournament in North America. Tennis fans from across the country will head to picturesque Daniel Island, SC - just minutes away from historic Charleston, SC -  for the highly anticipated event held April 1-9, 2023. To celebrate our love of the game, our brand will be on site at our pop-up shop with the latest spring styles. Be on the lookout - April 4th is Southern Tide Day on the courts!",
+        "content_color": "#313133",
+        "cta_text": "",
+        "cta_link": "",
+        "cta_color": "#1c59a8",
+        "margin_top": "0",
+        "margin_top_mobile": "0",
+        "margin_bottom": "48px",
+        "margin_bottom_mobile": "48px"
+      }
+    },
+    "0d44fc62-21d0-41a3-a4c3-a029551b886c": {
+      "type": "content-blocks",
+      "blocks": {
+        "e782be6f-8d7b-457b-a5e2-13bddb46de99": {
+          "type": "content_block",
+          "settings": {
+            "mobile_image": "shopify:\/\/shop_images\/230320-coco-lp-banner-mobile-v2.jpg",
+            "image": "shopify:\/\/shop_images\/230320-coco-lp-banner-v2.jpg",
+            "video_file_url": "",
+            "mobile_video_file_url": "",
+            "enable_full_width_video": false,
+            "video_embed": "",
+            "video_description": "",
+            "mobile_video_embed": "",
+            "background_color": "#cde0f1",
+            "width": "full",
+            "content_position": "right",
+            "headline": "Get Tickets Today",
+            "content": "Don't miss out on the action! Experience the best of the Credit One Charleston Open by choosing from ticket packages curated for your visit.",
+            "cta_1_text": "View Tickets",
+            "cta_1_link": "https:\/\/www.creditonecharlestonopen.com\/tickets\/",
+            "cta_1_style": "solid",
+            "cta_2_text": "",
+            "cta_2_link": "",
+            "cta_2_style": "outline",
+            "feature_1_text": "",
+            "feature_2_text": "",
+            "feature_3_text": "",
+            "feature_4_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "e782be6f-8d7b-457b-a5e2-13bddb46de99"
+      ],
+      "settings": {
+        "margin_top": "0",
+        "margin_top_mobile": "0",
+        "margin_bottom": "0",
+        "margin_bottom_mobile": "default",
+        "padding_top": "0",
+        "padding_top_mobile": "0",
+        "padding_bottom": "0",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "1657811995ef10caa8": {
+      "type": "featured-products",
+      "blocks": {
+        "4bf9d832-d349-4b05-93e3-c34f1acb5e30": {
+          "type": "collection",
+          "settings": {
+            "collection": "womens-active-clothing",
+            "collection_title": "",
+            "enable_cta": false,
+            "cta_text": "Show more"
+          }
+        }
+      },
+      "block_order": [
+        "4bf9d832-d349-4b05-93e3-c34f1acb5e30"
+      ],
+      "settings": {
+        "headline": "Active Styles For On And Off The Court",
+        "headline_size": "small",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "0",
+        "margin_bottom_mobile": "0",
+        "padding_top": "64px",
+        "padding_top_mobile": "32px",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "1657812875c375d477": {
+      "type": "trust-bar",
+      "blocks": {
+        "3c1d32df-e982-475f-b300-21fdd8b6b504": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/icon-1.png",
+            "title": "Stores",
+            "content": "",
+            "cta_text": "",
+            "cta_link": "\/apps\/store-locator"
+          }
+        },
+        "24c328a4-d406-43a7-ba6c-abfaf836d246": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/icon-2.png",
+            "title": "Gift Cards",
+            "content": "",
+            "cta_text": "",
+            "cta_link": "shopify:\/\/products\/southern-tide-gift-card"
+          }
+        },
+        "1396d997-21cc-4d9f-9c75-093bb3e9ff64": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/icon-3.png",
+            "title": "Catalog",
+            "content": "",
+            "cta_text": "",
+            "cta_link": "\/pages\/2022-spring-catalog"
+          }
+        },
+        "c23fc7b6-5d81-450b-808f-da8a18a62f46": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/icon-4.png",
+            "title": "ST Rewards",
+            "content": "",
+            "cta_text": "",
+            "cta_link": "shopify:\/\/pages\/rewards"
+          }
+        }
+      },
+      "block_order": [
+        "3c1d32df-e982-475f-b300-21fdd8b6b504",
+        "24c328a4-d406-43a7-ba6c-abfaf836d246",
+        "1396d997-21cc-4d9f-9c75-093bb3e9ff64",
+        "c23fc7b6-5d81-450b-808f-da8a18a62f46"
+      ],
+      "disabled": true,
+      "settings": {
+        "background_color": "#f2f2f2",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "0",
+        "margin_bottom_mobile": "0"
+      }
+    }
+  },
+  "order": [
+    "6ad11db5-e3f0-4954-8076-131d350b4d1a",
+    "1657810214275f20ee",
+    "0d44fc62-21d0-41a3-a4c3-a029551b886c",
+    "1657811995ef10caa8",
+    "main",
+    "1657812875c375d477"
+  ]
+}

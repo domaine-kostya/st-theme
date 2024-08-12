@@ -1,0 +1,13 @@
+<div class="collection-sorting">
+  <label class="visually-hidden" for="collection-sort{% if id_suffix %}-{{ id_suffix }}{% endif %}">{{ 'collections.sorting.title' | t }}</label>
+  <dropdown-select>
+    <select id="collection-sort{% if id_suffix %}-{{ id_suffix }}{% endif %}" class="text-right" name="collection" aria-label="Collection Sorting" data-current-sorting="{{ collection.sort_by | default: collection.default_sort_by }}" dir="rtl" data-collection-sorting>
+      <option value="manual">{{ 'collections.sorting.featured' | t }}</option>
+      <option value="best-selling">{{ 'collections.sorting.best_selling' | t }}</option>
+      <option value="title-ascending">{{ 'collections.sorting.az' | t }}</option>
+      <option value="title-descending">{{ 'collections.sorting.za' | t }}</option>
+      <option value="price-ascending">{{ 'collections.sorting.price_ascending' | t }}</option>
+      <option value="price-descending">{{ 'collections.sorting.price_descending' | t }}</option>
+    </select>
+  </dropdown-select>
+</div>

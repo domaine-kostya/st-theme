@@ -1,0 +1,244 @@
+<nav class="site-nav d-none d-lg-block" role="navigation" data-nav>
+  <div class="site-nav__content" data-nav-content>
+    <button class="visually-hidden d-lg-none" type="button" aria-label="Close menu" data-mobile-nav-close>
+      Close menu
+    </button>
+
+    <ul class="site-nav__mobile d-lg-none">
+      {% for block in section.blocks %}
+        {% if block.type == 'link' %}
+          <li>
+            <a class="site-nav__mobile-link" href="{{ block.settings.link }}" title="{{ block.settings.link_title }}">
+              <span>{{ block.settings.link_title }}</span>
+            </a>
+          </li>
+        {% else %}
+          <li class="site-nav__mobile-link-wrapper" data-mobile-link-wrapper>
+            <button class="site-nav__mobile-link" data-mobile-link>
+              <span>{{ block.settings.link_title }}</span>
+              {% render 'icon-chevron-down' %}
+            </button>
+
+            <ul class="site-nav__mobile-sublinks text-left">
+              {% if block.settings.menu != blank %}
+                {% for link in linklists[block.settings.menu].links %}
+                  {% assign child_list_handle = link.title | handleize %}
+
+                  {% for childlink in linklists[child_list_handle].links %}
+                    {% assign grandchild_list_handle = childlink.title | handleize %}
+
+                    <li data-mobile-sublink-wrapper>
+                      <button class="site-nav__mobile-sublink" data-mobile-sublink>
+                        <span>{{ childlink.title }}</span>
+                        {% render 'icon-chevron-down' %}
+                      </button>
+
+                      <ul class="site-nav__mobile-sub-sublinks" data-mobile-sub-sublinks>
+                        {% for grandchildlink in linklists[grandchild_list_handle].links %}
+                          <li>
+                            <a class="site-nav__mobile-sub-sublink" href="{{ grandchildlink.url }}">
+                              {{ grandchildlink.title }}
+                            </a>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    </li>
+                  {% endfor %}
+                {% endfor %}
+              {% elsif block.settings.featured_link_1 != blank %}
+                {% for i in (1..4) %}
+                  {% capture featured_link %}featured_link_{{ i }}{% endcapture %}
+                  {% capture featured_link_title %}featured_link_{{ i }}_title{% endcapture %}
+
+                  {% if block.settings[featured_link] != blank %}
+                    <li data-mobile-sublink-wrapper>
+                      <a class="site-nav__mobile-sub-sublink site-nav__mobile-sub-sublink--reduced-padding" href="{{ block.settings[featured_link] }}">
+                        {{ block.settings[featured_link_title] }}
+                      </a>
+                    </li>
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+            </ul>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+
+    <ul class="d-none d-lg-block">
+      {% for block in section.blocks %}
+        {% if block.type == 'link' %}
+          <li class="site-nav__link-wrapper" data-nav-link>
+            <a class="site-nav__link {% if forloop.first %}site-nav__link--first{% endif %} {% if forloop.last %}site-nav__link--last{% endif %}" href="{{ block.settings.link }}" title="{{ block.settings.link_title }}" {% if block.settings.color != blank %}style="color: {{ block.settings.color }};"{% endif %} data-nav-link>
+              <span>{{ block.settings.link_title }}</span>
+            </a>
+          </li>
+        {% else %}
+          <li class="site-nav__link-wrapper site-nav--has-dropdown">
+            <a class="site-nav__link {% if forloop.first %}site-nav__link--first{% endif %} {% if forloop.last %}site-nav__link--last{% endif %}" href="{{ block.settings.link }}" title="{{ block.settings.link_title }}" {% if block.settings.color != blank %}style="color: {{ block.settings.color }};"{% endif %} data-nav-link>
+              <span {% if block.settings.color != blank %}style="color: {{ block.settings.color }};"{% endif %}>{{ block.settings.link_title }}</span>
+            </a>
+
+            <div class="site-nav__dropdown site-nav__dropdown--{{ block.type | replace: '_', '-' }}">
+              <div class="site-nav__dropdown-background"></div>
+
+              <div class="container container--wide">
+                <div class="row">
+                  {% assign menu_cols_size = "col-lg" %}
+                  {% if block.settings.menu != blank %}
+                    {% liquid
+                      assign menu_cols_amount = linklists[block.settings.menu].links | size
+
+                      if menu_cols_amount <= 2
+                        assign menu_cols_size = "col-lg-2"
+                      else
+                        assign menu_cols_size = "col-lg"
+                      endif
+                    %}
+                    <div class="site-nav__dropdown-columns {% if linklists[block.settings.menu].links.size <= 2 %}col-lg-2{% else %}col-lg{% endif %}">
+                      <div class="row">
+                        {% for link in linklists[block.settings.menu].links %}
+                          {% assign child_list_handle = link.title | handleize %}
+
+                          <div class="site-nav__dropdown-column col-lg">
+                            {% for childlink in linklists[child_list_handle].links %}
+                              <div>
+                                {% assign grandchild_list_handle = childlink.title | handleize %}
+
+                                <h5>
+                                  {% if childlink.url == '#' %}
+                                    {{ childlink.title }}
+                                  {% else %}
+                                    <a href="{{ childlink.url }}" title="{{ childlink.title }}">
+                                      {{ childlink.title }}
+                                    </a>
+                                  {% endif %}
+                                </h5>
+
+                                <ul class="{% if forloop.index <= 3 %}site-nav__dropdown-list--margin-bottom{% endif %}">
+                                  {% for grandchildlink in linklists[grandchild_list_handle].links %}
+                                    <li>
+                                      <a href="{{ grandchildlink.url }}" title="{{ grandchildlink.title }}">
+                                        {{ grandchildlink.title }}
+                                      </a>
+                                    </li>
+                                  {% endfor %}
+                                </ul>
+                              </div>
+                            {% endfor %}
+                          </div>
+                        {% endfor %}
+                      </div>
+                    </div>
+                  {% endif %}
+
+                  {% if block.settings.featured_link_1 != blank %}
+                    <div class="site-nav__featured-links {% if block.settings.menu == blank %}site-nav__featured-links--no-menu{% endif %} col-lg">
+                      <div class="row">
+                        {% assign num_of_images = 0 %}
+                        {% for i in (1..4) %}
+                          {% capture featured_link %}featured_link_{{ i }}{% endcapture %}
+                          {% if block.settings[featured_link] != blank %}
+                            {% assign num_of_images = num_of_images | plus: 1 %}
+                          {% endif %}
+                        {% endfor %}
+                        {% liquid
+                          if menu_cols_size == "col-lg-2"
+                            assign col_md_class = "col-md-3"
+                          else
+                            assign col_md_class = "col-md-6"
+                          endif
+                          case num_of_images
+                            when 0
+                              assign col_md_class = "col-md-6"
+                            when 3
+                              assign col_md_class = "col-md-4"
+                            when 4
+                              assign col_md_class = "col-md-3"
+                          endcase
+                        %}
+                        {% for i in (1..4) %}
+                          {% capture featured_link %}featured_link_{{ i }}{% endcapture %}
+                          {% capture featured_link_title %}featured_link_{{ i }}_title{% endcapture %}
+                          {% capture featured_link_image %}featured_link_{{ i }}_image{% endcapture %}
+
+                          {% if block.settings[featured_link] != blank %}
+                            <div class="col-12 {{ col_md_class }}">
+                              <a class="site-nav__featured-link image-link" href="{{ block.settings[featured_link] }}" title="{{ block.settings[featured_link_title] }}">
+                                <div class="site-nav__featured-image-wrapper img-cover">
+                                  {{ block.settings[featured_link_image] | image_url: width: 1000 | image_tag: loading: 'lazy' }}
+                                </div>
+
+                                {% if block.settings[featured_link_title] != blank %}
+                                  <div class="site-nav__featured-link-text">
+                                    <span class="ui-link">{{ block.settings[featured_link_title] }}</span>
+                                  </div>
+                                {% endif %}
+                              </a>
+                            </div>
+                          {% endif %}
+                        {% endfor %}
+                      </div>
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+
+    {% if section.settings.mobile_featured_link_1 != blank or section.settings.mobile_featured_link_2 != blank %}
+      <div class="site-nav__mobile-featured-links d-lg-none">
+        <div class="row">
+          {% for i in (1..4) %}
+            {% capture mobile_featured_link %}mobile_featured_link_{{ i }}{% endcapture %}
+            {% capture mobile_featured_link_title %}mobile_featured_link_{{ i }}_title{% endcapture %}
+            {% capture mobile_featured_link_image %}mobile_featured_link_{{ i }}_image{% endcapture %}
+
+            {% if section.settings[mobile_featured_link] != blank %}
+              <div class="col-12 col-md-6">
+                <a class="site-nav__featured-link site-nav__featured-link--{{ i }} image-link" href="{{ section.settings[mobile_featured_link] }}" title="{{ section.settings[mobile_featured_link_title] }}">
+                  <div class="site-nav__featured-image-wrapper img-cover">
+                    {{ section.settings[mobile_featured_link_image] | image_url: width: 1000 | image_tag: loading: 'lazy' }}
+                  </div>
+
+                  {% if section.settings[mobile_featured_link_title] != blank %}
+                    <div class="site-nav__featured-link-text">
+                      <span class="ui-link">{{ section.settings[mobile_featured_link_title] }}</span>
+                    </div>
+                  {% endif %}
+                </a>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+
+    {% if section.settings.mobile_submenu != blank %}
+      <ul class="site-nav__mobile-submenu d-lg-none">
+        {% for link in linklists[section.settings.mobile_submenu].links %}
+          <li>
+            <a href="{{ link.url }}" title="{{ link.title }}">
+              {{ link.title }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    <div class="site-nav__dropdown site-nav__dropdown--search" data-nav-search>
+      <div class="site-nav__dropdown-background" data-nav-dropdown-background></div>
+
+      <div class="container container--wide">
+        {% render 'search-bar', primary: true %}
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-hidden-search d-none" data-mobile-hidden-search>
+  {% render 'search-bar' %}
+</div>

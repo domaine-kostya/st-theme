@@ -1,0 +1,160 @@
+/* ============================================================================
+  Header
+============================================================================== */
+
+.site-header-wrapper {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $color-white;
+}
+
+.site-header {
+  position: relative;
+  padding: 12px 0 11px;
+  transition: padding $transition-primary;
+
+  @include media-query($min, $large) {
+    padding: 18px 0;
+
+    .site-header-wrapper--compact & {
+      padding: 11px 0;
+    }
+  }
+
+  h2 {
+    margin-bottom: 0;
+  }
+
+  button,
+  a {
+    display: inline-block;
+    line-height: 0;
+    vertical-align: middle;
+  }
+}
+
+.site-header__logo {
+  display: inline-block;
+  margin-top: -1px;
+
+  @include media-query($min, $large) {
+    margin-top: 0;
+  }
+
+  svg,
+  img {
+    width: 142px;
+    transition: width $transition-primary;
+
+    @include media-query($min, $medium) {
+      width: 210px;
+    }
+
+    @include media-query($min, $large) {
+      width: 267px;
+    }
+
+    @include media-query($min, $mid-large) {
+      width: 320px;
+    }
+
+    .site-header-wrapper--compact & {
+      @include media-query($min, $large) {
+        width: 267px;
+      }
+    }
+  }
+}
+
+.site-header__nav-icon {
+  display: block;
+  padding: 4px 0;
+
+  &.active {
+    .icon-menu {
+      display: none;
+    }
+
+    .icon-mobile-close {
+      display: block;
+    }
+  }
+
+  .icon-mobile-close {
+    display: none;
+  }
+}
+
+.site-header__controls {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  margin-top: 1px;
+
+  @include media-query($min, $large) {
+    display: block;
+    margin-top: 8px;
+  }
+
+  a,
+  button {
+    margin-left: 12px;
+    transition: opacity $transition-primary;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &.site-header__search-icon {
+      margin-left: 0;
+    }
+  }
+}
+
+.site-header__search-icon {
+  &.active {
+    .icon-search,
+    .icon-mobile-search {
+      display: none;
+    }
+
+    .icon-close,
+    .icon-mobile-close {
+      display: block;
+    }
+  }
+
+  .icon-close,
+  .icon-mobile-close {
+    display: none;
+  }
+}
+
+.site-header__cart-icon {
+  position: relative;
+
+  @include media-query($min, $large) {
+    margin-right: -5px;
+  }
+
+  &.active {
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 3px;
+      right: 0;
+      width: 12px;
+      height: 12px;
+      border-radius: 100%;
+      background-color: $color-coral;
+    }
+  }
+}
+
+.boost-pfs-search-suggestion-header {
+  color: $color-black !important;
+}

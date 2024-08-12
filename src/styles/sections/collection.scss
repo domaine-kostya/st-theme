@@ -1,0 +1,71 @@
+/* Snippets */
+@import '@/styles/snippets/collection-item';
+@import '@/styles/snippets/collection-sorting';
+@import '@/styles/snippets/pagination';
+@import '@/styles/snippets/boost-custom-styles';
+
+.boost-loading-text {
+  padding: 24px 0;
+  font-size: 2.4rem;
+}
+
+.collection__filter {
+  margin-top: 16px;
+
+  @include media-query($min, $large) {
+    margin: 0 0 60px;
+  }
+
+  @include media-query($max, $pre-large) {
+    h1 {
+      padding-right: 30px;
+    }
+
+    &.active {
+      position: fixed;
+      z-index: 10000;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 30px $gutter;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      background-color: $color-white;
+
+      .collection__show-results {
+        display: inline-block;
+      }
+
+      .collection__filter-close {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.collection__filter-close {
+  position: absolute;
+  top: 27px;
+  right: 25px;
+  display: none;
+}
+
+.collection__show-results {
+  display: none;
+}
+
+.collection__grid {
+  @include media-query($min, $site-width) {
+    padding-left: 35px;
+  }
+}
+
+.collection__description {
+  padding-bottom: 40px;
+
+  @include media-query($min, $medium) {
+    padding: 0 10px 40px;
+  }
+}

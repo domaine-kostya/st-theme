@@ -1,0 +1,106 @@
+/* ============================================================================
+  Breakpoint and grid variables
+============================================================================== */
+
+$all: 1px;
+$small: 375px;
+$small-medium: 550px;
+$medium: 750px;
+$large: 1025px;
+$mid-large: 1200px;
+$xlarge: 1400px;
+$xxlarge: 1920px;
+$viewport-increment: 1px;
+$pre-medium: $medium - $viewport-increment;
+$pre-large: $large - $viewport-increment;
+$site-width: 1310px;
+$wide-container-width: 1842px;
+$gutter: 24px;
+$container-padding: 25px;
+$border-radius: 100px;
+
+/* ============================================================================
+  Color variables
+============================================================================== */
+
+// Primary colors
+$color-primary: #1c59a8;
+$color-selection: #1c59a8;
+$color-btn-primary: #1c59a8;
+$color-btn-primary-text: #fff;
+
+// Secondary colors
+$color-secondary: #9ec0e6;
+$color-btn-secondary: #9ec0e6;
+$color-btn-secondary-text: #1c59a8;
+
+// General colors
+$color-white: #fff;
+$color-off-white: #fcfcfc;
+$color-black: #313133;
+$color-grey: #f2f2f2;
+$color-light-grey: #b7b7b7;
+$color-sand-grey: #6a635d;
+$color-coral: #ff8671;
+$color-pink: #ffcbc0;
+$color-yellow: #eafe02;
+$color-green: #00856d;
+$color-teal: #addece;
+$color-alt-blue: #475d8e;
+$color-light-blue: #cde0f1;
+$color-red: #cf1f00;
+
+// Body text color
+$color-body-text: #313133;
+
+// Drawer colors
+$color-drawer-background: #fff;
+$color-drawer-text: #000;
+$color-site-overlay: rgba(0, 0, 0, 0.75);
+
+// Modal
+$color-modal-background: rgba(0, 0, 0, 0.75);
+
+// Site overlay background
+$color-site-overlay-background: rgba(0, 0, 0, 0.75);
+
+// Navigation dropdown color
+$color-dropdown: #fff;
+
+// Border colors
+$color-border: #e1e1e1;
+
+// Helper colors
+$color-disabled: #f1f1f1;
+$color-error: #c31c1c;
+$color-success: #156c29;
+
+/* ============================================================================
+  Transition variables
+============================================================================== */
+
+$transition-primary: 0.2s cubic-bezier(0.46, 0.01, 0.32, 1);
+$transition-drawer: 0.3s cubic-bezier(0.46, 0.01, 0.32, 1);
+$transition-slow: 0.6s cubic-bezier(0.46, 0.01, 0.32, 1);
+
+/* ============================================================================
+  Font Families
+============================================================================== */
+
+/*
+  @font-face import your font families in /views/snippets/style-fonts/style-fonts.liquid then define global variables for them here
+*/
+
+$font-gotham-extra-narrow-bold: 'Gotham Extra Narrow Bold', helvetica, arial, sans-serif;
+$font-gotham-narrow-bold: 'Gotham Narrow Bold', helvetica, arial, sans-serif;
+$font-gotham-narrow-book: 'Gotham Narrow Book', helvetica, arial, sans-serif;
+$font-gotham-narrow-book-italic: 'Gotham Narrow Book Italic', helvetica, arial, sans-serif;
+$font-heading: $font-gotham-extra-narrow-bold;
+$font-body: $font-gotham-narrow-book;
+
+/* ============================================================================
+  Font Weights
+============================================================================== */
+
+$weight-normal: normal;
+$weight-bold: bold;

@@ -1,0 +1,312 @@
+{% if request.path contains 'store-locator' %}
+  {% assign class_suffix = 'store-locator' %}
+  {% assign enable_hero = settings.enable_store_locator_hero %}
+  {% assign hero_title = settings.store_locator_hero_title %}
+  {% assign hero_content_text = settings.store_locator_hero_content %}
+  {% assign hero_cta_1_text = settings.store_locator_hero_cta_1_text %}
+  {% assign hero_cta_1_link = settings.store_locator_hero_cta_1_link %}
+  {% assign hero_cta_2_text = settings.store_locator_hero_cta_2_text %}
+  {% assign hero_cta_2_link = settings.store_locator_hero_cta_2_link %}
+  {% assign hero_cta_3_text = settings.store_locator_hero_cta_3_text %}
+  {% assign hero_cta_3_link = settings.store_locator_hero_cta_3_link %}
+  {% assign hero_image_link = settings.store_locator_hero_image_link %}
+  {% assign hero_desktop_image_1 = settings.store_locator_hero_desktop_image_1 | img_url: 'master' %}
+  {% assign hero_desktop_image_1_alt = settings.store_locator_hero_desktop_image_1.alt %}
+  {% assign hero_desktop_image_2 = settings.store_locator_hero_desktop_image_2 | img_url: 'master' %}
+  {% assign hero_desktop_image_2_alt = settings.store_locator_hero_desktop_image_2.alt %}
+  {% assign hero_mobile_image_1 = settings.store_locator_hero_mobile_image | default: settings.store_locator_hero_desktop_image_1 | img_url: 'master' %}
+  {% assign hero_mobile_image_1_alt = settings.store_locator_hero_mobile_image.alt | default: hero_desktop_image_1_alt %}
+  {% assign hero_layout = settings.store_locator_hero_desktop_layout %}
+  {% assign hero_background_color = settings.store_locator_hero_background_color %}
+  {% assign hero_title_color = settings.store_locator_hero_title_color %}
+  {% assign hero_content_color = settings.store_locator_hero_content_color  %}
+  {% assign hero_cta_1_color = settings.store_locator_hero_cta_1_color %}
+  {% assign hero_cta_2_color = settings.store_locator_hero_cta_2_color %}
+  {% assign hero_cta_3_color = settings.store_locator_hero_cta_3_color %}
+{% else %}
+  {% if request.page_type == 'collection' %}
+    {% assign object = collection %}
+  {% elsif request.page_type == 'page' %}
+    {% assign object = page %}
+  {% endif %}
+
+  {% assign enable_hero = object.metafields.custom_fields['hero_enable'] %}
+  {% assign hero_title = object.metafields.custom_fields['hero_title'] | default: object.title %}
+  {% assign hero_content_text = object.metafields.custom_fields['hero_content'] %}
+  {% assign hero_cta_1_text = object.metafields.custom_fields['hero_cta_1_text'] %}
+  {% assign hero_cta_1_link = object.metafields.custom_fields['hero_cta_1_link'] %}
+  {% assign hero_cta_2_text = object.metafields.custom_fields['hero_cta_2_text'] %}
+  {% assign hero_cta_2_link = object.metafields.custom_fields['hero_cta_2_link'] %}
+  {% assign hero_cta_3_text = object.metafields.custom_fields['hero_cta_3_text'] %}
+  {% assign hero_cta_3_link = object.metafields.custom_fields['hero_cta_3_link'] %}
+  {% assign hero_image_link = object.metafields.custom_fields['hero_image_link'] %}
+  {% assign hero_desktop_image_1 = object.metafields.custom_fields['hero_desktop_image_1'] %}
+  {% assign hero_desktop_image_1_alt = object.metafields.custom_fields['hero_desktop_image_1_alt'] %}
+  {% assign hero_desktop_image_2 = object.metafields.custom_fields['hero_desktop_image_2'] %}
+  {% assign hero_desktop_image_2_alt = object.metafields.custom_fields['hero_desktop_image_2_alt'] %}
+  {% assign hero_mobile_image_1 = object.metafields.custom_fields['hero_mobile_image_1'] | default: hero_desktop_image_1 %}
+  {% assign hero_mobile_image_1_alt = object.metafields.custom_fields['hero_mobile_image_1_alt'] | default: hero_desktop_image_1_alt %}
+  {% assign hero_mobile_image_2 = object.metafields.custom_fields['hero_mobile_image_2'] | default: hero_desktop_image_2 %}
+  {% assign hero_mobile_image_2_alt = object.metafields.custom_fields['hero_mobile_image_2_alt'] | default: hero_desktop_image_2_alt %}
+  {% assign hero_layout = object.metafields.custom_fields['hero_layout'] %}
+  {% assign hero_background_color = object.metafields.custom_fields['hero_background_color'] %}
+  {% assign hero_title_color = object.metafields.custom_fields['hero_title_color'] %}
+  {% assign hero_content_color = object.metafields.custom_fields['hero_content_color'] %}
+  {% assign hero_cta_1_color = object.metafields.custom_fields['hero_cta_1_color'] %}
+  {% assign hero_cta_2_color = object.metafields.custom_fields['hero_cta_2_color'] %}
+  {% assign hero_cta_3_color = object.metafields.custom_fields['hero_cta_3_color'] %}
+{% endif %}
+
+{% if enable_hero %}
+  <script src="{{ 'sections.hero.js' | asset_url }}" defer="defer"></script>
+  {{ 'sections.hero.css' | asset_url | stylesheet_tag }}
+
+  <div class="hero hero--{{ class_suffix | default: 'collection' }}" role="region" aria-label="Hero" data-hero>
+    {% capture hero_content %}
+      <div class="hero__content">
+        <div class="display-table">
+          <div class="display-table-cell">
+
+            <p class="heading heading-2">
+              {{ hero_title | newline_to_br }}
+            </p>
+
+            {% if hero_content_text != blank %}
+              <p class="hero__text">
+                {{ hero_content_text }}
+              </p>
+            {% endif %}
+
+            {% if hero_cta_1_text != blank or hero_cta_2_text != blank %}
+              <div class="hero__content-buttons {% if hero_layout == 'Image 1 + Content + Image 2' or hero_layout == 'Image Top + Content' %}hero__content-buttons--center{% endif %} {% if page_type.metafields.custom_fields['hero_cta_2_text'] != blank or page_type.metafields.custom_fields['hero_cta_3_text'] != blank %}hero__content-buttons--multiple{% endif %}">
+                {% if hero_cta_1_text != blank %}
+                  <a class="btn btn--outline btn--1" {% if hero_cta_1_link contains '#' %}data-hero-anchor-cta="{{ hero_cta_1_link | split: '#' | last }}"{% else %}href="{{ hero_cta_1_link }}"{% endif %} title="{{ hero_cta_1_text }}">
+                    {{ hero_cta_1_text }}
+                  </a>
+                {% endif %}
+
+                {% if hero_cta_2_text != blank %}
+                  <a class="btn btn--outline btn--2" {% if hero_cta_2_link contains '#' %}data-hero-anchor-cta="{{ hero_cta_2_link | split: '#' | last }}"{% else %}href="{{ hero_cta_2_link }}"{% endif %} title="{{ hero_cta_2_text }}">
+                    {{ hero_cta_2_text }}
+                  </a>
+                {% endif %}
+
+                {% if hero_cta_3_text != blank %}
+                  <a class="btn btn--outline btn--3" {% if hero_cta_3_link contains '#' %}data-hero-anchor-cta="{{ hero_cta_3_link | split: '#' | last }}"{% else %}href="{{ hero_cta_3_link }}"{% endif %} title="{{ hero_cta_3_text }}">
+                    {{ hero_cta_3_text }}
+                  </a>
+                {% endif %}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% endcapture %}
+
+    {% capture desktop_image_1 %}
+      {% if hero_image_link != blank %}
+        <a class="image-link" href="{{ hero_image_link }}" title="{{ hero_desktop_image_1_alt }}">
+      {% endif %}
+
+      <img src="{{ hero_desktop_image_1 }}" alt="{{ hero_desktop_image_1_alt }}">
+
+      {% if hero_image_link != blank %}
+        </a>
+      {% endif %}
+    {% endcapture %}
+
+    {% capture desktop_image_2 %}
+      {% if hero_image_link != blank %}
+        <a class="image-link" href="{{ hero_image_link }}" title="{{ hero_desktop_image_2_alt }}">
+      {% endif %}
+
+      <img src="{{ hero_desktop_image_2 }}" alt="{{ hero_desktop_image_2_alt }}">
+
+      {% if hero_image_link != blank %}
+        </a>
+      {% endif %}
+    {% endcapture %}
+
+    {% capture mobile_image_1 %}
+      {% if hero_image_link != blank %}
+        <a class="image-link" href="{{ hero_image_link }}" title="{{ hero_mobile_image_1_alt }}">
+      {% endif %}
+
+      <img src="{{ hero_mobile_image_1 }}" alt="{{ hero_mobile_image_1_alt }}">
+
+      {% if hero_image_link != blank %}
+        </a>
+      {% endif %}
+    {% endcapture %}
+
+    {% capture mobile_image_2 %}
+      {% if hero_image_link != blank %}
+        <a class="image-link" href="{{ hero_image_link }}" title="{{ hero_mobile_image_2_alt }}">
+      {% endif %}
+
+      <img src="{{ hero_mobile_image_2 }}" alt="{{ hero_mobile_image_2_alt }}">
+
+      {% if hero_image_link != blank %}
+        </a>
+      {% endif %}
+    {% endcapture %}
+
+    <div class="hero__slide {% if hero_layout == 'Image Top + Content' %}hero__slide--top-image{% endif %} lazyload">
+      {% if hero_layout == 'Image 1 + Content' or hero_layout == 'Content + Image 1' %}
+        <div class="row no-gutters {% if hero_layout == 'Content + Image 1' %}flex-row-reverse{% endif %}">
+          <div class="col-12 d-md-none">
+            {{ mobile_image_1 }}
+          </div>
+
+          <div class="hero__rectangle-image d-none d-md-block">
+            {{ desktop_image_1 }}
+          </div>
+
+          <div class="hero__content-wrapper col-12 col-md">
+            {{ hero_content }}
+          </div>
+        </div>
+      {% elsif hero_layout == 'Image 1 + Image 2 + Content' or hero_layout == 'Content + Image 1 + Image 2' %}
+        <div class="row no-gutters {% if hero_layout == 'Content + Image 1 + Image 2' %}flex-row-reverse{% endif %}">
+          <div class="col-12 d-md-none">
+            {% if hero_mobile_image_2 != blank %}
+              <div class="row no-gutters">
+                <div class="col-6">
+                  {{ mobile_image_1 }}
+                </div>
+
+                <div class="col-6">
+                  {{ mobile_image_2 }}
+                </div>
+              </div>
+            {% else %}
+              {{ mobile_image_1 }}
+            {% endif %}
+          </div>
+
+          <div class="hero__portrait-image d-none d-md-block">
+            {{ desktop_image_1 }}
+          </div>
+
+          <div class="hero__portrait-image d-none d-md-block">
+            {{ desktop_image_2 }}
+          </div>
+
+          <div class="hero__content-wrapper col-12 col-md">
+            {{ hero_content }}
+          </div>
+        </div>
+      {% elsif hero_layout == 'Image 1 + Content + Image 2' %}
+        <div class="row no-gutters">
+          <div class="col-12 d-md-none">
+            {% if hero_mobile_image_2 != blank %}
+              <div class="row no-gutters">
+                <div class="col-6">
+                  {{ mobile_image_1 }}
+                </div>
+
+                <div class="col-6">
+                  {{ mobile_image_2 }}
+                </div>
+              </div>
+            {% else %}
+              {{ mobile_image_1 }}
+            {% endif %}
+          </div>
+
+          <div class="hero__square-image d-none d-md-block">
+            {{ desktop_image_1 }}
+          </div>
+
+          <div class="hero__square-image d-none d-md-block d-lg-none">
+            {{ desktop_image_2 }}
+          </div>
+
+          <div class="hero__content-wrapper hero__content-wrapper--center col-12 col-md">
+            {{ hero_content }}
+          </div>
+
+          <div class="hero__square-image d-none d-lg-block">
+            {{ desktop_image_2 }}
+          </div>
+        </div>
+      {% elsif hero_layout == 'Image Top + Content' %}
+        <div class="row no-gutters">
+          <div class="col-12 d-md-none">
+            {{ mobile_image_1 }}
+          </div>
+
+          <div class="d-none d-md-block">
+            {{ desktop_image_1 }}
+          </div>
+
+          <div class="hero__content-wrapper--center col-12">
+            {{ hero_content }}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <style>
+    {% if hero_background_color != blank %}
+      .hero--{{ class_suffix | default: 'collection' }} .hero__content {
+        background-color: {{ hero_background_color }};
+      }
+    {% endif %}
+
+    {% if hero_title_color != blank %}
+      .hero--{{ class_suffix | default: 'collection' }} .hero__content .heading-2 {
+        color: {{ hero_title_color }};
+      }
+    {% endif %}
+
+    {% if hero_content_color != blank %}
+      .hero--{{ class_suffix | default: 'collection' }} .hero__text {
+        color: {{ hero_content_color }};
+      }
+    {% endif %}
+
+    {% if hero_cta_1_color != blank %}
+      .hero--{{ class_suffix | default: 'collection' }} .hero__content .btn--1 {
+        color: {{ hero_cta_1_color }};
+        border-color: {{ hero_cta_1_color }};
+      }
+
+      .hero--{{ class_suffix | default: 'collection' }} .hero__content .btn--1:hover,
+      .hero--{{ class_suffix | default: 'collection' }} .hero__content .btn--1:focus {
+        color: #FFFFFF;
+        border-color: {{ hero_cta_1_color }};
+        background-color: {{ hero_cta_1_color }};
+      }
+    {% endif %}
+
+    {% if hero_cta_2_color != blank %}
+      .hero--{{ class_suffix | default: 'collection' }} .hero__content .btn--2 {
+        color: {{ hero_cta_2_color }};
+        border-color: {{ hero_cta_2_color }};
+      }
+
+      .hero--{{ class_suffix | default: 'collection' }} .hero__content .btn--2:hover,
+      .hero--{{ class_suffix | default: 'collection' }} .hero__content .btn--2:focus {
+        color: #FFFFFF;
+        border-color: {{ hero_cta_2_color }};
+        background-color: {{ hero_cta_2_color }};
+      }
+    {% endif %}
+
+    {% if hero_cta_3_color != blank %}
+      .hero--{{ class_suffix | default: 'collection' }} .hero__content .btn--3 {
+        color: {{ hero_cta_3_color }};
+        border-color: {{ hero_cta_3_color }};
+      }
+
+      .hero--{{ class_suffix | default: 'collection' }} .hero__content .btn--3:hover,
+      .hero--{{ class_suffix | default: 'collection' }} .hero__content .btn--3:focus {
+        color: #FFFFFF;
+        border-color: {{ hero_cta_3_color }};
+        background-color: {{ hero_cta_3_color }};
+      }
+    {% endif %}
+  </style>
+{% endif %}

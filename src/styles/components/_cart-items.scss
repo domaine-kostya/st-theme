@@ -1,0 +1,262 @@
+/* ============================================================================
+  Cart Items
+============================================================================== */
+
+.cart-item {
+  display: grid;
+  position: relative;
+  grid-template-columns: 81px auto;
+  width: 100%;
+  margin: 0 auto 16px;
+  gap: $gutter;
+  transition: $transition-primary;
+
+  .cart & {
+    @include media-query($min, $large) {
+      grid-template-columns: 140px auto;
+    }
+
+    @include media-query($min, $site-width) {
+      grid-template-columns: 189px auto;
+    }
+  }
+
+  &.cart-item--free-gift,
+  &.cart-item--reward,
+  &.cart-item--free-gift-card {
+    quantity-selector {
+      display: none;
+    }
+  }
+
+  &:last-child {
+    margin: 0 auto;
+  }
+
+  &.removed {
+    transform: translateY(calc(#{$gutter} / 2));
+    opacity: 0;
+  }
+}
+
+.cart-item--soft-bundle {
+  .cart-item__bundle-children summary span:last-of-type,
+  .cart-item__bundle-children li > span:last-of-type {
+    display: none;
+  }
+}
+
+.cart-item__image-holder {
+  position: relative;
+  width: 100%;
+}
+
+.cart-item__badge {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 26px;
+  padding: 7px 4px 4px;
+  background-color: $color-teal;
+  color: $color-black;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include media-query($min, $large) {
+    right: 8px;
+    bottom: 8px;
+    width: auto;
+    padding: 6px 9px;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+  }
+
+  .ajaxcart & {
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 23px;
+    padding: 6px 4px 4px;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+  }
+}
+
+.cart-item__sale-message {
+  display: flex;
+  align-items: center;
+  margin: -10px 0 16px;
+  color: $color-red;
+  font-size: 1.4rem;
+  line-height: 1;
+
+  svg {
+    margin-right: 10px;
+  }
+}
+
+.cart-item__link {
+  display: block;
+  position: relative;
+  width: fit-content;
+  margin-bottom: 4px;
+  padding-right: 30px;
+  color: $color-black;
+  line-height: 2rem;
+}
+
+.cart-item__remove {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  svg {
+    path {
+      fill: $color-black;
+    }
+  }
+}
+
+.cart-item__properties {
+  display: none;
+  margin: 0 0 $gutter 0;
+  color: rgba($color-body-text, 0.7);
+  list-style: none;
+}
+
+.cart-item__quantity-and-price {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+
+  .cart-item__price {
+    margin: 0;
+    font-size: 1.6rem;
+
+    span {
+      color: $color-red;
+    }
+
+    s {
+      color: $color-sand-grey;
+    }
+  }
+}
+
+.cart-item__bundle-children {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 15px 0 0;
+  padding: 5px 0 0;
+  border-top: 1px solid $color-border;
+
+  summary {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:first-child {
+        width: auto;
+        margin-right: calc(#{$gutter} / 2);
+      }
+    }
+
+    s {
+      margin-left: 5px;
+    }
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: calc(#{$gutter} / 2) 0 0;
+    color: rgba($color-body-text, 0.7);
+    list-style: none;
+    gap: calc(#{$gutter} / 2);
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      padding: 0;
+      line-height: 1.25;
+    }
+
+    span:first-child {
+      margin-right: calc(#{$gutter} / 2);
+    }
+  }
+}
+
+.cart-item__quantity-selector {
+  max-width: 80px;
+
+  &.quantity-selector {
+    border: 2px solid $color-grey;
+  }
+
+  input {
+    font-family: $font-gotham-narrow-bold;
+    font-size: 1.6rem;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 100%;
+
+    path {
+      stroke: $color-black;
+    }
+  }
+}
+
+.cart-item__selling-plan-select {
+  position: relative;
+  width: 100%;
+  margin: calc(#{$gutter} / 2) 0 0;
+
+  select {
+    width: 100%;
+  }
+}
+
+.ajaxcart .cart-item {
+  &:has(.cart-promo-notice) {
+    padding-bottom: 36px;
+  }
+}
+
+.cart-promo-notice {
+  @include typography(14, 20);
+  display: block;
+  width: 100%;
+  margin-top: 16px;
+  padding: 8px 16px;
+  background-color: var(--notice-bg-color, $color-pink);
+  color: var(--notice-txt-color, $color-black);
+  font-family: $font-gotham-extra-narrow-bold;
+
+  .ajaxcart & {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  a {
+    color: var(--notice-txt-color, $color-black);
+    text-decoration: underline;
+  }
+}

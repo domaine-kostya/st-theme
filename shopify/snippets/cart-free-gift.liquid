@@ -1,0 +1,43 @@
+{% if settings.enable_spend_x_get_y %}
+  {% render 'cart-reward-threshold' %}
+{% elsif settings.enable_spend_x_get_y_or_z %}
+  <div class="hide" role="region" aria-label="Cart Free Gift"
+    data-cart-free-gift-threshold="{{ settings.spend_x_get_y_or_z_threshold | times: 100.00 }}"
+    data-cart-free-gift
+    data-cart-free-gift-message="{{ settings.spend_x_get_y_or_z_message }}"
+  >
+    <button class="cart__free-gift-toggle hide" data-cart-free-gift-toggle>
+      <div>
+        {% render 'icon-shipjack-circle' %}
+
+        <span>
+          {{ settings.spend_x_get_y_or_z_toggle_text }}
+        </span>
+      </div>
+
+      {% render 'icon-chevron-down' %}
+    </button>
+
+    <div class="cart__free-gift-toggle-content hide" data-cart-free-gift-toggle-content>
+      <div class="row">
+        {% if settings.spend_x_get_y_or_z_free_gift_1 != blank %}
+          <div class="col-6">
+            {% render 'cart-reward-item',
+              product: all_products[settings.spend_x_get_y_or_z_free_gift_1],
+              free_gift: true
+            %}
+          </div>
+        {% endif %}
+
+        {% if settings.spend_x_get_y_or_z_free_gift_2 != blank %}
+          <div class="col-6">
+            {% render 'cart-reward-item',
+              product: all_products[settings.spend_x_get_y_or_z_free_gift_2],
+              free_gift: true
+            %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endif %}

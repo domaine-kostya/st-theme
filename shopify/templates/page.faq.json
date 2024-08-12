@@ -1,0 +1,282 @@
+{
+  "sections": {
+    "main": {
+      "type": "faq",
+      "blocks": {
+        "ae7284c4-40fe-4049-9ed7-8658580a18a6": {
+          "type": "faq",
+          "settings": {
+            "question": "Where can I buy Southern Tide near me?",
+            "answer": "<p>You can find your closest Southern Tide Retailer by visiting our <a href=\"https:\/\/southerntide.com\/apps\/store-locator\" title=\"https:\/\/southerntidellc.myshopify.com\/apps\/store-locator?\">Store Locator page<\/a>.<\/p><p><\/p>"
+          }
+        },
+        "d47a1e28-454c-4818-b822-8e58414e028f": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you offer gift wrapping services?",
+            "answer": "<p>We do not offer gift wrapping services. Pick out a Southern Tide <a href=\"https:\/\/southerntide.com\/collections\/gift-box\" target=\"_blank\" title=\"https:\/\/southerntide.com\/collections\/gift-box\">gift box<\/a> if you would like to wrap the gift at home.<\/p><p><\/p>"
+          }
+        },
+        "56fbddba-b1e0-41ce-9bf7-d7474cbf371f": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I be a Southern Tide Retailer?",
+            "answer": "<p>To become a Southern Tide Retailer please contact us <a href=\"https:\/\/southerntide.com\/pages\/contact-us\" title=\"Contact Us\">here<\/a> and select the topic “Become a Retailer” in the drop down.<\/p><p><\/p>"
+          }
+        },
+        "778af76c-5cdb-4f5f-85c7-b04bd35f5280": {
+          "type": "faq",
+          "settings": {
+            "question": "How do I request a catalog?",
+            "answer": "<p>We'd love to add you to our catalog mailing list! Please fill out our <a href=\"https:\/\/southerntide.com\/pages\/contact-us\" title=\"Contact Us\">contact form<\/a> with your information and we'll add you to our mailing list. <\/p><p><\/p>"
+          }
+        },
+        "883a6645-a222-405a-bfbd-9ac5e5d21859": {
+          "type": "faq",
+          "settings": {
+            "question": "Sticker Requests",
+            "answer": "<p>If you'd like to request free stickers please view our sticker request page<a href=\"https:\/\/southerntide.com\/pages\/sticker-request\" title=\"Sticker Request\"> here.<\/a><\/p><p><\/p>"
+          }
+        },
+        "c308d4fc-c96e-4fd5-a4c4-abc5fb4b394e": {
+          "type": "faq",
+          "settings": {
+            "question": "How do I become a Southern tide Ambassador?",
+            "answer": "<p>If you're interested in becoming a Southern Tide Ambassador please visit our <a href=\"https:\/\/southerntide.com\/pages\/st-ambassadors\" title=\"ST Ambassadors\">Ambassador page<\/a> for more information. <\/p><p><\/p>"
+          }
+        },
+        "f59cd79a-064b-4bd8-b52f-1ef7e2962fb7": {
+          "type": "faq",
+          "settings": {
+            "question": "Charitable Donations and Giving Back",
+            "answer": "<p>In addition to supporting the causes that we are passionate about, like our partnerships with <a href=\"https:\/\/southerntide.com\/pages\/beneath-the-waves\" title=\"Beneath The Waves & Southern Tide Partnership\">Beneath the Waves<\/a> and <a href=\"https:\/\/southerntide.com\/pages\/folds-of-honor\" title=\"Southern Tide and Folds of Honor Partnership\">Folds of Honor<\/a>, we also believe in giving back to our community and the communities of our customers. We also partner with the <a href=\"https:\/\/www.frazeecenter.com\/\" target=\"_blank\" title=\"https:\/\/www.frazeecenter.com\/\">Frazee Center<\/a> and <a href=\"https:\/\/cisofsc.org\/\" target=\"_blank\" title=\"https:\/\/cisofsc.org\/\">CIS of South Carolina<\/a> to support educational programs for at risk communities.<\/p><p>Please fill out our <a href=\"https:\/\/southerntide.com\/pages\/contact-us\" title=\"Contact Us\">contact form<\/a> to discuss your cause with one of customer service representatives.<\/p>"
+          }
+        },
+        "d9d744cc-62f0-4312-8908-7f686cd5df3c": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you offer a Military Discount?",
+            "answer": "<p>We offer a Military Discount to all active Military personnel, veterans and military spouses. Please click on the link below to enroll in our Military Discount program. <a href=\"https:\/\/southerntide.com\/pages\/military-discount\" title=\"https:\/\/southerntide.com\/pages\/military-discount\">Military Discount Verification. <\/a><\/p>"
+          }
+        },
+        "ffa72206-5523-4a1e-a533-34d5adf4f426": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you have any current employment opportunities?",
+            "answer": "<p>We are always accepting applications at Southern Tide. To apply for current openings, please click the \"<a href=\"https:\/\/southerntide.com\/pages\/careers\" title=\"https:\/\/southerntide.com\/pages\/careers\">Careers<\/a>\" link at the bottom of the page.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "ae7284c4-40fe-4049-9ed7-8658580a18a6",
+        "d47a1e28-454c-4818-b822-8e58414e028f",
+        "56fbddba-b1e0-41ce-9bf7-d7474cbf371f",
+        "778af76c-5cdb-4f5f-85c7-b04bd35f5280",
+        "883a6645-a222-405a-bfbd-9ac5e5d21859",
+        "c308d4fc-c96e-4fd5-a4c4-abc5fb4b394e",
+        "f59cd79a-064b-4bd8-b52f-1ef7e2962fb7",
+        "d9d744cc-62f0-4312-8908-7f686cd5df3c",
+        "ffa72206-5523-4a1e-a533-34d5adf4f426"
+      ],
+      "settings": {
+        "headline": "General Questions",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "16565137303d3cbc66": {
+      "type": "faq",
+      "blocks": {
+        "7bd6d030-3dc9-4963-b748-e4bb8bfec4d8": {
+          "type": "faq",
+          "settings": {
+            "question": "Why didn’t I receive my order confirmation?",
+            "answer": "<p>Once your order has been placed you should receive an order confirmation by email. This email may end up in your Spam Folder, so be sure to add Southern Tide to your “Safe” list. If you still have not received your order confirmation email please give Customer Service a call toll free at 1-855-890-8334 or email us at <a href=\"mailto:theskipjack@southerntide.com\">theskipjack@southerntide.com<\/a>.<\/p>"
+          }
+        },
+        "ba1120ca-2f94-4ef5-b388-859c33458216": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I change or cancel my order after it’s been placed?",
+            "answer": "<p>Unfortunately, once an order has been placed, it gets processed immediately and cannot be changed or canceled. This helps us get your order to you as quickly as possible.<\/p>"
+          }
+        },
+        "07fdfee0-e8b6-493d-b0a4-e51812f2e921": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I use multiple credit cards on one order?",
+            "answer": "<p>At this time, our website is unable to accept multiple credit cards for one transaction, including prepaid Visa Cards and Visa Gift Cards.<\/p><p><\/p>"
+          }
+        },
+        "9b37ec0b-0673-4e67-b016-fe000b2399cc": {
+          "type": "faq",
+          "settings": {
+            "question": "Why do I have multiple charges on my credit card, but only one order confirmation?",
+            "answer": "<p>If your order was adjusted for any reason, you will see a separate transaction for the correct amount, and the incorrect charge will be voided and should disappear after a few days. This can also occur when a credit card is declined because of a zip code or CVV mismatch. In those cases the transaction never posted to our account and should fall off of your statement within 24-48 business hours depending on your bank’s policies. If you are still unsure about multiple charges on your credit card, please give Customer Service a call toll free at 1-855-890-8334 or email us at <a href=\"mailto:theskipjack@southerntide.com\">theskipjack@southerntide.com<\/a><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "7bd6d030-3dc9-4963-b748-e4bb8bfec4d8",
+        "ba1120ca-2f94-4ef5-b388-859c33458216",
+        "07fdfee0-e8b6-493d-b0a4-e51812f2e921",
+        "9b37ec0b-0673-4e67-b016-fe000b2399cc"
+      ],
+      "settings": {
+        "headline": "Order and Payment",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "16565139086acdefe2": {
+      "type": "faq",
+      "blocks": {
+        "9b6fbb93-b6f2-4b0d-9fcd-8621d5c72917": {
+          "type": "faq",
+          "settings": {
+            "question": "When will my order be shipped?",
+            "answer": "<p>Orders entered on a business day, by Noon Eastern Time ship the same day. Orders entered after Noon Eastern Time will ship the following business day. Orders entered on a non-business day, will ship the following business day. Business days are Monday-Friday.<\/p>"
+          }
+        },
+        "7faf9933-ab1b-437a-ab0e-d09c8bc58266": {
+          "type": "faq",
+          "settings": {
+            "question": "How can I track my order?",
+            "answer": "<p>Once your order has shipped you will receive an email with tracking information. This email may end up in your Spam Folder, so be sure to add Southern Tide to your “Safe” list. You may also check the status of your order at any time by signing into your account and by opting into text message updates from the order confirmation screen. <\/p>"
+          }
+        },
+        "73de45b7-7b45-4bc9-90d3-a8d49ccf1164": {
+          "type": "faq",
+          "settings": {
+            "question": "When will my order be delivered?",
+            "answer": "<p>Once processed, orders are shipped depending on the shipping method selected during checkout. FedEx Ground guarantees delivery within 5-6 business days to most US locations, but may arrive sooner. If you have selected an expedited FedEx service, your item(s) should arrive within the selected time frame. Click <a href=\"https:\/\/southerntide.com\/pages\/shipping\" title=\"Shipping Information | Southern Tide\">here<\/a> to view the our shipping information.<\/p>"
+          }
+        },
+        "37068ed4-f7b5-4adf-a110-44be9cb3937d": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you offer Expedited Shipping?",
+            "answer": "<p>Yes, we are happy to offer FedEx Standard Overnight and FedEx 2-Day services for an additional cost at Checkout. Please be aware that FedEx Standard Overnight and FedEx 2-Day shipping is not waived if your order is over $50, as that promotion is only valid for FedEx Home delivery. Also, keep in mind that orders placed after noon Eastern Time will ship the next day, and orders placed before noon Eastern Time should ship the same day. <span style=\"text-decoration:underline\"><strong>FedEx Express services do not deliver on the weekends for us at this time.<\/strong><\/span><\/p><p><\/p><p>EX: If you place a Next Day Air order on Friday at 10:30AM, you will receive your package on Monday before the end of the day the following week. Also, if you placed a Next day air order at 2PM on Friday afternoon, you will receive your order on Tuesday the following week.<\/p>"
+          }
+        },
+        "98f785cf-d12f-410b-a9a7-34637219631b": {
+          "type": "faq",
+          "settings": {
+            "question": "What can I expect with my expedited shipping option?",
+            "answer": "<p>During the checkout process, you will be given an option to select your preferred shipping method. We offer overnight shipping and two-day shipping. <strong>(Please note: overnight shipping does not include Saturday).<\/strong><\/p>"
+          }
+        },
+        "c1a97020-ef7d-48f0-8c82-8f636ed9b82b": {
+          "type": "faq",
+          "settings": {
+            "question": "Can you ship to an address that’s outside the US?",
+            "answer": "<p>At this time we do not ship orders internationally.<\/p>"
+          }
+        },
+        "de397e4b-592e-4a17-8b24-d037d97218e4": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I ship to a P.O. Box or to multiple addresses?",
+            "answer": "<p>We do not currently offer delivery to P.O. Boxes. If you need to send items to multiple addresses, you will need to create a separate order for each address.<\/p>"
+          }
+        },
+        "4bb9d3bb-f894-4bb5-9862-3872ea721854": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you ship on the weekends?",
+            "answer": "<p>If your order is placed on Friday after 12:00PM ET through Sunday, your order will not be processed at our warehouse for a weekend delivery. However, if you order is already en route and you have received tracking, FedEx will deliver the order on Saturday and\/or Sunday.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "9b6fbb93-b6f2-4b0d-9fcd-8621d5c72917",
+        "7faf9933-ab1b-437a-ab0e-d09c8bc58266",
+        "73de45b7-7b45-4bc9-90d3-a8d49ccf1164",
+        "37068ed4-f7b5-4adf-a110-44be9cb3937d",
+        "98f785cf-d12f-410b-a9a7-34637219631b",
+        "c1a97020-ef7d-48f0-8c82-8f636ed9b82b",
+        "de397e4b-592e-4a17-8b24-d037d97218e4",
+        "4bb9d3bb-f894-4bb5-9862-3872ea721854"
+      ],
+      "settings": {
+        "headline": "Shipping and Delivery",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "1656513955ec885a9a": {
+      "type": "faq",
+      "blocks": {
+        "98e9c975-01a8-4dae-863e-4a86ceae3399": {
+          "type": "faq",
+          "settings": {
+            "question": "What is your return policy?",
+            "answer": "<p>Unworn or unwashed merchandise may be returned within <strong>30 days<\/strong> from your order date if accompanied by the original tags and packing slip you received after going through the return process at <a href=\"https:\/\/returns.southerntide.com\/\">returns.southerntide.com<\/a>. Items labeled Final Sale are non-returnable. You will be credited the appropriate amount upon processing of the returned item(s) based on the original payment method. Please contact our Customer Service Department at 1-855-890-8334 if you need help. See our full <a href=\"https:\/\/southerntide.com\/pages\/free-returns\" title=\"Free Returns | Southern Tide\">return policy here. <\/a><\/p>"
+          }
+        },
+        "79d270c3-5d59-4d13-a6b4-e2b4fce33727": {
+          "type": "faq",
+          "settings": {
+            "question": "How do you process a return?",
+            "answer": "<p>The easiest way to start a return is to visit <a href=\"https:\/\/returns.southerntide.com\/\">https:\/\/returns.southerntide.com<\/a>. For more information on our returns process please review our full return policy <a href=\"https:\/\/southerntide.com\/pages\/free-returns\" title=\"Free Returns | Southern Tide\">here. <\/a><\/p>"
+          }
+        },
+        "30f370f7-1d2f-4444-a658-fe67d363c132": {
+          "type": "faq",
+          "settings": {
+            "question": "How can I check the status of my return?",
+            "answer": "<p>To check the status of your return please contact Customer Service by phone toll free at 1-855-890-8334 or email us at <a href=\"mailto:theskipjack@southerntide.com\">theskipjack@southerntide.com<\/a>. You will receive email updates along the return process providing update. <\/p>"
+          }
+        },
+        "495e0b6d-c5c6-4041-8a8e-8f0841028a53": {
+          "type": "faq",
+          "settings": {
+            "question": "Can you process a return over the phone?",
+            "answer": "<p>You may call us toll free at 855-890-8334 and one of our customer service representatives will walk you through the return process. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "98e9c975-01a8-4dae-863e-4a86ceae3399",
+        "79d270c3-5d59-4d13-a6b4-e2b4fce33727",
+        "30f370f7-1d2f-4444-a658-fe67d363c132",
+        "495e0b6d-c5c6-4041-8a8e-8f0841028a53"
+      ],
+      "settings": {
+        "headline": "Returns and Exchanges",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16565137303d3cbc66",
+    "16565139086acdefe2",
+    "1656513955ec885a9a"
+  ]
+}

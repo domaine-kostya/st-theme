@@ -1,0 +1,42 @@
+name: Update QA theme
+
+# Controls when the action will run.
+on:
+  workflow_dispatch:
+  pull_request:
+    types: [closed]
+    branches: develop
+
+jobs:
+  deploy:
+    if: github.event.pull_request.merged == true
+    name: Deploy theme
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1
+          bundler: 'latest'
+
+      - name: Install Shopify CLI
+        run: yarn global add @shopify/cli @shopify/theme
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build theme
+        run: yarn build
+
+      - name: Deploy QA
+        env:
+          SHOPIFY_FLAG_STORE: ${{ secrets.SHOPIFY_SHOP }}.myshopify.com
+          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.SHOPIFY_THEME_ACCESS_TOKEN }}
+        run: shopify theme push -t "qa" -x "templates/**/*.json" "config/settings_data.json" "locales/*.json" --path=./shopify
+
+concurrency:
+  group: merge-pr-${{ github.head_ref }}
+  cancel-in-progress: true

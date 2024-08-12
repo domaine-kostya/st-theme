@@ -1,0 +1,160 @@
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+      }
+    },
+    "3bed8954-b487-4282-b435-7b908d22a149": {
+      "type": "featured-collections",
+      "blocks": {
+        "61a212af-b1de-4667-9b5e-f9ff4d340a03": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Baylor-resize-07282023.png",
+            "title": "",
+            "content": "",
+            "cta_text": "Baylor University",
+            "link": "shopify:\/\/collections\/baylor-university"
+          }
+        },
+        "1a5ebd26-bd1b-4165-95ed-5d9e5b540ab8": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/U-of-Oklahona-1280resize-07282023.png",
+            "title": "",
+            "content": "",
+            "cta_text": "University of Oklahoma",
+            "link": "shopify:\/\/collections\/university-of-oklahoma"
+          }
+        }
+      },
+      "block_order": [
+        "61a212af-b1de-4667-9b5e-f9ff4d340a03",
+        "1a5ebd26-bd1b-4165-95ed-5d9e5b540ab8"
+      ],
+      "settings": {
+        "headline": "Big 12",
+        "headline_size": "large",
+        "content": "<hr>",
+        "section_width": "container",
+        "button_style": "link",
+        "margin_top": "32px",
+        "margin_top_mobile": "32px",
+        "margin_bottom": "32px",
+        "margin_bottom_mobile": "32px",
+        "padding_top": "32px",
+        "padding_top_mobile": "32px",
+        "padding_bottom": "32px",
+        "padding_bottom_mobile": "32px"
+      }
+    },
+    "c40ea621-a13e-4499-9adc-16bfb39523fc": {
+      "type": "featured-collections",
+      "blocks": {
+        "f4b7e2a0-03ca-42b5-9dc0-aef5bd8336f2": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/TCU-1280resize-07282023.png",
+            "title": "",
+            "content": "",
+            "cta_text": "Texas Christian University",
+            "link": "shopify:\/\/collections\/texas-christian-university"
+          }
+        },
+        "49f01270-e233-4f11-b018-47b51005c0c2": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Texas-Tech-1280resize-07282023.png",
+            "title": "",
+            "content": "",
+            "cta_text": "Texas Tech University",
+            "link": "shopify:\/\/collections\/texas-tech-university"
+          }
+        },
+        "f19018ce-565b-4a1a-b9c3-27dee1e98b59": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/West-Virginia-University-1280resize-07282023.png",
+            "title": "",
+            "content": "",
+            "cta_text": "West Virginia University",
+            "link": "shopify:\/\/collections\/west-virginia-university"
+          }
+        }
+      },
+      "block_order": [
+        "f4b7e2a0-03ca-42b5-9dc0-aef5bd8336f2",
+        "49f01270-e233-4f11-b018-47b51005c0c2",
+        "f19018ce-565b-4a1a-b9c3-27dee1e98b59"
+      ],
+      "settings": {
+        "headline": "",
+        "headline_size": "small",
+        "content": "",
+        "section_width": "container",
+        "button_style": "link",
+        "margin_top": "0",
+        "margin_top_mobile": "0",
+        "margin_bottom": "32px",
+        "margin_bottom_mobile": "32px",
+        "padding_top": "0",
+        "padding_top_mobile": "0",
+        "padding_bottom": "32px",
+        "padding_bottom_mobile": "32px"
+      }
+    },
+    "64f09bab-4505-470f-b451-a7f3f2da5c3c": {
+      "type": "content-blocks",
+      "blocks": {
+        "88bc2e70-095a-4b64-b9ae-e90916cbac14": {
+          "type": "content_block",
+          "settings": {
+            "mobile_image": "shopify:\/\/shop_images\/230811-navigation-collegiate.jpg",
+            "image": "shopify:\/\/shop_images\/230811-navigation-collegiate.jpg",
+            "video_file_url": "",
+            "mobile_video_file_url": "",
+            "enable_full_width_video": false,
+            "video_embed": "",
+            "video_description": "",
+            "mobile_video_embed": "",
+            "background_color": "#cde0f1",
+            "width": "full",
+            "content_position": "right",
+            "headline": "Don't See Your Team?",
+            "content": "",
+            "cta_1_text": "Explore All Schools",
+            "cta_1_link": "shopify:\/\/pages\/collegiate-conferences",
+            "cta_1_style": "solid",
+            "cta_2_text": "",
+            "cta_2_link": "",
+            "cta_2_style": "outline",
+            "feature_1_text": "",
+            "feature_2_text": "",
+            "feature_3_text": "",
+            "feature_4_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "88bc2e70-095a-4b64-b9ae-e90916cbac14"
+      ],
+      "settings": {
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "3bed8954-b487-4282-b435-7b908d22a149",
+    "c40ea621-a13e-4499-9adc-16bfb39523fc",
+    "64f09bab-4505-470f-b451-a7f3f2da5c3c"
+  ]
+}

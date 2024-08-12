@@ -1,0 +1,188 @@
+{{ 'sections.blog-filter.css' | asset_url | stylesheet_tag }}
+
+<blog-filter class="blog-filter" role="region" aria-label="Blog Filter">
+  <div class="container">
+    <div class="blog-filter__wrapper">
+      <div class="blog-filter__inner">
+        <button class="ui-link {% unless current_tags %}active{% endunless %}" type="button" aria-label="Show All Blog Posts" data-value="all" data-blog-filter-button>
+          {{ section.settings.all_filter_text }}
+        </button>
+
+        {% for block in section.blocks %}
+          <button class="ui-link {% if current_tags contains block.settings.filter_tag %}active{% endif %}" type="button" aria-label="Filter Blog By {{ block.settings.filter_text }}" data-value="{{ block.settings.filter_tag }}" data-blog-filter-button>
+            {{ block.settings.filter_text }}
+          </button>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</blog-filter>
+
+{{ 'sections.blog-filter.js' | asset_url | script_tag }}
+
+{% schema %}
+  {
+    "settings": [
+      {
+        "type": "text",
+        "id": "all_filter_text",
+        "label": "All Filter Text",
+        "default": "All Articles"
+      },
+{
+  "type": "header",
+  "content": "Section Margin"
+},
+{
+  "type": "select",
+  "id": "margin_top",
+  "label": "Margin Top",
+  "default": "default",
+  "options": [
+    {"value": "default", "label": "Theme Default"},
+    {"value": "0", "label": "None"},
+    {"value": "8px", "label": "8px"},
+    {"value": "16px", "label": "16px"},
+    {"value": "32px", "label": "32px"},
+    {"value": "48px", "label": "48px"},
+    {"value": "64px", "label": "64px"},
+    {"value": "102px", "label": "102px"}
+  ]
+},
+{
+  "type": "select",
+  "id": "margin_top_mobile",
+  "label": "Margin Top Mobile",
+  "default": "default",
+  "options": [
+    {"value": "default", "label": "Theme Default"},
+    {"value": "0", "label": "None"},
+    {"value": "8px", "label": "8px"},
+    {"value": "16px", "label": "16px"},
+    {"value": "32px", "label": "32px"},
+    {"value": "48px", "label": "48px"},
+    {"value": "64px", "label": "64px"},
+    {"value": "102px", "label": "102px"}
+  ]
+},
+{
+  "type": "select",
+  "id": "margin_bottom",
+  "label": "Margin Bottom",
+  "default": "default",
+  "options": [
+    {"value": "default", "label": "Theme Default"},
+    {"value": "0", "label": "None"},
+    {"value": "8px", "label": "8px"},
+    {"value": "16px", "label": "16px"},
+    {"value": "32px", "label": "32px"},
+    {"value": "48px", "label": "48px"},
+    {"value": "64px", "label": "64px"},
+    {"value": "102px", "label": "102px"}
+  ]
+},
+{
+  "type": "select",
+  "id": "margin_bottom_mobile",
+  "label": "Margin Bottom Mobile",
+  "default": "default",
+  "options": [
+    {"value": "default", "label": "Theme Default"},
+    {"value": "0", "label": "None"},
+    {"value": "8px", "label": "8px"},
+    {"value": "16px", "label": "16px"},
+    {"value": "32px", "label": "32px"},
+    {"value": "48px", "label": "48px"},
+    {"value": "64px", "label": "64px"},
+    {"value": "102px", "label": "102px"}
+  ]
+},
+{
+  "type": "header",
+  "content": "Section Padding"
+},
+{
+  "type": "select",
+  "id": "padding_top",
+  "label": "Padding Top",
+  "default": "default",
+  "options": [
+    {"value": "default", "label": "Theme Default"},
+    {"value": "0", "label": "None"},
+    {"value": "8px", "label": "8px"},
+    {"value": "16px", "label": "16px"},
+    {"value": "32px", "label": "32px"},
+    {"value": "48px", "label": "48px"},
+    {"value": "64px", "label": "64px"},
+    {"value": "102px", "label": "102px"}
+  ]
+},
+{
+  "type": "select",
+  "id": "padding_top_mobile",
+  "label": "Padding Top Mobile",
+  "default": "default",
+  "options": [
+    {"value": "default", "label": "Theme Default"},
+    {"value": "0", "label": "None"},
+    {"value": "8px", "label": "8px"},
+    {"value": "16px", "label": "16px"},
+    {"value": "32px", "label": "32px"},
+    {"value": "48px", "label": "48px"},
+    {"value": "64px", "label": "64px"},
+    {"value": "102px", "label": "102px"}
+  ]
+},
+{
+  "type": "select",
+  "id": "padding_bottom",
+  "label": "Padding Bottom",
+  "default": "default",
+  "options": [
+    {"value": "default", "label": "Theme Default"},
+    {"value": "0", "label": "None"},
+    {"value": "8px", "label": "8px"},
+    {"value": "16px", "label": "16px"},
+    {"value": "32px", "label": "32px"},
+    {"value": "48px", "label": "48px"},
+    {"value": "64px", "label": "64px"},
+    {"value": "102px", "label": "102px"}
+  ]
+},
+{
+  "type": "select",
+  "id": "padding_bottom_mobile",
+  "label": "Padding Bottom Mobile",
+  "default": "default",
+  "options": [
+    {"value": "default", "label": "Theme Default"},
+    {"value": "0", "label": "None"},
+    {"value": "8px", "label": "8px"},
+    {"value": "16px", "label": "16px"},
+    {"value": "32px", "label": "32px"},
+    {"value": "48px", "label": "48px"},
+    {"value": "64px", "label": "64px"},
+    {"value": "102px", "label": "102px"}
+  ]
+}
+    ],
+    "blocks": [
+      {
+        "type": "tag",
+        "name": "Tag",
+        "settings": [
+          {
+            "type": "text",
+            "id": "filter_text",
+            "label": "Filter Text"
+          },
+          {
+            "type": "text",
+            "id": "filter_tag",
+            "label": "Filter Tag"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

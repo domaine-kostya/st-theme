@@ -1,0 +1,176 @@
+{
+  "sections": {
+    "1658860492f7f30d15": {
+      "type": "banner",
+      "settings": {
+        "enable_full_width": true,
+        "background_image": "shopify:\/\/shop_images\/hero-desktop.png",
+        "mobile_background_image": "shopify:\/\/shop_images\/hero-banner-rewards-page-mobile_9f2dd5c6-9dbf-4188-a3df-cb92b907f24b.jpg",
+        "background_color": "#f2f2f2",
+        "overlay_opacity": 0,
+        "overlay_color": "#313133",
+        "overlay_opacity_mobile": 0,
+        "overlay_color_mobile": "linear-gradient(90deg, rgba(49, 49, 51, 1), rgba(255, 255, 255, 0) 100%)",
+        "mobile_headline": "About ST Rewards",
+        "headline": "About ST Rewards",
+        "headline_color": "#1c59a8",
+        "mobile_content": "A Southern Tide Loyalty Program",
+        "content": "A Southern Tide Loyalty Program",
+        "content_color": "#313133",
+        "cta_text": "",
+        "cta_link": "",
+        "cta_color": "#1c59a8",
+        "cta_text_color": "#1C59A8",
+        "cta_style": "outline",
+        "cta_2_text": "",
+        "cta_2_link": "",
+        "cta_2_color": "#1C59A8",
+        "cta_2_text_color": "#1C59A8",
+        "cta_2_style": "outline",
+        "cta_3_text": "",
+        "cta_3_link": "",
+        "cta_3_color": "#1C59A8",
+        "cta_3_text_color": "#1C59A8",
+        "show_buttons_on_separate_lines": false,
+        "cta_3_style": "outline",
+        "desktop_vertical_content_position": "middle",
+        "desktop_horizontal_content_position": "center",
+        "desktop_text_alignment": "center",
+        "mobile_vertical_content_position": "middle",
+        "mobile_horizontal_content_position": "center",
+        "mobile_text_alignment": "center",
+        "desktop_height": "natural",
+        "mobile_height": "large",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "8px"
+      }
+    },
+    "main": {
+      "type": "rewards",
+      "settings": {
+        "yotpo_instance_id": "40083"
+      }
+    },
+    "16588601667f627508": {
+      "type": "faq",
+      "blocks": {
+        "c570f135-3335-48d4-b5ac-8d7119327f1d": {
+          "type": "faq",
+          "settings": {
+            "question": "How do I know when I have leveled up to the next tier?",
+            "answer": "<p>Once you have reached a new tier level, you will receive an email notifying you of the next tier benefits you have unlocked. You can view your points and tier status on your account dashboard.<\/p>"
+          }
+        },
+        "f7ad8780-9e06-446f-b35d-f2f74fc7d525": {
+          "type": "faq",
+          "settings": {
+            "question": "How do I sign up for the Southern Tide Rewards Program?",
+            "answer": "<p>Joining is easy! <a href=\"\/account\/login?return_url=%2Faccount\" title=\"\/account\/login?return_url=%2Faccount\">Sign up here<\/a>. Or log in to your account and start earning points with every purchase.<\/p>"
+          }
+        },
+        "e1553ebc-15e2-44c3-bb2f-a65036d1481f": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I combine orders on multiple accounts?",
+            "answer": "<p>We cannot combine accounts at this time. You will only receive points for the email account you are logged into at checkout.<\/p>"
+          }
+        },
+        "0d9aa6c9-cc91-4a5b-b4c7-d506ae1e7533": {
+          "type": "faq",
+          "settings": {
+            "question": "How do I earn points?",
+            "answer": "<p>For every $1.00 spent on southerntide.com or at one of our participating <a href=\"https:\/\/southerntide.com\/pages\/southern-tide-stores\"><span style=\"text-decoration:underline\">company stores<\/span><\/a>, you will earn 1 point. While you cannot redeem points directly, points earned will apply to your tier status. Once you level up, you will earn rewards and unlock exclusive perks.<\/p>"
+          }
+        },
+        "e2ce879f-ebee-4d4c-b63a-b49a7c39021d": {
+          "type": "faq",
+          "settings": {
+            "question": "Will my previous purchases be eligible for the ST Rewards points?",
+            "answer": "<p>For customers with an existing account, purchases made <strong>before August 16, 2021<\/strong> will not be added to your rewards program points. Additionally, any purchases prior to creating a ST Rewards account will not be eligible.<\/p>"
+          }
+        },
+        "7b09b9b2-4d7e-4e7f-9b99-16abd8e27613": {
+          "type": "faq",
+          "settings": {
+            "question": "Are there certain products that will not count towards my ST Rewards points?",
+            "answer": "<p>Yes, gift cards are not eligible for rewards points.<\/p>"
+          }
+        },
+        "846e0d00-d889-47d0-a3bd-1a804bfc662e": {
+          "type": "faq",
+          "settings": {
+            "question": "What are the perks of joining the Southern Tide Rewards Program?",
+            "answer": "<p>Receive exclusive product gifts, birthday rewards, complimentary shipping and more!<\/p>"
+          }
+        },
+        "72712e8f-53fb-4447-9ff2-705cfa9fb4d7": {
+          "type": "faq",
+          "settings": {
+            "question": "How can I give feedback or get in contact with Southern Tide?",
+            "answer": "<p>Our customer service team is available Monday through Friday 8:30AM ET to 5:30PM ET. Give us a call at (855) 890-8334 or send a message to our email, <a href=\"mailto:theskipjack@southerntide.com\"><span style=\"text-decoration:underline\"><strong>theskipjack@southerntide.com<\/strong><\/span><\/a><strong>. <\/strong><\/p>"
+          }
+        },
+        "fd0fee05-1585-4ab7-a708-3a4d73b2c9fc": {
+          "type": "faq",
+          "settings": {
+            "question": "Does my birthday reward expire after a certain amount of time?",
+            "answer": "<p>The birthday reward will expire one year after the issue date.<\/p>"
+          }
+        },
+        "f2b1d7ce-131f-448c-b8be-812fc187997e": {
+          "type": "faq",
+          "settings": {
+            "question": "Do my points ever expire?",
+            "answer": "<p>The ST Rewards program is based off a rolling 12 months. Meaning your tier status will start over 12 months after you created your account.<\/p>"
+          }
+        },
+        "002ceb17-bcf4-4600-9f96-484ee46742e6": {
+          "type": "faq",
+          "settings": {
+            "question": "How do I receive my birthday gift?",
+            "answer": "<p>You will log into your ST Rewards account and add your birthday. The birthday coupon will be sent during your birthday month.<\/p>"
+          }
+        },
+        "eb8efa0c-0c18-4f7f-836e-539f30eb9101": {
+          "type": "faq",
+          "settings": {
+            "question": "What are the ST Rewards Terms & Conditions",
+            "answer": "<p>Find our full ST Rewards Terms & Conditions <a href=\"https:\/\/southerntide.com\/pages\/st-rewards-terms-conditions\" target=\"_blank\" title=\"https:\/\/southerntide.com\/pages\/st-rewards-terms-conditions\">here<\/a>.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "c570f135-3335-48d4-b5ac-8d7119327f1d",
+        "f7ad8780-9e06-446f-b35d-f2f74fc7d525",
+        "e1553ebc-15e2-44c3-bb2f-a65036d1481f",
+        "0d9aa6c9-cc91-4a5b-b4c7-d506ae1e7533",
+        "e2ce879f-ebee-4d4c-b63a-b49a7c39021d",
+        "7b09b9b2-4d7e-4e7f-9b99-16abd8e27613",
+        "846e0d00-d889-47d0-a3bd-1a804bfc662e",
+        "72712e8f-53fb-4447-9ff2-705cfa9fb4d7",
+        "fd0fee05-1585-4ab7-a708-3a4d73b2c9fc",
+        "f2b1d7ce-131f-448c-b8be-812fc187997e",
+        "002ceb17-bcf4-4600-9f96-484ee46742e6",
+        "eb8efa0c-0c18-4f7f-836e-539f30eb9101"
+      ],
+      "settings": {
+        "headline": "Frequently Asked Questions",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    }
+  },
+  "order": [
+    "1658860492f7f30d15",
+    "main",
+    "16588601667f627508"
+  ]
+}

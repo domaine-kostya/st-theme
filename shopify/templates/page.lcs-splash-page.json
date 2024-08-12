@@ -1,0 +1,149 @@
+{
+  "sections": {
+    "718d1f93-38c5-4af4-819a-381999004d04": {
+      "type": "hero",
+      "blocks": {
+        "fec5e3f5-3fde-4806-bee9-9525cfbda027": {
+          "type": "hero_slide",
+          "settings": {
+            "desktop_layout": "image_top_content",
+            "desktop_image_1": "shopify:\/\/shop_images\/231226-collection-landing-hero-lcs.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/231226-collection-landing-hero-lcs-mobile.jpg",
+            "title": "",
+            "mobile_title": "",
+            "title_size": "heading-2",
+            "content": "",
+            "mobile_content": "",
+            "title_color": "#1c59a8",
+            "content_color": "#313133",
+            "background_color": "#ffffff",
+            "cta_1_text": "",
+            "cta_1_link": "",
+            "cta_1_color": "",
+            "cta_2_text": "",
+            "cta_2_link": "",
+            "cta_2_color": "",
+            "cta_3_text": "",
+            "cta_3_link": "",
+            "cta_3_color": "",
+            "image_link": "",
+            "btn_display": "d-flex"
+          }
+        }
+      },
+      "block_order": [
+        "fec5e3f5-3fde-4806-bee9-9525cfbda027"
+      ],
+      "settings": {
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "0",
+        "margin_bottom_mobile": "0",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "0",
+        "padding_bottom_mobile": "0"
+      }
+    },
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "f1642a2f-5179-472a-b7b9-5fe248ac8e83": {
+      "type": "featured-collections",
+      "blocks": {
+        "9590948d-b83a-406f-8783-7a6319f20404": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/231226-featured-collections-lcs-01.jpg",
+            "title": "",
+            "content": "",
+            "cta_text": "Shop Men's",
+            "link": "shopify:\/\/collections\/last-catch-mens"
+          }
+        },
+        "91900055-28dc-4703-acf5-452fc5e98be6": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/231226-featured-collections-lcs-02.jpg",
+            "title": "",
+            "content": "",
+            "cta_text": "Shop Women's",
+            "link": "shopify:\/\/collections\/last-catch-womens"
+          }
+        }
+      },
+      "block_order": [
+        "9590948d-b83a-406f-8783-7a6319f20404",
+        "91900055-28dc-4703-acf5-452fc5e98be6"
+      ],
+      "settings": {
+        "headline": "Last Catch Collections",
+        "headline_size": "large",
+        "content": "",
+        "section_width": "container",
+        "button_style": "link",
+        "margin_top": "0",
+        "margin_top_mobile": "0",
+        "margin_bottom": "48px",
+        "margin_bottom_mobile": "0",
+        "padding_top": "0",
+        "padding_top_mobile": "0",
+        "padding_bottom": "0",
+        "padding_bottom_mobile": "0"
+      }
+    },
+    "b18923c0-18c8-436b-90bd-da9cedbb616a": {
+      "type": "featured-collections",
+      "blocks": {
+        "e0b21b88-672d-4db7-9652-25fb0c79c7c4": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/231226-featured-collections-lcs-03.jpg",
+            "title": "",
+            "content": "",
+            "cta_text": "Shop Kids",
+            "link": "shopify:\/\/collections\/last-catch-kids"
+          }
+        },
+        "185854f6-fe05-4e20-a209-f7fbfc6eb0e2": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/231226-featured-collections-lcs-04.jpg",
+            "title": "",
+            "content": "",
+            "cta_text": "Shop T-Shirts",
+            "link": "shopify:\/\/collections\/last-catch-t-shirts"
+          }
+        }
+      },
+      "block_order": [
+        "e0b21b88-672d-4db7-9652-25fb0c79c7c4",
+        "185854f6-fe05-4e20-a209-f7fbfc6eb0e2"
+      ],
+      "settings": {
+        "headline": "",
+        "headline_size": "small",
+        "content": "",
+        "section_width": "container",
+        "button_style": "link",
+        "margin_top": "0",
+        "margin_top_mobile": "0",
+        "margin_bottom": "48px",
+        "margin_bottom_mobile": "0",
+        "padding_top": "0",
+        "padding_top_mobile": "0",
+        "padding_bottom": "0",
+        "padding_bottom_mobile": "default"
+      }
+    }
+  },
+  "order": [
+    "718d1f93-38c5-4af4-819a-381999004d04",
+    "main",
+    "f1642a2f-5179-472a-b7b9-5fe248ac8e83",
+    "b18923c0-18c8-436b-90bd-da9cedbb616a"
+  ]
+}

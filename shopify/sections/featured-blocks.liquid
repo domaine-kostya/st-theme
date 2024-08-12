@@ -1,0 +1,289 @@
+
+{{ 'sections.featured-blocks.css' | asset_url | stylesheet_tag }}
+
+<div class="featured-blocks featured-blocks--{{ section.settings.section_width }} featured-blocks--{{ section.id }}" role="region" aria-label="Featured Blocks">
+  <div class="featured-blocks__header">
+    <h2 {% if section.settings.headline_size == 'small' %}class="heading-3"{% endif %}>
+      {{ section.settings.headline }}
+    </h2>
+
+    <p>
+      {{ section.settings.content }}
+    </p>
+  </div>
+
+  {% if section.settings.section_width == 'container' %}
+    <div class="container">
+  {% endif %}
+
+  <div class="row {% if section.settings.section_width == 'full' %}no-gutters{% endif %}">
+    {% for block in section.blocks %}
+      <div class="col-12 {% if section.blocks.length == 4 %}col-md-6 col-lg{% else %}col-md{% endif %}">
+        <div class="featured-blocks__block">
+          {% if block.settings.link != blank %}
+            <a class="image-link" href="{{ block.settings.link }}" title="{{ block.settings.title }} - {{ block.settings.cta_text }}">
+          {% endif %}
+
+          <div class="featured-blocks__image img-cover">
+            {{ block.settings.image | image_url: width: 1440 | image_tag: loading: 'lazy' }}
+          </div>
+
+          <div class="featured-blocks__block-content">
+            <p class="heading-4">
+              {{ block.settings.title }}
+            </p>
+
+            {% if block.settings.content != blank %}
+              <p>
+                {{ block.settings.content }}
+              </p>
+            {% endif %}
+
+            {% if section.settings.button_style == 'link' %}
+              <span class="ui-link">
+                {{ block.settings.cta_text }}
+              </span>
+            {% else %}
+              <button class="btn btn--outline" type="button" tabindex="-1">
+                {{ block.settings.cta_text }}
+              </button>
+            {% endif %}
+          </div>
+
+          {% if block.settings.link != blank %}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  {% if section.settings.section_width == 'container' %}
+    </div>
+  {% endif %}
+</div>
+
+{% render 'section-spacing', section_name: 'featured-blocks' %}
+
+{% schema %}
+  {
+    "settings": [
+      {
+        "type": "text",
+        "id": "headline",
+        "label": "Headline"
+      },
+      {
+        "type": "select",
+        "id": "headline_size",
+        "label": "Headline Size",
+        "default": "large",
+        "options": [
+          {"value": "small", "label": "Small"},
+          {"value": "large", "label": "Large"}
+        ]
+      },
+      {
+        "type": "textarea",
+        "id": "content",
+        "label": "Content"
+      },
+      {
+        "type": "select",
+        "id": "section_width",
+        "label": "Section Width",
+        "default": "full",
+        "options": [
+          {"value": "full", "label": "Full"},
+          {"value": "container", "label": "Container"}
+        ]
+      },
+      {
+        "type": "select",
+        "id": "button_style",
+        "label": "Button Style",
+        "default": "link",
+        "options": [
+          {"value": "link", "label": "Link"},
+          {"value": "button", "label": "Button"}
+        ]
+      },
+{
+  "type": "header",
+  "content": "Section Margin"
+},
+{
+  "type": "select",
+  "id": "margin_top",
+  "label": "Margin Top",
+  "default": "default",
+  "options": [
+    {"value": "default", "label": "Theme Default"},
+    {"value": "0", "label": "None"},
+    {"value": "8px", "label": "8px"},
+    {"value": "16px", "label": "16px"},
+    {"value": "32px", "label": "32px"},
+    {"value": "48px", "label": "48px"},
+    {"value": "64px", "label": "64px"},
+    {"value": "102px", "label": "102px"}
+  ]
+},
+{
+  "type": "select",
+  "id": "margin_top_mobile",
+  "label": "Margin Top Mobile",
+  "default": "default",
+  "options": [
+    {"value": "default", "label": "Theme Default"},
+    {"value": "0", "label": "None"},
+    {"value": "8px", "label": "8px"},
+    {"value": "16px", "label": "16px"},
+    {"value": "32px", "label": "32px"},
+    {"value": "48px", "label": "48px"},
+    {"value": "64px", "label": "64px"},
+    {"value": "102px", "label": "102px"}
+  ]
+},
+{
+  "type": "select",
+  "id": "margin_bottom",
+  "label": "Margin Bottom",
+  "default": "default",
+  "options": [
+    {"value": "default", "label": "Theme Default"},
+    {"value": "0", "label": "None"},
+    {"value": "8px", "label": "8px"},
+    {"value": "16px", "label": "16px"},
+    {"value": "32px", "label": "32px"},
+    {"value": "48px", "label": "48px"},
+    {"value": "64px", "label": "64px"},
+    {"value": "102px", "label": "102px"}
+  ]
+},
+{
+  "type": "select",
+  "id": "margin_bottom_mobile",
+  "label": "Margin Bottom Mobile",
+  "default": "default",
+  "options": [
+    {"value": "default", "label": "Theme Default"},
+    {"value": "0", "label": "None"},
+    {"value": "8px", "label": "8px"},
+    {"value": "16px", "label": "16px"},
+    {"value": "32px", "label": "32px"},
+    {"value": "48px", "label": "48px"},
+    {"value": "64px", "label": "64px"},
+    {"value": "102px", "label": "102px"}
+  ]
+},
+{
+  "type": "header",
+  "content": "Section Padding"
+},
+{
+  "type": "select",
+  "id": "padding_top",
+  "label": "Padding Top",
+  "default": "default",
+  "options": [
+    {"value": "default", "label": "Theme Default"},
+    {"value": "0", "label": "None"},
+    {"value": "8px", "label": "8px"},
+    {"value": "16px", "label": "16px"},
+    {"value": "32px", "label": "32px"},
+    {"value": "48px", "label": "48px"},
+    {"value": "64px", "label": "64px"},
+    {"value": "102px", "label": "102px"}
+  ]
+},
+{
+  "type": "select",
+  "id": "padding_top_mobile",
+  "label": "Padding Top Mobile",
+  "default": "default",
+  "options": [
+    {"value": "default", "label": "Theme Default"},
+    {"value": "0", "label": "None"},
+    {"value": "8px", "label": "8px"},
+    {"value": "16px", "label": "16px"},
+    {"value": "32px", "label": "32px"},
+    {"value": "48px", "label": "48px"},
+    {"value": "64px", "label": "64px"},
+    {"value": "102px", "label": "102px"}
+  ]
+},
+{
+  "type": "select",
+  "id": "padding_bottom",
+  "label": "Padding Bottom",
+  "default": "default",
+  "options": [
+    {"value": "default", "label": "Theme Default"},
+    {"value": "0", "label": "None"},
+    {"value": "8px", "label": "8px"},
+    {"value": "16px", "label": "16px"},
+    {"value": "32px", "label": "32px"},
+    {"value": "48px", "label": "48px"},
+    {"value": "64px", "label": "64px"},
+    {"value": "102px", "label": "102px"}
+  ]
+},
+{
+  "type": "select",
+  "id": "padding_bottom_mobile",
+  "label": "Padding Bottom Mobile",
+  "default": "default",
+  "options": [
+    {"value": "default", "label": "Theme Default"},
+    {"value": "0", "label": "None"},
+    {"value": "8px", "label": "8px"},
+    {"value": "16px", "label": "16px"},
+    {"value": "32px", "label": "32px"},
+    {"value": "48px", "label": "48px"},
+    {"value": "64px", "label": "64px"},
+    {"value": "102px", "label": "102px"}
+  ]
+}
+    ],
+    "blocks": [
+      {
+        "type": "featured_block",
+        "name": "Featured Block",
+        "limit": 4,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image",
+            "info": "Dimensions 1280 x 1280"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "textarea",
+            "id": "content",
+            "label": "Content"
+          },
+          {
+            "type": "text",
+            "id": "cta_text",
+            "label": "CTA Text"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Featured Blocks"
+      }
+    ]
+  }
+{% endschema %}

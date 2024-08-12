@@ -1,0 +1,31 @@
+/* ============================================================================
+  Collection item
+============================================================================== */
+
+.collection-sorting {
+  display: inline-block;
+  vertical-align: middle;
+
+  dropdown-select {
+    min-width: 145px;
+
+    @include media-query($min, $medium) {
+      min-width: 220px;
+    }
+  }
+
+  ul {
+    max-height: none;
+    font-size: 1.4rem;
+
+    li {
+      padding-right: 26px !important;
+    }
+  }
+
+  select {
+    padding: 0 28px 0 0;
+    border: none;
+    background-position: right 10px center;
+  }
+}

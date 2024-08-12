@@ -1,0 +1,20 @@
+/* Snippets */
+@import '@/styles/snippets/collection-item';
+
+.limespot-recommendation-box-carousel-indicator {
+  &.indicator-left {
+    display: none !important;
+
+    @include media-query($min, $large) {
+      display: flex !important;
+    }
+  }
+
+  &.indicator-right {
+    display: none !important;
+
+    @include media-query($min, $large) {
+      display: flex !important;
+    }
+  }
+}

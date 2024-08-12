@@ -1,0 +1,130 @@
+{
+  "sections": {
+    "1656077658967ab68c": {
+      "type": "hero",
+      "blocks": {
+        "e07e792f-6675-491f-99df-7d86a6f9365f": {
+          "type": "hero_slide",
+          "settings": {
+            "desktop_layout": "image_1_content",
+            "desktop_image_1": "shopify:\/\/shop_images\/220727-collection-page-news-press.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/220727-collection-page-news-press.jpg",
+            "title": "News and Press",
+            "title_size": "heading-2",
+            "content": "Focused on sharing our lifestyle through premium products, experiences and service. See what others are saying about Southern Tide.",
+            "title_color": "#1c59a8",
+            "background_color": "#cde0f1",
+            "cta_1_text": "",
+            "cta_1_link": "",
+            "cta_1_color": "",
+            "cta_2_text": "",
+            "cta_2_link": "",
+            "cta_2_color": "",
+            "image_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "e07e792f-6675-491f-99df-7d86a6f9365f"
+      ],
+      "settings": {
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "0",
+        "margin_bottom_mobile": "0",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "48px",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "blog-filter": {
+      "type": "blog-filter",
+      "blocks": {
+        "1cc82ebc-dce0-4b39-af8b-2e556fc65927": {
+          "type": "tag",
+          "settings": {
+            "filter_text": "Style Guide",
+            "filter_tag": "style guide"
+          }
+        },
+        "6b60d734-5110-413b-9b2d-b795c59a4fd9": {
+          "type": "tag",
+          "settings": {
+            "filter_text": "Travel",
+            "filter_tag": "travel"
+          }
+        },
+        "099fbd3c-72b1-4412-9b64-ae7e870d3bd6": {
+          "type": "tag",
+          "settings": {
+            "filter_text": "Holiday and Gift Guides",
+            "filter_tag": "holiday and gift guides"
+          }
+        },
+        "94b29f4e-a88a-413e-a7fc-146734f92b8a": {
+          "type": "tag",
+          "settings": {
+            "filter_text": "Sports and Activities",
+            "filter_tag": "sports and activities"
+          }
+        },
+        "381f8ccd-203d-4391-87a2-5c8eb19083d8": {
+          "type": "tag",
+          "settings": {
+            "filter_text": "Lifestyle",
+            "filter_tag": "lifestyle"
+          }
+        },
+        "db2c1172-4873-4167-98fb-5fa8c7eff0ef": {
+          "type": "tag",
+          "settings": {
+            "filter_text": "About Southern Tide",
+            "filter_tag": "about southern tide"
+          }
+        }
+      },
+      "block_order": [
+        "1cc82ebc-dce0-4b39-af8b-2e556fc65927",
+        "6b60d734-5110-413b-9b2d-b795c59a4fd9",
+        "099fbd3c-72b1-4412-9b64-ae7e870d3bd6",
+        "94b29f4e-a88a-413e-a7fc-146734f92b8a",
+        "381f8ccd-203d-4391-87a2-5c8eb19083d8",
+        "db2c1172-4873-4167-98fb-5fa8c7eff0ef"
+      ],
+      "disabled": true,
+      "settings": {
+        "all_filter_text": "All Articles",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "main": {
+      "type": "blog",
+      "settings": {
+        "featured_article": "news\/southern-tide-teams-up-with-recess-pickleball-to-launch-limited-edition-coastal-inspired-paddles",
+        "featured_article_image": "shopify:\/\/shop_images\/MicrosoftTeams-image_7_19ca721c-1c11-4092-9dc9-1582c005a40b.jpg",
+        "featured_article_excerpt": "Southern Tide, the leader in premium coastal lifestyle apparel, is partnering with Austin, Texas-based, Recess Pickleball to launch a limited-edition collection of coastal-inspired pickleball paddles that aim to inspire creativity, fun, and style both on and off the courts.",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    }
+  },
+  "order": [
+    "1656077658967ab68c",
+    "blog-filter",
+    "main"
+  ]
+}

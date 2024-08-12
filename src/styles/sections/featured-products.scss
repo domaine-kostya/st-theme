@@ -1,0 +1,142 @@
+/* Snippets */
+@import '@/styles/snippets/collection-item';
+
+/* ============================================================================
+  Featured Products
+============================================================================== */
+
+.featured-products {
+  display: block;
+  margin-bottom: 50px;
+
+  @include media-query($min, $large) {
+    margin-bottom: 97px;
+    padding: 0 60px;
+  }
+
+  @include media-query($min, $xxlarge) {
+    padding: 0 90px;
+  }
+
+  .container {
+    max-width: none;
+  }
+}
+
+.featured-products__header {
+  text-align: center;
+
+  h2 {
+    margin-bottom: 28px;
+  }
+}
+
+.featured-products__nav {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 42px;
+
+  @include media-query($min, $small-medium) {
+    display: block;
+  }
+
+  @include media-query($min, $large) {
+    margin-bottom: 54px;
+  }
+
+  li {
+    margin: 0 10px;
+
+    @include media-query($min, $large) {
+      margin: 0 15px;
+    }
+  }
+
+  button {
+    &:not(.active) {
+      &::after {
+        opacity: 0;
+      }
+
+      &:hover {
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.featured-products__collection {
+  position: relative;
+
+  .swiper-container {
+    overflow: visible;
+
+    @include media-query($min, $large) {
+      overflow: hidden;
+    }
+  }
+
+  .swiper-slide {
+    width: 241px;
+
+    @include media-query($min, $large) {
+      width: calc(25% - 20px);
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    margin: -88px 0 0;
+    transform: translateY(-50%);
+    line-height: 52px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .swiper-button-prev {
+    left: -53px;
+
+    @include media-query($min, $xxlarge) {
+      left: -66px;
+    }
+  }
+
+  .swiper-button-next {
+    right: -83px;
+
+    @include media-query($min, $xxlarge) {
+      right: -94px;
+    }
+  }
+
+  .swiper-scrollbar {
+    position: relative !important;
+    height: 2px !important;
+    margin: 38px auto 32px;
+    overflow: hidden;
+    border-radius: 0;
+    background-color: $color-light-blue;
+
+    .swiper-scrollbar-drag {
+      border-radius: 0;
+      background-color: $color-primary;
+    }
+  }
+
+  .collection-item {
+    margin-bottom: 0;
+
+    @include media-query($min, $large) {
+      margin-bottom: 51px;
+    }
+  }
+}

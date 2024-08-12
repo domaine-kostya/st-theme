@@ -1,0 +1,65 @@
+{%- comment -%}
+  PARAMETERS
+  paginate : shopify's paginate liquid function (required)
+  classes : any additional classes needed (optional)
+
+  USAGE
+  {% render 'pagination', paginate: paginate, classes: 'collection__pagination' %}
+{%- endcomment -%}
+
+<nav role="navigation" class="pagination {{ classes }}" aria-label="Pagination">
+  <ol>
+    {%- if paginate.previous -%}
+      <li class="pagination__prev">
+        <a title="Go to Previous page" href="{{ paginate.previous.url }}">
+          {% render 'icon-pagination-chevron-left' %}
+          <span aria-hidden="true">{{ 'general.pagination.prev' | t }}</span>
+          <span class="visually-hidden">Go to Previous page</span>
+        </a>
+      </li>
+    {%- else -%}
+      {%- comment -%} Disabled State {%- endcomment -%}
+      <li class="pagination__prev pagination__prev--disabled" aria-hidden="true" aria-disabled="true">
+        {% render 'icon-pagination-chevron-left' %}
+        <span>{{ 'general.pagination.prev' | t }}</span>
+      </li>
+    {%- endif -%}
+
+    {%- for part in paginate.parts -%}
+      {%- if part.is_link -%}
+        <li class="pagination__page">
+          <a title="Go to Page {{ part.title }}" href="{{ part.url }}">
+            <span class="visually-hidden">Go to Page</span>
+            <span>{{ part.title }}</span>
+          </a>
+        </li>
+      {%- elsif part.title == paginate.current_page -%}
+        <li class="pagination__page pagination__page--current" aria-current="page">
+          <span class="visually-hidden">Current Page</span>
+          <span>{{ part.title }}</span>
+        </li>
+      {%- else -%}
+        {%- comment -%} Ellipsis (Ex: 1 2 3 ... 9) {%- endcomment -%}
+        <li class="pagination__page pagination__page--deco" aria-hidden="true">
+          <span>{{ part.title }}</span>
+        </li>
+      {%- endif -%}
+    {%- endfor -%}
+
+    {%- if paginate.next -%}
+      <li class="pagination__next">
+        <a title="Go to Next page" href="{{ paginate.next.url }}">
+          <span aria-hidden="true">{{ 'general.pagination.next' | t }}</span>
+          {% render 'icon-pagination-chevron-right' %}
+          <span class="visually-hidden">Go to Next page</span>
+        </a>
+      </li>
+    {%- else -%}
+      {%- comment -%} Disabled State {%- endcomment -%}
+      <li class="pagination__next pagination__next-disabled" aria-hidden="true" aria-disabled="true">
+        <span>{{ 'general.pagination.next' | t }}</span>
+        {% render 'icon-pagination-chevron-right' %}
+      </li>
+    {%- endif -%}
+  </ol>
+</nav>

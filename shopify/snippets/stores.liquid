@@ -1,0 +1,99 @@
+<div class="stores" role="region" aria-label="Southern Tide Stores" data-stores>
+  <div class="container">
+    <div class="stores__header">
+      <h2 class="heading-3">
+        {{ settings.stores_headline }}
+      </h2>
+
+      <p>
+        {{ settings.stores_content }}
+      </p>
+    </div>
+
+    <div class="stores__carousel">
+      <div class="swiper-button-prev d-none d-lg-block" data-stores-carousel-prev>
+        {% render 'icon-chevron-left-large' %}
+      </div>
+
+      <div class="swiper-button-next d-none d-lg-block" data-stores-carousel-next>
+        {% render 'icon-chevron-right-large' %}
+      </div>
+
+      <div class="swiper-container" data-stores-carousel>
+        <div class="swiper-wrapper">
+          {% for i in (1..25) %}
+            {% capture store_image %}store_{{ i }}_image{% endcapture %}
+            {% capture store_title %}store_{{ i }}_title{% endcapture %}
+            {% capture store_address_line_1 %}store_{{ i }}_address_line_1{% endcapture %}
+            {% capture store_address_line_2 %}store_{{ i }}_address_line_2{% endcapture %}
+            {% capture store_city_state %}store_{{ i }}_city_state{% endcapture %}
+            {% capture store_zip %}store_{{ i }}_zip{% endcapture %}
+            {% capture store_phone %}store_{{ i }}_phone{% endcapture %}
+            {% capture store_link %}store_{{ i }}_link{% endcapture %}
+            {% capture store_hours %}store_{{ i }}_hours{% endcapture %}
+
+            {% if settings[store_image] != blank %}
+              <div class="swiper-slide">
+                <div class="stores__block">
+                  <div class="stores__block-image">
+                    <div class="stores__block-image-wrapper img-cover">
+                      {{ settings[store_image] | image_url: width: 800 | image_tag: loading: 'lazy' }}
+                    </div>
+
+                    <div class="stores__block-image-overlay" style="background-color: {{ settings.stores_image_overlay_color }};"></div>
+
+                    <div class="stores__block-image-content">
+                      <p class="heading-4">
+                        {{ settings[store_title] }}
+                      </p>
+
+                      <p class="stores__block-image-address">
+                        {% if settings[store_address_line_1] != blank %}
+                          {{ settings[store_address_line_1] }}
+                        {% endif %}
+
+                        {% if settings[store_address_line_2] != blank %}
+                          {{ settings[store_address_line_2] }}
+                        {% endif %}
+
+                        {% if settings[store_city_state] != blank %}
+                          {{ settings[store_city_state] }}
+                        {% endif %}
+
+                        {% if settings[store_zip] != blank %}
+                          {{ settings[store_zip] }}
+                        {% endif %}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="text-center">
+                    {% if settings[store_hours] != blank %}
+                      {% unless settings[store_hours] contains '<strong>' %}
+                        <strong> {{ 'store_locator.hours' | t }}</strong>
+                      {% endunless %}
+
+                      <p>
+                        {{ settings[store_hours] | newline_to_br }}
+                      </p>
+
+                      {% if settings[store_phone] != blank %}
+                        <strong>{{ settings[store_phone] }}</strong>
+                      {% endif %}
+                    {% endif %}
+
+                    <br>
+
+                    <a class="ui-link" href="{{ settings[store_link] }}" title="{{ settings[store_title] }} - {{ 'store_locator.get_directions' | t }}">
+                      {{ 'store_locator.get_directions' | t }}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

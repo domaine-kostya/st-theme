@@ -1,0 +1,88 @@
+{% if section.settings.enable %}
+  <script src="{{ 'sections.newsletter-popup.js' | asset_url }}" defer="defer"></script>
+  {{ 'sections.newsletter-popup.css' | asset_url | stylesheet_tag }}
+
+  <div class="newsletter-popup hide" role="region" aria-label="Newsletter Popup" data-newsletter-popup>
+    <div class="newsletter-popup__content">
+      <button class="newsletter-popup__close" type="button" aria-label="Close Newsletter Popup" data-newsletter-popup-close>
+        {% render 'icon-close-small' %}
+      </button>
+
+      <div class="newsletter-popup__image-wrapper">
+        {{ section.settings.image | image_url: width: 82 | image_tag: loading: 'lazy' }}
+      </div>
+
+      <strong class="heading-4">
+        {{ section.settings.title }}
+      </strong>
+
+      {% render 'newsletter-form',
+        list_id: section.settings.klaviyo_list_id,
+        bump_id: section.settings.sms_bump_id,
+        email_placeholder: section.settings.email_input_text,
+        sms_placeholder: section.settings.phone_input_text,
+        submit_text: section.settings.cta_text
+      %}
+
+      <p>
+        {{ section.settings.content }}
+      </p>
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+  {
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable",
+        "label": "Enable"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image",
+        "info": "Dimensions 164 x 126"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "email_input_text",
+        "label": "Email Input Text",
+        "default": "Email address"
+      },
+      {
+        "type": "text",
+        "id": "phone_input_text",
+        "label": "Phone Input Text",
+        "default": "Phone (optional)"
+      },
+      {
+        "type": "text",
+        "id": "cta_text",
+        "label": "CTA Text",
+        "default": "Sign up"
+      },
+      {
+        "type": "text",
+        "id": "klaviyo_list_id",
+        "label": "Klaviyo List ID"
+      },
+      {
+        "type": "text",
+        "id": "sms_bump_id",
+        "label": "SMS Bump ID"
+      },
+      {
+        "type": "textarea",
+        "id": "content",
+        "label": "Content"
+      }
+    ]
+  }
+{% endschema %}

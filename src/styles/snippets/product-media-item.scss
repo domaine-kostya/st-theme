@@ -1,0 +1,10 @@
+.product-media-item {
+  position: relative;
+  width: 100%;
+
+  img,
+  video,
+  model-viewer {
+    display: block;
+  }
+}

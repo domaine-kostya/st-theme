@@ -1,0 +1,619 @@
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "1658335330d6219cb0": {
+      "type": "image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/190409-ambassador-LP-Recovered_01_92edfe31-2c56-46d3-8b32-5018c6ee50b3.jpg"
+      }
+    },
+    "1658335349f691c78b": {
+      "type": "banner",
+      "settings": {
+        "enable_full_width": true,
+        "background_color": "#ffffff",
+        "overlay_opacity": 0,
+        "overlay_color": "#313133",
+        "mobile_headline": "",
+        "headline": "#FOLLOWTHETIDE",
+        "headline_color": "#1c59a8",
+        "mobile_content": "",
+        "content": "We're all about having a good time, being on the water, and traveling to new places - which is why our Southern Tide Ambassador program is a community of passionate and inspirational people across the country. While the interests and hobbies of these ambassadors range from fishing to Greek life to adventures abroad to athletics, they are all linked by their passion for the Southern Tide brand and lifestyle.",
+        "content_color": "#313133",
+        "cta_text": "",
+        "cta_link": "",
+        "cta_color": "#1c59a8",
+        "cta_text_color": "#1C59A8",
+        "cta_style": "outline",
+        "cta_2_text": "",
+        "cta_2_link": "",
+        "cta_2_color": "#1C59A8",
+        "cta_2_text_color": "#1C59A8",
+        "cta_2_style": "outline",
+        "cta_3_text": "",
+        "cta_3_link": "",
+        "cta_3_color": "#1C59A8",
+        "cta_3_text_color": "#1C59A8",
+        "show_buttons_on_separate_lines": false,
+        "cta_3_style": "outline",
+        "desktop_vertical_content_position": "middle",
+        "desktop_horizontal_content_position": "center",
+        "desktop_text_alignment": "center",
+        "mobile_vertical_content_position": "middle",
+        "mobile_horizontal_content_position": "center",
+        "mobile_text_alignment": "center",
+        "desktop_height": "natural",
+        "mobile_height": "large",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "0",
+        "margin_bottom_mobile": "0"
+      }
+    },
+    "165833828769bec47d": {
+      "type": "banner",
+      "settings": {
+        "enable_full_width": true,
+        "background_color": "#f2f2f2",
+        "overlay_opacity": 0,
+        "overlay_color": "#313133",
+        "mobile_headline": "",
+        "headline": "Want to be a #STAMBASSADOR?",
+        "headline_color": "#1c59a8",
+        "mobile_content": "",
+        "content": "",
+        "content_color": "#313133",
+        "cta_text": "Apply now",
+        "cta_link": "https:\/\/join.collabs.shopify.com\/community\/apply\/wSDNJ6MvQ98\/",
+        "cta_color": "#1c59a8",
+        "cta_text_color": "#1C59A8",
+        "cta_style": "outline",
+        "cta_2_text": "",
+        "cta_2_link": "",
+        "cta_2_color": "#1C59A8",
+        "cta_2_text_color": "#1C59A8",
+        "cta_2_style": "outline",
+        "cta_3_text": "",
+        "cta_3_link": "",
+        "cta_3_color": "#1C59A8",
+        "cta_3_text_color": "#1C59A8",
+        "show_buttons_on_separate_lines": false,
+        "cta_3_style": "outline",
+        "desktop_vertical_content_position": "middle",
+        "desktop_horizontal_content_position": "center",
+        "desktop_text_alignment": "center",
+        "mobile_vertical_content_position": "middle",
+        "mobile_horizontal_content_position": "center",
+        "mobile_text_alignment": "center",
+        "desktop_height": "small",
+        "mobile_height": "small",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default"
+      }
+    },
+    "1658338360ceb5da08": {
+      "type": "ambassadors",
+      "blocks": {
+        "1a94e033-8fdc-4e9b-8fef-91b0464b2403": {
+          "type": "ambassador",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/alix-highes-web-image_8b838875-e98b-4bbf-889f-22514285e8cb.jpg",
+            "name": "Alix Hughes",
+            "position": "Content Creator",
+            "handle": "@alixryanhughes",
+            "link": "https:\/\/www.instagram.com\/alixryanhughes\/"
+          }
+        },
+        "4416330a-7788-4018-aee4-af579ae49d74": {
+          "type": "ambassador",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/allison-lee-web-image_7fb152d7-76d2-4818-921d-29ef8638a53f.jpg",
+            "name": "Allison Lee",
+            "position": "Photographer",
+            "handle": "@allison.lee_",
+            "link": "https:\/\/www.instagram.com\/allison.lee_\/"
+          }
+        },
+        "c21a4937-7ab5-478c-953c-8f6043d35f6d": {
+          "type": "ambassador",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/200207-ambassador-pic-adam-giard_516x_6cee23ba-bd8b-43d2-baea-e47d6f7b7e9a.jpg",
+            "name": "Adam Giard",
+            "position": "Content Creator",
+            "handle": "@adam.giard",
+            "link": "https:\/\/www.instagram.com\/adam.giard\/"
+          }
+        },
+        "4c33cc7f-9721-457d-8c62-e78fffe6a5d7": {
+          "type": "ambassador",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/cole-butenhoff-web-image_e3aecfe8-84a9-48e0-b9b1-d71dde1817b3.jpg",
+            "name": "Cole Butenhoff",
+            "position": "Sales Professional",
+            "handle": "@cole_butenhoff",
+            "link": "https:\/\/www.instagram.com\/cole_butenhoff\/"
+          }
+        },
+        "4fd54f29-dbd1-4a46-8ee0-35c581fd6ee9": {
+          "type": "ambassador",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/corbin-caroll-web-image_652baf25-64cb-4acb-b9e4-4ac8604365d3.jpg",
+            "name": "Corbin Carroll",
+            "position": "Entrepreneur",
+            "handle": "@hardcorbin",
+            "link": "https:\/\/www.instagram.com\/hardcorbin\/"
+          }
+        },
+        "0dff4188-64c9-4afa-8cbe-fd3d3bf0982d": {
+          "type": "ambassador",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/190813-ambassador-pic-drew-schaumann_f81b1b32-45a0-4803-b08d-1808bf1b2857.jpg",
+            "name": "Drew Schaumann",
+            "position": "Firefighter",
+            "handle": "@officialschaumann",
+            "link": "https:\/\/www.instagram.com\/officialschaumann\/"
+          }
+        },
+        "eaae9dd1-d173-4180-89ab-4bc8491ccc6e": {
+          "type": "ambassador",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/dillon-staples-web-image_f928bcad-6c54-4771-b1a5-c7fde5bcd5b6.jpg",
+            "name": "Dillon Staples",
+            "position": "Luxury Real Estate Agent",
+            "handle": "@dillon_staples",
+            "link": "https:\/\/www.instagram.com\/dillon_staples\/"
+          }
+        },
+        "f4f8efb4-97dc-475d-bda9-474bde457038": {
+          "type": "ambassador",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/200107-ambassador-pic-james-lancaster_cf8dc196-8fcd-45d9-83f1-b9a18d56fe0e.jpg",
+            "name": "James Lancaster",
+            "position": "Gym Owner",
+            "handle": "@_jlancaster_",
+            "link": "https:\/\/www.instagram.com\/_jlancaster_\/"
+          }
+        },
+        "fc89856f-69ff-4766-b928-c973f78a883e": {
+          "type": "ambassador",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MicrosoftTeams-image_19_eb98e2a1-a5c7-4707-b212-60c7315ac433.jpg",
+            "name": "Jack Nickoley",
+            "position": "Senior District Manager",
+            "handle": "@jacknickoley11",
+            "link": "https:\/\/www.instagram.com\/jacknickoley11\/"
+          }
+        },
+        "15b276b4-e07f-4527-8923-d4a93d37eb94": {
+          "type": "ambassador",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/kyle-kampsen-web-image_4d34cde5-afb5-48a6-89d5-6c0c15113bba.jpg",
+            "name": "Kyle Kampsen",
+            "position": "US Air Force Pilot",
+            "handle": "@kykampp",
+            "link": "https:\/\/www.instagram.com\/kykampp\/"
+          }
+        },
+        "17b6e8e3-0b1b-4943-944e-736be75054a1": {
+          "type": "ambassador",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/layne-little-web-image_32830a60-f295-46db-bf02-702d8af28ec4.jpg",
+            "name": "Layne Little",
+            "position": "Photographer",
+            "handle": "@therosemaryhen",
+            "link": "https:\/\/www.instagram.com\/therosemaryhen\/"
+          }
+        },
+        "34ca7bb8-4358-4965-9b0f-8dc5c2367404": {
+          "type": "ambassador",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/max-muskat-web-image.jpg",
+            "name": "Max Muskat",
+            "position": "Marketing Professional & US Navy Veteran",
+            "handle": "@max_muskat",
+            "link": "https:\/\/www.instagram.com\/max_muskat\/"
+          }
+        },
+        "4d126297-e395-4978-a587-0dca861e2101": {
+          "type": "ambassador",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mckenna-Ma-Web-Image.jpg",
+            "name": "Mckenna Ma",
+            "position": "Undergraduate Research Assistant",
+            "handle": "@mckennam7",
+            "link": "https:\/\/www.instagram.com\/mckennam7\/"
+          }
+        },
+        "f68033da-7d11-48c1-8a86-d8358dc94a92": {
+          "type": "ambassador",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/190813-ambassador-pic-ryan-dukes_8a6b1313-ab9e-4ad6-9141-19b2d4af9244.jpg",
+            "name": "Ryan Dukes",
+            "position": "Air Force Veteran",
+            "handle": "@rdukes13",
+            "link": "https:\/\/www.instagram.com\/rdukes13\/"
+          }
+        },
+        "616b7c45-c07a-4d31-a8bf-ced334ec64dc": {
+          "type": "ambassador",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/sunny-carroll-web-image_c72cf1a5-c321-4945-b8fa-c60507ca877a.jpg",
+            "name": "Sunny Carroll",
+            "position": "Entrepreneur",
+            "handle": "@floridiansunshine",
+            "link": "https:\/\/www.instagram.com\/floridiansunshine\/"
+          }
+        },
+        "6c171617-cccd-4b19-b9f7-e09982800d82": {
+          "type": "ambassador",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/sarah-moehling-web-image_d95147d4-9df2-46ad-9c61-1a268d5b1c7d.jpg",
+            "name": "Sarah Moehling",
+            "position": "Marketing Professional & Model",
+            "handle": "@sarah_moehling",
+            "link": "https:\/\/www.instagram.com\/sarah_moehling\/"
+          }
+        },
+        "9595844b-48c9-4f45-bc80-db48cee106f2": {
+          "type": "ambassador",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/savannah-cole-web-image_b3b214e6-0664-4e96-ae4a-bcede5117447.jpg",
+            "name": "Savannah Cole",
+            "position": "Public Relations Professional",
+            "handle": "@savvyhales",
+            "link": "https:\/\/www.instagram.com\/savvyhales\/"
+          }
+        },
+        "8e814a01-22e1-432b-b69c-134a0ccebe37": {
+          "type": "ambassador",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/190813-ambassador-pic-teddy-giard_11b2b461-3efe-4c51-a48d-ca22a59b45cd.jpg",
+            "name": "Teddy Giard",
+            "position": "Film Director",
+            "handle": "@teddyg111",
+            "link": "https:\/\/www.instagram.com\/teddyg111\/"
+          }
+        }
+      },
+      "block_order": [
+        "1a94e033-8fdc-4e9b-8fef-91b0464b2403",
+        "4416330a-7788-4018-aee4-af579ae49d74",
+        "c21a4937-7ab5-478c-953c-8f6043d35f6d",
+        "4c33cc7f-9721-457d-8c62-e78fffe6a5d7",
+        "4fd54f29-dbd1-4a46-8ee0-35c581fd6ee9",
+        "0dff4188-64c9-4afa-8cbe-fd3d3bf0982d",
+        "eaae9dd1-d173-4180-89ab-4bc8491ccc6e",
+        "f4f8efb4-97dc-475d-bda9-474bde457038",
+        "fc89856f-69ff-4766-b928-c973f78a883e",
+        "15b276b4-e07f-4527-8923-d4a93d37eb94",
+        "17b6e8e3-0b1b-4943-944e-736be75054a1",
+        "34ca7bb8-4358-4965-9b0f-8dc5c2367404",
+        "4d126297-e395-4978-a587-0dca861e2101",
+        "f68033da-7d11-48c1-8a86-d8358dc94a92",
+        "616b7c45-c07a-4d31-a8bf-ced334ec64dc",
+        "6c171617-cccd-4b19-b9f7-e09982800d82",
+        "9595844b-48c9-4f45-bc80-db48cee106f2",
+        "8e814a01-22e1-432b-b69c-134a0ccebe37"
+      ],
+      "settings": {
+        "headline": "Lifestyle Ambassadors",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "1660078291221caae4": {
+      "type": "ambassadors",
+      "blocks": {
+        "77068511-79cf-4cc9-957d-0a78cd03fd86": {
+          "type": "ambassador",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/andrew-marrs-web-image_fc4d0513-d6ea-4341-9248-434715b6fce2.jpg",
+            "name": "Andrew Marrs",
+            "position": "Golf | Morehead State University",
+            "handle": "@andrew_marrs_",
+            "link": "https:\/\/www.instagram.com\/andrew_marrs_\/"
+          }
+        },
+        "2d0bcbfe-2c4c-49a4-9369-332acf3590d3": {
+          "type": "ambassador",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/200918-ambassador-pic-brooklynn-mitchell_516x_460ee2c0-29a8-4355-8fe6-6bf3cad73936.jpg",
+            "name": "Brooklyn Mitchell",
+            "position": "NFL Cheerleader",
+            "handle": "@brooklynn_mitchell",
+            "link": "https:\/\/www.instagram.com\/brooklynn_mitchell\/"
+          }
+        },
+        "c12b4a97-6905-45b9-8f4a-be26637e8f94": {
+          "type": "ambassador",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/calahan-keever_1216230d-e2d2-40a3-8ec8-25fd2efb7808.jpg",
+            "name": "Calahan Keever",
+            "position": "Golf | Anderson University",
+            "handle": "@calahan_keever",
+            "link": "https:\/\/www.instagram.com\/calahan_keever\/"
+          }
+        },
+        "b7b74ce7-0121-4f99-8492-8c709e3d3266": {
+          "type": "ambassador",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/200918-ambassador-pic-carson-coleman_516x_2a214d73-8476-4cfd-a300-cad0001469b9.webp",
+            "name": "Carson Coleman",
+            "position": "Pro Baseball Pitcher",
+            "handle": "@carson_coleman34",
+            "link": "https:\/\/www.instagram.com\/carson_coleman34\/"
+          }
+        },
+        "0738599c-688f-46e2-92df-6bc4260fd644": {
+          "type": "ambassador",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/camden-murphy-web-image_8e0d9716-e1e4-41b9-933c-b0bd4474b8e1.jpg",
+            "name": "Camden Murphy",
+            "position": "Swim | University of Georgia",
+            "handle": "@camdenmurphy1",
+            "link": "https:\/\/www.instagram.com\/camdenmurphy1\/"
+          }
+        },
+        "3c7df184-0ab3-4a9a-95f9-519059ae2788": {
+          "type": "ambassador",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/kaeli-crews-web-image_3c79c014-a715-4cc9-a7c4-374411e6d3e3.jpg",
+            "name": "Kaeli Crews",
+            "position": "Beach Volleyball | University of South Carolina",
+            "handle": "@kaeli.crews",
+            "link": "https:\/\/www.instagram.com\/kaeli.crews\/"
+          }
+        },
+        "54bd947a-ab58-4942-a6e1-bc86aad231d6": {
+          "type": "ambassador",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Morgan-Schwab-Web-Image.png",
+            "name": "Morgan Schwab",
+            "position": "Lacrosse | University of Virginia",
+            "handle": "@morganschwab",
+            "link": "https:\/\/www.instagram.com\/morganschwab\/"
+          }
+        },
+        "d81c26f4-6c37-447b-a5bd-5c7ab34fb51a": {
+          "type": "ambassador",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/190813-ambassador-pic-mike-freeman_516x_a0c8e2b1-4f6d-49fc-a860-c20cd27e8480.webp",
+            "name": "Mike Freeman",
+            "position": "Pro Baseball Infielder",
+            "handle": "@mikebfree5",
+            "link": "https:\/\/www.instagram.com\/mikebfree5\/"
+          }
+        },
+        "7ee92205-1319-48a6-bf13-a0af663acf93": {
+          "type": "ambassador",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Nolan-Crisp-Web-Image.jpg",
+            "name": "Nolan Crisp",
+            "position": "Baseball | University of Georgia",
+            "handle": "@nolancrisp1",
+            "link": "https:\/\/www.instagram.com\/nolancrisp1\/"
+          }
+        },
+        "9a8ef088-b09f-4e51-9493-f28f28f5d94d": {
+          "type": "ambassador",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Peyton-Stearns-Web-Image.png",
+            "name": "Peyton Stearns",
+            "position": "Tennis | University of Texas at Austin",
+            "handle": "@peystearns",
+            "link": "https:\/\/www.instagram.com\/peystearns\/"
+          }
+        }
+      },
+      "block_order": [
+        "77068511-79cf-4cc9-957d-0a78cd03fd86",
+        "2d0bcbfe-2c4c-49a4-9369-332acf3590d3",
+        "c12b4a97-6905-45b9-8f4a-be26637e8f94",
+        "b7b74ce7-0121-4f99-8492-8c709e3d3266",
+        "0738599c-688f-46e2-92df-6bc4260fd644",
+        "3c7df184-0ab3-4a9a-95f9-519059ae2788",
+        "54bd947a-ab58-4942-a6e1-bc86aad231d6",
+        "d81c26f4-6c37-447b-a5bd-5c7ab34fb51a",
+        "7ee92205-1319-48a6-bf13-a0af663acf93",
+        "9a8ef088-b09f-4e51-9493-f28f28f5d94d"
+      ],
+      "settings": {
+        "headline": "Athlete Ambassadors",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "165833649833f6f8eb": {
+      "type": "ambassadors",
+      "blocks": {
+        "3aae8bd2-ecd4-458a-ac4f-e0ddd267e2b9": {
+          "type": "ambassador",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Cole-Greene-Web-Image.jpg",
+            "name": "Cole Greene",
+            "position": "Palm Beach Atlantic University",
+            "handle": "@colegree",
+            "link": "https:\/\/www.instagram.com\/colegree\/"
+          }
+        },
+        "8ec72868-6f85-4006-b0b9-53f5c45ca167": {
+          "type": "ambassador",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/200612-ambassador-pic-derek-hawk_30153944-5043-40c5-811e-f33dbf25349a.jpg",
+            "name": "Derek Hawk",
+            "position": "Ohio State University",
+            "handle": "@dhawk2",
+            "link": "https:\/\/www.instagram.com\/dhawk2\/"
+          }
+        },
+        "95711e28-5ef3-47b1-b3a9-65aa8aad00cd": {
+          "type": "ambassador",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/grayson-atkins-web-image_11fb261f-99d8-4dcb-9f12-c3bec634ad93.jpg",
+            "name": "Grayson Atkins",
+            "position": "University of North Carolina Graduate Student",
+            "handle": "@g_atkins17",
+            "link": "https:\/\/www.instagram.com\/g_atkins17\/"
+          }
+        },
+        "3a295e45-86df-4438-89de-6c9f225153c5": {
+          "type": "ambassador",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Sydney-Butenhoff-Web-Image.jpg",
+            "name": "Sydney Butenhoff",
+            "position": "Clemson University",
+            "handle": "@sydneybutenhoff",
+            "link": "https:\/\/www.instagram.com\/sydneybutenhoff\/"
+          }
+        },
+        "7c271ff8-7c71-49b7-8e04-696949a05a5e": {
+          "type": "ambassador",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Wyatt-Greene-Web-Imagejpg.jpg",
+            "name": "Wyatt Greene",
+            "position": "Palm Beach Atlantic University",
+            "handle": "@wyattgree",
+            "link": "https:\/\/www.instagram.com\/wyattgree\/"
+          }
+        }
+      },
+      "block_order": [
+        "3aae8bd2-ecd4-458a-ac4f-e0ddd267e2b9",
+        "8ec72868-6f85-4006-b0b9-53f5c45ca167",
+        "95711e28-5ef3-47b1-b3a9-65aa8aad00cd",
+        "3a295e45-86df-4438-89de-6c9f225153c5",
+        "7c271ff8-7c71-49b7-8e04-696949a05a5e"
+      ],
+      "settings": {
+        "headline": "College Ambassadors",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "16583354071199e496": {
+      "type": "content-blocks",
+      "blocks": {
+        "09aceb2d-ab8b-4226-816e-a6ea978408ab": {
+          "type": "content_block",
+          "settings": {
+            "mobile_image": "shopify:\/\/shop_images\/all-is-swell-2-v_1.jpg",
+            "image": "shopify:\/\/shop_images\/all-is-swell-2-h_1.jpg",
+            "video_file_url": "",
+            "mobile_video_file_url": "",
+            "enable_full_width_video": true,
+            "video_embed": "https:\/\/www.youtube.com\/watch?v=zYukgu_ObQg&feature=emb_title",
+            "video_description": "",
+            "mobile_video_embed": "",
+            "background_color": "#cde0f1",
+            "width": "full",
+            "content_position": "right",
+            "headline": "",
+            "content": "",
+            "cta_1_text": "",
+            "cta_1_link": "",
+            "cta_1_style": "solid",
+            "cta_2_text": "",
+            "cta_2_link": "",
+            "cta_2_style": "outline",
+            "feature_1_text": "",
+            "feature_2_text": "",
+            "feature_3_text": "",
+            "feature_4_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "09aceb2d-ab8b-4226-816e-a6ea978408ab"
+      ],
+      "settings": {
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "0",
+        "margin_bottom_mobile": "0",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "1658335475289a7632": {
+      "type": "banner",
+      "settings": {
+        "enable_full_width": true,
+        "background_color": "#ffffff",
+        "overlay_opacity": 0,
+        "overlay_color": "#313133",
+        "mobile_headline": "",
+        "headline": "#STAMBASSADOR",
+        "headline_color": "#1c59a8",
+        "mobile_content": "",
+        "content": "",
+        "content_color": "#313133",
+        "cta_text": "",
+        "cta_link": "",
+        "cta_color": "#1c59a8",
+        "cta_text_color": "#1C59A8",
+        "cta_style": "outline",
+        "cta_2_text": "",
+        "cta_2_link": "",
+        "cta_2_color": "#1C59A8",
+        "cta_2_text_color": "#1C59A8",
+        "cta_2_style": "outline",
+        "cta_3_text": "",
+        "cta_3_link": "",
+        "cta_3_color": "#1C59A8",
+        "cta_3_text_color": "#1C59A8",
+        "show_buttons_on_separate_lines": false,
+        "cta_3_style": "outline",
+        "desktop_vertical_content_position": "middle",
+        "desktop_horizontal_content_position": "center",
+        "desktop_text_alignment": "center",
+        "mobile_vertical_content_position": "middle",
+        "mobile_horizontal_content_position": "center",
+        "mobile_text_alignment": "center",
+        "desktop_height": "natural",
+        "mobile_height": "large",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "0"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1658335330d6219cb0",
+    "1658335349f691c78b",
+    "165833828769bec47d",
+    "1658338360ceb5da08",
+    "1660078291221caae4",
+    "165833649833f6f8eb",
+    "16583354071199e496",
+    "1658335475289a7632"
+  ]
+}

@@ -1,0 +1,94 @@
+<ajax-cart class="ajaxcart" role="region" aria-label="{{ 'cart.general.title' | t }}">
+  <custom-cart
+    data-spend-x-get-y-or-z-gift-promo-active="{{ settings.enable_spend_x_get_y_or_z }}"
+    data-spend-threshold-gifts-promo-active="{{ settings.enable_spend_x_get_y }}"
+    data-giftcard-promo-active="{{ settings.enable_spend_x_get_y_gift_card }}"
+    data-spending-tiers-promo-active="{{ settings.enable_spend_x_get_y_off }}"
+  >
+    <div class="ajaxcart__header">
+      <div class="ajaxcart__header-main">
+        <h3 class="heading-5 ajaxcart__header-title">
+          {{ 'cart.general.title' | t }}
+
+          <hide-if-cart-empty>
+            <span class="ajaxcart__header-item-count">
+            (<cart-count>{{ cart.item_count }}</cart-count>)
+            </span>
+          </hide-if-cart-empty>
+        </h3>
+
+        <button class="ajaxcart__header-close" aria-label="Close Ajax Cart" data-close-ajaxcart>
+          {% render 'icon-close' %}
+        </button>
+      </div>
+
+      {% render 'ajaxcart-fsb' %}
+    </div>
+
+    <hide-if-cart-empty class="ajaxcart__content">
+      {% if settings.enable_cpb_drawer and settings.cpb_drawer_location == 'top' %}
+        {% render 'cart-promo-banner' with key: 'drawer' %}
+      {% endif %}
+
+      {% if settings.enable_spend_x_get_y %}
+        {% render 'cart-reward-threshold' %}
+      {% endif %}
+
+      <span class="ajaxcart__success hide" data-ajaxcart-success>
+        {% render 'icon-check' %}
+
+        <span>
+          {{ 'cart.general.added_to_bag' | t }}
+        </span>
+      </span>
+
+      <cart-items class="ajaxcart__items">
+        {% comment %}
+          Cart Items Generated From src/scripts/cart/components/cart-items.js
+        {% endcomment %}
+        <div class="cart-loading" data-cart-loading>Loading..</div>
+      </cart-items>
+
+      {% if settings.enable_cpb_drawer and settings.cpb_drawer_location == 'bottom' %}
+        {% render 'cart-promo-banner' with key: 'drawer' %}
+      {% endif %}
+
+      <div class="ajaxcart__footer">
+        <div class="ajaxcart__summary">
+          <show-if-cart-discounts class="ajaxcart__summary-item">
+            <strong>{{ 'cart.general.discounts' | t }}</strong>
+            <strong>-<cart-discounts>{{ cart.total_discount | money }}</cart-discounts></strong>
+          </show-if-cart-discounts>
+
+          <p class="ajaxcart__summary-item">
+            <strong>{{ 'cart.general.subtotal' | t }}</strong>
+            <strong><cart-total>{{ cart.total_price | money }}</cart-total></strong>
+          </p>
+        </div>
+
+        <p class="ajaxcart__disclaimer p--small">
+          {{ 'cart.general.ajaxcart_disclaimer' | t }}
+        </p>
+
+        <div class="ajaxcart__buttons d-flex">
+          <a href="{{ routes.cart_url }}" class="btn btn--outline">
+            {{ 'cart.general.view_cart' | t }}
+          </a>
+
+          <a class="btn btn--primary btn--full cart_checkout" href="/checkout" class="btn btn--primary">
+            {{ 'cart.general.proceed_to_checkout' | t }}
+          </a>
+        </div>
+
+      </div>
+    </hide-if-cart-empty>
+
+    {% render 'ajaxcart-empty' %}
+  </custom-cart>
+</ajax-cart>
+
+{% if settings.enable_cpb_takeover %}
+  <ajax-cart-takeover class="cart-promo-takeover">
+    {% render 'cart-promo-banner' with key: 'takeover' %}
+  </ajax-cart-takeover>
+{% endif %}

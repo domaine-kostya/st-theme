@@ -1,0 +1,26 @@
+/* Components */
+@import '@/styles/snippets/collection-item';
+
+.search__header {
+  margin-bottom: 40px;
+
+  .search-bar {
+    position: relative;
+
+    button {
+      position: absolute;
+      top: 11px;
+      right: 20px;
+    }
+  }
+}
+
+.boost-pfs-filter-products {
+  @include media-query($max, 767px) {
+    width: calc(100% + 30px);
+  }
+
+  @include media-query($min, 768px) {
+    margin-left: -12.5px;
+  }
+}

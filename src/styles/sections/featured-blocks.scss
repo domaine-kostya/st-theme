@@ -1,0 +1,77 @@
+/* ============================================================================
+  Featured Blocks
+============================================================================== */
+
+.featured-blocks {
+  margin-bottom: 10px;
+  padding: 0 $container-padding;
+
+  @include media-query($min, $medium) {
+    margin-bottom: 108px;
+    padding: 0;
+  }
+
+  .container {
+    @include media-query($max, $pre-medium) {
+      padding: 0;
+    }
+  }
+}
+
+.featured-blocks__header {
+  margin-bottom: 48px;
+  text-align: center;
+
+  @include media-query($min, $medium) {
+    padding: 0 $container-padding;
+  }
+
+  .featured-blocks--container & {
+    margin-bottom: 28px;
+  }
+
+  h2 {
+    margin-bottom: 24px;
+  }
+
+  p {
+    max-width: 620px;
+    margin: 0 auto;
+  }
+}
+
+.featured-blocks__block {
+  margin-bottom: 40px;
+  text-align: center;
+
+  @include media-query($min, $medium) {
+    margin-bottom: 0;
+  }
+
+  @include media-query($min, $large) {
+    a:hover img {
+      transform: scale(1.1);
+    }
+
+    img {
+      transition: transform $transition-slow;
+    }
+  }
+
+  &.col-md-6 {
+    margin-bottom: 40px;
+
+    @include media-query($min, $large) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.featured-blocks__image {
+  margin-bottom: 25px;
+  overflow: hidden;
+}
+
+.featured-blocks__block-content {
+  padding: 0 20px;
+}

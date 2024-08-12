@@ -1,0 +1,157 @@
+{%- liquid
+  assign bundle_count = 0
+  assign bundle_original_price = 0
+
+  for index in (1..6)
+    assign bundle_product_index = 'bundle_product_' | append: index
+    assign bundle_product = all_products[product.metafields.custom_fields[bundle_product_index]]
+
+    if bundle_product  != blank
+      assign bundle_original_price  = bundle_original_price | plus: bundle_product.price
+      assign bundle_count = bundle_count | plus: 1
+    endif
+  endfor
+
+  assign bundle_price = bundle_original_price
+  assign bundle_discount_type = product.metafields.custom_fields.bundle_discount_type | default: 'tag'
+  assign bundle_discount_percent = 0
+  assign bundle_discount_amount = 0
+
+  if bundle_discount_type == 'percent'
+    assign bundle_discount_percent = product.metafields.custom_fields.bundle_discount_percent | plus: 0.0
+  elsif bundle_discount_type == 'tag'
+    for tag in product.tags
+      if tag contains 'bundle-discount--'
+        assign bundle_discount_percent = tag | remove: 'bundle-discount--' | times: 1.0
+        assign bundle_discount_type = 'percent'
+        break
+      endif
+    endfor
+  endif
+
+  if bundle_discount_type == 'percent'
+    assign discount_multiplier = bundle_discount_percent | divided_by: 100.0
+    assign savings = bundle_original_price | times: discount_multiplier
+  elsif bundle_discount_type == 'amount'
+    assign bundle_discount_amount = product.metafields.custom_fields.bundle_discount_amount | times: 100.0
+    assign savings = bundle_discount_amount | times: bundle_count
+  endif
+
+  assign bundle_price = bundle_original_price | minus: savings
+-%}
+
+{% if bundle_count > 0 %}
+  <div data-bundle
+    data-bundle-handle="{{ product.handle }}"
+    data-bundle-title="{{ product.title }}"
+    data-bundle-image="{{ product.featured_image | img_url: '250x250' }}"
+    data-bundle-id="{{ product.selected_or_first_available_variant.id }}"
+    data-bundle-sku="{{ product.selected_or_first_available_variant.sku }}"
+    data-bundle-price="{{ bundle_price }}"
+  >
+    <div class="product__meta">
+      <span class="product__price {% if bundle_price != bundle_original_price %}product__price--on-sale{% endif %} heading-5">
+        {{ bundle_price | money }}
+      </span>
+
+      {% if bundle_price != bundle_original_price %}
+        <s class="product__price product__price--compare heading-5">
+          {{ bundle_original_price | money }}
+        </s>
+      {% endif %}
+    </div>
+
+    {% for index in (1..bundle_count) %}
+      {% assign bundle_product_index = 'bundle_product_' | append: index %}
+      {% assign bundle_product = all_products[product.metafields.custom_fields[bundle_product_index]] %}
+
+      {% if bundle_product != blank %}
+        {%- liquid
+          assign bundle_product_original_price = bundle_product.price
+          assign product_savings = 0
+
+          if bundle_discount_type == 'percent' and bundle_discount_percent > 0
+            assign discount_multiplier = bundle_discount_percent | divided_by: 100.0
+            assign product_savings = bundle_product_original_price | times: discount_multiplier
+          elsif bundle_discount_type == 'amount' and bundle_discount_amount > 0
+            assign product_savings = bundle_discount_amount
+          endif
+
+          assign bundle_product_price = bundle_product_original_price | minus: product_savings
+
+          for tag in bundle_product.tags
+            if tag contains 'Style:'
+              assign styleNumber = tag | split: 'Style:' | last | strip
+              break
+            endif
+          endfor
+        -%}
+
+        <div class="product__bundle-item"
+          data-bundle-product
+          data-bundle-product-id="{{ bundle_product.id }}"
+          data-bundle-product-name="{{ bundle_product.title }}"
+          data-bundle-product-style-number="{{ styleNumber }}"
+          data-product
+        >
+          <div class="product__bundle-item-image" data-bundle-product-image>
+            {{ bundle_product.featured_image.src | image_url: width: 200 | image_tag: loading: 'lazy' }}
+          </div>
+
+          <div class="product__bundle-item-content">
+            <strong data-bundle-product-title>{{ bundle_product.title }}</strong>
+
+            <br>
+
+            <a class="ui-link-lowercase" href="{{ bundle_product.url }}" title="{{ bundle_product.title }}" target="_blank">
+              {{ 'products.product.view_full_details' | t }}
+            </a>
+
+            {% if bundle_product_price == bundle_product_original_price %}
+              <p>{{ bundle_product_price | money }}</p>
+            {% else %}
+              <p>
+                <span class="product__price product__price--on-sale">{{ bundle_product_price | money }}</span>
+
+                <s class="product__price product__price--compare">
+                  {{ bundle_product_original_price | money }}
+                </s>
+              </p>
+            {% endif %}
+
+            {% render 'product-options', product: bundle_product %}
+
+            <div class="d-none">
+              <select name="id" id="productSelect-{{ bundle_product.id }}" data-product-select>
+                {% for variant in bundle_product.variants %}
+                  {% if variant.available %}
+                    {% assign hash = '' %}
+                    {% assign to = 'ouimepqvtwjybxndgrhcakfszl' | split: '' %}
+
+                    {% assign from = variant.id | split: '' %}
+                    {% for char in from %}
+                      {% assign index = char | plus:0 %}
+                      {% assign next_char = to[index] %}
+                      {% assign hash = hash | append: next_char %}
+                    {% endfor %}
+                    <option {% if variant == bundle_product.selected_or_first_available_variant %} selected="selected" {% endif %} data-sku="{{ variant.sku }}" value="{{ variant.id }}" data-hash="{{ hash }}>
+                      {{ variant.title }} - {{ variant.price | money_with_currency }}
+                    </option>
+                  {% else %}
+                    <option disabled="disabled">
+                      {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+                    </option>
+                  {% endif %}
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+
+    <button class="product__bundle-submit product__submit btn--full btn" type="button" data-product-bundle-submit>
+      {{ 'products.product.add_to_cart' | t }}
+    </button>
+  </div>
+{% endif %}

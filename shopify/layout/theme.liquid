@@ -1,0 +1,191 @@
+<!doctype html>
+<html data-site-html lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"/>
+    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+    <link rel="canonical" href="{{ canonical_url }}">
+
+    {% if settings.favicon != blank %}
+      <link rel="shortcut icon" href="{{ settings.favicon | img_url: '64x64' }}" type="image/png"/>
+    {% endif %}
+
+    {% comment %}
+      Temp fix for background-property SVGs in SCSS files
+    {% endcomment %}
+    {% render "scss-svg-support" %}
+
+    {% comment %}
+      Begin Assets Preload
+    {% endcomment %}
+    {{ 'vendor.css' | asset_url | preload_tag: as: 'style' }}
+    {{ 'layout.theme.css' | asset_url | preload_tag: as: 'style' }}
+    {{ 'runtime.js' | asset_url | preload_tag: as: 'script' }}
+    {{ 'vendor.js' | asset_url | preload_tag: as: 'script' }}
+    {{ 'layout.theme.js' | asset_url | preload_tag: as: 'script' }}
+    {% comment %}
+      End Assets Preload
+    {% endcomment %}
+
+    <title>
+      {{ page_title }}{% if current_tags %}{% assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags }}{% endif %}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
+    </title>
+
+    {% if page_description %}
+      <meta name="description" content="{{ page_description | escape }}">
+    {% endif %}
+
+    <!-- OneTrust Cookies Consent Notice start for southerntide.com -->
+    <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="66913f1f-3ecd-4e46-84c3-5511431325d8"></script>
+    <script type="text/javascript">
+      function OptanonWrapper() { }
+    </script>
+    <!-- OneTrust Cookies Consent Notice end for southerntide.com -->
+
+    {% comment %}Yottaa{% endcomment %}
+    <script src="https://rapid-cdn.yottaa.com/rapid/lib/WTyU0D3oOJf4Wg.js"></script>
+
+    {% render 'og-tags' %}
+    {{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+    <script src="{{ 'swiper-bundle.min.js' | asset_url }}" defer="defer"></script>
+    {% render 'style-fonts' %}
+    {% render 'window-theme' %}
+    {{ '/services/countries.js' | script_tag }}
+
+    {% comment %}
+      Begin Assets
+    {% endcomment %}
+    {{ 'vendor.css' | asset_url | stylesheet_tag }}
+    {{ 'layout.theme.css' | asset_url | stylesheet_tag }}
+    <script src="{{ 'runtime.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'vendor.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'layout.theme.js' | asset_url }}" defer="defer"></script>
+    {% comment %}
+      End Assets
+    {% endcomment %}
+
+    {% include 'boost-pfs-style' %}
+    {% include 'swymSnippet' %}
+    {% include 'limespot' %}
+
+    {% comment %}Bugherd{% endcomment %}
+    {% if settings.enable_bugherd and settings.bugherd_api_key != blank %}
+      <script type='text/javascript'>
+        (function (d, t) {
+          var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
+          bh.type = 'text/javascript';
+          bh.src = 'https://www.bugherd.com/sidebarv2.js?apikey={{ settings.bugherd_api_key }}';
+          s.parentNode.insertBefore(bh, s);
+          })(document, 'script');
+      </script>
+    {% endif %}
+
+    {% comment %}Google Tag Manager{% endcomment %}
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','{{ settings.gtm_id }}');</script>
+
+    {% comment %}Global site tag (gtag.js) - Google Ads: 963004865{% endcomment %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ settings.google_ads_id }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', '{{ settings.google_ads_id }}');
+    </script>
+
+    <script>
+      gtag('event', 'page_view', {
+        'send_to': '{{ settings.google_ads_id }}',
+        'ecomm_pagetype': '{{ template }}',
+        'ecomm_prodid': '{{ product.id }}',
+        'ecomm_totalvalue': '{{ product.price_min | money_without_currency }}'
+      });
+    </script>
+
+    {% liquid
+      if settings['3pi_navistone']
+        render 'navistone'
+      endif
+    %}
+
+    {% liquid
+      if settings['3pi_share_a_sale']
+        render 'share-a-sale'
+      endif
+    %}
+
+    {% liquid
+      if settings['3pi_otRegion']
+        render 'otRegion'
+      endif
+    %}
+
+    {{ content_for_header }}
+
+    <script type="text/plain" class="optanon-category-C0002">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "jpxkvhaut8");
+    </script>
+  </head>
+
+  <body id="{{ page_title | handle }}" class="template-{{ template.name | handle }} {% if template.suffix %}template-{{ template.suffix }}{% endif %}" data-site-body>
+    {% render 'cart-promo-data' %}
+
+    {% comment %}Google Tag Manager (noscript){% endcomment %}
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ settings.gtm_id }}"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <div role="region" aria-label="Skip link">
+      <a class="visually-hidden skip-link" href="#siteContent" title="{{ 'general.accessibility.skip_to_content' | t }}">{{ 'general.accessibility.skip_to_content' | t }}</a>
+    </div>
+
+    {% unless request.page_type == 'cart' %}
+      {% section 'ajaxcart' %}
+    {% endunless %}
+
+    <div class="site-overlay" data-site-overlay></div>
+
+    <div class="site-container" data-site-container>
+      <div class="site-header-wrapper" data-site-header-wrapper>
+        {% section 'promobar' %}
+        {% section 'header' %}
+      </div>
+
+      <main id="siteContent" class="site-content" role="main">
+        {{ content_for_layout }}
+
+        <div class="hide">
+          <limespot></limespot>
+        </div>
+      </main>
+
+      {% section 'newsletter-signup' %}
+      {% section 'footer' %}
+    </div>
+
+    {% section 'newsletter-popup' %}
+    {% render 'cart-reward-modals' %}
+    {% render 'schema' %}
+    {% include 'boost-pfs' %}
+
+    {% comment %}Gorgias Chat Widget{% endcomment %}
+    {%- render 'gorgias-chat', gorgias_intro_message: settings.gorgias_intro_message -%}
+
+    <script src="https://cdn.jsdelivr.net/npm/@loophq/onstore-sdk@latest/dist/loop-onstore-sdk.min.js"></script>
+
+    <script>
+      LoopOnstore.init({
+        key: "22e7a61dc772b241de69569dc5b0178a88650255",
+        attach: ".cart_checkout",
+      });
+    </script>
+  </body>
+</html>

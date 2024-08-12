@@ -1,0 +1,136 @@
+{
+  "sections": {
+    "1656077658967ab68c": {
+      "type": "hero",
+      "blocks": {
+        "e07e792f-6675-491f-99df-7d86a6f9365f": {
+          "type": "hero_slide",
+          "settings": {
+            "desktop_layout": "image_1_content",
+            "desktop_image_1": "shopify://shop_images/220727-collection-page-southern-edit.jpg",
+            "mobile_image": "shopify://shop_images/220727-collection-page-southern-edit.jpg",
+            "title": "The Southern Edit",
+            "mobile_title": "The Southern Edit",
+            "title_size": "heading-2",
+            "content": "The South is more than a location. It's a state a of mind. The Southern Edit is here to help you navigate the waters of life.",
+            "mobile_content": "The South is more than a location. It's a state a of mind. The Southern Edit is here to help you navigate the waters of life.",
+            "title_color": "#1c59a8",
+            "content_color": "#313133",
+            "background_color": "#cde0f1",
+            "cta_1_text": "",
+            "cta_1_link": "",
+            "cta_1_color": "",
+            "cta_2_text": "",
+            "cta_2_link": "",
+            "cta_2_color": "",
+            "cta_3_text": "",
+            "cta_3_link": "",
+            "cta_3_color": "",
+            "image_link": "",
+            "btn_display": "d-flex"
+          }
+        }
+      },
+      "block_order": [
+        "e07e792f-6675-491f-99df-7d86a6f9365f"
+      ],
+      "settings": {
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "0",
+        "margin_bottom_mobile": "0",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "blog-filter": {
+      "type": "blog-filter",
+      "blocks": {
+        "1cc82ebc-dce0-4b39-af8b-2e556fc65927": {
+          "type": "tag",
+          "settings": {
+            "filter_text": "Style Guide",
+            "filter_tag": "style-guide"
+          }
+        },
+        "6b60d734-5110-413b-9b2d-b795c59a4fd9": {
+          "type": "tag",
+          "settings": {
+            "filter_text": "Travel",
+            "filter_tag": "travel"
+          }
+        },
+        "099fbd3c-72b1-4412-9b64-ae7e870d3bd6": {
+          "type": "tag",
+          "settings": {
+            "filter_text": "Holiday and Gift Guides",
+            "filter_tag": "holiday-and-gift-guides"
+          }
+        },
+        "94b29f4e-a88a-413e-a7fc-146734f92b8a": {
+          "type": "tag",
+          "settings": {
+            "filter_text": "Sports and Activities",
+            "filter_tag": "sports-and-activities"
+          }
+        },
+        "381f8ccd-203d-4391-87a2-5c8eb19083d8": {
+          "type": "tag",
+          "settings": {
+            "filter_text": "Lifestyle",
+            "filter_tag": "lifestyle"
+          }
+        },
+        "db2c1172-4873-4167-98fb-5fa8c7eff0ef": {
+          "type": "tag",
+          "settings": {
+            "filter_text": "About Southern Tide",
+            "filter_tag": "about-southern-tide"
+          }
+        }
+      },
+      "block_order": [
+        "1cc82ebc-dce0-4b39-af8b-2e556fc65927",
+        "6b60d734-5110-413b-9b2d-b795c59a4fd9",
+        "099fbd3c-72b1-4412-9b64-ae7e870d3bd6",
+        "94b29f4e-a88a-413e-a7fc-146734f92b8a",
+        "381f8ccd-203d-4391-87a2-5c8eb19083d8",
+        "db2c1172-4873-4167-98fb-5fa8c7eff0ef"
+      ],
+      "settings": {
+        "all_filter_text": "All Articles",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "main": {
+      "type": "blog",
+      "settings": {
+        "featured_article": "the-southern-edit/the-ultimate-spring-break-packing-list",
+        "featured_article_image": "shopify://shop_images/Spring-Break-Blog-Cover-2.jpg",
+        "featured_article_excerpt": "Spring Break is just around the corner. Is your closet ready? The sun is calling your name this season... Answer Southern Tide style! Jet off this Spring Break in our most coveted warm-weather looks designed for the whole family.",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    }
+  },
+  "order": [
+    "1656077658967ab68c",
+    "blog-filter",
+    "main"
+  ]
+}

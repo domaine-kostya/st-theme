@@ -1,0 +1,128 @@
+/* Snippets */
+@import '@/styles/snippets/blog-article';
+
+/* ============================================================================
+  Featured Articles
+============================================================================== */
+
+.featured-articles {
+  margin-bottom: 46px;
+
+  @include media-query($min, $large) {
+    margin-bottom: 70px;
+  }
+
+  .swiper-container {
+    overflow: visible;
+  }
+
+  .swiper-slide {
+    width: 241px;
+
+    @include media-query($min, $medium) {
+      width: 38%;
+    }
+  }
+
+  .swiper-scrollbar {
+    position: relative !important;
+    height: 2px !important;
+    margin: 42px auto 0;
+    overflow: hidden;
+    border-radius: 0;
+    background-color: $color-light-blue;
+
+    .swiper-scrollbar-drag {
+      border-radius: 0;
+      background-color: $color-primary;
+    }
+  }
+}
+
+.featured-articles__header {
+  margin-bottom: 39px;
+
+  @include media-query($min, $large) {
+    margin-bottom: 41px;
+  }
+
+  h2 {
+    margin-bottom: 17px;
+
+    @include media-query($min, $large) {
+      margin-bottom: 28px;
+    }
+  }
+
+  .ui-link {
+    opacity: 1;
+  }
+}
+
+.featured-article {
+  position: relative;
+
+  @include media-query($min, $large) {
+    &:hover,
+    &:focus {
+      img {
+        transform: scale(1.1);
+      }
+
+      .ui-link {
+        &::after {
+          margin-top: 2px;
+        }
+      }
+    }
+
+    img {
+      transition: transform $transition-slow;
+    }
+  }
+}
+
+.featured-article__content {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+
+  @include media-query($min, $large) {
+    bottom: 40px;
+    left: 40px;
+  }
+
+  span {
+    color: $color-white;
+  }
+
+  .featured-article__title {
+    margin-bottom: 0;
+    padding-right: 25px;
+  }
+
+  .ui-link {
+    margin-top: 10px;
+
+    @include media-query($min, $large) {
+      margin-top: 20px;
+    }
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+}
+
+.featured-article__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $color-black;
+}
+
+.featured-article__image {
+  overflow: hidden;
+}

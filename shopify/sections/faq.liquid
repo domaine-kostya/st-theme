@@ -1,0 +1,193 @@
+{{ 'sections.faq.css' | asset_url | stylesheet_tag }}
+
+<div class="faq faq--{{ section.id }}" role="region" aria-label="FAQ">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2">
+        <h2 class="heading-3 text-center">
+          {{ section.settings.headline }}
+        </h2>
+
+        {% for block in section.blocks %}
+          {% render 'accordion',
+            title: block.settings.question,
+            content: block.settings.answer
+          %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% render 'section-spacing', section_name: 'faq' %}
+
+{% schema %}
+  {
+    "settings": [
+      {
+        "type": "text",
+        "id": "headline",
+        "label": "Headline"
+      },
+{
+  "type": "header",
+  "content": "Section Margin"
+},
+{
+  "type": "select",
+  "id": "margin_top",
+  "label": "Margin Top",
+  "default": "default",
+  "options": [
+    {"value": "default", "label": "Theme Default"},
+    {"value": "0", "label": "None"},
+    {"value": "8px", "label": "8px"},
+    {"value": "16px", "label": "16px"},
+    {"value": "32px", "label": "32px"},
+    {"value": "48px", "label": "48px"},
+    {"value": "64px", "label": "64px"},
+    {"value": "102px", "label": "102px"}
+  ]
+},
+{
+  "type": "select",
+  "id": "margin_top_mobile",
+  "label": "Margin Top Mobile",
+  "default": "default",
+  "options": [
+    {"value": "default", "label": "Theme Default"},
+    {"value": "0", "label": "None"},
+    {"value": "8px", "label": "8px"},
+    {"value": "16px", "label": "16px"},
+    {"value": "32px", "label": "32px"},
+    {"value": "48px", "label": "48px"},
+    {"value": "64px", "label": "64px"},
+    {"value": "102px", "label": "102px"}
+  ]
+},
+{
+  "type": "select",
+  "id": "margin_bottom",
+  "label": "Margin Bottom",
+  "default": "default",
+  "options": [
+    {"value": "default", "label": "Theme Default"},
+    {"value": "0", "label": "None"},
+    {"value": "8px", "label": "8px"},
+    {"value": "16px", "label": "16px"},
+    {"value": "32px", "label": "32px"},
+    {"value": "48px", "label": "48px"},
+    {"value": "64px", "label": "64px"},
+    {"value": "102px", "label": "102px"}
+  ]
+},
+{
+  "type": "select",
+  "id": "margin_bottom_mobile",
+  "label": "Margin Bottom Mobile",
+  "default": "default",
+  "options": [
+    {"value": "default", "label": "Theme Default"},
+    {"value": "0", "label": "None"},
+    {"value": "8px", "label": "8px"},
+    {"value": "16px", "label": "16px"},
+    {"value": "32px", "label": "32px"},
+    {"value": "48px", "label": "48px"},
+    {"value": "64px", "label": "64px"},
+    {"value": "102px", "label": "102px"}
+  ]
+},
+{
+  "type": "header",
+  "content": "Section Padding"
+},
+{
+  "type": "select",
+  "id": "padding_top",
+  "label": "Padding Top",
+  "default": "default",
+  "options": [
+    {"value": "default", "label": "Theme Default"},
+    {"value": "0", "label": "None"},
+    {"value": "8px", "label": "8px"},
+    {"value": "16px", "label": "16px"},
+    {"value": "32px", "label": "32px"},
+    {"value": "48px", "label": "48px"},
+    {"value": "64px", "label": "64px"},
+    {"value": "102px", "label": "102px"}
+  ]
+},
+{
+  "type": "select",
+  "id": "padding_top_mobile",
+  "label": "Padding Top Mobile",
+  "default": "default",
+  "options": [
+    {"value": "default", "label": "Theme Default"},
+    {"value": "0", "label": "None"},
+    {"value": "8px", "label": "8px"},
+    {"value": "16px", "label": "16px"},
+    {"value": "32px", "label": "32px"},
+    {"value": "48px", "label": "48px"},
+    {"value": "64px", "label": "64px"},
+    {"value": "102px", "label": "102px"}
+  ]
+},
+{
+  "type": "select",
+  "id": "padding_bottom",
+  "label": "Padding Bottom",
+  "default": "default",
+  "options": [
+    {"value": "default", "label": "Theme Default"},
+    {"value": "0", "label": "None"},
+    {"value": "8px", "label": "8px"},
+    {"value": "16px", "label": "16px"},
+    {"value": "32px", "label": "32px"},
+    {"value": "48px", "label": "48px"},
+    {"value": "64px", "label": "64px"},
+    {"value": "102px", "label": "102px"}
+  ]
+},
+{
+  "type": "select",
+  "id": "padding_bottom_mobile",
+  "label": "Padding Bottom Mobile",
+  "default": "default",
+  "options": [
+    {"value": "default", "label": "Theme Default"},
+    {"value": "0", "label": "None"},
+    {"value": "8px", "label": "8px"},
+    {"value": "16px", "label": "16px"},
+    {"value": "32px", "label": "32px"},
+    {"value": "48px", "label": "48px"},
+    {"value": "64px", "label": "64px"},
+    {"value": "102px", "label": "102px"}
+  ]
+}
+    ],
+    "blocks": [
+      {
+        "type": "faq",
+        "name": "FAQ",
+        "settings": [
+          {
+            "type": "textarea",
+            "id": "question",
+            "label": "Question"
+          },
+          {
+            "type": "richtext",
+            "id": "answer",
+            "label": "Answer"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "FAQ"
+      }
+    ]
+  }
+{% endschema %}

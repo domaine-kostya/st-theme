@@ -1,0 +1,362 @@
+{
+  "general": {
+    "accessibility": {
+      "skip_to_content": "Skip to content"
+    },
+    "meta": {
+      "tags": "Tagged \"{{ tags }}\"",
+      "page": "Page {{ page }}"
+    },
+    "search": {
+      "title": "Search for products on our site",
+      "placeholder": "Search",
+      "submit": "Search",
+      "heading": {
+        "one": "Search result",
+        "other": "Search results"
+      },
+      "results_with_count": {
+        "one": "{{ count }} result for \"{{ terms }}\"",
+        "other": "{{ count }} results for \"{{ terms }}\""
+      },
+      "no_results_html": "Please try a different search term or go back to the <a href=\"\/\">homepage<\/a>."
+    },
+    "pagination": {
+      "prev": "Prev",
+      "next": "Next"
+    },
+    "newsletter_form": {
+      "email_placeholder": "Email address",
+      "sms_placeholder": "Phone (optional)",
+      "submit": "Sign up",
+      "success_message": "Thank you for subscribing!"
+    },
+    "nav": {
+      "menu": "Menu"
+    },
+    "footer": {
+      "all_rights": "All Rights Reserved"
+    }
+  },
+  "store_locator": {
+    "get_directions": "Get Directions",
+    "hours": "Hours:",
+    "filter_by_category": "Filter by category",
+    "filter_by_store_type": "Filter by store type",
+    "search_message": "*If nothing is found in your selected range it will still show the nearest stores even if they're out of your chosen range."
+  },
+  "blogs": {
+    "article": {
+      "author_on_date_html": "Posted by {{ author }} on {{ date }}",
+      "comment_meta_html": "{{ author }} on {{ date }}",
+      "read_more": "Read more",
+      "min_read": "min read",
+      "share_article": "Share article",
+      "copied": "Copied!",
+      "previous_article": "Previous Article",
+      "next_article": "Next Article",
+      "back_to_the_blog": "Back to the blog"
+    }
+  },
+  "cart": {
+    "general": {
+      "title": "Your Bag",
+      "remove": "Remove",
+      "subtotal": "Subtotal",
+      "total": "Total",
+      "tax": "Tax",
+      "calculated_at_checkout": "Calculated at checkout",
+      "shipping_estimate": "Shipping Estimate (optional)",
+      "discounts": "Applied Discounts",
+      "shipping": "Shipping",
+      "shipping_at_checkout": "Shipping & taxes calculated at checkout",
+      "proceed_to_checkout": "Proceed to Checkout",
+      "review_and_checkout": "Review and Checkout",
+      "view_cart": "View Cart",
+      "ajaxcart_disclaimer": "Shipping, taxes and promotions calculated at checkout. Local in-store pickup is also available.",
+      "cart_disclaimer": "You will have the opportunity to enter a gift card, discount code or select local pickup during checkout.",
+      "empty": "Your cart is currently empty.",
+      "continue_browsing_html": "Continue browsing <a href=\"\/collections\/all\">here<\/a>.",
+      "items": "items",
+      "note_placeholder": "Please add additional notes here.",
+      "bundled_products": "Bundled Products",
+      "soft_bundle_default_append": "- Bundle",
+      "selling_plan_single": "One time order",
+      "order_summary": "Order Summary",
+      "order_total": "Order total",
+      "calculate": "Calculate",
+      "upsell_title": "Add to your order",
+      "added_to_bag": "Added to bag",
+      "add": "Add",
+      "free_gift": "Free gift",
+      "reward": "Reward",
+      "gift_select_variant": "Select a size",
+      "gift_selection_title": "Please make your selection"
+    }
+  },
+  "collections": {
+    "general": {
+      "no_matches": "Sorry, there are no products in this collection",
+      "link_title": "Browse our {{ title }} collection",
+      "products": "Products",
+      "product_filters": "Product Filters",
+      "show_results": "Show Results"
+    },
+    "breadcrumbs": {
+      "home": "Home"
+    },
+    "sorting": {
+      "title": "Sort By",
+      "featured": "Featured",
+      "best_selling": "Most Popular",
+      "az": "Name: A-Z",
+      "za": "Name: Z-A",
+      "price_ascending": "Price: Low to High",
+      "price_descending": "Price: High to Low",
+      "date_descending": "Newest",
+      "date_ascending": "Oldest"
+    }
+  },
+  "contact": {
+    "form": {
+      "name": "Name*",
+      "first_name": "First Name*",
+      "last_name": "Last Name*",
+      "email": "Email*",
+      "subject": "Subject",
+      "phone": "Phone Number",
+      "message": "Message",
+      "send": "Send",
+      "post_success": "Thanks for contacting us. We'll get back to you as soon as possible.",
+      "request_a_catalog": "Request a Catalog",
+      "product_question": "Product Question",
+      "help_with_my_order": "Help with my order",
+      "return_exchange": "Return\/Exchange",
+      "become_a_retailer": "Become a Retailer",
+      "charitable_contribution": "Charitable Contribution",
+      "other": "Other",
+      "order_number": "Order Number",
+      "name_of_store": "Name of Store",
+      "your_website": "Your website",
+      "order_date": "Order Date",
+      "organization": "Organization",
+      "donation_type": "Donation Type",
+      "event_date": "Event Date",
+      "address_line_1": "Address Line 1",
+      "address_line_2": "Address Line 2",
+      "city": "City",
+      "state": "State",
+      "zip": "Zip",
+      "other_apparel": "What other apparel lines do you currently carry?",
+      "retail_close_by": "Do you know if a Retailer close to you carries Southern Tide?",
+      "interested_lines": "What lines are you interested in? Men's, Women's, Youth?"
+    },
+    "corporate": {
+      "corporate_orders": "Corporate Orders",
+      "company": "Company",
+      "purpose_of_order": "Purpose of Order",
+      "categories_of_interest": "Categories of Interest:",
+      "polos": "Polos",
+      "sport_shirts": "Sport Shirts",
+      "pullovers": "Pullovers",
+      "vests": "Vests",
+      "womens": "Womens",
+      "hats_visors": "Hats\/Visors",
+      "total_quantity_estimate": "Total Quantity Estimate",
+      "in_hand_date": "In Hand Date",
+      "additional_comments": "Additional Comments"
+    },
+    "ambassador": {
+      "title": "Ambassador Application",
+      "college_ambassador": "College – Open to all rising sophomore, junior, or senior level college students.",
+      "college_athlete_ambassador": "College Athletes – Open to rising sophomore, junior, or senior level college athletes",
+      "lifestyle_ambassador": "Lifestyle – Open to those who embody the Southern Tide lifestyle.",
+      "store_ambassador": "Store – Open to those based near one of our store locations.",
+      "instagram_handle": "Instagram Handle",
+      "instagram_disclaimer": "*Account must be public",
+      "follower_count": "Follower Count",
+      "sport": "Sport",
+      "sport_disclaimer": "*Preferably D1 Schools",
+      "description": "Description",
+      "college": "College (if applicable)",
+      "age": "Age",
+      "city": "City",
+      "state": "State",
+      "brand_title": "Let us know how you want to represent the brand"
+    }
+  },
+  "customer": {
+    "account": {
+      "title": "My Account",
+      "details": "Account Details",
+      "view_addresses": "View Addresses",
+      "view_order_history": "View Order History",
+      "order_history": "Order history",
+      "back_to_order_history": "Back to order history",
+      "account_details": "Account details",
+      "order_details": "Order Details",
+      "rewards": "Rewards"
+    },
+    "activate_account": {
+      "title": "Activate Account",
+      "subtext": "Create your password to activate your account.",
+      "password": "Password",
+      "password_confirm": "Confirm Password",
+      "submit": "Activate Account",
+      "cancel": "Decline Invitation"
+    },
+    "addresses": {
+      "title": "Addresses",
+      "default": "Default",
+      "add_new": "Add a New Address",
+      "edit_address": "Edit address",
+      "first_name": "First Name*",
+      "last_name": "Last Name*",
+      "company": "Company",
+      "address1": "Address 1*",
+      "address2": "Address 2",
+      "city": "City*",
+      "country": "Country*",
+      "province": "Province*",
+      "zip": "Postal\/Zip Code*",
+      "phone": "Phone Number*",
+      "set_default": "Set as default address",
+      "add": "Add Address",
+      "update": "Update Address",
+      "cancel": "Cancel",
+      "edit": "Edit",
+      "delete": "Delete",
+      "delete_confirm": "Are you sure you wish to delete this address?",
+      "submit": "Submit",
+      "none": "You have no addresses",
+      "back_to_addresses": "Back to addresses"
+    },
+    "login": {
+      "title": "Log in",
+      "email": "Email address*",
+      "password": "Password",
+      "forgot_password": "Forgot Your Password?",
+      "sign_in": "Sign In",
+      "login": "Sign in",
+      "cancel": "Return to Store",
+      "guest_title": "Continue as a guest",
+      "guest_continue": "Continue",
+      "create_account": "Create an Account",
+      "not_a_member": "Not a member?",
+      "member_content": "Level up with ST Rewards! It’s free to join and comes with a lot of perks. Earn points every time you shop, get early access to sales, unlock exclusive gifts and more."
+    },
+    "orders": {
+      "title": "Order History",
+      "order_number": "Order no.",
+      "date": "Date",
+      "status": "Status:",
+      "payment_status": "Payment Status",
+      "fulfillment_status": "Fulfillment Status",
+      "total": "Total",
+      "none": "You haven't placed any orders yet.",
+      "details": "View Details",
+      "track": "Track"
+    },
+    "order": {
+      "title": "Order {{ name }}",
+      "date": "Date:",
+      "cancelled": "Order Cancelled on {{ date }}",
+      "cancelled_reason": "Reason: {{ reason }}",
+      "billing_address": "Billing Address",
+      "payment_status": "Payment Status",
+      "shipping_address": "Shipping Address",
+      "fulfillment_status": "Fulfillment Status",
+      "discount": "Discount",
+      "shipping": "Shipping",
+      "tax": "Tax",
+      "product": "Product",
+      "sku": "SKU",
+      "price": "Price",
+      "quantity": "QTY",
+      "total": "Total",
+      "fulfilled_at": "Date fulfilled",
+      "track_shipment": "Track shipment",
+      "tracking_url": "Tracking link",
+      "tracking_company": "Carrier",
+      "tracking_number": "Tracking number",
+      "subtotal": "Subtotal"
+    },
+    "recover_password": {
+      "title": "Forgot Your Password?",
+      "title_html": "Forgot your password?",
+      "email": "Email address*",
+      "submit": "Reset Password",
+      "cancel": "Cancel",
+      "subtext": "Enter your email and we will send you a link to reset your password.",
+      "success": "We've sent you an email with a link to update your password."
+    },
+    "reset_password": {
+      "title": "Reset account password",
+      "subtext": "Enter a new password for {{ email }}",
+      "password": "Password",
+      "password_confirm": "Confirm Password",
+      "submit": "Reset Password"
+    },
+    "register": {
+      "title": "Create an account",
+      "first_name": "First Name*",
+      "last_name": "Last Name*",
+      "email": "Email address*",
+      "password": "Password",
+      "submit": "Create Account",
+      "sign_in": "Login to your account"
+    }
+  },
+  "layout": {
+    "customer": {
+      "account": "Account",
+      "log_out": "Log out",
+      "log_in": "Log in",
+      "create_account": "Create an account"
+    }
+  },
+  "products": {
+    "product": {
+      "sold_out": "Sold Out",
+      "limited_stock": "Only a few left!",
+      "no_stock": "Out of Stock!",
+      "unavailable": "Unavailable",
+      "selection_unavailable": "Selected options not available",
+      "add_to_cart": "Add to Bag",
+      "adding_to_cart": "Adding...",
+      "quantity_limit_reached": "Only {{ limit }} available",
+      "on_sale": "On sale",
+      "more": "more",
+      "add_to_wishlist": "Add to wishlist",
+      "size_guide": "Size Guide",
+      "show_more": "Show more",
+      "show_less": "Show less",
+      "description": "Description",
+      "details": "Details",
+      "features_benefits": "Features & Benefits",
+      "reviews": "Reviews",
+      "questions_answers": "Questions & Answers",
+      "view_full_details": "View Full Details",
+      "off": "off",
+      "final_sale": "Final Sale",
+      "selected_style_on_sale": "Selected Style on Sale"
+    }
+  },
+  "gift_cards": {
+    "issued": {
+      "title": "Here's your {{ value }} gift card for {{ shop }}!",
+      "subtext": "Here's your gift card!",
+      "disabled": "Disabled",
+      "expired": "Expired on {{ expiry }}",
+      "active": "Expires on {{ expiry }}",
+      "redeem": "Use this code at checkout to redeem your gift card",
+      "shop_link": "Start shopping",
+      "print": "Print",
+      "remaining_html": "{{ balance }} left",
+      "add_to_apple_wallet": "Add to Apple Wallet"
+    }
+  },
+  "date_formats": {
+    "month_day_year": "%d %B, %Y"
+  }
+}

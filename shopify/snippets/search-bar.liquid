@@ -1,0 +1,19 @@
+<form action="{{ routes.search_url }}" method="get" class="search-bar" role="search">
+  <input type="hidden"
+        name="type"
+        value="product">
+
+  <label for="search-bar" class="visually-hidden">{{ 'general.search.placeholder' | t }}</label>
+
+  <input class="p--small"
+        type="search"
+        id="search-bar"
+        name="q"
+        value="{{ search.terms | escape }}"
+        placeholder="{{ 'general.search.placeholder' | t }}"
+        {% if primary %}data-search-bar{% endif %}>
+
+  <button type="submit" aria-label="{{ 'general.search.submit' | t }}">
+    {% render 'icon-search-small' %}
+  </button>
+</form>

@@ -1,0 +1,251 @@
+/* ============================================================================
+  Hero
+============================================================================== */
+
+.hero {
+  width: 100%;
+  margin-bottom: 49px;
+
+  @include media-query($min, $large) {
+    margin-bottom: 96px;
+  }
+
+  &.hero--collection {
+    margin-bottom: 0;
+  }
+
+  &.swiper-container {
+    padding-bottom: 40px;
+  }
+
+  .swiper-pagination {
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translate(-50%, 100%);
+  }
+
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    margin: 0 3px;
+    border: 2px solid $color-primary;
+    opacity: 1;
+    background-color: $color-white;
+
+    @include media-query($min, $large) {
+      width: 16px;
+      height: 16px;
+    }
+
+    &.swiper-pagination-bullet-active {
+      background-color: $color-primary;
+    }
+  }
+
+  .image-link {
+    height: 100%;
+  }
+
+  .banner {
+    margin-bottom: 0;
+  }
+}
+
+.hero__slide {
+  position: relative;
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+
+  .hero__image-wrapper {
+    max-width: none;
+    height: 100%;
+  }
+}
+
+.hero__rectangle-image {
+  @include media-query($min, $large) {
+    width: 60.52%;
+  }
+
+  img {
+    display: block;
+  }
+}
+
+.hero__square-image {
+  @include media-query($min, $medium) {
+    width: 50%;
+  }
+
+  @include media-query($min, $large) {
+    width: 34.01%;
+  }
+
+  img {
+    display: block;
+  }
+}
+
+.hero__portrait-image {
+  @include media-query($min, $medium) {
+    width: 50%;
+  }
+
+  @include media-query($min, $large) {
+    width: 30.26%;
+  }
+}
+
+.hero__content-wrapper {
+  @include media-query($min, $large) {
+    width: 39.53%;
+  }
+
+  &.hero__content-wrapper--center {
+    @include media-query($min, $large) {
+      flex: none;
+      width: 31.97%;
+    }
+  }
+}
+
+.hero__content {
+  height: 100%;
+  padding: 35px 20px;
+  text-align: center;
+
+  @include media-query($min, $small) {
+    padding: 35px 33px;
+  }
+
+  @include media-query($min, $large) {
+    text-align: left;
+  }
+
+  @include media-query($min, $site-width) {
+    padding: 35px 60px;
+  }
+
+  @include media-query($min, 1600px) {
+    padding: 35px 130px;
+  }
+
+  .hero__content-wrapper--center & {
+    padding: 35px 20px;
+    text-align: center;
+
+    @include media-query($min, 1600px) {
+      padding: 48px 80px;
+    }
+
+    .display-table-cell {
+      max-width: none;
+    }
+
+    .btn {
+      min-width: 0;
+      padding: 15px 21px;
+
+      @include media-query($min, $large) {
+        margin: 0 8px 16px;
+        padding: 15px 16px;
+      }
+
+      @include media-query($min, $site-width) {
+        padding: 15px 24px;
+      }
+    }
+
+    p {
+      max-width: none;
+    }
+  }
+
+  .hero--collection & {
+    @include media-query($max, $pre-medium) {
+      padding: 18px 20px 24px;
+
+      .heading {
+        margin-bottom: 0;
+        font-size: 2.9rem;
+      }
+
+      p:not(.heading) {
+        font-size: 1.4rem;
+        line-height: 2rem;
+      }
+    }
+
+    p:not(.heading) {
+      @include media-query($max, $pre-large) {
+        margin: 0;
+      }
+    }
+  }
+
+  .display-table-cell {
+    max-width: 380px;
+  }
+
+  h1,
+  h2 {
+    margin-bottom: 30px;
+
+    @include media-query($min, $site-width) {
+      margin-top: -2px;
+    }
+  }
+
+  p:not(.heading) {
+    margin-bottom: 30px;
+
+    @include media-query($min, $large) {
+      margin-bottom: 39px;
+    }
+
+    @include media-query($min, $site-width) {
+      font-size: 2rem;
+    }
+  }
+
+  .hero__content-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+
+    @include media-query($min, $large) {
+      justify-content: flex-start;
+    }
+
+    @include media-query($min, $site-width) {
+      font-size: 2rem;
+    }
+
+    &.hero__content-buttons--center {
+      justify-content: center;
+    }
+  }
+
+  .btn {
+    width: auto;
+    margin: 0 8px 16px;
+    padding: 15px 5px;
+    font-size: 1.4rem;
+
+    @include media-query($min, $small) {
+      padding: 15px 21px;
+    }
+
+    @include media-query($min, $site-width) {
+      margin: 0 16px 16px 0;
+      font-size: 1.6rem;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

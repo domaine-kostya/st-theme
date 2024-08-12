@@ -1,0 +1,144 @@
+/* ============================================================================
+  Testimonials
+============================================================================== */
+
+.testimonials {
+  display: block;
+  margin-bottom: 60px;
+
+  @include media-query($min, $large) {
+    margin-bottom: 88px;
+    padding: 0 60px;
+  }
+
+  @include media-query($min, $xxlarge) {
+    padding: 0 90px;
+  }
+}
+
+.testimonials__header {
+  margin-bottom: 28px;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 28px;
+  }
+}
+
+.testimonials__carousel-wrapper {
+  position: relative;
+
+  .swiper-container {
+    overflow: visible;
+
+    @include media-query($min, $large) {
+      overflow: hidden;
+    }
+  }
+
+  .swiper-slide {
+    width: 275px;
+    height: auto;
+
+    @include media-query($min, $small) {
+      width: 303px;
+    }
+
+    @include media-query($min, $large) {
+      width: calc(33.33% - 20px);
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    transform: translateY(-50%);
+    line-height: 52px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .swiper-button-prev {
+    left: -53px;
+
+    @include media-query($min, $xxlarge) {
+      left: -66px;
+    }
+  }
+
+  .swiper-button-next {
+    right: -83px;
+
+    @include media-query($min, $xxlarge) {
+      right: -94px;
+    }
+  }
+
+  .swiper-scrollbar {
+    position: relative !important;
+    height: 2px !important;
+    margin: 26px auto 32px;
+    overflow: hidden;
+    border-radius: 0;
+    background-color: $color-light-blue;
+
+    .swiper-scrollbar-drag {
+      border-radius: 0;
+      background-color: $color-primary;
+    }
+  }
+
+  .swiper-pagination {
+    position: relative;
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    margin: 0 3px;
+    border: 2px solid $color-primary;
+    opacity: 1;
+    background-color: $color-white;
+
+    @include media-query($min, $large) {
+      width: 16px;
+      height: 16px;
+    }
+
+    &.swiper-pagination-bullet-active {
+      background-color: $color-primary;
+    }
+  }
+}
+
+.testimonials__item {
+  height: 100%;
+  padding: 37px 32px 39px;
+  background-color: $color-grey;
+  font-size: 1.8rem;
+  text-align: center;
+
+  p {
+    margin-bottom: 24px;
+  }
+}
+
+.testimonials__item-rating {
+  width: 100%;
+  margin-bottom: 25px;
+  text-align: center;
+
+  svg {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

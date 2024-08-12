@@ -1,0 +1,51 @@
+{
+  "sections": {
+    "16565144750a2f8d1d": {
+      "type": "hero",
+      "blocks": {
+        "f3226ff0-70e2-48b3-9dba-45507e4a75d5": {
+          "type": "hero_slide",
+          "settings": {
+            "desktop_layout": "image_1_content",
+            "desktop_image_1": "shopify:\/\/shop_images\/hero_a39e090e-52da-4f0c-bfb8-7ca494e59f57.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/mobile-hero.jpg",
+            "title": "Contact Us",
+            "title_size": "heading-1",
+            "content": "Chat with us by clicking the circle in the bottom right hand corner of your screen or contact us by email at <a href=\"mailto:theskipjack@southerntide.com\">theskipjack@southerntide.com<\/a> or call customer service at <a href=\"tel:18558908334\">1-855-890-8334<\/a>",
+            "title_color": "#1C59A8",
+            "background_color": "#CDE0F1",
+            "cta_1_text": "",
+            "cta_1_link": "",
+            "cta_1_color": "",
+            "cta_2_text": "",
+            "cta_2_link": "",
+            "cta_2_color": "",
+            "image_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "f3226ff0-70e2-48b3-9dba-45507e4a75d5"
+      ],
+      "settings": {
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "main": {
+      "type": "page-contact",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "16565144750a2f8d1d",
+    "main"
+  ]
+}

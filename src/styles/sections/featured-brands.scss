@@ -1,0 +1,63 @@
+/* ============================================================================
+  Featured Brands
+============================================================================== */
+
+.featured-brands {
+  margin-bottom: 70px;
+
+  @include media-query($min, $large) {
+    margin-bottom: 102px;
+  }
+
+  h2 {
+    margin-bottom: 71px;
+
+    @include media-query($min, $large) {
+      margin-bottom: 91px;
+    }
+  }
+}
+
+.featured-brands__grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.featured-brands__item {
+  display: block;
+  width: 50%;
+  transition: opacity $transition-primary;
+
+  @include media-query($min, $medium) {
+    width: var(--desktop-width, 126px);
+    padding: 0 10px;
+  }
+
+  @include media-query($min, $large) {
+    padding: 0;
+  }
+
+  &:nth-of-type(1),
+  &:nth-of-type(2) {
+    @include media-query($max, $pre-medium) {
+      margin-bottom: 92px;
+    }
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  .featured-brands__image {
+    margin: 0;
+    filter: invert(67%) sepia(0%) saturate(1398%) hue-rotate(227deg) brightness(89%) contrast(96%);
+
+    @include media-query($max, $pre-large) {
+      width: 126px;
+      margin: 0 auto;
+    }
+  }
+}

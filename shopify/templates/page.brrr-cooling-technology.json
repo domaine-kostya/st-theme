@@ -1,0 +1,455 @@
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "1657810131eb39af18": {
+      "type": "banner",
+      "settings": {
+        "background_image": "shopify:\/\/shop_images\/brrr-hero-banner_22211d05-95bc-4b20-8969-26faa6ae8194.jpg",
+        "background_color": "#f2f2f2",
+        "overlay_opacity": 0,
+        "overlay_color": "#313133",
+        "icon": "shopify:\/\/shop_images\/brrr-banner-icon.png",
+        "mobile_headline": "",
+        "headline": "brrr°ace yourself",
+        "headline_color": "#ffffff",
+        "mobile_content": "",
+        "content": "",
+        "content_color": "#313133",
+        "cta_text": "",
+        "cta_link": "",
+        "cta_color": "#1c59a8",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "0",
+        "margin_bottom_mobile": "0"
+      }
+    },
+    "1657810214275f20ee": {
+      "type": "banner",
+      "settings": {
+        "background_color": "#cde0f1",
+        "overlay_opacity": 0,
+        "overlay_color": "#313133",
+        "mobile_headline": "",
+        "headline": "brrr° Fabric Technology",
+        "headline_color": "#1c59a8",
+        "mobile_content": "",
+        "content": "Others may say they’re cooling, but we prove it.\nbrrr° uses patented technology to design fabric that provides immediate & continuous cooling -\nactively reducing skin temperature throughout your everyday routine. Our cooling technology is permanently integrated into the fiber and never fades or washes away with the added benefit of enhanced UV protection.",
+        "content_color": "#313133",
+        "cta_text": "",
+        "cta_link": "",
+        "cta_color": "#1c59a8",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default"
+      }
+    },
+    "16578102549e672944": {
+      "type": "featured-blocks",
+      "blocks": {
+        "fb957cc7-8b2e-40b5-bf20-c8d8bfa74e7d": {
+          "type": "featured_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/featured-block-cooling-minerals.png",
+            "title": "Cooling Minerals",
+            "content": "Creates an immediate & continuous cooling effect. The Triple Chill Effect technology gives brrr° fabric superior cooling capabilities that outperform other cooling fabrics.",
+            "cta_text": "",
+            "link": ""
+          }
+        },
+        "80c8abf8-5a6f-4d20-9450-8126d715c0c3": {
+          "type": "featured_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/featured-block-active-wicking.png",
+            "title": "Active Wicking",
+            "content": "All brrr° fabrics incorporate active wicking to move moisture away from your skin for nonstop comfort.",
+            "cta_text": "",
+            "link": ""
+          }
+        },
+        "c89ee159-fff6-4037-9484-224393bc657e": {
+          "type": "featured_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/featured-block-rapid-drying.png",
+            "title": "Rapid Drying",
+            "content": "brrr° nylon and brrr° polyester take less time to dry, rapidly releasing moisture into the air, cooling the fabric to provide a fresh and crisp experience.",
+            "cta_text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "fb957cc7-8b2e-40b5-bf20-c8d8bfa74e7d",
+        "80c8abf8-5a6f-4d20-9450-8126d715c0c3",
+        "c89ee159-fff6-4037-9484-224393bc657e"
+      ],
+      "settings": {
+        "headline": "brrr° Triple Chill Effect",
+        "headline_size": "large",
+        "content": "Fabric technology with natural cooling minerals, active moisture wicking and rapid drying proven to instantly and permanently keep you cooler.",
+        "section_width": "full",
+        "button_style": "link",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "32px",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "165290108122b2d56a": {
+      "type": "content-blocks",
+      "blocks": {
+        "b0410eea-5235-4264-a7fe-391b9790f609": {
+          "type": "content_block",
+          "settings": {
+            "mobile_image": "shopify:\/\/shop_images\/brrr-video-cover-mobile.jpg",
+            "image": "shopify:\/\/shop_images\/brrr-video-cover.jpg",
+            "video_file_url": "",
+            "mobile_video_file_url": "",
+            "enable_full_width_video": true,
+            "video_embed": "https:\/\/www.youtube.com\/watch?v=jJwFrJxiD8Y",
+            "video_description": "",
+            "mobile_video_embed": "",
+            "background_color": "#cde0f1",
+            "width": "full",
+            "content_position": "right",
+            "headline": "Reclaim the Tide",
+            "content": "We’re working to reduce our footprint by sourcing more sustainable, organic and recycled materials for our products.",
+            "cta_1_text": "Watch the video",
+            "cta_1_link": "#video",
+            "cta_1_style": "solid",
+            "cta_2_text": "",
+            "cta_2_link": "",
+            "cta_2_style": "outline",
+            "feature_1_text": "",
+            "feature_2_text": "",
+            "feature_3_text": "",
+            "feature_4_text": ""
+          }
+        },
+        "92a9fdb5-19e1-41a4-89cb-77cd4a303d31": {
+          "type": "content_block",
+          "settings": {
+            "mobile_image": "shopify:\/\/shop_images\/microsoftteams-image-1_e5c65935-d75e-403d-9246-9425d60fb9f4.jpg",
+            "image": "shopify:\/\/shop_images\/microsoftteams-image-1_fbd82815-f13e-426f-bf4c-fcb8159a1eed.jpg",
+            "video_file_url": "",
+            "mobile_video_file_url": "",
+            "enable_full_width_video": false,
+            "video_embed": "",
+            "video_description": "",
+            "mobile_video_embed": "",
+            "background_color": "#f2f2f2",
+            "width": "full",
+            "content_position": "left",
+            "headline": "brrr°®-eeze Polos",
+            "content": "Thanks to innovative cooling technology, moisture-wicking fabric and a hint of stretch - he can feel his best for a morning on the course or a day in the office.\n83% brrr®Nylon 17% Stretch",
+            "cta_1_text": "Shop brrr°®-eeze Polos",
+            "cta_1_link": "https:\/\/southerntide.com\/collections\/men-polos",
+            "cta_1_style": "solid",
+            "cta_2_text": "",
+            "cta_2_link": "",
+            "cta_2_style": "outline",
+            "feature_1_icon": "shopify:\/\/shop_images\/FB-icons-brrr.png",
+            "feature_1_text": "brrr° Cooling Materials",
+            "feature_2_icon": "shopify:\/\/shop_images\/FB-icons-stretch.png",
+            "feature_2_text": "Stretch for Added Mobility",
+            "feature_3_icon": "shopify:\/\/shop_images\/FB-icons-quick-dry.png",
+            "feature_3_text": "Moisture Management",
+            "feature_4_icon": "shopify:\/\/shop_images\/FB-icons-UV.png",
+            "feature_4_text": "UV Protection"
+          }
+        },
+        "a458a10c-760f-4270-9266-5fd3c525ed7a": {
+          "type": "content_block",
+          "settings": {
+            "mobile_image": "shopify:\/\/shop_images\/brrr-content-block-shorts-mobile.jpg",
+            "image": "shopify:\/\/shop_images\/brrr-content-block-shorts.jpg",
+            "video_file_url": "",
+            "mobile_video_file_url": "",
+            "enable_full_width_video": false,
+            "video_embed": "",
+            "video_description": "",
+            "mobile_video_embed": "",
+            "background_color": "#cde0f1",
+            "width": "full",
+            "content_position": "right",
+            "headline": "brrr°®-die 8\" Short",
+            "content": "Brrring on the cool hues and even cooler shorts. With 6 color options for the season, our bestselling brrr°die Gulf Performance Short just keeps getting better.",
+            "cta_1_text": "Shop brrr°®-die Short",
+            "cta_1_link": "https:\/\/southerntide.com\/collections\/brrr\/products\/gulf-8-inch-brrr-die-performance-short",
+            "cta_1_style": "solid",
+            "cta_2_text": "",
+            "cta_2_link": "",
+            "cta_2_style": "outline",
+            "feature_1_icon": "shopify:\/\/shop_images\/FB-icons-brrr.png",
+            "feature_1_text": "brrrº Cooling Materials",
+            "feature_2_icon": "shopify:\/\/shop_images\/FB-icons-stretch.png",
+            "feature_2_text": "Stretch for Added Mobility",
+            "feature_3_icon": "shopify:\/\/shop_images\/FB-icons-quick-dry.png",
+            "feature_3_text": "Moisture Management",
+            "feature_4_icon": "shopify:\/\/shop_images\/FB-icons-UV.png",
+            "feature_4_text": "UV Protection"
+          }
+        },
+        "713bbe36-737f-4370-9fdb-aa4436b6344c": {
+          "type": "content_block",
+          "settings": {
+            "mobile_image": "shopify:\/\/shop_images\/microsoftteams-image_3205680d-9f90-4562-a8d2-e591711d54cc.jpg",
+            "image": "shopify:\/\/shop_images\/microsoftteams-image.jpg",
+            "video_file_url": "",
+            "mobile_video_file_url": "",
+            "enable_full_width_video": false,
+            "video_embed": "",
+            "video_description": "",
+            "mobile_video_embed": "",
+            "background_color": "#cde0f1",
+            "width": "full",
+            "content_position": "left",
+            "headline": "brrr°® Intercoastal Shirts",
+            "content": "Whether it's a stuffy conference room, outdoor event or day on the go - our brrr°® intercoastal sport shirts are sure to keep him feeling cool and confident all day long.\n91% Nylon 9% Stretch",
+            "cta_1_text": "Shop brrr°® Intercoastal Shirts",
+            "cta_1_link": "https:\/\/southerntide.com\/collections\/men-sport-shirts",
+            "cta_1_style": "solid",
+            "cta_2_text": "",
+            "cta_2_link": "",
+            "cta_2_style": "outline",
+            "feature_1_icon": "shopify:\/\/shop_images\/FB-icons-brrr.png",
+            "feature_1_text": "brrr° Cooling Material",
+            "feature_2_icon": "shopify:\/\/shop_images\/FB-icons-stretch.png",
+            "feature_2_text": "Stretch for Added Mobility",
+            "feature_3_icon": "shopify:\/\/shop_images\/FB-icons-quick-dry.png",
+            "feature_3_text": "Moisture Management",
+            "feature_4_icon": "shopify:\/\/shop_images\/FB-icons-UV.png",
+            "feature_4_text": "UV Protection"
+          }
+        },
+        "775729e8-7bad-4be0-b83f-703835389051": {
+          "type": "content_block",
+          "disabled": true,
+          "settings": {
+            "mobile_image": "shopify:\/\/shop_images\/hemp-mobile.jpg",
+            "image": "shopify:\/\/shop_images\/hemp.jpg",
+            "video_file_url": "",
+            "mobile_video_file_url": "",
+            "enable_full_width_video": false,
+            "video_embed": "",
+            "video_description": "",
+            "mobile_video_embed": "",
+            "background_color": "#cde0f1",
+            "width": "full",
+            "content_position": "right",
+            "headline": "Hemp",
+            "content": "Our initiative to be more sustainable wouldn’t be complete without the use of hemp. Hemp grows with less water consumption, puts 60-70% of the nutrients back into the soil and has higher yield than cotton. Hemp fibers are known to be the strongest natural fibers, so it lasts longer than cotton.",
+            "cta_1_text": "",
+            "cta_1_link": "",
+            "cta_1_style": "solid",
+            "cta_2_text": "",
+            "cta_2_link": "",
+            "cta_2_style": "outline",
+            "feature_1_icon": "shopify:\/\/shop_images\/Environmentaly_Friendly_112x_7c6078c8-4db6-4920-8b19-d3fa4bdc9b7d.png",
+            "feature_1_text": "Environmentally Friendly",
+            "feature_2_icon": "shopify:\/\/shop_images\/Breathable_112x_61a0a292-4210-4fb0-9284-0a3be4579eec.png",
+            "feature_2_text": "Highly Breathable",
+            "feature_3_icon": "shopify:\/\/shop_images\/Durable_112x_a88a2ac7-d249-443b-8d77-2a6849d26f8d.png",
+            "feature_3_text": "Extremely Durable",
+            "feature_4_icon": "shopify:\/\/shop_images\/Anti-Bacterial_112x_1090afb2-f927-4d5c-9b9c-aba67bc397e7.png",
+            "feature_4_text": "Naturally Anti-Bacterial"
+          }
+        }
+      },
+      "block_order": [
+        "b0410eea-5235-4264-a7fe-391b9790f609",
+        "92a9fdb5-19e1-41a4-89cb-77cd4a303d31",
+        "a458a10c-760f-4270-9266-5fd3c525ed7a",
+        "713bbe36-737f-4370-9fdb-aa4436b6344c",
+        "775729e8-7bad-4be0-b83f-703835389051"
+      ],
+      "settings": {
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "0",
+        "margin_bottom_mobile": "0",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "16578117439dc0e155": {
+      "type": "banner",
+      "disabled": true,
+      "settings": {
+        "background_image": "shopify:\/\/shop_images\/bgi-d_2880x_88690d4a-c55a-4d33-a08f-1d575e76b5bf.jpg",
+        "background_color": "#f2f2f2",
+        "overlay_opacity": 0,
+        "overlay_color": "#313133",
+        "mobile_headline": "",
+        "headline": "100% Post-consumer recycled by 2023",
+        "headline_color": "#ffffff",
+        "mobile_content": "",
+        "content": "We’ve eliminated 600k pieces of tissue paper annually. All polybags, tissue & sport shirt packaging trims are 100% post-consumer recycled quality. By 2023 we will fully shift all hangtags and woven garment labels to 100% post-consumer recycled qualities.",
+        "content_color": "#ffffff",
+        "cta_text": "",
+        "cta_link": "",
+        "cta_color": "#1c59a8",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default"
+      }
+    },
+    "1657811995ef10caa8": {
+      "type": "featured-products",
+      "blocks": {
+        "4bf9d832-d349-4b05-93e3-c34f1acb5e30": {
+          "type": "collection",
+          "settings": {
+            "collection": "brrr",
+            "collection_title": "",
+            "enable_cta": false,
+            "cta_text": "Show more"
+          }
+        }
+      },
+      "block_order": [
+        "4bf9d832-d349-4b05-93e3-c34f1acb5e30"
+      ],
+      "settings": {
+        "headline": "shop our entire brrr°® collection",
+        "headline_size": "large",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "32px",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "165781231308e79784": {
+      "type": "featured-blocks",
+      "blocks": {
+        "d1acc28b-0c74-4c05-b6da-457e85813e42": {
+          "type": "featured_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/waves.jpg",
+            "title": "The benefits of brrrº",
+            "content": "",
+            "cta_text": "5 min read",
+            "link": "https:\/\/southerntide.com\/pages\/beneath-the-waves"
+          }
+        },
+        "35af650b-0b7d-4cf5-a502-0ee605d40bcd": {
+          "type": "featured_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/coconuts.jpg",
+            "title": "Learn more about brrrº",
+            "content": "",
+            "cta_text": "Read more",
+            "link": "https:\/\/www.brrr.com\/"
+          }
+        }
+      },
+      "block_order": [
+        "d1acc28b-0c74-4c05-b6da-457e85813e42",
+        "35af650b-0b7d-4cf5-a502-0ee605d40bcd"
+      ],
+      "disabled": true,
+      "settings": {
+        "headline": "",
+        "headline_size": "large",
+        "content": "",
+        "section_width": "full",
+        "button_style": "link",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "1657812875c375d477": {
+      "type": "trust-bar",
+      "blocks": {
+        "3c1d32df-e982-475f-b300-21fdd8b6b504": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/icon-1.png",
+            "title": "Stores",
+            "content": "",
+            "cta_text": "",
+            "cta_link": "\/apps\/store-locator"
+          }
+        },
+        "24c328a4-d406-43a7-ba6c-abfaf836d246": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/icon-2.png",
+            "title": "Gift Cards",
+            "content": "",
+            "cta_text": "",
+            "cta_link": "shopify:\/\/products\/southern-tide-gift-card"
+          }
+        },
+        "1396d997-21cc-4d9f-9c75-093bb3e9ff64": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/icon-3.png",
+            "title": "Catalog",
+            "content": "",
+            "cta_text": "",
+            "cta_link": "\/pages\/2022-spring-catalog"
+          }
+        },
+        "c23fc7b6-5d81-450b-808f-da8a18a62f46": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/icon-4.png",
+            "title": "ST Rewards",
+            "content": "",
+            "cta_text": "",
+            "cta_link": "shopify:\/\/pages\/rewards"
+          }
+        }
+      },
+      "block_order": [
+        "3c1d32df-e982-475f-b300-21fdd8b6b504",
+        "24c328a4-d406-43a7-ba6c-abfaf836d246",
+        "1396d997-21cc-4d9f-9c75-093bb3e9ff64",
+        "c23fc7b6-5d81-450b-808f-da8a18a62f46"
+      ],
+      "disabled": true,
+      "settings": {
+        "background_color": "#f2f2f2",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "0",
+        "margin_bottom_mobile": "0"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1657810131eb39af18",
+    "1657810214275f20ee",
+    "16578102549e672944",
+    "165290108122b2d56a",
+    "16578117439dc0e155",
+    "1657811995ef10caa8",
+    "165781231308e79784",
+    "1657812875c375d477"
+  ]
+}

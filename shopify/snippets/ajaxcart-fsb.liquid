@@ -1,0 +1,21 @@
+{% if settings.free_shipping_enable == true %}
+  <hide-if-cart-empty>
+    <div class="ajaxcart__fsb" data-fsb="{{ settings.free_shipping_threshold }}">
+      <div class="ajaxcart__fsb-header">
+        {% render 'icon-shipping' %}
+
+        <p class="ajaxcart__fsb-text p--small"
+          data-fsb-text
+          data-unqualified-text="{{ settings.fsb_unqualified }}"
+          data-qualified-text="{{ settings.fsb_qualified }}"
+        >
+          {{ settings.fsb_unqualified }}
+        </p>
+      </div>
+
+      <div class="ajaxcart__fsb-bar-holder">
+        <span class="ajaxcart__fsb-bar" data-fsb-bar></span>
+      </div>
+    </div>
+  </hide-if-cart-empty>
+{% endif %}

@@ -1,0 +1,115 @@
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+      }
+    },
+    "b85338ad-e915-4fb5-88d1-99fb04c6f048": {
+      "type": "featured-collections",
+      "blocks": {
+        "a5434230-911c-45dd-8346-8cdda1bdb4de": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-07-26_at_9.28.01_AM.png",
+            "title": "",
+            "content": "",
+            "cta_text": "",
+            "link": ""
+          }
+        },
+        "fe1c6ff8-a1c1-4833-b5bb-c6464e6dc11c": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Notre-Dame-1280resize-07282023.png",
+            "title": "",
+            "content": "",
+            "cta_text": "University of Notre Dame",
+            "link": "shopify:\/\/collections\/notre-dame-fighting-irish-apparel"
+          }
+        },
+        "06de6b74-2dee-4210-b043-89515b1fff25": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-07-26_at_9.28.01_AM.png",
+            "title": "",
+            "content": "",
+            "cta_text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "a5434230-911c-45dd-8346-8cdda1bdb4de",
+        "fe1c6ff8-a1c1-4833-b5bb-c6464e6dc11c",
+        "06de6b74-2dee-4210-b043-89515b1fff25"
+      ],
+      "settings": {
+        "headline": "FBS Independents",
+        "headline_size": "large",
+        "content": "<hr>",
+        "section_width": "container",
+        "button_style": "link",
+        "margin_top": "32px",
+        "margin_top_mobile": "32px",
+        "margin_bottom": "16px",
+        "margin_bottom_mobile": "16px",
+        "padding_top": "32px",
+        "padding_top_mobile": "32px",
+        "padding_bottom": "16px",
+        "padding_bottom_mobile": "16px"
+      }
+    },
+    "6224def8-106d-4a3f-9dc1-74bfe8f71e06": {
+      "type": "content-blocks",
+      "blocks": {
+        "a1d8ab22-93c5-4f36-a7b5-529bf53806e1": {
+          "type": "content_block",
+          "settings": {
+            "mobile_image": "shopify:\/\/shop_images\/230811-navigation-collegiate.jpg",
+            "image": "shopify:\/\/shop_images\/230811-navigation-collegiate.jpg",
+            "video_file_url": "",
+            "mobile_video_file_url": "",
+            "enable_full_width_video": false,
+            "video_embed": "",
+            "video_description": "",
+            "mobile_video_embed": "",
+            "background_color": "#CDE0F1",
+            "width": "full",
+            "content_position": "right",
+            "headline": "Don't See Your Team?",
+            "content": "",
+            "cta_1_text": "Explore All Schools",
+            "cta_1_link": "shopify:\/\/pages\/collegiate-conferences",
+            "cta_1_style": "solid",
+            "cta_2_text": "",
+            "cta_2_link": "",
+            "cta_2_style": "outline",
+            "feature_1_text": "",
+            "feature_2_text": "",
+            "feature_3_text": "",
+            "feature_4_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "a1d8ab22-93c5-4f36-a7b5-529bf53806e1"
+      ],
+      "settings": {
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "b85338ad-e915-4fb5-88d1-99fb04c6f048",
+    "6224def8-106d-4a3f-9dc1-74bfe8f71e06"
+  ]
+}

@@ -1,0 +1,294 @@
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+      }
+    },
+    "5d8ed3d0-39b3-497d-9151-8f2f47f74a1f": {
+      "type": "featured-collections",
+      "blocks": {
+        "12df3760-1ce9-4bdd-a880-c9f5ff905deb": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bama_2_-resize.png",
+            "title": "",
+            "content": "",
+            "cta_text": "University of Alabama",
+            "link": "shopify:\/\/collections\/university-of-alabama"
+          }
+        },
+        "b43a92aa-e989-4843-b29e-a5134ac6d762": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ark_2-resize.png",
+            "title": "",
+            "content": "",
+            "cta_text": "University of Arkansas",
+            "link": "shopify:\/\/collections\/university-of-arkansas"
+          }
+        },
+        "61470175-754b-4d28-a8bf-1c47b6552de3": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/au_2-_resize.png",
+            "title": "",
+            "content": "",
+            "cta_text": "Auburn University",
+            "link": "shopify:\/\/collections\/auburn-university"
+          }
+        },
+        "46b5cc4d-8ae3-42ea-ae80-33550da6b247": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/gators2-resize.png",
+            "title": "",
+            "content": "",
+            "cta_text": "University of Florida",
+            "link": "shopify:\/\/collections\/university-of-florida"
+          }
+        }
+      },
+      "block_order": [
+        "12df3760-1ce9-4bdd-a880-c9f5ff905deb",
+        "b43a92aa-e989-4843-b29e-a5134ac6d762",
+        "61470175-754b-4d28-a8bf-1c47b6552de3",
+        "46b5cc4d-8ae3-42ea-ae80-33550da6b247"
+      ],
+      "settings": {
+        "headline": "SEC",
+        "headline_size": "large",
+        "content": "<hr>",
+        "section_width": "container",
+        "button_style": "link",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "32px",
+        "margin_bottom_mobile": "32px",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "32px",
+        "padding_bottom_mobile": "32px"
+      }
+    },
+    "e21593a7-0c9b-461e-be7b-3611c70c7d7d": {
+      "type": "featured-collections",
+      "blocks": {
+        "cade7b26-c37c-470b-ae03-01be0bc4a8b2": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/georgia-resize_6edf4922-e5aa-4ff6-b2c8-f5c8b5999a6d.png",
+            "title": "",
+            "content": "",
+            "cta_text": "University of Georgia",
+            "link": "shopify:\/\/collections\/university-of-georgia"
+          }
+        },
+        "acee5819-2145-414b-9f75-92d94f3abe76": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/UK-resize.png",
+            "title": "",
+            "content": "",
+            "cta_text": "University of Kentucky",
+            "link": "shopify:\/\/collections\/university-of-kentucky"
+          }
+        },
+        "bc974dd7-e8f4-4315-82f1-140e5b2a6e0d": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/LSU-resize.png",
+            "title": "",
+            "content": "",
+            "cta_text": "Louisiana State University",
+            "link": "shopify:\/\/collections\/louisiana-state-university"
+          }
+        }
+      },
+      "block_order": [
+        "cade7b26-c37c-470b-ae03-01be0bc4a8b2",
+        "acee5819-2145-414b-9f75-92d94f3abe76",
+        "bc974dd7-e8f4-4315-82f1-140e5b2a6e0d"
+      ],
+      "settings": {
+        "headline": "",
+        "headline_size": "small",
+        "content": "",
+        "section_width": "container",
+        "button_style": "link",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "32px",
+        "margin_bottom_mobile": "32px",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "32px",
+        "padding_bottom_mobile": "32px"
+      }
+    },
+    "807e2cdd-07ba-46ab-95b6-accaf40686c8": {
+      "type": "featured-collections",
+      "blocks": {
+        "88f737ce-1075-49c7-a982-a62dccf86d6e": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/miss-state-resize.png",
+            "title": "",
+            "content": "",
+            "cta_text": "Mississippi State",
+            "link": "shopify:\/\/collections\/mississippi-state-university"
+          }
+        },
+        "545b2415-f7c5-4d8c-92d9-3c09fae1ec23": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ole-miss-1280resize-07282023.png",
+            "title": "",
+            "content": "",
+            "cta_text": "University of Mississippi",
+            "link": "shopify:\/\/collections\/university-of-mississippi"
+          }
+        },
+        "7cd661bf-ca53-43ba-8321-059428d4af12": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/southcarolina-resize.png",
+            "title": "",
+            "content": "",
+            "cta_text": "University of South Carolina",
+            "link": "shopify:\/\/collections\/university-of-south-carolina"
+          }
+        }
+      },
+      "block_order": [
+        "88f737ce-1075-49c7-a982-a62dccf86d6e",
+        "545b2415-f7c5-4d8c-92d9-3c09fae1ec23",
+        "7cd661bf-ca53-43ba-8321-059428d4af12"
+      ],
+      "settings": {
+        "headline": "",
+        "headline_size": "large",
+        "content": "",
+        "section_width": "container",
+        "button_style": "link",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "32px",
+        "margin_bottom_mobile": "32px",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "32px",
+        "padding_bottom_mobile": "32px"
+      }
+    },
+    "c0b74571-31a0-406f-b056-fd7e64ade5cf": {
+      "type": "featured-collections",
+      "blocks": {
+        "ab93cc70-1c75-4d6e-a3fb-3369b253afd4": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/tenessee-resize.png",
+            "title": "",
+            "content": "",
+            "cta_text": "University of Tennessee",
+            "link": "shopify:\/\/collections\/university-of-tennessee"
+          }
+        },
+        "ae0a6554-40b9-4ad7-a82a-f82296b0a91a": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/t-am-resize.png",
+            "title": "",
+            "content": "",
+            "cta_text": "Texas A&M University",
+            "link": "shopify:\/\/collections\/texas-a-m-university"
+          }
+        },
+        "12636a85-25c7-4ea3-a4a3-c14f27b574b8": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/vandy-resize.png",
+            "title": "",
+            "content": "",
+            "cta_text": "Vanderbilt University",
+            "link": "shopify:\/\/collections\/vanderbilt-university"
+          }
+        }
+      },
+      "block_order": [
+        "ab93cc70-1c75-4d6e-a3fb-3369b253afd4",
+        "ae0a6554-40b9-4ad7-a82a-f82296b0a91a",
+        "12636a85-25c7-4ea3-a4a3-c14f27b574b8"
+      ],
+      "settings": {
+        "headline": "",
+        "headline_size": "large",
+        "content": "",
+        "section_width": "container",
+        "button_style": "link",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "32px",
+        "padding_bottom_mobile": "32px"
+      }
+    },
+    "57fe77f2-8c62-42cc-a6bc-7be849c5d66e": {
+      "type": "content-blocks",
+      "blocks": {
+        "107435ea-5f58-4132-b920-2b39589d509b": {
+          "type": "content_block",
+          "settings": {
+            "mobile_image": "shopify:\/\/shop_images\/230811-navigation-collegiate.jpg",
+            "image": "shopify:\/\/shop_images\/230811-navigation-collegiate.jpg",
+            "video_file_url": "",
+            "mobile_video_file_url": "",
+            "enable_full_width_video": false,
+            "video_embed": "",
+            "video_description": "",
+            "mobile_video_embed": "",
+            "background_color": "#CDE0F1",
+            "width": "full",
+            "content_position": "right",
+            "headline": "Don't See Your Team?",
+            "content": "",
+            "cta_1_text": "Explore All Schools",
+            "cta_1_link": "shopify:\/\/pages\/collegiate-conferences",
+            "cta_1_style": "solid",
+            "cta_2_text": "",
+            "cta_2_link": "",
+            "cta_2_style": "outline",
+            "feature_1_text": "",
+            "feature_2_text": "",
+            "feature_3_text": "",
+            "feature_4_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "107435ea-5f58-4132-b920-2b39589d509b"
+      ],
+      "settings": {
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "5d8ed3d0-39b3-497d-9151-8f2f47f74a1f",
+    "e21593a7-0c9b-461e-be7b-3611c70c7d7d",
+    "807e2cdd-07ba-46ab-95b6-accaf40686c8",
+    "c0b74571-31a0-406f-b056-fd7e64ade5cf",
+    "57fe77f2-8c62-42cc-a6bc-7be849c5d66e"
+  ]
+}

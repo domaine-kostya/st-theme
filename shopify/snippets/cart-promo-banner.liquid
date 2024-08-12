@@ -1,0 +1,46 @@
+{%- liquid
+  assign type = key
+  assign location_key = 'cpb_' | append: key | append: '_location'
+  assign show_on_key = 'cpb_' | append: key | append: '_show_on'
+  assign image_key = 'cpb_' | append: key | append: '_image'
+  assign title_key = 'cpb_' | append: key | append: '_title'
+  assign cta_key = 'cpb_' | append: key | append: '_cta'
+  assign link_key = 'cpb_' | append: key | append: '_link'
+  assign legal_key = 'cpb_' | append: key | append: '_legal'
+
+  assign banner_location = settings[location_key]
+  assign show_on = settings[show_on_key]
+  assign banner_image = settings[image_key]
+  assign title = settings[title_key]
+  assign cta = settings[cta_key]
+  assign cta_link = settings[link_key]
+  assign legal = settings[legal_key]
+
+  assign image_size = 400
+  if type == 'takeover' or banner_location == 'side'
+    assign image_size = 1300
+  endif
+
+  if type == 'takeover'
+    assign show_on = 'd-none d-lg-flex'
+  endif
+-%}
+
+<div class="cart-promo-banner cart-promo-banner--{{ type }} cart-promo-banner--{{ banner_location }} {{ show_on }}">
+  {% if banner_image != blank %}
+    <div class="cart-promo-banner__image img-cover">
+      {{ banner_image | image_url: width: image_size | image_tag: loading: 'lazy' }}
+    </div>
+  {% endif %}
+  <div class="cart-promo-banner__content {% if banner_image == blank and type == 'drawer' %}cart-promo-banner__content--no-img{% endif %}">
+    <h2 class="cart-promo-banner__title">
+      {{ title }}
+    </h2>
+    {{ cta | link_to: cta_link, class: 'cart-promo-banner__cta' }}
+    {% if legal != blank %}
+      <p class="cart-promo-banner__legal">
+        {{ legal }}
+      </p>
+    {% endif %}
+  </div>
+</div>

@@ -1,0 +1,78 @@
+{{ 'sections.account.css' | asset_url | stylesheet_tag }}
+
+<section-account class="account">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2 d-none d-lg-block">
+        {% render 'account-sidebar' %}
+      </div>
+
+      <div class="col-lg-10">
+        <h1 class="account__headline heading-3">{{ 'customer.account.order_history' | t }}</h1>
+
+        {% render 'account-page-selector' %}
+
+        <div class="row">
+          <div class="col-m-8">
+            <div class="account__orders" data-account-dashboard-orders>
+              {% if customer.orders.size != 0 %}
+                {% for order in customer.orders %}
+                  <div class="account__order{% if forloop.first %} active{% endif %}" data-account-dashboard-order>
+                    <button class="account__order-toggle heading-5 d-md-none" data-account-dashboard-order-toggle>
+                      <span>{{ 'customer.orders.order_number' | t }}&nbsp;{{ order.name }}</span>
+                      {%- render 'icon-plus-large' -%}
+                      {%- render 'icon-minus-large' -%}
+                    </button>
+
+                    <div class="account__order-info">
+                      <div class="account__order-info-inner">
+                        <div class="account__order-image">
+                          {% assign order_product = order.line_items[0].product %}
+
+                          <a href="{{ order.customer_url }}" title="{{ order_product.title }}">
+                            <img src="{{ order_product.featured_image | img_url: '190x' }}" class="lazyload" alt="{{ order_product.title }}">
+                          </a>
+                        </div>
+
+                        <div class="account__order-details">
+                          <p class="heading-5 d-none d-md-block">{{ 'customer.orders.order_number' | t }}&nbsp;{{ order.name }}</p>
+                          <p><strong>{{ 'customer.orders.date' | t }}</strong>&nbsp;{{ order.created_at | date: '%b %d, %Y' }}</p>
+                          <p><strong>{{ 'customer.orders.status' | t }}</strong>&nbsp;{{ order.fulfillment_status_label }}</p>
+
+                          <div class="account__order-details-info">
+                            <a class="ui-link" href="{{ order.customer_url }}" title="{{ 'customer.orders.details' | t }}">{{ 'customer.orders.details' | t }}</a>
+                            <p class="account__order-total heading-5 d-md-none">{{ order.total_price | money }}</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="account__order-actions">
+                        <p class="account__order-total heading-5 d-none d-md-block">{{ order.total_price | money }}</p>
+
+                        <br class="d-none d-md-block">
+
+                        {% if order.order_status_url != blank %}
+                          <div class="account__order-track">
+                            <a class="btn" href="{{ order.order_status_url }}" target="_blank" title="{{ 'customer.orders.track' | t }}">
+                              {{- 'customer.orders.track' | t -}}
+                            </a>
+                          </div>
+                        {% endif %}
+                      </div>
+                    </div>
+                  </div>
+                {% endfor %}
+              {% else %}
+                <div class="account__empty">
+                  <p>{{ 'customer.orders.none' | t }}</p>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section-account>
+
+{{ 'sections.account.js' | asset_url | script_tag }}

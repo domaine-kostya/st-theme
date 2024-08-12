@@ -1,0 +1,870 @@
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+      }
+    },
+    "b78422b2-89bf-40af-a791-d5ecc9f73ec4": {
+      "type": "featured-collections",
+      "settings": {
+        "headline": "Collegiate Conferences",
+        "headline_size": "large",
+        "content": "",
+        "section_width": "full",
+        "button_style": "link",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "32px",
+        "margin_bottom_mobile": "32px",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "5d8ed3d0-39b3-497d-9151-8f2f47f74a1f": {
+      "type": "featured-collections",
+      "blocks": {
+        "12df3760-1ce9-4bdd-a880-c9f5ff905deb": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bama_2_-resize.png",
+            "title": "",
+            "content": "",
+            "cta_text": "University of Alabama",
+            "link": "shopify:\/\/collections\/university-of-alabama"
+          }
+        },
+        "b43a92aa-e989-4843-b29e-a5134ac6d762": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ark_2-resize.png",
+            "title": "",
+            "content": "",
+            "cta_text": "University of Arkansas",
+            "link": "shopify:\/\/collections\/university-of-arkansas"
+          }
+        },
+        "61470175-754b-4d28-a8bf-1c47b6552de3": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/au_2-_resize.png",
+            "title": "",
+            "content": "",
+            "cta_text": "Auburn University",
+            "link": "shopify:\/\/collections\/auburn-university"
+          }
+        },
+        "46b5cc4d-8ae3-42ea-ae80-33550da6b247": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/gators2-resize.png",
+            "title": "",
+            "content": "",
+            "cta_text": "University of Florida",
+            "link": "shopify:\/\/collections\/university-of-florida"
+          }
+        }
+      },
+      "block_order": [
+        "12df3760-1ce9-4bdd-a880-c9f5ff905deb",
+        "b43a92aa-e989-4843-b29e-a5134ac6d762",
+        "61470175-754b-4d28-a8bf-1c47b6552de3",
+        "46b5cc4d-8ae3-42ea-ae80-33550da6b247"
+      ],
+      "settings": {
+        "headline": "SEC",
+        "headline_size": "small",
+        "content": "<hr>",
+        "section_width": "container",
+        "button_style": "link",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "32px",
+        "margin_bottom_mobile": "32px",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "32px",
+        "padding_bottom_mobile": "32px"
+      }
+    },
+    "e21593a7-0c9b-461e-be7b-3611c70c7d7d": {
+      "type": "featured-collections",
+      "blocks": {
+        "cade7b26-c37c-470b-ae03-01be0bc4a8b2": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/georgia-resize_6edf4922-e5aa-4ff6-b2c8-f5c8b5999a6d.png",
+            "title": "",
+            "content": "",
+            "cta_text": "University of Georgia",
+            "link": "shopify:\/\/collections\/university-of-georgia"
+          }
+        },
+        "acee5819-2145-414b-9f75-92d94f3abe76": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/UK-resize.png",
+            "title": "",
+            "content": "",
+            "cta_text": "University of Kentucky",
+            "link": "shopify:\/\/collections\/university-of-kentucky"
+          }
+        },
+        "bc974dd7-e8f4-4315-82f1-140e5b2a6e0d": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/LSU-resize.png",
+            "title": "",
+            "content": "",
+            "cta_text": "Louisiana State University",
+            "link": "shopify:\/\/collections\/louisiana-state-university"
+          }
+        }
+      },
+      "block_order": [
+        "cade7b26-c37c-470b-ae03-01be0bc4a8b2",
+        "acee5819-2145-414b-9f75-92d94f3abe76",
+        "bc974dd7-e8f4-4315-82f1-140e5b2a6e0d"
+      ],
+      "settings": {
+        "headline": "",
+        "headline_size": "small",
+        "content": "",
+        "section_width": "container",
+        "button_style": "link",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "32px",
+        "margin_bottom_mobile": "32px",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "32px",
+        "padding_bottom_mobile": "32px"
+      }
+    },
+    "807e2cdd-07ba-46ab-95b6-accaf40686c8": {
+      "type": "featured-collections",
+      "blocks": {
+        "88f737ce-1075-49c7-a982-a62dccf86d6e": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/miss-state-resize.png",
+            "title": "",
+            "content": "",
+            "cta_text": "Mississippi State",
+            "link": "shopify:\/\/collections\/mississippi-state-university"
+          }
+        },
+        "545b2415-f7c5-4d8c-92d9-3c09fae1ec23": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ole-miss-1280resize-07282023.png",
+            "title": "",
+            "content": "",
+            "cta_text": "University of Mississippi",
+            "link": "shopify:\/\/collections\/university-of-mississippi"
+          }
+        },
+        "7cd661bf-ca53-43ba-8321-059428d4af12": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/southcarolina-resize.png",
+            "title": "",
+            "content": "",
+            "cta_text": "University of South Carolina",
+            "link": "shopify:\/\/collections\/university-of-south-carolina"
+          }
+        }
+      },
+      "block_order": [
+        "88f737ce-1075-49c7-a982-a62dccf86d6e",
+        "545b2415-f7c5-4d8c-92d9-3c09fae1ec23",
+        "7cd661bf-ca53-43ba-8321-059428d4af12"
+      ],
+      "settings": {
+        "headline": "",
+        "headline_size": "large",
+        "content": "",
+        "section_width": "container",
+        "button_style": "link",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "32px",
+        "margin_bottom_mobile": "32px",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "32px",
+        "padding_bottom_mobile": "32px"
+      }
+    },
+    "c0b74571-31a0-406f-b056-fd7e64ade5cf": {
+      "type": "featured-collections",
+      "blocks": {
+        "ab93cc70-1c75-4d6e-a3fb-3369b253afd4": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/tenessee-resize.png",
+            "title": "",
+            "content": "",
+            "cta_text": "University of Tennessee",
+            "link": "shopify:\/\/collections\/university-of-tennessee"
+          }
+        },
+        "ae0a6554-40b9-4ad7-a82a-f82296b0a91a": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/t-am-resize.png",
+            "title": "",
+            "content": "",
+            "cta_text": "Texas A&M University",
+            "link": "shopify:\/\/collections\/texas-a-m-university"
+          }
+        },
+        "12636a85-25c7-4ea3-a4a3-c14f27b574b8": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/vandy-resize.png",
+            "title": "",
+            "content": "",
+            "cta_text": "Vanderbilt University",
+            "link": "shopify:\/\/collections\/vanderbilt-university"
+          }
+        }
+      },
+      "block_order": [
+        "ab93cc70-1c75-4d6e-a3fb-3369b253afd4",
+        "ae0a6554-40b9-4ad7-a82a-f82296b0a91a",
+        "12636a85-25c7-4ea3-a4a3-c14f27b574b8"
+      ],
+      "settings": {
+        "headline": "",
+        "headline_size": "large",
+        "content": "",
+        "section_width": "container",
+        "button_style": "link",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "32px",
+        "padding_bottom_mobile": "32px"
+      }
+    },
+    "4f40f39b-df1e-4be2-9736-794b2b9090e1": {
+      "type": "featured-collections",
+      "blocks": {
+        "2b2d6647-783c-42dd-b19d-87ebb8b73b3d": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Clemson-1280resize-07282023.png",
+            "title": "",
+            "content": "",
+            "cta_text": "Clemson University",
+            "link": "shopify:\/\/collections\/clemson-university"
+          }
+        },
+        "91ca1633-7af7-4828-bad2-ac100c191bf3": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/fsu-resize.png",
+            "title": "",
+            "content": "",
+            "cta_text": "Florida State University",
+            "link": "shopify:\/\/collections\/florida-state-university"
+          }
+        },
+        "80f72d66-203c-4f1b-a6b8-23df3f9ce995": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/georgia_tech-resize.png",
+            "title": "",
+            "content": "",
+            "cta_text": "Georgia Tech",
+            "link": "shopify:\/\/collections\/georgia-institute-of-technology"
+          }
+        }
+      },
+      "block_order": [
+        "2b2d6647-783c-42dd-b19d-87ebb8b73b3d",
+        "91ca1633-7af7-4828-bad2-ac100c191bf3",
+        "80f72d66-203c-4f1b-a6b8-23df3f9ce995"
+      ],
+      "settings": {
+        "headline": "ACC",
+        "headline_size": "small",
+        "content": "<hr>",
+        "section_width": "container",
+        "button_style": "link",
+        "margin_top": "16px",
+        "margin_top_mobile": "16px",
+        "margin_bottom": "32px",
+        "margin_bottom_mobile": "32px",
+        "padding_top": "32px",
+        "padding_top_mobile": "32px",
+        "padding_bottom": "32px",
+        "padding_bottom_mobile": "32px"
+      }
+    },
+    "80a69afe-f65e-4292-9d55-52a5d980e28d": {
+      "type": "featured-collections",
+      "blocks": {
+        "2ff4f40a-3185-4b3a-a00c-cba17c37749b": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/u-miami-resize.png",
+            "title": "",
+            "content": "",
+            "cta_text": "University of Miami",
+            "link": "shopify:\/\/collections\/university-of-miami"
+          }
+        },
+        "9859264d-40ca-4cd2-be03-f54e6c9e233d": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ns-state-resize.png",
+            "title": "",
+            "content": "",
+            "cta_text": "NC State",
+            "link": "shopify:\/\/collections\/north-carolina-state-university"
+          }
+        },
+        "f6d0d906-5fd9-4265-a42b-2bf4648071f3": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/unc-ch-resize.png",
+            "title": "",
+            "content": "",
+            "cta_text": "UNC",
+            "link": "shopify:\/\/collections\/university-of-north-carolina-at-chapel-hill"
+          }
+        }
+      },
+      "block_order": [
+        "2ff4f40a-3185-4b3a-a00c-cba17c37749b",
+        "9859264d-40ca-4cd2-be03-f54e6c9e233d",
+        "f6d0d906-5fd9-4265-a42b-2bf4648071f3"
+      ],
+      "settings": {
+        "headline": "",
+        "headline_size": "small",
+        "content": "",
+        "section_width": "container",
+        "button_style": "link",
+        "margin_top": "0",
+        "margin_top_mobile": "0",
+        "margin_bottom": "32px",
+        "margin_bottom_mobile": "32px",
+        "padding_top": "0",
+        "padding_top_mobile": "0",
+        "padding_bottom": "32px",
+        "padding_bottom_mobile": "32px"
+      }
+    },
+    "b80db12d-961b-42af-b6f4-60844ae0e87a": {
+      "type": "featured-collections",
+      "blocks": {
+        "4f7dc764-579a-4dc5-8923-e0c270162e2f": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/UVA-resize.png",
+            "title": "",
+            "content": "",
+            "cta_text": "UVA",
+            "link": "shopify:\/\/collections\/university-of-virginia"
+          }
+        },
+        "fe795ea7-16be-4d40-bc9a-8b50e9fe9dcd": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/VA_Tech-resize.png",
+            "title": "",
+            "content": "",
+            "cta_text": "Virginia Tech",
+            "link": "shopify:\/\/collections\/virginia-polytechnic-institute-state-university"
+          }
+        },
+        "4c5ce917-3b6d-419f-9c01-9f27a3d2a928": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Wake-resize.png",
+            "title": "",
+            "content": "",
+            "cta_text": "Wake Forest",
+            "link": "shopify:\/\/collections\/wake-forest-university"
+          }
+        }
+      },
+      "block_order": [
+        "4f7dc764-579a-4dc5-8923-e0c270162e2f",
+        "fe795ea7-16be-4d40-bc9a-8b50e9fe9dcd",
+        "4c5ce917-3b6d-419f-9c01-9f27a3d2a928"
+      ],
+      "settings": {
+        "headline": "",
+        "headline_size": "small",
+        "content": "",
+        "section_width": "container",
+        "button_style": "link",
+        "margin_top": "0",
+        "margin_top_mobile": "0",
+        "margin_bottom": "32px",
+        "margin_bottom_mobile": "32px",
+        "padding_top": "0",
+        "padding_top_mobile": "0",
+        "padding_bottom": "32px",
+        "padding_bottom_mobile": "32px"
+      }
+    },
+    "3bed8954-b487-4282-b435-7b908d22a149": {
+      "type": "featured-collections",
+      "blocks": {
+        "f44c0e74-81ff-4d7b-93a6-896fbca07a31": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Blank-1280x1280-09082023.png",
+            "title": "",
+            "content": "",
+            "cta_text": "",
+            "link": ""
+          }
+        },
+        "61a212af-b1de-4667-9b5e-f9ff4d340a03": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Baylor-resize-07282023.png",
+            "title": "",
+            "content": "",
+            "cta_text": "Baylor University",
+            "link": "shopify:\/\/collections\/baylor-university"
+          }
+        },
+        "1a5ebd26-bd1b-4165-95ed-5d9e5b540ab8": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/U-of-Oklahona-1280resize-07282023.png",
+            "title": "",
+            "content": "",
+            "cta_text": "University of Oklahoma",
+            "link": "shopify:\/\/collections\/university-of-oklahoma"
+          }
+        },
+        "d4cf10ab-0ad9-4c07-8cb2-c2e3b7f3f7d5": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Blank-1280x1280-09082023_761bf4f5-ba32-4e1d-9257-3ab5db6af060.png",
+            "title": "",
+            "content": "",
+            "cta_text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "f44c0e74-81ff-4d7b-93a6-896fbca07a31",
+        "61a212af-b1de-4667-9b5e-f9ff4d340a03",
+        "1a5ebd26-bd1b-4165-95ed-5d9e5b540ab8",
+        "d4cf10ab-0ad9-4c07-8cb2-c2e3b7f3f7d5"
+      ],
+      "settings": {
+        "headline": "Big 12",
+        "headline_size": "small",
+        "content": "<hr>",
+        "section_width": "container",
+        "button_style": "link",
+        "margin_top": "32px",
+        "margin_top_mobile": "32px",
+        "margin_bottom": "32px",
+        "margin_bottom_mobile": "32px",
+        "padding_top": "32px",
+        "padding_top_mobile": "32px",
+        "padding_bottom": "32px",
+        "padding_bottom_mobile": "32px"
+      }
+    },
+    "c40ea621-a13e-4499-9adc-16bfb39523fc": {
+      "type": "featured-collections",
+      "blocks": {
+        "f4b7e2a0-03ca-42b5-9dc0-aef5bd8336f2": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/TCU-1280resize-07282023.png",
+            "title": "",
+            "content": "",
+            "cta_text": "Texas Christian University",
+            "link": "shopify:\/\/collections\/texas-christian-university"
+          }
+        },
+        "49f01270-e233-4f11-b018-47b51005c0c2": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Texas-Tech-1280resize-07282023.png",
+            "title": "",
+            "content": "",
+            "cta_text": "Texas Tech University",
+            "link": "shopify:\/\/collections\/texas-tech-university"
+          }
+        },
+        "f19018ce-565b-4a1a-b9c3-27dee1e98b59": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/West-Virginia-University-1280resize-07282023.png",
+            "title": "",
+            "content": "",
+            "cta_text": "West Virginia University",
+            "link": "shopify:\/\/collections\/west-virginia-university"
+          }
+        }
+      },
+      "block_order": [
+        "f4b7e2a0-03ca-42b5-9dc0-aef5bd8336f2",
+        "49f01270-e233-4f11-b018-47b51005c0c2",
+        "f19018ce-565b-4a1a-b9c3-27dee1e98b59"
+      ],
+      "settings": {
+        "headline": "",
+        "headline_size": "small",
+        "content": "",
+        "section_width": "container",
+        "button_style": "link",
+        "margin_top": "0",
+        "margin_top_mobile": "0",
+        "margin_bottom": "32px",
+        "margin_bottom_mobile": "32px",
+        "padding_top": "0",
+        "padding_top_mobile": "0",
+        "padding_bottom": "32px",
+        "padding_bottom_mobile": "32px"
+      }
+    },
+    "d4d34632-8e9d-4f60-a0f8-76da05237086": {
+      "type": "featured-collections",
+      "blocks": {
+        "bfe59e06-db62-4921-956b-64979346382d": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-07-26_at_9.28.01_AM.png",
+            "title": "",
+            "content": "",
+            "cta_text": "",
+            "link": ""
+          }
+        },
+        "6fd6ac2a-fc7b-42b3-8e56-ff6f1decb814": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Michigan-State-University-1280resize-07282023.png",
+            "title": "",
+            "content": "",
+            "cta_text": "Michigan State University",
+            "link": "shopify:\/\/collections\/michigan-spartans-apparel"
+          }
+        },
+        "2271aa0a-c4a3-44ff-9492-e49b9318e2f4": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Ohio-State-University-1280resize-07282023.png",
+            "title": "",
+            "content": "",
+            "cta_text": "Ohio State University",
+            "link": "shopify:\/\/collections\/ohio-state-buckeyes-apparel"
+          }
+        },
+        "f388127e-7c2b-496e-b837-551f42879930": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-07-26_at_9.28.01_AM.png",
+            "title": "",
+            "content": "",
+            "cta_text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "bfe59e06-db62-4921-956b-64979346382d",
+        "6fd6ac2a-fc7b-42b3-8e56-ff6f1decb814",
+        "2271aa0a-c4a3-44ff-9492-e49b9318e2f4",
+        "f388127e-7c2b-496e-b837-551f42879930"
+      ],
+      "settings": {
+        "headline": "Big 10",
+        "headline_size": "small",
+        "content": "<hr>",
+        "section_width": "container",
+        "button_style": "link",
+        "margin_top": "32px",
+        "margin_top_mobile": "32px",
+        "margin_bottom": "16px",
+        "margin_bottom_mobile": "16px",
+        "padding_top": "32px",
+        "padding_top_mobile": "32px",
+        "padding_bottom": "32px",
+        "padding_bottom_mobile": "32px"
+      }
+    },
+    "b85338ad-e915-4fb5-88d1-99fb04c6f048": {
+      "type": "featured-collections",
+      "blocks": {
+        "a5434230-911c-45dd-8346-8cdda1bdb4de": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-07-26_at_9.28.01_AM.png",
+            "title": "",
+            "content": "",
+            "cta_text": "",
+            "link": ""
+          }
+        },
+        "fe1c6ff8-a1c1-4833-b5bb-c6464e6dc11c": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Notre-Dame-1280resize-07282023.png",
+            "title": "",
+            "content": "",
+            "cta_text": "University of Notre Dame",
+            "link": "shopify:\/\/collections\/notre-dame-fighting-irish-apparel"
+          }
+        },
+        "06de6b74-2dee-4210-b043-89515b1fff25": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-07-26_at_9.28.01_AM.png",
+            "title": "",
+            "content": "",
+            "cta_text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "a5434230-911c-45dd-8346-8cdda1bdb4de",
+        "fe1c6ff8-a1c1-4833-b5bb-c6464e6dc11c",
+        "06de6b74-2dee-4210-b043-89515b1fff25"
+      ],
+      "settings": {
+        "headline": "FBS Independents",
+        "headline_size": "small",
+        "content": "<hr>",
+        "section_width": "container",
+        "button_style": "link",
+        "margin_top": "32px",
+        "margin_top_mobile": "32px",
+        "margin_bottom": "16px",
+        "margin_bottom_mobile": "16px",
+        "padding_top": "32px",
+        "padding_top_mobile": "32px",
+        "padding_bottom": "16px",
+        "padding_bottom_mobile": "16px"
+      }
+    },
+    "d32eee3f-dd86-4b54-80ce-028480470ee0": {
+      "type": "featured-collections",
+      "blocks": {
+        "45696c44-b911-488e-bfd9-28314e2ac960": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/AprApp_State_1280_x_1280_09082023.png",
+            "title": "",
+            "content": "",
+            "cta_text": "Appalachian State",
+            "link": "https:\/\/southerntide.com\/collections\/appalachian-state-university"
+          }
+        },
+        "3a4ac9fb-6ada-4495-af2e-a071b4956c8b": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Coastal_Carolina_1280_x_1280_09082023.png",
+            "title": "",
+            "content": "",
+            "cta_text": "Coastal Carolina University",
+            "link": "https:\/\/southerntide.com\/collections\/coastal-carolina-university"
+          }
+        },
+        "c0af52b4-5d89-48eb-ac71-e9b423dbd298": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/GSU_1280_x_1280_09082023.png",
+            "title": "",
+            "content": "",
+            "cta_text": "Georgia Southern",
+            "link": "https:\/\/southerntide.com\/collections\/georgia-southern-university"
+          }
+        }
+      },
+      "block_order": [
+        "45696c44-b911-488e-bfd9-28314e2ac960",
+        "3a4ac9fb-6ada-4495-af2e-a071b4956c8b",
+        "c0af52b4-5d89-48eb-ac71-e9b423dbd298"
+      ],
+      "settings": {
+        "headline": "Sun Belt <hr>",
+        "headline_size": "small",
+        "content": "",
+        "section_width": "full",
+        "button_style": "link",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "d45a5bd3-a2fc-4705-8238-782686df55e6": {
+      "type": "featured-collections",
+      "blocks": {
+        "40b95f31-4b52-4fd8-8f2f-d3733d258e38": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Blank-1280x1280-09082023_bfff9145-9752-4c2a-947b-5c7d94c995f8.png",
+            "title": "",
+            "content": "",
+            "cta_text": "",
+            "link": ""
+          }
+        },
+        "036e0e7a-e162-4887-b702-389699bc45e9": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Citadel_1280_x_1280_09082023.png",
+            "title": "",
+            "content": "",
+            "cta_text": "The Citadel",
+            "link": "https:\/\/southerntide.com\/collections\/the-citadel"
+          }
+        },
+        "c0ac0632-8cb8-4b06-98b8-93c9e7e6f982": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Furman_1280_x_1280_09082023.png",
+            "title": "",
+            "content": "",
+            "cta_text": "Furman",
+            "link": "https:\/\/southerntide.com\/collections\/furman-university"
+          }
+        },
+        "026430da-a421-4a93-9e40-3525bdf51751": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Blank-1280x1280-09082023_ef2b472b-a656-4433-ac21-704c259a7083.png",
+            "title": "",
+            "content": "",
+            "cta_text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "40b95f31-4b52-4fd8-8f2f-d3733d258e38",
+        "036e0e7a-e162-4887-b702-389699bc45e9",
+        "c0ac0632-8cb8-4b06-98b8-93c9e7e6f982",
+        "026430da-a421-4a93-9e40-3525bdf51751"
+      ],
+      "settings": {
+        "headline": "Southern Conference",
+        "headline_size": "small",
+        "content": "",
+        "section_width": "full",
+        "button_style": "link",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "3eb0a222-7fb6-492c-bf05-3dedd2a0b657": {
+      "type": "featured-collections",
+      "blocks": {
+        "6328a9a1-bd41-42f6-9218-e03d9a92b7c8": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Blank-1280x1280-09082023_bfff9145-9752-4c2a-947b-5c7d94c995f8.png",
+            "title": "",
+            "content": "",
+            "cta_text": "",
+            "link": ""
+          }
+        },
+        "0db60117-c689-447c-b5a9-f60a8ceac712": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/College_of_Charleston_1280_x_1280_09082023.png",
+            "title": "",
+            "content": "",
+            "cta_text": "College Of Charleston",
+            "link": "https:\/\/southerntide.com\/collections\/college-of-charleston"
+          }
+        },
+        "795f045a-b574-4df6-95e5-58bb5d813d85": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ECU_1280_x_1280_09082023.png",
+            "title": "",
+            "content": "",
+            "cta_text": "ECU",
+            "link": "https:\/\/southerntide.com\/collections\/east-carolina-university"
+          }
+        },
+        "27158d63-3781-4321-8b76-00378ef5100b": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Blank-1280x1280-09082023_ef2b472b-a656-4433-ac21-704c259a7083.png",
+            "title": "",
+            "content": "",
+            "cta_text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "6328a9a1-bd41-42f6-9218-e03d9a92b7c8",
+        "0db60117-c689-447c-b5a9-f60a8ceac712",
+        "795f045a-b574-4df6-95e5-58bb5d813d85",
+        "27158d63-3781-4321-8b76-00378ef5100b"
+      ],
+      "settings": {
+        "headline": "Other Schools",
+        "headline_size": "small",
+        "content": "",
+        "section_width": "full",
+        "button_style": "link",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "b78422b2-89bf-40af-a791-d5ecc9f73ec4",
+    "5d8ed3d0-39b3-497d-9151-8f2f47f74a1f",
+    "e21593a7-0c9b-461e-be7b-3611c70c7d7d",
+    "807e2cdd-07ba-46ab-95b6-accaf40686c8",
+    "c0b74571-31a0-406f-b056-fd7e64ade5cf",
+    "4f40f39b-df1e-4be2-9736-794b2b9090e1",
+    "80a69afe-f65e-4292-9d55-52a5d980e28d",
+    "b80db12d-961b-42af-b6f4-60844ae0e87a",
+    "3bed8954-b487-4282-b435-7b908d22a149",
+    "c40ea621-a13e-4499-9adc-16bfb39523fc",
+    "d4d34632-8e9d-4f60-a0f8-76da05237086",
+    "b85338ad-e915-4fb5-88d1-99fb04c6f048",
+    "d32eee3f-dd86-4b54-80ce-028480470ee0",
+    "d45a5bd3-a2fc-4705-8238-782686df55e6",
+    "3eb0a222-7fb6-492c-bf05-3dedd2a0b657"
+  ]
+}

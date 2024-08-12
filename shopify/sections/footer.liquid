@@ -1,0 +1,248 @@
+<footer class="site-footer medium-down--text-center" role="contentinfo" aria-label="Site Footer">
+  <div class="site-footer__content">
+    <div class="container">
+      <div class="row">
+        {% if section.settings.mobile_menu != blank %}
+          {% for link in linklists[section.settings.desktop_menu].links %}
+            {% assign child_list_handle = link.title | handleize %}
+
+            <div class="col-6 d-md-none">
+              <strong class="p--small p--bold">{{ link.title }}</strong>
+
+              <ul class="no-bullets">
+                {% for childlink in linklists[child_list_handle].links %}
+                  <li>
+                    <a class="p--small" href="{{ childlink.url }}" title="{{ childlink.title }}">
+                      {{ childlink.title }}
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endfor %}
+        {% endif %}
+
+        {% for link in linklists[section.settings.desktop_menu].links %}
+          {% assign child_list_handle = link.title | handleize %}
+
+          <div class="col-6 col-md {% if section.settings.mobile_menu != blank %}d-none d-md-block{% endif %}">
+            <strong class="p--small p--bold">{{ link.title }}</strong>
+
+            <ul class="no-bullets">
+              {% for childlink in linklists[child_list_handle].links %}
+                <li>
+                  <a class="p--small" href="{{ childlink.url }}" title="{{ childlink.title }}">
+                    {{ childlink.title }}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endfor %}
+
+        <div class="col-12 col-md-5">
+          <strong class="p--small p--bold">{{ section.settings.title }}</strong>
+          <p class="p--small">{{ section.settings.content }}</p>
+          <a class="site-footer__cta p--small text-link" href="{{ section.settings.cta_link }}" title="{{ section.settings.cta_text }}">
+            {{ section.settings.cta_text }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="site-footer__copyright">
+    <div class="container">
+      <div class="row">
+        <div class="site-footer__copyright-content col-lg-8 align-self-center">
+          <div class="row">
+            <div class="col-12 col-lg">
+              <small>&copy; {{ 'now' | date: "%Y" }} {{ shop.name }} {{ 'general.footer.all_rights' | t }}</small>
+            </div>
+
+            <div class="col-12 col-lg">
+              <ul class="site-footer__copyright-menu inline-list">
+                {% for link in linklists[section.settings.copyright_menu].links %}
+                  <li>
+                    <a href="{{ link.url }}" title="{{ link.title }}">
+                      {{ link.title }}
+                    </a>
+                  </li>
+                {% endfor %}
+                <li>
+                  <!-- OneTrust Cookies Settings button start -->
+                  <button id="ot-sdk-btn" class="ot-sdk-show-settings">
+                    Your Privacy Choices
+                  </button>
+                  <!-- OneTrust Cookies Settings button end -->
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 align-self-center">
+          <ul class="site-footer__social inline-list">
+            {% if section.settings.facebook_link != blank %}
+              <li>
+                <a href="{{ section.settings.facebook_link }}" target="_blank" title="Facebook Link" aria-label="Facebook Link">
+                  {% render 'icon-facebook' %}
+                </a>
+              </li>
+            {% endif %}
+
+            {% if section.settings.pinterest_link != blank %}
+              <li>
+                <a href="{{ section.settings.pinterest_link }}" target="_blank" title="Pinterest Link" aria-label="Pinterest Link">
+                  {% render 'icon-pinterest' %}
+                </a>
+              </li>
+            {% endif %}
+
+            {% if section.settings.instagram_link != blank %}
+              <li>
+                <a href="{{ section.settings.instagram_link }}" target="_blank" title="Instagram Link" aria-label="Instagram Link">
+                  {% render 'icon-instagram' %}
+                </a>
+              </li>
+            {% endif %}
+
+            {% if section.settings.youtube_link != blank %}
+              <li>
+                <a href="{{ section.settings.youtube_link }}" target="_blank" title="Youtube Link" aria-label="Youtube Link">
+                  {% render 'icon-youtube' %}
+                </a>
+              </li>
+            {% endif %}
+
+            {% if section.settings.tiktok_link != blank %}
+              <li>
+                <a href="{{ section.settings.tiktok_link }}" target="_blank" title="Tiktok Link" aria-label="Tiktok Link">
+                  {% render 'icon-tiktok' %}
+                </a>
+              </li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% if section.settings.seo_title != blank %}
+    <div class="site-footer__seo-content">
+      <div class="container">
+        <strong class="p--small p--bold">
+          {{ section.settings.seo_title }}
+        </strong>
+
+        {{ section.settings.seo_content }}
+      </div>
+    </div>
+  {% endif %}
+
+  <div class="accessibility-msg">
+    If you are using a screen reader or other assistive technology and are having problems using this website, please contact us at 859-317-8270 for assistance.
+    <div>
+      <!-- UserWay.org Accessibility Widget -->
+      <span id="accessibilityWidget" tabindex="0">Click for Accessibility Menu</span>
+      <script>(function(d){var s = d.createElement("script");s.setAttribute("data-account", "WkNuSJkTPC");s.setAttribute("src", "https://accessibilityserver.org/widget.js");(d.body || d.head).appendChild(s);})(document)</script><noscript>Please ensure Javascript is enabled for purposes of <a href="https://accessibilityserver.org">website accessibility</a></noscript>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+  {
+    "name": "Footer",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Menus"
+      },
+      {
+        "type": "link_list",
+        "id": "desktop_menu",
+        "label": "Desktop Menu",
+        "default": "footer"
+      },
+      {
+        "type": "link_list",
+        "id": "mobile_menu",
+        "label": "Mobile Menu",
+        "default": "footer"
+      },
+      {
+        "type": "link_list",
+        "id": "copyright_menu",
+        "label": "Copyright Menu",
+        "default": "footer"
+      },
+      {
+        "type": "header",
+        "content": "Content"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "content",
+        "label": "Content"
+      },
+      {
+        "type": "text",
+        "id": "cta_text",
+        "label": "CTA Text"
+      },
+      {
+        "type": "url",
+        "id": "cta_link",
+        "label": "CTA Link"
+      },
+      {
+        "type": "header",
+        "content": "Social Links"
+      },
+      {
+        "type": "text",
+        "id": "facebook_link",
+        "label": "Facebook URL"
+      },
+      {
+        "type": "text",
+        "id": "pinterest_link",
+        "label": "Pinterest URL"
+      },
+      {
+        "type": "text",
+        "id": "instagram_link",
+        "label": "Instagram URL"
+      },
+      {
+        "type": "text",
+        "id": "youtube_link",
+        "label": "Youtube URL"
+      },
+      {
+        "type": "text",
+        "id": "tiktok_link",
+        "label": "TikTok URL"
+      },
+      {
+        "type": "header",
+        "content": "SEO Content"
+      },
+      {
+        "type": "text",
+        "id": "seo_title",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "seo_content",
+        "label": "Content"
+      }
+    ]
+  }
+{% endschema %}

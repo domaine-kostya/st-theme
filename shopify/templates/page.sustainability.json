@@ -1,0 +1,527 @@
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "1657810131eb39af18": {
+      "type": "banner",
+      "settings": {
+        "enable_full_width": true,
+        "background_image": "shopify:\/\/shop_images\/230130-hero-banner-sustainability.jpg",
+        "mobile_background_image": "shopify:\/\/shop_images\/230130-hero-banner-sustainability.jpg",
+        "background_color": "rgba(0,0,0,0)",
+        "overlay_opacity": 0,
+        "overlay_color": "#313133",
+        "overlay_opacity_mobile": 0,
+        "overlay_color_mobile": "linear-gradient(90deg, rgba(49, 49, 51, 1), rgba(255, 255, 255, 0) 100%)",
+        "icon": "shopify:\/\/shop_images\/sustainability-landing-page-icon.png",
+        "mobile_headline": "Reclaim the Tide",
+        "headline": "Reclaim the Tide",
+        "headline_color": "#ffffff",
+        "mobile_content": "",
+        "content": "",
+        "content_color": "#313133",
+        "cta_text": "",
+        "cta_link": "",
+        "cta_color": "#1c59a8",
+        "cta_text_color": "#1c59a8",
+        "cta_style": "outline",
+        "cta_2_text": "",
+        "cta_2_link": "",
+        "cta_2_color": "#1c59a8",
+        "cta_2_text_color": "#1c59a8",
+        "cta_2_style": "outline",
+        "cta_3_text": "",
+        "cta_3_link": "",
+        "cta_3_color": "#1c59a8",
+        "cta_3_text_color": "#1c59a8",
+        "show_buttons_on_separate_lines": false,
+        "cta_3_style": "outline",
+        "desktop_vertical_content_position": "middle",
+        "desktop_horizontal_content_position": "center",
+        "desktop_text_alignment": "center",
+        "mobile_vertical_content_position": "middle",
+        "mobile_horizontal_content_position": "center",
+        "mobile_text_alignment": "center",
+        "desktop_height": "natural",
+        "mobile_height": "large",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "0",
+        "margin_bottom_mobile": "0"
+      }
+    },
+    "1657810214275f20ee": {
+      "type": "banner",
+      "settings": {
+        "enable_full_width": true,
+        "background_color": "#cde0f1",
+        "overlay_opacity": 0,
+        "overlay_color": "#313133",
+        "overlay_opacity_mobile": 0,
+        "overlay_color_mobile": "linear-gradient(90deg, #313133 0%, rgba(255,255,255,0) 100%)",
+        "mobile_headline": "",
+        "headline": "Our Mission",
+        "headline_color": "#1c59a8",
+        "mobile_content": "",
+        "content": "By definition, the tide represents the ebb and flow of our ocean - but to us, it embodies a more meaningful movement. Much like the world we live in, the tide is ever-changing, but we adapt. We adjust our sails, we put the planet first and we evolve every single day. That’s where our Reclaim The Tide mission comes in. We’re working to reduce our footprint by sourcing more sustainable, organic and recycled materials for our products.",
+        "content_color": "#313133",
+        "cta_text": "",
+        "cta_link": "",
+        "cta_color": "#1c59a8",
+        "cta_text_color": "#1c59a8",
+        "cta_style": "outline",
+        "cta_2_text": "",
+        "cta_2_link": "",
+        "cta_2_color": "#1c59a8",
+        "cta_2_text_color": "#1c59a8",
+        "cta_2_style": "outline",
+        "cta_3_text": "",
+        "cta_3_link": "",
+        "cta_3_color": "#1c59a8",
+        "cta_3_text_color": "#1c59a8",
+        "show_buttons_on_separate_lines": false,
+        "cta_3_style": "outline",
+        "desktop_vertical_content_position": "middle",
+        "desktop_horizontal_content_position": "center",
+        "desktop_text_alignment": "center",
+        "mobile_vertical_content_position": "middle",
+        "mobile_horizontal_content_position": "center",
+        "mobile_text_alignment": "center",
+        "desktop_height": "natural",
+        "mobile_height": "large",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default"
+      }
+    },
+    "16578102549e672944": {
+      "type": "featured-blocks",
+      "blocks": {
+        "fb957cc7-8b2e-40b5-bf20-c8d8bfa74e7d": {
+          "type": "featured_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/230130-sustainability-featured-block-1.jpg",
+            "title": "Fabrics",
+            "content": "Using environmentally friendly and ethically sourced materials is a top priority for our team. Our commitment to quality and fit is parallel with our mission to reduce our global footprint.",
+            "cta_text": "",
+            "link": ""
+          }
+        },
+        "80c8abf8-5a6f-4d20-9450-8126d715c0c3": {
+          "type": "featured_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/featured-block-2.jpg",
+            "title": "Packaging",
+            "content": "We are committed to doing better every step of the way, from when the package arrives at your door to when you open your favorite new items. You can trust that we are focused on choosing eco-friendly packaging and materials.",
+            "cta_text": "",
+            "link": ""
+          }
+        },
+        "c89ee159-fff6-4037-9484-224393bc657e": {
+          "type": "featured_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/featured-block-3.jpg",
+            "title": "Partners",
+            "content": "Many of our vendors are currently certified in sustainable manufacturing practices and we are continuing to expand upon these relationships. We are also proud to partner with some amazing nonprofits who focus on making the world a better place.",
+            "cta_text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "fb957cc7-8b2e-40b5-bf20-c8d8bfa74e7d",
+        "80c8abf8-5a6f-4d20-9450-8126d715c0c3",
+        "c89ee159-fff6-4037-9484-224393bc657e"
+      ],
+      "settings": {
+        "headline": "Our Practices",
+        "headline_size": "large",
+        "content": "We are committed to bringing you the Southern Tide lifestyle with a reduced footprint.",
+        "section_width": "full",
+        "button_style": "link",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "32px",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "165290108122b2d56a": {
+      "type": "content-blocks",
+      "blocks": {
+        "b0410eea-5235-4264-a7fe-391b9790f609": {
+          "type": "content_block",
+          "settings": {
+            "mobile_image": "shopify:\/\/shop_images\/content-block-1-mobile-image.jpg",
+            "image": "shopify:\/\/shop_images\/content-block-image.jpg",
+            "video_file_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/2294\/8559\/files\/Reduce-_Reuse-_-23RECLAIMTHETIDE.mp4?v=1653418650",
+            "mobile_video_file_url": "",
+            "enable_full_width_video": false,
+            "video_embed": "",
+            "video_description": "",
+            "mobile_video_embed": "",
+            "background_color": "#cde0f1",
+            "width": "full",
+            "content_position": "right",
+            "headline": "Reclaim the Tide",
+            "content": "We’re working to reduce our footprint by sourcing more sustainable, organic and recycled materials for our products.",
+            "cta_1_text": "Watch the video",
+            "cta_1_link": "#video",
+            "cta_1_style": "solid",
+            "cta_2_text": "",
+            "cta_2_link": "",
+            "cta_2_style": "outline",
+            "feature_1_text": "",
+            "feature_2_text": "",
+            "feature_3_text": "",
+            "feature_4_text": ""
+          }
+        },
+        "92a9fdb5-19e1-41a4-89cb-77cd4a303d31": {
+          "type": "content_block",
+          "settings": {
+            "mobile_image": "shopify:\/\/shop_images\/cotton-mobile.jpg",
+            "image": "shopify:\/\/shop_images\/cotton.jpg",
+            "video_file_url": "",
+            "mobile_video_file_url": "",
+            "enable_full_width_video": false,
+            "video_embed": "",
+            "video_description": "",
+            "mobile_video_embed": "",
+            "background_color": "#f2f2f2",
+            "width": "full",
+            "content_position": "left",
+            "headline": "Organic Cotton",
+            "content": "Our organic cotton is produced without the use of toxic chemicals or dyes and uses less water, making it better for your health, and planet Earth.",
+            "cta_1_text": "Shop Organic Cotton",
+            "cta_1_link": "shopify:\/\/products\/new-skipjack-polo-shirt",
+            "cta_1_style": "solid",
+            "cta_2_text": "",
+            "cta_2_link": "",
+            "cta_2_style": "outline",
+            "feature_1_icon": "shopify:\/\/shop_images\/cotton-1.png",
+            "feature_1_text": "Certified Organic",
+            "feature_2_icon": "shopify:\/\/shop_images\/cotton-2.png",
+            "feature_2_text": "No Fertilizers",
+            "feature_3_icon": "shopify:\/\/shop_images\/cotton-3.png",
+            "feature_3_text": "Pesticide Free",
+            "feature_4_icon": "shopify:\/\/shop_images\/cotton-4.png",
+            "feature_4_text": "Uses Less Water"
+          }
+        },
+        "a458a10c-760f-4270-9266-5fd3c525ed7a": {
+          "type": "content_block",
+          "settings": {
+            "mobile_image": "shopify:\/\/shop_images\/recycled-nylon-mobile.jpg",
+            "image": "shopify:\/\/shop_images\/recycled-nylon.jpg",
+            "video_file_url": "",
+            "mobile_video_file_url": "",
+            "enable_full_width_video": false,
+            "video_embed": "",
+            "video_description": "",
+            "mobile_video_embed": "",
+            "background_color": "#cde0f1",
+            "width": "full",
+            "content_position": "right",
+            "headline": "Recycled Nylon",
+            "content": "Nylon is a synthetic fiber that doesn’t’ break down easily and accounts for about 10% of ocean debris. More than 600,000 tons of fishing gear is dumped into oceans every year, including nylon nets. Our goal is to repurpose this discarded nylon that’s disturbing our ocean’s ecosystems and turn it into something purposeful. We use 100% post-consumer recyclables to create the nylon fibers used in our products.",
+            "cta_1_text": "Shop Recycled Nylon",
+            "cta_1_link": "shopify:\/\/collections\/driver-polo-shirts",
+            "cta_1_style": "solid",
+            "cta_2_text": "",
+            "cta_2_link": "",
+            "cta_2_style": "outline",
+            "feature_1_icon": "shopify:\/\/shop_images\/Post-Consumer_Recycled_112x_f9105807-fd68-44e8-928a-0200c4bfb5c8.png",
+            "feature_1_text": "Post-Consumer Recycled",
+            "feature_2_icon": "shopify:\/\/shop_images\/Reduces_Waste_Polluting_112x_22673674-22f2-4e28-831d-eae80b9d04dd.png",
+            "feature_2_text": "Reduces waste & polluting",
+            "feature_3_icon": "shopify:\/\/shop_images\/Recycled_Nylon_Fishing_Waste_112x_f44c379d-1732-4273-9350-8ac16f353240.png",
+            "feature_3_text": "Recycled nylon fishing waste",
+            "feature_4_icon": "shopify:\/\/shop_images\/Recycled_PET_Bottles_112x_9026b39a-854c-4cb0-982a-ed9ae50415e1.png",
+            "feature_4_text": "Recycled PET bottles"
+          }
+        },
+        "713bbe36-737f-4370-9fdb-aa4436b6344c": {
+          "type": "content_block",
+          "disabled": true,
+          "settings": {
+            "mobile_image": "shopify:\/\/shop_images\/coconut-husks-mobile.jpg",
+            "image": "shopify:\/\/shop_images\/coconut-husks.jpg",
+            "video_file_url": "",
+            "mobile_video_file_url": "",
+            "enable_full_width_video": false,
+            "video_embed": "",
+            "video_description": "",
+            "mobile_video_embed": "",
+            "background_color": "#cde0f1",
+            "width": "full",
+            "content_position": "left",
+            "headline": "Coconut Husks",
+            "content": "The process of using discarded coconut husks by blending the husk fibers with polyester into the perfect yarn. Naturally taking on great performance features like moisture wicking, UV protection, stretch & water repellency.",
+            "cta_1_text": "Shop Swim Trunks",
+            "cta_1_link": "\/collections\/men-swim",
+            "cta_1_style": "solid",
+            "cta_2_text": "",
+            "cta_2_link": "",
+            "cta_2_style": "outline",
+            "feature_1_icon": "shopify:\/\/shop_images\/recycled-coconuts_112x_7bb4256e-c94b-4c0e-95ac-93f75603bd6a.png",
+            "feature_1_text": "Upcycled Coconuts",
+            "feature_2_icon": "shopify:\/\/shop_images\/Quick_Dry_112x_5cf561af-8a6a-4c55-bb1f-cd43ef1dd227.png",
+            "feature_2_text": "Quick Drying",
+            "feature_3_icon": "shopify:\/\/shop_images\/Anti-Odor_112x_ce5bdbfa-70c4-40a1-8430-7e7dee536fbe.png",
+            "feature_3_text": "Anti Odor",
+            "feature_4_icon": "shopify:\/\/shop_images\/UV_Protection_112x_d7731d52-6963-4322-91dd-48310d412feb.png",
+            "feature_4_text": "UV Protection"
+          }
+        },
+        "775729e8-7bad-4be0-b83f-703835389051": {
+          "type": "content_block",
+          "settings": {
+            "mobile_image": "shopify:\/\/shop_images\/hemp-mobile.jpg",
+            "image": "shopify:\/\/shop_images\/hemp.jpg",
+            "video_file_url": "",
+            "mobile_video_file_url": "",
+            "enable_full_width_video": false,
+            "video_embed": "",
+            "video_description": "",
+            "mobile_video_embed": "",
+            "background_color": "#cde0f1",
+            "width": "full",
+            "content_position": "left",
+            "headline": "Hemp",
+            "content": "Our initiative to be more sustainable wouldn’t be complete without the use of hemp. Hemp grows with less water consumption, puts 60-70% of the nutrients back into the soil and has higher yield than cotton. Hemp fibers are known to be the strongest natural fibers, so it lasts longer than cotton.",
+            "cta_1_text": "",
+            "cta_1_link": "",
+            "cta_1_style": "solid",
+            "cta_2_text": "",
+            "cta_2_link": "",
+            "cta_2_style": "outline",
+            "feature_1_icon": "shopify:\/\/shop_images\/Environmentaly_Friendly_112x_7c6078c8-4db6-4920-8b19-d3fa4bdc9b7d.png",
+            "feature_1_text": "Environmentally Friendly",
+            "feature_2_icon": "shopify:\/\/shop_images\/Breathable_112x_61a0a292-4210-4fb0-9284-0a3be4579eec.png",
+            "feature_2_text": "Highly Breathable",
+            "feature_3_icon": "shopify:\/\/shop_images\/Durable_112x_a88a2ac7-d249-443b-8d77-2a6849d26f8d.png",
+            "feature_3_text": "Extremely Durable",
+            "feature_4_icon": "shopify:\/\/shop_images\/Anti-Bacterial_112x_1090afb2-f927-4d5c-9b9c-aba67bc397e7.png",
+            "feature_4_text": "Naturally Anti-Bacterial"
+          }
+        }
+      },
+      "block_order": [
+        "b0410eea-5235-4264-a7fe-391b9790f609",
+        "92a9fdb5-19e1-41a4-89cb-77cd4a303d31",
+        "a458a10c-760f-4270-9266-5fd3c525ed7a",
+        "713bbe36-737f-4370-9fdb-aa4436b6344c",
+        "775729e8-7bad-4be0-b83f-703835389051"
+      ],
+      "settings": {
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "0",
+        "margin_bottom_mobile": "0",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "16578117439dc0e155": {
+      "type": "banner",
+      "disabled": true,
+      "settings": {
+        "enable_full_width": true,
+        "background_image": "shopify:\/\/shop_images\/bgi-d_2880x_88690d4a-c55a-4d33-a08f-1d575e76b5bf.jpg",
+        "background_color": "#f2f2f2",
+        "overlay_opacity": 0,
+        "overlay_color": "#313133",
+        "overlay_opacity_mobile": 0,
+        "overlay_color_mobile": "linear-gradient(90deg, #313133 0%, rgba(255,255,255,0) 100%)",
+        "mobile_headline": "",
+        "headline": "100% Post-consumer recycled by 2023",
+        "headline_color": "#ffffff",
+        "mobile_content": "",
+        "content": "We’ve eliminated 600k pieces of tissue paper annually. All polybags, tissue & sport shirt packaging trims are 100% post-consumer recycled quality. By 2023 we will fully shift all hangtags and woven garment labels to 100% post-consumer recycled qualities.",
+        "content_color": "#ffffff",
+        "cta_text": "",
+        "cta_link": "",
+        "cta_color": "#1c59a8",
+        "cta_text_color": "#1c59a8",
+        "cta_style": "outline",
+        "cta_2_text": "",
+        "cta_2_link": "",
+        "cta_2_color": "#1c59a8",
+        "cta_2_text_color": "#1c59a8",
+        "cta_2_style": "outline",
+        "cta_3_text": "",
+        "cta_3_link": "",
+        "cta_3_color": "#1c59a8",
+        "cta_3_text_color": "#1c59a8",
+        "show_buttons_on_separate_lines": false,
+        "cta_3_style": "outline",
+        "desktop_vertical_content_position": "middle",
+        "desktop_horizontal_content_position": "center",
+        "desktop_text_alignment": "center",
+        "mobile_vertical_content_position": "middle",
+        "mobile_horizontal_content_position": "center",
+        "mobile_text_alignment": "center",
+        "desktop_height": "natural",
+        "mobile_height": "large",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default"
+      }
+    },
+    "1657811995ef10caa8": {
+      "type": "featured-products",
+      "blocks": {
+        "4bf9d832-d349-4b05-93e3-c34f1acb5e30": {
+          "type": "collection",
+          "settings": {
+            "collection": "responsibly-crafted-classics",
+            "collection_title": "",
+            "enable_cta": false,
+            "cta_text": "Show more"
+          }
+        }
+      },
+      "block_order": [
+        "4bf9d832-d349-4b05-93e3-c34f1acb5e30"
+      ],
+      "settings": {
+        "headline": "New to Our Sustainable Collection",
+        "headline_size": "large",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "64px",
+        "padding_top_mobile": "32px",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "165781231308e79784": {
+      "type": "featured-blocks",
+      "blocks": {
+        "d1acc28b-0c74-4c05-b6da-457e85813e42": {
+          "type": "featured_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/waves.jpg",
+            "title": "Responsible Sourcing",
+            "content": "",
+            "cta_text": "Oxford Supplier Code of Conduct",
+            "link": "https:\/\/cdn.shopify.com\/s\/files\/1\/2294\/8559\/files\/OXM_Code_of_Conduct_Final_April_2023.pdf?v=1689600415"
+          }
+        },
+        "35af650b-0b7d-4cf5-a502-0ee605d40bcd": {
+          "type": "featured_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/coconuts.jpg",
+            "title": "A Sustainability Movement",
+            "content": "",
+            "cta_text": "5 min read",
+            "link": "https:\/\/southerntide.com\/blogs\/the-southern-edit\/reclaim-the-tide-a-sustainability-movement"
+          }
+        }
+      },
+      "block_order": [
+        "d1acc28b-0c74-4c05-b6da-457e85813e42",
+        "35af650b-0b7d-4cf5-a502-0ee605d40bcd"
+      ],
+      "settings": {
+        "headline": "",
+        "headline_size": "large",
+        "content": "",
+        "section_width": "full",
+        "button_style": "link",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "1657812875c375d477": {
+      "type": "trust-bar",
+      "blocks": {
+        "3c1d32df-e982-475f-b300-21fdd8b6b504": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/icon-1.png",
+            "title": "Stores",
+            "content": "",
+            "cta_text": "",
+            "cta_link": "\/apps\/store-locator"
+          }
+        },
+        "24c328a4-d406-43a7-ba6c-abfaf836d246": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/icon-2.png",
+            "title": "Gift Cards",
+            "content": "",
+            "cta_text": "",
+            "cta_link": "shopify:\/\/products\/southern-tide-gift-card"
+          }
+        },
+        "1396d997-21cc-4d9f-9c75-093bb3e9ff64": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/icon-3.png",
+            "title": "Catalog",
+            "content": "",
+            "cta_text": "",
+            "cta_link": "\/pages\/2022-spring-catalog"
+          }
+        },
+        "c23fc7b6-5d81-450b-808f-da8a18a62f46": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/icon-4.png",
+            "title": "ST Rewards",
+            "content": "",
+            "cta_text": "",
+            "cta_link": "shopify:\/\/pages\/rewards"
+          }
+        }
+      },
+      "block_order": [
+        "3c1d32df-e982-475f-b300-21fdd8b6b504",
+        "24c328a4-d406-43a7-ba6c-abfaf836d246",
+        "1396d997-21cc-4d9f-9c75-093bb3e9ff64",
+        "c23fc7b6-5d81-450b-808f-da8a18a62f46"
+      ],
+      "disabled": true,
+      "settings": {
+        "background_color": "#f2f2f2",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "0",
+        "margin_bottom_mobile": "0"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1657810131eb39af18",
+    "1657810214275f20ee",
+    "16578102549e672944",
+    "165290108122b2d56a",
+    "16578117439dc0e155",
+    "1657811995ef10caa8",
+    "165781231308e79784",
+    "1657812875c375d477"
+  ]
+}

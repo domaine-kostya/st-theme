@@ -1,0 +1,15 @@
+/* ============================================================================
+  Page Contact
+============================================================================== */
+
+.page-contact {
+  margin-bottom: 49px;
+
+  @include media-query($min, $large) {
+    margin-bottom: 70px;
+  }
+
+  textarea {
+    border-radius: 32px;
+  }
+}

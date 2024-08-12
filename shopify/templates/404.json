@@ -1,0 +1,59 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "blocks": {
+        "6c22a1e5-bc6e-4366-941b-2650fe35fa8c": {
+          "type": "hero_slide",
+          "settings": {
+            "desktop_layout": "image_1_content",
+            "desktop_image_1": "shopify:\/\/shop_images\/404-hero.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/404-hero-mobile.jpg",
+            "title": "Feeling like a fish out of water?",
+            "title_size": "heading-1",
+            "content": "404: Page not found",
+            "title_color": "#1c59a8",
+            "background_color": "#cde0f1",
+            "cta_1_text": "Take Me Home",
+            "cta_1_link": "\/",
+            "cta_1_color": "",
+            "cta_2_text": "",
+            "cta_2_link": "",
+            "cta_2_color": "",
+            "image_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "6c22a1e5-bc6e-4366-941b-2650fe35fa8c"
+      ],
+      "settings": {
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "16563568215d1f670b": {
+      "type": "limespot",
+      "settings": {
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "16563568215d1f670b"
+  ]
+}

@@ -1,0 +1,54 @@
+/* ============================================================================
+  Product Bundle
+============================================================================== */
+
+.product__bundle-item {
+  display: flex;
+
+  .product__bundle-item-image {
+    flex-shrink: 0;
+    width: 83px;
+    height: auto;
+    margin-right: 24px;
+  }
+}
+
+.product__bundle-item-content {
+  strong {
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+  }
+
+  a {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+  }
+
+  p {
+    margin-bottom: 0;
+    font-size: 1.6rem;
+  }
+
+  .product-option {
+    margin-bottom: 8px;
+
+    &[data-option-name='size'] {
+      legend {
+        display: none;
+      }
+    }
+
+    legend {
+      margin-bottom: 5px;
+
+      strong,
+      span {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+button.product__bundle-submit {
+  margin-top: 8px;
+}

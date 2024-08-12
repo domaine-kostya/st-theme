@@ -1,0 +1,35 @@
+/* ============================================================================
+  Ambassadors
+============================================================================== */
+
+.ambassadors {
+  margin-bottom: 50px;
+
+  @include media-query($min, $large) {
+    margin-bottom: 97px;
+  }
+
+  h2 {
+    margin-bottom: 40px;
+    color: $color-primary;
+  }
+}
+
+.ambassador {
+  margin-bottom: 35px;
+  text-align: center;
+
+  .ambassador__image {
+    margin-bottom: 20px;
+
+    img {
+      object-fit: cover;
+      aspect-ratio: 1;
+    }
+  }
+}
+
+.ambassador__position {
+  opacity: 0.8;
+  font-size: 1.8rem;
+}

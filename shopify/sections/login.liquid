@@ -1,0 +1,134 @@
+<script src="{{ 'sections.login.js' | asset_url }}" defer="defer"></script>
+{{ 'sections.login.css' | asset_url | stylesheet_tag }}
+
+<div class="account-form">
+  <div class="row no-gutters" data-customer-login-form>
+    <div class="col-lg-6">
+      <div class="account-form__content text-center">
+        <div class="form-success hide" data-recover-password-success-message>
+          {{ 'customer.recover_password.success' | t }}
+        </div>
+
+        {% form 'customer_login' %}
+          <h1 class="heading-2">{{ 'customer.login.title' | t }}</h1>
+          {% capture form_errors %}{{ form.errors | default_errors }}{% endcapture %}
+
+          <div class="form-input-group">
+            <label for="customerEmail" class="visually-hidden">{{ 'customer.login.email' | t }}</label>
+            <input type="email"
+              name="customer[email]"
+              id="customerEmail"
+              class="{% if form_errors contains 'email' %}input-error{% endif %}"
+              spellcheck="false"
+              autocomplete="off"
+              autocapitalize="off"
+              placeholder="{{ 'customer.login.email' | t }}"
+              required>
+          </div>
+
+          {% if form.password_needed %}
+            <div class="form-input-group" data-account-form-password-wrapper>
+              <label for="customerPassword" class="visually-hidden">{{ 'customer.login.password' | t }}</label>
+              <input type="password"
+                name="customer[password]"
+                id="customerPassword"
+                class="{% if form_errors contains 'password' %}input-error{% endif %}"
+                placeholder="{{ 'customer.login.password' | t }}">
+
+              <button class="account-form__password-toggle {% if form.errors %}input-error{% endif %}" type="button" aria-label="Toggle password text visbility" data-account-form-password-toggle>
+                {% render 'icon-show-password' %}
+                {% render 'icon-hide-password' %}
+              </button>
+            </div>
+          {% endif %}
+
+          {% if form.errors %}
+            <div class="form-errors">
+              {{ form.errors | default_errors }}
+            </div>
+          {% endif %}
+
+          <button type="submit" class="btn">
+            {{ 'customer.login.login' | t }}
+          </button>
+
+          <div class="account-form__actions text-center">
+            <a class="account-form__create-button ui-link d-lg-none" href="{{ routes.account_register_url }}" title="{{ 'layout.customer.create_account' | t }}">
+              {{ 'layout.customer.create_account' | t }}
+            </a>
+
+            <br class="d-lg-none">
+
+            {% if form.password_needed %}
+              <a class="ui-link" href="#recover" title="{{ 'customer.login.forgot_password' | t }}" data-show-recover-password>{{ 'customer.login.forgot_password' | t }}</a>
+            {% endif %}
+          </div>
+        {% endform %}
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="account-form__content account-form__content--alt text-center">
+        <div class="display-table">
+          <div class="display-table-cell">
+            <h2 class="heading-3">
+              {{ 'customer.login.not_a_member' | t }}
+            </h2>
+
+            <p class="account-form__member-content">
+              {{ 'customer.login.member_content' | t }}
+            </p>
+
+            <a class="ui-link" href="{{ routes.account_register_url }}" title="{{ 'layout.customer.create_account' | t }}">
+              {{ 'layout.customer.create_account' | t }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hide account-form__reset-password account-form__content text-center" data-recover-password-form>
+    <h2>{{ 'customer.recover_password.title_html' | t }}</h2>
+
+    <p>{{ 'customer.recover_password.subtext' | t }}</p>
+
+    {% form 'recover_customer_password', data-validation-required: '' %}
+      <div id="recover" class="form-input-group" data-form-input-group data-required-field-wrapper>
+        <label for="recoverEmail" class="visually-hidden">{{ 'customer.recover_password.email' | t }}</label>
+        <input type="email"
+          name="email"
+          id="recoverEmail"
+          placeholder="{{ 'customer.recover_password.email' | t }}"
+          data-form-input
+          spellcheck="false"
+          autocomplete="off"
+          autocapitalize="off"
+          data-required-field="valid email address is required"
+          data-required-field-pattern="^\w+([.-/+/-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$"
+          required>
+        <span class="validation-error">&times;</span>
+      </div>
+
+      {% if form.posted_successfully? %}
+        <span class="hide" data-recover-password-success></span>
+      {% elsif form.errors %}
+        <div class="form-errors">
+          {{ form.errors | default_errors }}
+        </div>
+      {% endif %}
+
+      <button type="submit" class="btn">{{ 'customer.recover_password.submit' | t }}</button>
+
+      <div class="account-form__actions">
+        <a class="account-form__create-button ui-link" href="{{ routes.account_register_url }}" title="{{ 'layout.customer.create_account' | t }}">
+          {{ 'layout.customer.create_account' | t }}
+        </a>
+
+        <br>
+
+        <button class="ui-link" type="button" data-hide-recover-password>{{ 'customer.recover_password.cancel' | t }}</button>
+      </div>
+    {% endform %}
+  </div>
+</div>

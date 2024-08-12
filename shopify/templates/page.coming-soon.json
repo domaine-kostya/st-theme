@@ -1,0 +1,64 @@
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "custom_css": [
+        "@media only screen and (max-width: 767px) {.rte {padding-left: 31px; }}",
+        "@media only screen and (max-width: 767px) {.rte {padding-right: 31px; }}"
+      ],
+      "settings": {
+      }
+    },
+    "e59de2be-1970-4b08-8cc7-34330ee8c0f8": {
+      "type": "banner",
+      "settings": {
+        "enable_full_width": true,
+        "background_image": "shopify:\/\/shop_images\/231104-hero-banner-sweaters.jpg",
+        "mobile_background_image": "shopify:\/\/shop_images\/231104-hero-banner-sweaters-mobile.jpg",
+        "background_color": "#f2f2f2",
+        "overlay_opacity": 8,
+        "overlay_color": "radial-gradient(rgba(49, 49, 51, 0.79), rgba(255, 255, 255, 0) 100%)",
+        "overlay_opacity_mobile": 4,
+        "overlay_color_mobile": "radial-gradient(rgba(49, 49, 51, 1), rgba(255, 255, 255, 0) 100%)",
+        "mobile_headline": "Coming Soon...",
+        "headline": "Coming Soon...",
+        "headline_color": "#fff",
+        "mobile_content": "Sign up for email and SMS to be the first in the know!",
+        "content": "Sign up for email and SMS to be the first in the know!",
+        "content_color": "#fff",
+        "cta_text": "Join Now",
+        "cta_link": "https:\/\/southerntide.attn.tv\/p\/Qqz\/landing-page",
+        "cta_color": "#fff",
+        "cta_text_color": "#fff",
+        "cta_style": "outline",
+        "cta_2_text": "",
+        "cta_2_link": "",
+        "cta_2_color": "#1C59A8",
+        "cta_2_text_color": "#1C59A8",
+        "cta_2_style": "outline",
+        "cta_3_text": "",
+        "cta_3_link": "",
+        "cta_3_color": "#1C59A8",
+        "cta_3_text_color": "#1C59A8",
+        "show_buttons_on_separate_lines": false,
+        "cta_3_style": "outline",
+        "desktop_vertical_content_position": "middle",
+        "desktop_horizontal_content_position": "center",
+        "desktop_text_alignment": "center",
+        "mobile_vertical_content_position": "middle",
+        "mobile_horizontal_content_position": "center",
+        "mobile_text_alignment": "center",
+        "desktop_height": "natural",
+        "mobile_height": "large",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "e59de2be-1970-4b08-8cc7-34330ee8c0f8"
+  ]
+}

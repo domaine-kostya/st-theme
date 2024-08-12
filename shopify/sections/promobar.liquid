@@ -1,0 +1,40 @@
+{{ 'sections.promobar.css' | asset_url | stylesheet_tag }}
+
+<div class="promobar" role="region" aria-label="Promo Bar">
+  <div class="container container--wide text-center">
+    <span class="d-md-none">{{ section.settings.mobile_content }}</span>
+    <span class="d-none d-md-block">{{ section.settings.desktop_content }}</span>
+
+    <a class="d-none d-lg-block promobar__cta" href="{{ section.settings.cta_link }}" title="{{ section.settings.cta_text }}">
+      {{ section.settings.cta_text }}
+    </a>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Promobar",
+    "settings": [
+      {
+        "type": "richtext",
+        "id": "desktop_content",
+        "label": "Desktop Content"
+      },
+      {
+        "type": "richtext",
+        "id": "mobile_content",
+        "label": "Mobile Content"
+      },
+      {
+        "type": "text",
+        "id": "cta_text",
+        "label": "CTA Text"
+      },
+      {
+        "type": "url",
+        "id": "cta_link",
+        "label": "CTA Link"
+      }
+    ]
+  }
+{% endschema %}

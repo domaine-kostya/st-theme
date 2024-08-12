@@ -1,0 +1,53 @@
+/* ============================================================================
+  Promobar
+============================================================================== */
+
+.promobar {
+  padding: 13px 0 12px;
+  transition: margin $transition-primary;
+  background-color: $color-primary;
+  color: $color-white;
+  font-size: 1.2rem;
+  line-height: 1;
+
+  @include media-query($min, $small) {
+    font-size: 1.4rem;
+  }
+
+  .site-header-wrapper--compact & {
+    @include media-query($min, $large) {
+      margin-top: -40px;
+    }
+  }
+
+  .container {
+    position: relative;
+  }
+
+  p {
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1;
+
+    @include media-query($min, $small) {
+      font-size: 1.4rem;
+    }
+  }
+
+  a {
+    transition: opacity $transition-primary;
+    border-bottom: 1px solid $color-white;
+    color: $color-white;
+
+    &:hover {
+      opacity: 60%;
+    }
+  }
+}
+
+a.promobar__cta {
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
+}

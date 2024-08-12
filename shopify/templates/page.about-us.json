@@ -1,0 +1,425 @@
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "1655833067318f75bc": {
+      "type": "hero",
+      "blocks": {
+        "0eaea3e0-4207-466b-8690-8a60197940e9": {
+          "type": "hero_slide",
+          "settings": {
+            "desktop_layout": "image_top_content",
+            "desktop_image_1": "shopify:\/\/shop_images\/220718-about-us-hero-v2_1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/220718-about-us-hero-mobile-v2_1.jpg",
+            "title": "We are\nSouthern Tide",
+            "mobile_title": "",
+            "title_size": "heading-1",
+            "content": "Southern Tide started with our beloved Skipjack Polo. It set a new standard in comfort, fit, and design. Today, Southern Tide offers an entire premium collection for men, women, and youth. Focusing on more than outfitting you for your next event or adventure, we create products with your lifestyle in mind. Southern Tide is about having a good time with good friends. We believe the South is more than just a location; it is a state of mind. And we always bring a piece of the South wherever we go.",
+            "mobile_content": "",
+            "title_color": "#1c59a8",
+            "content_color": "#313133",
+            "background_color": "#cde0f1",
+            "cta_1_text": "",
+            "cta_1_link": "",
+            "cta_1_color": "",
+            "cta_2_text": "",
+            "cta_2_link": "",
+            "cta_2_color": "",
+            "cta_3_text": "",
+            "cta_3_link": "",
+            "cta_3_color": "",
+            "image_link": "",
+            "btn_display": "d-flex"
+          }
+        }
+      },
+      "block_order": [
+        "0eaea3e0-4207-466b-8690-8a60197940e9"
+      ],
+      "settings": {
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "1657841263c6fc1766": {
+      "type": "content-blocks",
+      "blocks": {
+        "fe3d3cbb-9e0b-4472-8545-67a49f721f29": {
+          "type": "content_block",
+          "settings": {
+            "mobile_image": "shopify:\/\/shop_images\/brand-video-cover-750x1000_1.jpg",
+            "image": "shopify:\/\/shop_images\/brand-video-cover-2324x1306_1.jpg",
+            "video_file_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/960bc277eef34fdc992de8489b9ab774.mp4",
+            "mobile_video_file_url": "",
+            "enable_full_width_video": true,
+            "video_embed": "",
+            "video_description": "men and women having a good time at the beach and around town wearing southern tide clothing.",
+            "mobile_video_embed": "",
+            "background_color": "#cde0f1",
+            "width": "full",
+            "content_position": "right",
+            "headline": "Brand video",
+            "content": "",
+            "cta_1_text": "",
+            "cta_1_link": "",
+            "cta_1_style": "solid",
+            "cta_2_text": "",
+            "cta_2_link": "",
+            "cta_2_style": "outline",
+            "feature_1_text": "",
+            "feature_2_text": "",
+            "feature_3_text": "",
+            "feature_4_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "fe3d3cbb-9e0b-4472-8545-67a49f721f29"
+      ],
+      "settings": {
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "165583376784a34b0f": {
+      "type": "featured-collections",
+      "blocks": {
+        "70662939-d50e-4f32-96c8-ec2fad4c1b7b": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/220718-about-us-featured-collections-mens.jpg",
+            "title": "Mens",
+            "content": "Shop our selection of preppy men's clothes, offering casual styles made from quality fabrics.",
+            "cta_text": "Shop collection",
+            "link": "shopify:\/\/collections\/mens-best-sellers"
+          }
+        },
+        "69a5adbb-2f40-4519-931f-ad22be8b3b39": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/220718-about-us-featured-collections-womens.jpg",
+            "title": "Womens",
+            "content": "Check out our southern styles for women, offering modern cuts made from quality fabrics.",
+            "cta_text": "Shop Collection",
+            "link": "shopify:\/\/collections\/womens-best-sellers"
+          }
+        },
+        "abc3f8c0-37fe-43d6-8209-44eb73b9bd37": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/220718-about-us-featured-collections-kids.jpg",
+            "title": "Kids",
+            "content": "Explore our most popular collections of kids clothing in cool coastal patterns.",
+            "cta_text": "Shop collection",
+            "link": "shopify:\/\/collections\/kids-best-sellers"
+          }
+        }
+      },
+      "block_order": [
+        "70662939-d50e-4f32-96c8-ec2fad4c1b7b",
+        "69a5adbb-2f40-4519-931f-ad22be8b3b39",
+        "abc3f8c0-37fe-43d6-8209-44eb73b9bd37"
+      ],
+      "settings": {
+        "headline": "Our apparel",
+        "headline_size": "large",
+        "content": "Whether you’re decked out for a special occasion or suited up for a dip in the ocean, we’ve got what you need to have a good time.",
+        "section_width": "container",
+        "button_style": "button",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "16558340640e9c1af7": {
+      "type": "content-blocks",
+      "blocks": {
+        "8eb0f784-bd68-472e-8b0b-f3be28825b91": {
+          "type": "content_block",
+          "settings": {
+            "mobile_image": "shopify:\/\/shop_images\/220718-about-us-featured-collections-mobile-comfort.jpg",
+            "image": "shopify:\/\/shop_images\/220718-about-us-featured-collections-comfort.jpg",
+            "video_file_url": "",
+            "mobile_video_file_url": "",
+            "enable_full_width_video": false,
+            "video_embed": "",
+            "video_description": "",
+            "mobile_video_embed": "",
+            "background_color": "#f2f2f2",
+            "width": "half",
+            "content_position": "right",
+            "headline": "Comfort meets style",
+            "content": "From unique button ups and original tshirts to vibrant pullover sweaters and novelty shorts, we set a new standard in comfort.",
+            "cta_1_text": "",
+            "cta_1_link": "",
+            "cta_1_style": "solid",
+            "cta_2_text": "",
+            "cta_2_link": "",
+            "cta_2_style": "outline",
+            "feature_1_text": "",
+            "feature_2_text": "",
+            "feature_3_text": "",
+            "feature_4_text": ""
+          }
+        },
+        "9187131e-a0ca-4880-ba4c-e40e3e60776a": {
+          "type": "content_block",
+          "settings": {
+            "mobile_image": "shopify:\/\/shop_images\/220718-about-us-featured-collections-mobile-coast.jpg",
+            "image": "shopify:\/\/shop_images\/220718-about-us-featured-collections-coast.jpg",
+            "video_file_url": "",
+            "mobile_video_file_url": "",
+            "enable_full_width_video": false,
+            "video_embed": "",
+            "video_description": "",
+            "mobile_video_embed": "",
+            "background_color": "#f2f2f2",
+            "width": "half",
+            "content_position": "right",
+            "headline": "For life on the coast",
+            "content": "We offer a wide range of products appealing to those with an affection for the coast and an appreciation for classic design.",
+            "cta_1_text": "",
+            "cta_1_link": "",
+            "cta_1_style": "solid",
+            "cta_2_text": "",
+            "cta_2_link": "",
+            "cta_2_style": "outline",
+            "feature_1_text": "",
+            "feature_2_text": "",
+            "feature_3_text": "",
+            "feature_4_text": ""
+          }
+        },
+        "af707324-3e48-4122-a9b8-65e8e4a41e14": {
+          "type": "content_block",
+          "disabled": true,
+          "settings": {
+            "video_file_url": "",
+            "mobile_video_file_url": "",
+            "enable_full_width_video": false,
+            "video_embed": "",
+            "video_description": "",
+            "mobile_video_embed": "",
+            "background_color": "#cde0f1",
+            "width": "full",
+            "content_position": "right",
+            "headline": "",
+            "content": "",
+            "cta_1_text": "",
+            "cta_1_link": "",
+            "cta_1_style": "solid",
+            "cta_2_text": "",
+            "cta_2_link": "",
+            "cta_2_style": "outline",
+            "feature_1_text": "",
+            "feature_2_text": "",
+            "feature_3_text": "",
+            "feature_4_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "8eb0f784-bd68-472e-8b0b-f3be28825b91",
+        "9187131e-a0ca-4880-ba4c-e40e3e60776a",
+        "af707324-3e48-4122-a9b8-65e8e4a41e14"
+      ],
+      "settings": {
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "165590689693dd6eff": {
+      "type": "testimonials",
+      "blocks": {
+        "1166298b-cbba-4d43-b5f5-19c3768d40f7": {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "content": "Southern Tide is one of my favorite stores. My husband and children love their high quality apparel. I have been a repeat customer for many years.",
+            "name": "Meredith"
+          }
+        },
+        "9a2812f6-66c7-4a0d-b3cf-580c65663a25": {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "content": "I have been shopping with Southern Tide for several years. My boys love their clothes and they wash and wear very well. Their shipping is lightening fast. I ordered on Wednesday and received the package on Thursday. Highly recommended!",
+            "name": "DeAnne"
+          }
+        },
+        "7399cb5d-303d-4289-bd32-a51986098212": {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "content": "Southern Tide is a great place to go for all things quality and unique clothing. I really like the website and selection that they have available. I have been happy with all of the purchases that I have made.",
+            "name": "Evan"
+          }
+        },
+        "57523e60-292f-438d-84b8-8638de7f7af3": {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "content": "Southern Tide never disappoints. My fiancé loves these shorts and they’re the perfect length. Great quality, color, everything. And as always extremely fast shipping! Our favorite brand by far!",
+            "name": "Kelly D"
+          }
+        },
+        "b34507bb-6a35-4625-9c46-70bf1d5b7d29": {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "content": "Great fit, comfortable, and looks great. I love the fabric, it’s why I bought it. My wife came home with a dress and I had to check out this brand. I went the next day to see the Men’s and bought a few pieces for myself. This is my new favorite brand, replacing Lulu.",
+            "name": "James S."
+          }
+        },
+        "d17abadb-ef08-4a75-bc35-7994188d4de7": {
+          "type": "testimonial",
+          "disabled": true,
+          "settings": {
+            "rating": 5,
+            "content": "Great clothes...excellent, knowledgeable helpers...wonderful environment. Just an exceptional experience.",
+            "name": "Dan Peterson"
+          }
+        },
+        "291e6a0b-46bf-47cd-a97c-8eef6e95e23f": {
+          "type": "testimonial",
+          "disabled": true,
+          "settings": {
+            "rating": 5,
+            "content": "Southern Tide is a great place to go for all things quality and unique clothing. I really like the website and selection that they have available. I have been happy with all of the purchases that I have made.",
+            "name": "Review"
+          }
+        }
+      },
+      "block_order": [
+        "1166298b-cbba-4d43-b5f5-19c3768d40f7",
+        "9a2812f6-66c7-4a0d-b3cf-580c65663a25",
+        "7399cb5d-303d-4289-bd32-a51986098212",
+        "57523e60-292f-438d-84b8-8638de7f7af3",
+        "b34507bb-6a35-4625-9c46-70bf1d5b7d29",
+        "d17abadb-ef08-4a75-bc35-7994188d4de7",
+        "291e6a0b-46bf-47cd-a97c-8eef6e95e23f"
+      ],
+      "settings": {
+        "headline": "We are the premier southern brand",
+        "content": "Here’s what our customer have to say.",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "1652982620f96659a7": {
+      "type": "trust-bar",
+      "blocks": {
+        "4e2c9edb-2e4b-4f56-bd32-debcce80436f": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/220718-trust-bar-icons-contact-2.png",
+            "title": "Contact Us",
+            "content": "Drop us a line, we are here to help. Call or email us.",
+            "cta_text": "chat now",
+            "cta_link": ""
+          }
+        },
+        "ef083b22-a5e3-43f1-a3d5-603b65320099": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/220718-trust-bar-icons-rewards-2.png",
+            "title": "ST Rewards",
+            "content": "Earn points with every purchase and get rewarded.",
+            "cta_text": "Get started",
+            "cta_link": "shopify:\/\/pages\/st-rewards-terms-conditions"
+          }
+        },
+        "28521701-6a76-4d28-8e0f-5495bfa65b5a": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/220718-trust-bar-icons-egift-card-2.png",
+            "title": "Gift Cards",
+            "content": "Let them pick out something special.",
+            "cta_text": "Shop now",
+            "cta_link": "https:\/\/southerntide.com\/products\/southern-tide-gift-card"
+          }
+        },
+        "d0efb94f-963b-4288-afbc-5d0a5de6c299": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/220718-trust-bar-icons-sustainability-2.png",
+            "title": "Sustainability",
+            "content": "We’re working to reduce our footprint every day.",
+            "cta_text": "Learn how",
+            "cta_link": "https:\/\/southerntide.com\/pages\/sustainability"
+          }
+        }
+      },
+      "block_order": [
+        "4e2c9edb-2e4b-4f56-bd32-debcce80436f",
+        "ef083b22-a5e3-43f1-a3d5-603b65320099",
+        "28521701-6a76-4d28-8e0f-5495bfa65b5a",
+        "d0efb94f-963b-4288-afbc-5d0a5de6c299"
+      ],
+      "settings": {
+        "background_color": "#cde0f1",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default"
+      }
+    },
+    "16583282804ad97aa2": {
+      "type": "content-blocks",
+      "settings": {
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1655833067318f75bc",
+    "1657841263c6fc1766",
+    "165583376784a34b0f",
+    "16558340640e9c1af7",
+    "165590689693dd6eff",
+    "1652982620f96659a7",
+    "16583282804ad97aa2"
+  ]
+}

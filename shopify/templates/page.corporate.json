@@ -1,0 +1,150 @@
+{
+  "sections": {
+    "16566001450b7d44b2": {
+      "type": "hero",
+      "blocks": {
+        "5fe99853-2306-4bcc-8ff9-9fd2703d5575": {
+          "type": "hero_slide",
+          "settings": {
+            "desktop_layout": "image_top_content",
+            "desktop_image_1": "shopify:\/\/shop_images\/220808-hero-banner-corporate.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/220808-hero-banner-corporate-mobile.jpg",
+            "title": "Custom Corporate Program",
+            "title_size": "heading-2",
+            "content": "",
+            "title_color": "#1c59a8",
+            "background_color": "#cde0f1",
+            "cta_1_text": "",
+            "cta_1_link": "",
+            "cta_1_color": "",
+            "cta_2_text": "",
+            "cta_2_link": "",
+            "cta_2_color": "",
+            "image_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "5fe99853-2306-4bcc-8ff9-9fd2703d5575"
+      ],
+      "settings": {
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "0",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "16px",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "1656600190625995c0": {
+      "type": "content-blocks",
+      "blocks": {
+        "0d86f218-8fe8-46a5-a961-c4a888c9e396": {
+          "type": "content_block",
+          "settings": {
+            "mobile_image": "shopify:\/\/shop_images\/220808-corporate-collection-page-customization-mob.jpg",
+            "image": "shopify:\/\/shop_images\/220808-corporate-collection-page-customization.jpg",
+            "video_file_url": "",
+            "mobile_video_file_url": "",
+            "enable_full_width_video": false,
+            "video_embed": "",
+            "video_description": "",
+            "mobile_video_embed": "",
+            "background_color": "#cde0f1",
+            "width": "full",
+            "content_position": "right",
+            "headline": "Easy Customization",
+            "content": "1. Work with a Southern Tide team member for the best service from start to finish.\n<br> <br>\n2. Send your company logo to have it embroidered on Southern Tide apparel.\n<br><br>\n3. Don’t stress! We have low minimums and a 15 day turnaround time.",
+            "cta_1_text": "Contact Us",
+            "cta_1_link": "https:\/\/southerntide.com\/pages\/contact-us#corporate",
+            "cta_1_style": "outline",
+            "cta_2_text": "",
+            "cta_2_link": "",
+            "cta_2_style": "outline",
+            "feature_1_text": "",
+            "feature_2_text": "",
+            "feature_3_text": "",
+            "feature_4_text": ""
+          }
+        },
+        "8dc4d961-aa42-4659-b0a6-496a2dbe7fa3": {
+          "type": "content_block",
+          "settings": {
+            "mobile_image": "shopify:\/\/shop_images\/220808-corporate-collection-page-team-mobile.jpg",
+            "image": "shopify:\/\/shop_images\/220808-corporate-collection-page-team.jpg",
+            "video_file_url": "",
+            "mobile_video_file_url": "",
+            "enable_full_width_video": false,
+            "video_embed": "",
+            "video_description": "",
+            "mobile_video_embed": "",
+            "background_color": "#f2f2f2",
+            "width": "full",
+            "content_position": "left",
+            "headline": "Corporate & Group Orders",
+            "content": "Executive Outfitting\n<br>\nTeam Uniforms\n<br>\nTeam Gifts\n<br>\nCorporate Event Gifting",
+            "cta_1_text": "Request More Info",
+            "cta_1_link": "https:\/\/southerntide.com\/pages\/contact-us#corporate",
+            "cta_1_style": "outline",
+            "cta_2_text": "",
+            "cta_2_link": "",
+            "cta_2_style": "outline",
+            "feature_1_text": "",
+            "feature_2_text": "",
+            "feature_3_text": "",
+            "feature_4_text": ""
+          }
+        },
+        "7301df1b-6f63-4321-8772-e317e3fe85f0": {
+          "type": "content_block",
+          "settings": {
+            "mobile_image": "shopify:\/\/shop_images\/events-mobile.jpg",
+            "image": "shopify:\/\/shop_images\/events.jpg",
+            "video_file_url": "",
+            "mobile_video_file_url": "",
+            "enable_full_width_video": false,
+            "video_embed": "",
+            "video_description": "",
+            "mobile_video_embed": "",
+            "background_color": "#cde0f1",
+            "width": "full",
+            "content_position": "right",
+            "headline": "Events",
+            "content": "Golf Events\n<br>\nOffice Gifting\n<br>\nConferences\n<br>\nOther Events",
+            "cta_1_text": "Request More Info",
+            "cta_1_link": "https:\/\/southerntide.com\/pages\/contact-us#corporate",
+            "cta_1_style": "outline",
+            "cta_2_text": "",
+            "cta_2_link": "",
+            "cta_2_style": "outline",
+            "feature_1_text": "",
+            "feature_2_text": "",
+            "feature_3_text": "",
+            "feature_4_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "0d86f218-8fe8-46a5-a961-c4a888c9e396",
+        "8dc4d961-aa42-4659-b0a6-496a2dbe7fa3",
+        "7301df1b-6f63-4321-8772-e317e3fe85f0"
+      ],
+      "settings": {
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    }
+  },
+  "order": [
+    "16566001450b7d44b2",
+    "1656600190625995c0"
+  ]
+}

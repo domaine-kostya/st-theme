@@ -1,0 +1,203 @@
+{% capture banner_alignment_classes %}
+  banner--mobile-{{ section.settings.mobile_vertical_content_position }}
+  banner--mobile-{{ section.settings.mobile_horizontal_content_position }}
+  banner--desktop-{{ section.settings.desktop_vertical_content_position }}
+  banner--desktop-{{ section.settings.desktop_horizontal_content_position }}
+{% endcapture %}
+
+<div class="banner banner--{{ section.id }} {{ banner_alignment_classes }} banner--mobile-{{ section.settings.mobile_height }} banner--desktop-{{ section.settings.desktop_height }} {% unless section.settings.enable_full_width %}container container--wide{% endunless %} {% if section.settings.icon != blank %}banner--has-icon{% endif %} {% if section.settings.background_image == blank %}banner--solid{% endif %}" role="region" aria-label="Banner">
+  {% if section.settings.mobile_background_image != blank %}
+    <div class="d-md-none banner__background img-cover">
+      {{ section.settings.mobile_background_image | image_url: width: 1000 | image_tag: loading: 'lazy' }}
+    </div>
+    <div class="d-none d-md-block banner__background img-cover">
+      {{ section.settings.background_image | image_url: width: 2000 | image_tag: loading: 'lazy' }}
+    </div>
+  {% elsif section.settings.background_image != blank %}
+    <div class="banner__background d-none d-md-block banner__background img-cover">
+      {{ section.settings.background_image | image_url: width: 2000 | image_tag: loading: 'lazy' }}
+    </div>
+  {% endif %}
+
+  <div class="banner__content text-{{ section.settings.mobile_text_alignment }} text-md-{{ section.settings.desktop_text_alignment }}">
+    {% if section.settings.icon != blank %}
+      <div class="banner__image-wrapper">
+        {{ section.settings.icon | image_url: width: 400 | image_tag: loading: 'lazy' }}
+      </div>
+    {% endif %}
+
+    {% if section.settings.mobile_headline != blank %}
+      <h2 class="d-md-none{% if section.settings.content == blank %} no-margin{% endif %}">
+        {{ section.settings.mobile_headline }}
+      </h2>
+    {% endif %}
+    {% if section.settings.headline != blank %}
+      <h2 class="d-none d-md-block{% if section.settings.content == blank %} no-margin{% endif %}">
+        {{ section.settings.headline }}
+      </h2>
+    {% endif %}
+
+    <div>
+      {% if section.settings.mobile_content != blank %}
+        <p class="p--large d-md-none {% if section.settings.cta_text == blank %}no-margin{% endif %}">
+          {{ section.settings.mobile_content | newline_to_br }}
+        </p>
+      {% endif %}
+      {% if section.settings.content != blank %}
+        <p class="p--large d-none d-md-block {% if section.settings.cta_text == blank %}no-margin{% endif %}">
+          {{ section.settings.content | newline_to_br }}
+        </p>
+      {% endif %}
+    </div>
+
+    {% if section.settings.cta_text != blank or section.settings.cta_2_text != blank or section.settings.cta_3_text != blank %}
+      <div class="banner__content-buttons {% if section.settings.show_buttons_on_separate_lines %}banner__content-buttons--separate-buttons{% endif %} {% if section.settings.cta_2_text != blank or section.settings.cta_3_text != blank %}banner__content-buttons--multiple{% endif %}">
+        {% if section.settings.cta_text != blank %}
+          <div>
+            <a class="btn btn--{{ section.settings.cta_style }} btn--1" href="{{ section.settings.cta_link }}" title="{{ section.settings.cta_text }}">
+              {{ section.settings.cta_text }}
+            </a>
+          </div>
+        {% endif %}
+
+        {% if section.settings.cta_2_text != blank %}
+          <div>
+            <a class="btn btn--{{ section.settings.cta_2_style }} btn--2" href="{{ section.settings.cta_2_link }}" title="{{ section.settings.cta_2_text }}">
+              {{ section.settings.cta_2_text }}
+            </a>
+          </div>
+        {% endif %}
+
+        {% if section.settings.cta_3_text != blank %}
+          <div>
+            <a class="btn btn--{{ section.settings.cta_3_style }} btn--3" href="{{ section.settings.cta_3_link }}" title="{{ section.settings.cta_3_text }}">
+              {{ section.settings.cta_3_text }}
+            </a>
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+
+  {% if section.settings.overlay_opacity >= 1 %}
+    <div class="banner__overlay"></div>
+
+    <style>
+      .banner--{{ section.id }} .banner__overlay {
+        opacity: {{ section.settings.overlay_opacity_mobile | times: 10 }}%;
+        background: {{ section.settings.overlay_color_mobile }};
+      }
+
+      @media screen and (min-width: 1025px) {
+        .banner--{{ section.id }} .banner__overlay {
+          opacity: {{ section.settings.overlay_opacity | times: 10 }}%;
+          background: {{ section.settings.overlay_color }};
+        }
+      }
+    </style>
+  {% endif %}
+</div>
+
+<style>
+  {% if section.settings.background_image == blank %}
+    .banner--{{ section.id }} {
+      background-color: {{ section.settings.background_color }};
+    }
+  {% endif %}
+
+  .banner--{{ section.id }} .banner__content h2 {
+    color: {{ section.settings.headline_color }};
+  }
+
+  .banner--{{ section.id }} .banner__content p {
+    color: {{ section.settings.content_color }};
+  }
+
+  {% if section.settings.cta_text != blank %}
+    .banner--{{ section.id }} .btn--solid.btn--1 {
+      color: {{ section.settings.cta_text_color }};
+      background-color: {{ section.settings.cta_color }};
+    }
+
+    .banner--{{ section.id }} .btn--solid.btn--1:hover {
+      background-color: {{ section.settings.cta_color | color_darken: 10 }};
+    }
+
+    .banner--{{ section.id }} .btn--outline.btn--1 {
+      color: {{ section.settings.cta_text_color }};
+      border-color: {{ section.settings.cta_color }};
+    }
+
+    {% assign bg_color = section.settings.cta_color | color_darken: 10 %}
+    {% assign brightness_diff = '#FFFFFF' | brightness_difference: bg_color %}
+    .banner--{{ section.id }} .btn--outline.btn--1:hover {
+      color: {% if brightness_diff < 125 %}#000{% else %}#FFF{% endif %};
+      background-color: {{ section.settings.cta_color | color_darken: 10 }};
+      border-color: {{ section.settings.cta_color | color_darken: 10 }};
+    }
+  {% endif %}
+
+  {% if section.settings.cta_2_text != blank %}
+    .banner--{{ section.id }} .btn--solid.btn--2 {
+      color: {{ section.settings.cta_2_text_color }};
+      background-color: {{ section.settings.cta_2_color }};
+    }
+
+    .banner--{{ section.id }} .btn--solid.btn--2:hover {
+      background-color: {{ section.settings.cta_2_color | color_darken: 10 }};
+    }
+
+    .banner--{{ section.id }} .btn--outline.btn--2 {
+      color: {{ section.settings.cta_2_text_color }};
+      border-color: {{ section.settings.cta_2_color }};
+    }
+
+    {% assign bg_color = section.settings.cta_2_color | color_darken: 10 %}
+    {% assign brightness_diff = '#FFFFFF' | brightness_difference: bg_color %}
+    .banner--{{ section.id }} .btn--outline.btn--2:hover {
+      color:  {% if brightness_diff < 125 %}#000{% else %}#FFF{% endif %};
+      background-color: {{ section.settings.cta_2_color | color_darken: 10 }};
+      border-color: {{ section.settings.cta_2_color | color_darken: 10 }};
+    }
+  {% endif %}
+
+  {% if section.settings.cta_3_text != blank %}
+    .banner--{{ section.id }} .btn--solid.btn--3 {
+      color: {{ section.settings.cta_3_text_color }};
+      background-color: {{ section.settings.cta_3_color }};
+    }
+
+    .banner--{{ section.id }} .btn--solid.btn--3:hover {
+      background-color: {{ section.settings.cta_3_color | color_darken: 10 }};
+    }
+
+    .banner--{{ section.id }} .btn--outline.btn--3 {
+      color: {{ section.settings.cta_3_text_color }};
+      border-color: {{ section.settings.cta_3_color }};
+    }
+
+    {% assign bg_color = section.settings.cta_3_color | color_darken: 10 %}
+    {% assign brightness_diff = '#FFFFFF' | brightness_difference: bg_color %}
+    .banner--{{ section.id }} .btn--outline.btn--3:hover {
+      color: {% if brightness_diff < 125 %}#000{% else %}#FFF{% endif %};
+      background-color: {{ section.settings.cta_3_color | color_darken: 10 }};
+      border-color: {{ section.settings.cta_3_color | color_darken: 10 }};
+    }
+  {% endif %}
+
+  {% if section.settings.content_width != blank or section.settings.content_width != 0 %}
+    @media screen and (min-width: 750px) {
+      .banner--{{ section.id }} .banner__content {
+        max-width: {{ section.settings.content_width | append: 'px;' }}
+      }
+    }
+  {% endif %}
+
+  {% if section.settings.desktop_height == 'natural' %}
+    @media screen and (min-width: 750px) {
+      .banner--{{ section.id }} {
+        aspect-ratio: {{ section.settings.background_image.aspect_ratio }};
+      }
+    }
+  {% endif %}
+</style>

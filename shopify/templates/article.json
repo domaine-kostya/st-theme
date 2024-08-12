@@ -1,0 +1,53 @@
+{
+  "sections": {
+    "main": {
+      "type": "article",
+      "settings": {
+        "enable_sharing": true
+      }
+    },
+    "related-articles": {
+      "type": "related-articles",
+      "blocks": {
+        "326747dc-c7f9-40e3-8623-02bacc345597": {
+          "type": "article",
+          "settings": {
+            "article": "the-southern-edit\/how-to-do-matching-family-pjs"
+          }
+        },
+        "b17ebf50-d4d8-4995-949e-461862a09c33": {
+          "type": "article",
+          "settings": {
+            "article": "the-southern-edit\/why-has-golf-become-so-popular"
+          }
+        },
+        "c6f9136c-2127-447c-a22b-fa2a6ca4a5ed": {
+          "type": "article",
+          "settings": {
+            "article": "the-southern-edit\/5-perks-of-taking-an-off-season-beach-vacation"
+          }
+        }
+      },
+      "block_order": [
+        "326747dc-c7f9-40e3-8623-02bacc345597",
+        "b17ebf50-d4d8-4995-949e-461862a09c33",
+        "c6f9136c-2127-447c-a22b-fa2a6ca4a5ed"
+      ],
+      "settings": {
+        "headline": "You may also enjoy",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "related-articles"
+  ]
+}

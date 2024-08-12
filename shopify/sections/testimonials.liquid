@@ -1,0 +1,248 @@
+{{ 'sections.testimonials.css' | asset_url | stylesheet_tag }}
+
+<section-testimonials class="testimonials testimonials--{{ section.id }}" role="region" aria-label="Testimonials" data-testimonials>
+  <div class="container">
+    <div class="testimonials__header">
+      <h2 class="heading-3">
+        {{ section.settings.headline }}
+      </h2>
+
+      {% if section.settings.content != blank %}
+        <p>
+          {{ section.settings.content }}
+        </p>
+      {% endif %}
+    </div>
+
+    <div class="testimonials__carousel-wrapper">
+      <div class="swiper-button-prev d-none d-lg-block" data-testimonials-prev>
+        {% render 'icon-chevron-left-large' %}
+      </div>
+
+      <div class="swiper-button-next d-none d-lg-block" data-testimonials-next>
+        {% render 'icon-chevron-right-large' %}
+      </div>
+
+      <div class="swiper-container" data-testimonials-carousel>
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            <div class="swiper-slide">
+              <div class="testimonials__item">
+                <div class="testimonials__item-rating" role="region" aria-label="Testimonial Rating - {{ block.settings.rating }} out of 5 stars">
+                  {% for i in (1..5) %}
+                    {% if forloop.index > block.settings.rating %}
+                      {% render 'icon-fish-rating-empty' %}
+                    {% else %}
+                      {% render 'icon-fish-rating' %}
+                    {% endif %}
+                  {% endfor %}
+                </div>
+
+                <p>
+                  {{ block.settings.content }}
+                </p>
+
+                <strong>
+                  {{ block.settings.name }}
+                </strong>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+
+        <div class="swiper-scrollbar d-lg-none" data-testimonials-scrollbar></div>
+      </div>
+
+      <div class="swiper-pagination d-none d-lg-block" data-testimonials-pagination></div>
+    </div>
+  </div>
+</section-testimonials>
+
+{% render 'section-spacing', section_name: 'featured-products' %}
+
+{{ 'sections.testimonials.js' | asset_url | script_tag }}
+
+{% schema %}
+  {
+    "settings": [
+      {
+        "type": "text",
+        "id": "headline",
+        "label": "Headline"
+      },
+      {
+        "type": "textarea",
+        "id": "content",
+        "label": "Content"
+      },
+      {
+        "type": "header",
+        "content": "Section Margin"
+      },
+      {
+        "type": "select",
+        "id": "margin_top",
+        "label": "Margin Top",
+        "default": "default",
+        "options": [
+          {"value": "default", "label": "Theme Default"},
+          {"value": "0", "label": "None"},
+          {"value": "8px", "label": "8px"},
+          {"value": "16px", "label": "16px"},
+          {"value": "32px", "label": "32px"},
+          {"value": "48px", "label": "48px"},
+          {"value": "64px", "label": "64px"},
+          {"value": "102px", "label": "102px"}
+        ]
+      },
+      {
+        "type": "select",
+        "id": "margin_top_mobile",
+        "label": "Margin Top Mobile",
+        "default": "default",
+        "options": [
+          {"value": "default", "label": "Theme Default"},
+          {"value": "0", "label": "None"},
+          {"value": "8px", "label": "8px"},
+          {"value": "16px", "label": "16px"},
+          {"value": "32px", "label": "32px"},
+          {"value": "48px", "label": "48px"},
+          {"value": "64px", "label": "64px"},
+          {"value": "102px", "label": "102px"}
+        ]
+      },
+      {
+        "type": "select",
+        "id": "margin_bottom",
+        "label": "Margin Bottom",
+        "default": "default",
+        "options": [
+          {"value": "default", "label": "Theme Default"},
+          {"value": "0", "label": "None"},
+          {"value": "8px", "label": "8px"},
+          {"value": "16px", "label": "16px"},
+          {"value": "32px", "label": "32px"},
+          {"value": "48px", "label": "48px"},
+          {"value": "64px", "label": "64px"},
+          {"value": "102px", "label": "102px"}
+        ]
+      },
+      {
+        "type": "select",
+        "id": "margin_bottom_mobile",
+        "label": "Margin Bottom Mobile",
+        "default": "default",
+        "options": [
+          {"value": "default", "label": "Theme Default"},
+          {"value": "0", "label": "None"},
+          {"value": "8px", "label": "8px"},
+          {"value": "16px", "label": "16px"},
+          {"value": "32px", "label": "32px"},
+          {"value": "48px", "label": "48px"},
+          {"value": "64px", "label": "64px"},
+          {"value": "102px", "label": "102px"}
+        ]
+      },
+      {
+        "type": "header",
+        "content": "Section Padding"
+      },
+      {
+        "type": "select",
+        "id": "padding_top",
+        "label": "Padding Top",
+        "default": "default",
+        "options": [
+          {"value": "default", "label": "Theme Default"},
+          {"value": "0", "label": "None"},
+          {"value": "8px", "label": "8px"},
+          {"value": "16px", "label": "16px"},
+          {"value": "32px", "label": "32px"},
+          {"value": "48px", "label": "48px"},
+          {"value": "64px", "label": "64px"},
+          {"value": "102px", "label": "102px"}
+        ]
+      },
+      {
+        "type": "select",
+        "id": "padding_top_mobile",
+        "label": "Padding Top Mobile",
+        "default": "default",
+        "options": [
+          {"value": "default", "label": "Theme Default"},
+          {"value": "0", "label": "None"},
+          {"value": "8px", "label": "8px"},
+          {"value": "16px", "label": "16px"},
+          {"value": "32px", "label": "32px"},
+          {"value": "48px", "label": "48px"},
+          {"value": "64px", "label": "64px"},
+          {"value": "102px", "label": "102px"}
+        ]
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom",
+        "label": "Padding Bottom",
+        "default": "default",
+        "options": [
+          {"value": "default", "label": "Theme Default"},
+          {"value": "0", "label": "None"},
+          {"value": "8px", "label": "8px"},
+          {"value": "16px", "label": "16px"},
+          {"value": "32px", "label": "32px"},
+          {"value": "48px", "label": "48px"},
+          {"value": "64px", "label": "64px"},
+          {"value": "102px", "label": "102px"}
+        ]
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom_mobile",
+        "label": "Padding Bottom Mobile",
+        "default": "default",
+        "options": [
+          {"value": "default", "label": "Theme Default"},
+          {"value": "0", "label": "None"},
+          {"value": "8px", "label": "8px"},
+          {"value": "16px", "label": "16px"},
+          {"value": "32px", "label": "32px"},
+          {"value": "48px", "label": "48px"},
+          {"value": "64px", "label": "64px"},
+          {"value": "102px", "label": "102px"}
+        ]
+      }
+    ],
+    "blocks": [
+      {
+        "type": "testimonial",
+        "name": "Testimonial",
+        "settings": [
+          {
+            "type": "range",
+            "id": "rating",
+            "label": "Rating",
+            "min": 0,
+            "max": 5,
+            "step": 1,
+            "default": 5
+          },
+          {
+            "type": "textarea",
+            "id": "content",
+            "label": "Content"
+          },
+          {
+            "type": "text",
+            "id": "name",
+            "label": "Name"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Testimonials"
+      }
+    ]
+  }
+{% endschema %}

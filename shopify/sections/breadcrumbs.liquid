@@ -1,0 +1,48 @@
+{{ 'sections.breadcrumbs.css' | asset_url | stylesheet_tag }}
+
+<div class="breadcrumbs breadcrumbs--{{ template.name | handle }}" role="region" aria-label="Breadcrumbs">
+  <div class="container {% unless request.page_type == 'product' %}container--wide{% endunless %}">
+    <div class="row">
+      <div class="{% if request.page_type == 'collection' %}col-lg-6 align-self-center{% else %}col-12{% endif %}">
+        <a href="{{ shop.url }}" title="{{ 'collections.breadcrumbs.home' | t }}">
+          {{ 'collections.breadcrumbs.home' | t }}
+        </a>
+
+        <span class="breadcrumbs__divider">/</span>
+
+        {% if request.page_type == 'page' %}
+          <span>
+            {{ page.title }}
+          </span>
+        {% elsif request.page_type == 'collection' %}
+          <span>
+            {{ collection.title }}
+          </span>
+        {% elsif request.page_type == 'product' %}
+          {%-  assign collection = collection | default: product.metafields.custom.default_breadcrumb_collection.value -%}
+          {% if collection.url %}
+            <a href="{{ collection.url }}" title="{{ collection.title }}">
+              {{ collection.title }}
+            </a>
+
+            <span class="breadcrumbs__divider">/</span>
+          {% endif %}
+
+          <span>
+            {{ product.title }}
+          </span>
+        {% endif %}
+      </div>
+
+      {% if request.page_type == 'collection' %}
+        <div class="col-6 col-lg-6 d-none d-lg-block align-self-center text-right">
+          <div class="breadcrumbs__count">
+            {{ collection.all_products_count }} {{ 'collections.general.products' | t }}
+          </div>
+
+          {% render 'collection-sorting', id_suffix: 'desktop' %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

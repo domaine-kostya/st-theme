@@ -1,0 +1,2002 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Southern Tide",
+    "theme_version": "1.0.0",
+    "theme_author": "Domaine",
+    "theme_documentation_url": "http:\/\/meetdomaine.com\/",
+    "theme_support_url": "http:\/\/meetdomaine.com\/"
+  },
+  {
+    "name": "Favicon",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "favicon",
+        "label": "Favicon image",
+        "info": "Dimensions 64 x 64 .png"
+      }
+    ]
+  },
+  {
+    "name": "Cart",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Empty Cart"
+      },
+      {
+        "type": "text",
+        "id": "empty_title",
+        "label": "Empty Cart Title",
+        "default": "Your Bag is empty"
+      },
+      {
+        "type": "text",
+        "id": "empty_cta_text",
+        "label": "Empty Cart CTA Text",
+        "default": "Continue Shopping"
+      },
+      {
+        "type": "url",
+        "id": "empty_cta_url",
+        "label": "Empty Cart CTA url",
+        "default": "\/"
+      },
+      {
+        "type": "header",
+        "content": "Free Shipping"
+      },
+      {
+        "type": "checkbox",
+        "id": "free_shipping_enable",
+        "label": "Enable Free Shipping",
+        "info": "Check to display free shipping in cart summary",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "fsb_unqualified",
+        "label": "Free Shipping Bar Unqualified Text",
+        "default": "You're [amount] away from receiving a  free shipping!",
+        "info": "Use [amount] to insert amout left until threshold"
+      },
+      {
+        "type": "text",
+        "id": "fsb_qualified",
+        "label": "Free Shipping Bar Qualified Text",
+        "default": "Your order qualifies for free shipping!"
+      },
+      {
+        "type": "text",
+        "id": "free_shipping_text",
+        "label": "Summary Free Shipping Text",
+        "default": "Free"
+      },
+      {
+        "type": "number",
+        "id": "free_shipping_threshold",
+        "label": "Free Shipping Threshold",
+        "info": "Cart total in dollars",
+        "default": 75
+      },
+      {
+        "type": "header",
+        "content": "Rewards"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_rewards",
+        "label": "Enable Rewards"
+      },
+      {
+        "type": "text",
+        "id": "rewards_message",
+        "label": "Rewards Message",
+        "info": "Message that appears on the line item when you add it",
+        "default": "Reward"
+      },
+      {
+        "type": "number",
+        "id": "rewards_threshold",
+        "label": "Rewards Threshold",
+        "info": "Cart total in dollars",
+        "default": 75
+      },
+      {
+        "type": "text",
+        "id": "rewards_toggle_text",
+        "label": "Rewards Toggle Text",
+        "default": "You have unlocked your exclusive gift – redeem now"
+      },
+      {
+        "type": "collection",
+        "id": "rewards_bronze_collection",
+        "label": "Rewards Bronze Collection"
+      },
+      {
+        "type": "collection",
+        "id": "rewards_silver_collection",
+        "label": "Rewards Silver Collection"
+      },
+      {
+        "type": "collection",
+        "id": "rewards_gold_collection",
+        "label": "Rewards Gold Collection"
+      },
+      {
+        "type": "header",
+        "content": "Spend $X get Y or Z"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_spend_x_get_y_or_z",
+        "label": "Enable"
+      },
+      {
+        "type": "number",
+        "id": "spend_x_get_y_or_z_threshold",
+        "label": "Free Gift Threshold"
+      },
+      {
+        "type": "text",
+        "id": "spend_x_get_y_or_z_message",
+        "label": "Free Gift Message"
+      },
+      {
+        "type": "product",
+        "id": "spend_x_get_y_or_z_free_gift_1",
+        "label": "Free Gift 1"
+      },
+      {
+        "type": "product",
+        "id": "spend_x_get_y_or_z_free_gift_2",
+        "label": "Free Gift 2"
+      },
+      {
+        "type": "text",
+        "id": "spend_x_get_y_or_z_toggle_text",
+        "label": "Toggle Text",
+        "default": "Your order qualifies for a free gift – redeem now"
+      },
+      {
+        "type": "header",
+        "content": "Spend $X get Y Gift"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_spend_x_get_y",
+        "label": "Enable"
+      },
+      {
+        "type": "text",
+        "id": "spend_x_get_y_free_gift_title_not_met",
+        "label": "Free Gift Accordion Title (Threshold Not Met)",
+        "default": "Unlock a FREE Gift"
+      },
+      {
+        "type": "text",
+        "id": "spend_x_get_y_free_gift_title_met",
+        "label": "Free Gift Accordion Title (Threshold Met)",
+        "default": "You’ve Unlocked a FREE Gift"
+      },
+      {
+        "type": "product",
+        "id": "spend_x_get_y_free_gift_1",
+        "label": "Free Gift 1"
+      },
+      {
+        "type": "number",
+        "id": "spend_x_get_y_free_gift_1_threshold",
+        "label": "Free Gift 1 Threshold"
+      },
+      {
+        "type": "text",
+        "id": "spend_x_get_y_free_gift_1_message",
+        "label": "Free Gift 1 Message"
+      },
+      {
+        "type": "product",
+        "id": "spend_x_get_y_free_gift_2",
+        "label": "Free Gift 2"
+      },
+      {
+        "type": "number",
+        "id": "spend_x_get_y_free_gift_2_threshold",
+        "label": "Free Gift 2 Threshold"
+      },
+      {
+        "type": "text",
+        "id": "spend_x_get_y_free_gift_2_message",
+        "label": "Free Gift 2 Message"
+      },
+      {
+        "type": "product",
+        "id": "spend_x_get_y_free_gift_3",
+        "label": "Free Gift 3"
+      },
+      {
+        "type": "number",
+        "id": "spend_x_get_y_free_gift_3_threshold",
+        "label": "Free Gift 3 Threshold"
+      },
+      {
+        "type": "text",
+        "id": "spend_x_get_y_free_gift_3_message",
+        "label": "Free Gift 3 Message"
+      },
+      {
+        "type": "header",
+        "content": "Spend $X get Y% Off"
+      },
+      {
+        "type": "paragraph",
+        "content": "Spending tiers can be configured in the Script Editor app"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_spend_x_get_y_off",
+        "label": "Enable"
+      },
+      {
+        "type": "collection",
+        "id": "spend_x_get_y_off_exclude_collection",
+        "label": "Collection to Exclude",
+        "info": "All products within this collection will be excluded from receiving the % off discount"
+      },
+      {
+        "type": "header",
+        "content": "Spend $X get Y Gift Card"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_spend_x_get_y_gift_card",
+        "label": "Enable"
+      },
+      {
+        "type": "product",
+        "id": "spend_x_get_y_gift_card_product",
+        "label": "Product",
+        "info": "Product should have 3 variants, each will be linked to the respective tier"
+      },
+      {
+        "type": "number",
+        "id": "spend_x_get_y_gift_card_tier_1_threshold",
+        "label": "Tier 1 Threshold"
+      },
+      {
+        "type": "number",
+        "id": "spend_x_get_y_gift_card_tier_2_threshold",
+        "label": "Tier 2 Threshold"
+      },
+      {
+        "type": "number",
+        "id": "spend_x_get_y_gift_card_tier_3_threshold",
+        "label": "Tier 3 Threshold"
+      }
+    ]
+  },
+  {
+    "name": "Cart Promotional Banner: Takeover",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Cart Promotion that appears over the overlay when the cart drawer is open. (Desktop Only)"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_cpb_takeover",
+        "label": "Enable Cart Promo Banner",
+        "default": true
+      },
+      {
+        "type": "image_picker",
+        "id": "cpb_takeover_image",
+        "label": "Image",
+        "info": "Dimensions 1280 x 960 .png"
+      },
+      {
+        "type": "text",
+        "id": "cpb_takeover_title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "cpb_takeover_cta",
+        "label": "CTA Text"
+      },
+      {
+        "type": "url",
+        "id": "cpb_takeover_link",
+        "label": "CTA Link"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "cpb_takeover_legal",
+        "label": "Legal Text"
+      }
+    ]
+  },
+  {
+    "name": "Cart Promotional Banner: Drawer",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Cart Promotion that appears in the cart drawer"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_cpb_drawer",
+        "label": "Enable Cart Promo Banner",
+        "default": true
+      },
+      {
+        "type": "select",
+        "id": "cpb_drawer_location",
+        "label": "Location",
+        "options": [
+          {
+            "value": "top",
+            "label": "Above Cart Items"
+          },
+          {
+            "value": "bottom",
+            "label": "Below Cart Items"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "cpb_drawer_show_on",
+        "label": "Show On",
+        "options": [
+          {
+            "value": "d-flex",
+            "label": "Both Desktop and Mobile"
+          },
+          {
+            "value": "d-none d-lg-flex",
+            "label": "Desktop Only"
+          },
+          {
+            "value": "d-flex d-lg-none",
+            "label": "Mobile Only"
+          }
+        ]
+      },
+      {
+        "type": "image_picker",
+        "id": "cpb_drawer_image",
+        "label": "Image",
+        "info": "Optional. Dimensions 300 x 224 .png"
+      },
+      {
+        "type": "text",
+        "id": "cpb_drawer_title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "cpb_drawer_cta",
+        "label": "CTA Text"
+      },
+      {
+        "type": "url",
+        "id": "cpb_drawer_link",
+        "label": "CTA Link"
+      }
+    ]
+  },
+  {
+    "name": "Cart Promotional Banner: Cart Page",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Cart Promotion that appears on the cart page"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_cpb_page",
+        "label": "Enable Cart Promo Banner",
+        "default": true
+      },
+      {
+        "type": "select",
+        "id": "cpb_page_location",
+        "label": "Location",
+        "options": [
+          {
+            "value": "top",
+            "label": "Above Cart Items"
+          },
+          {
+            "value": "side",
+            "label": "Below Summary"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "cpb_page_show_on",
+        "label": "Show On",
+        "options": [
+          {
+            "value": "d-flex",
+            "label": "Both Desktop and Mobile"
+          },
+          {
+            "value": "d-none d-lg-flex",
+            "label": "Desktop Only"
+          },
+          {
+            "value": "d-flex d-lg-none",
+            "label": "Mobile Only"
+          }
+        ]
+      },
+      {
+        "type": "image_picker",
+        "id": "cpb_page_image",
+        "label": "Image",
+        "info": "Above Cart Items Dimensions 386 x 188 .png. Below Summary Dimensions 808 x 606 .png."
+      },
+      {
+        "type": "text",
+        "id": "cpb_page_title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "cpb_page_cta",
+        "label": "CTA Text"
+      },
+      {
+        "type": "url",
+        "id": "cpb_page_link",
+        "label": "CTA Link"
+      }
+    ]
+  },
+  {
+    "name": "Storefront API",
+    "settings": [
+      {
+        "type": "text",
+        "id": "storefront_api_token",
+        "label": "Storefront API Access Token",
+        "info": "Requires a minimum of 'Products' and 'Selling plans' access."
+      }
+    ]
+  },
+  {
+    "name": "GTM",
+    "settings": [
+      {
+        "type": "text",
+        "id": "gtm_id",
+        "label": "GTM ID",
+        "default": "GTM-NDRSNM"
+      }
+    ]
+  },
+  {
+    "name": "Google Ads",
+    "settings": [
+      {
+        "type": "text",
+        "id": "google_ads_id",
+        "label": "Google Ads ID",
+        "default": "AW-963004865"
+      }
+    ]
+  },
+  {
+    "name": "Gorgias",
+    "settings": [
+      {
+        "type": "inline_richtext",
+        "id": "gorgias_intro_message",
+        "label": "Gorgias Intro Message",
+        "default": "This chat may be monitored and retained. See our <a href=\"\/pages\/privacy\" target=\"_blank\" title=\"Privacy Policy | Southern Tide\">Privacy Policy<\/a> for more details about our information practices."
+      }
+    ]
+  },
+  {
+    "name": "Bugherd",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_bugherd",
+        "label": "Enable Bugherd"
+      },
+      {
+        "type": "text",
+        "id": "bugherd_api_key",
+        "label": "Bugherd API Key",
+        "default": "x07akhrxifsq7xqxifr1ka"
+      }
+    ]
+  },
+  {
+    "name": "Schema",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "schema_logo",
+        "label": "Company Logo",
+        "info": "Minimum dimensions: 112 x 112px"
+      },
+      {
+        "type": "textarea",
+        "id": "schema_same_as",
+        "label": "Social Media URLs",
+        "info": "Comma separated list of social media URLs"
+      }
+    ]
+  },
+  {
+    "name": "Store Locator Page",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Hero"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_store_locator_hero",
+        "label": "Enable Hero"
+      },
+      {
+        "type": "header",
+        "content": "Desktop Layout"
+      },
+      {
+        "type": "select",
+        "id": "store_locator_hero_desktop_layout",
+        "label": "Desktop Layout",
+        "options": [
+          {
+            "value": "Image 1 + Content",
+            "label": "Image 1 + Content"
+          },
+          {
+            "value": "Content + Image 1",
+            "label": "Content + Image 1"
+          },
+          {
+            "value": "Image 1 + Image 2 + Content",
+            "label": "Image 1 + Image 2 + Content"
+          },
+          {
+            "value": "Content + Image 1 + Image 2",
+            "label": "Content + Image 1 + Image 2"
+          },
+          {
+            "value": "Image 1 + Content + Image 2",
+            "label": "Image 1 + Content + Image 2"
+          },
+          {
+            "value": "Image Top + Content",
+            "label": "Image Top + Content"
+          }
+        ]
+      },
+      {
+        "type": "image_picker",
+        "id": "store_locator_hero_desktop_image_1",
+        "label": "Desktop Image 1",
+        "info": "Dimensions 2324 x 1306 for rectangle, 1306 x 1306 for square, 1162 x 1306 for portrait, 3840 x 1130 for full width"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_locator_hero_desktop_image_2",
+        "label": "Desktop Image 2",
+        "info": "Dimensions 2324 x 1306 for rectangle, 1306 x 1306 for square, 1162 x 1306 for portrait, 3840 x 1130 for full width"
+      },
+      {
+        "type": "header",
+        "content": "Mobile Images"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_locator_hero_mobile_image",
+        "label": "Mobile Image",
+        "info": "Dimensions 750 x 1000"
+      },
+      {
+        "type": "header",
+        "content": "Content"
+      },
+      {
+        "type": "textarea",
+        "id": "store_locator_hero_title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "store_locator_hero_content",
+        "label": "Content"
+      },
+      {
+        "type": "color",
+        "id": "store_locator_hero_title_color",
+        "label": "Title Color",
+        "default": "#1C59A8"
+      },
+      {
+        "type": "color",
+        "id": "store_locator_hero_content_color",
+        "label": "Content Color",
+        "default": "#313133"
+      },
+      {
+        "type": "color",
+        "id": "store_locator_hero_background_color",
+        "label": "Background Color",
+        "default": "#CDE0F1"
+      },
+      {
+        "type": "text",
+        "id": "store_locator_hero_cta_1_text",
+        "label": "CTA 1 Text"
+      },
+      {
+        "type": "url",
+        "id": "store_locator_hero_cta_1_link",
+        "label": "CTA 1 Link"
+      },
+      {
+        "type": "color",
+        "id": "store_locator_hero_cta_1_color",
+        "label": "CTA 1 Color"
+      },
+      {
+        "type": "text",
+        "id": "store_locator_hero_cta_2_text",
+        "label": "CTA 2 Text"
+      },
+      {
+        "type": "url",
+        "id": "store_locator_hero_cta_2_link",
+        "label": "CTA 2 Link"
+      },
+      {
+        "type": "color",
+        "id": "store_locator_hero_cta_2_color",
+        "label": "CTA 2 Color"
+      },
+      {
+        "type": "text",
+        "id": "store_locator_hero_cta_3_text",
+        "label": "CTA 3 Text"
+      },
+      {
+        "type": "url",
+        "id": "store_locator_hero_cta_3_link",
+        "label": "CTA 3 Link"
+      },
+      {
+        "type": "color",
+        "id": "store_locator_hero_cta_3_color",
+        "label": "CTA 3 Color"
+      },
+      {
+        "type": "url",
+        "id": "store_locator_hero_image_link",
+        "label": "Image Link"
+      },
+      {
+        "type": "header",
+        "content": "Stores"
+      },
+      {
+        "type": "text",
+        "id": "stores_headline",
+        "label": "Stores Headline"
+      },
+      {
+        "type": "textarea",
+        "id": "stores_content",
+        "label": "Stores Content"
+      },
+      {
+        "type": "color",
+        "id": "stores_image_overlay_color",
+        "label": "Image Overlay Color",
+        "default": "#1C59A8"
+      },
+      {
+        "type": "header",
+        "content": "Store 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_1_image",
+        "label": "Store 1 Image",
+        "info": "Dimensions 800 x 600"
+      },
+      {
+        "type": "text",
+        "id": "store_1_title",
+        "label": "Store 1 Title"
+      },
+      {
+        "type": "text",
+        "id": "store_1_address_line_1",
+        "label": "Store 1 Address Line 1"
+      },
+      {
+        "type": "text",
+        "id": "store_1_address_line_2",
+        "label": "Store 1 Address Line 2"
+      },
+      {
+        "type": "text",
+        "id": "store_1_city_state",
+        "label": "Store 1 City \/ State"
+      },
+      {
+        "type": "text",
+        "id": "store_1_zip",
+        "label": "Store 1 Zip"
+      },
+      {
+        "type": "text",
+        "id": "store_1_phone",
+        "label": "Store 1 Phone"
+      },
+      {
+        "type": "url",
+        "id": "store_1_link",
+        "label": "Store 1 Link"
+      },
+      {
+        "type": "textarea",
+        "id": "store_1_hours",
+        "label": "Store 1 Hours"
+      },
+      {
+        "type": "header",
+        "content": "Store 2"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_2_image",
+        "label": "Store 2 Image",
+        "info": "Dimensions 800 x 600"
+      },
+      {
+        "type": "text",
+        "id": "store_2_title",
+        "label": "Store 2 Title"
+      },
+      {
+        "type": "text",
+        "id": "store_2_address_line_1",
+        "label": "Store 2 Address Line 1"
+      },
+      {
+        "type": "text",
+        "id": "store_2_address_line_2",
+        "label": "Store 2 Address Line 2"
+      },
+      {
+        "type": "text",
+        "id": "store_2_city_state",
+        "label": "Store 2 City \/ State"
+      },
+      {
+        "type": "text",
+        "id": "store_2_zip",
+        "label": "Store 2 Zip"
+      },
+      {
+        "type": "text",
+        "id": "store_2_phone",
+        "label": "Store 2 Phone"
+      },
+      {
+        "type": "url",
+        "id": "store_2_link",
+        "label": "Store 2 Link"
+      },
+      {
+        "type": "textarea",
+        "id": "store_2_hours",
+        "label": "Store 2 Hours"
+      },
+      {
+        "type": "header",
+        "content": "Store 3"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_3_image",
+        "label": "Store 3 Image",
+        "info": "Dimensions 800 x 600"
+      },
+      {
+        "type": "text",
+        "id": "store_3_title",
+        "label": "Store 3 Title"
+      },
+      {
+        "type": "text",
+        "id": "store_3_address_line_1",
+        "label": "Store 3 Address Line 1"
+      },
+      {
+        "type": "text",
+        "id": "store_3_address_line_2",
+        "label": "Store 3 Address Line 2"
+      },
+      {
+        "type": "text",
+        "id": "store_3_city_state",
+        "label": "Store 3 City \/ State"
+      },
+      {
+        "type": "text",
+        "id": "store_3_zip",
+        "label": "Store 3 Zip"
+      },
+      {
+        "type": "text",
+        "id": "store_3_phone",
+        "label": "Store 3 Phone"
+      },
+      {
+        "type": "url",
+        "id": "store_3_link",
+        "label": "Store 3 Link"
+      },
+      {
+        "type": "textarea",
+        "id": "store_3_hours",
+        "label": "Store 3 Hours"
+      },
+      {
+        "type": "header",
+        "content": "Store 4"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_4_image",
+        "label": "Store 4 Image",
+        "info": "Dimensions 800 x 600"
+      },
+      {
+        "type": "text",
+        "id": "store_4_title",
+        "label": "Store 4 Title"
+      },
+      {
+        "type": "text",
+        "id": "store_4_address_line_1",
+        "label": "Store 4 Address Line 1"
+      },
+      {
+        "type": "text",
+        "id": "store_4_address_line_2",
+        "label": "Store 4 Address Line 2"
+      },
+      {
+        "type": "text",
+        "id": "store_4_city_state",
+        "label": "Store 4 City \/ State"
+      },
+      {
+        "type": "text",
+        "id": "store_4_zip",
+        "label": "Store 4 Zip"
+      },
+      {
+        "type": "text",
+        "id": "store_4_phone",
+        "label": "Store 4 Phone"
+      },
+      {
+        "type": "url",
+        "id": "store_4_link",
+        "label": "Store 4 Link"
+      },
+      {
+        "type": "textarea",
+        "id": "store_4_hours",
+        "label": "Store 4 Hours"
+      },
+      {
+        "type": "header",
+        "content": "Store 5"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_5_image",
+        "label": "Store 5 Image",
+        "info": "Dimensions 800 x 600"
+      },
+      {
+        "type": "text",
+        "id": "store_5_title",
+        "label": "Store 5 Title"
+      },
+      {
+        "type": "text",
+        "id": "store_5_address_line_1",
+        "label": "Store 5 Address Line 1"
+      },
+      {
+        "type": "text",
+        "id": "store_5_address_line_2",
+        "label": "Store 5 Address Line 2"
+      },
+      {
+        "type": "text",
+        "id": "store_5_city_state",
+        "label": "Store 5 City \/ State"
+      },
+      {
+        "type": "text",
+        "id": "store_5_zip",
+        "label": "Store 5 Zip"
+      },
+      {
+        "type": "text",
+        "id": "store_5_phone",
+        "label": "Store 5 Phone"
+      },
+      {
+        "type": "url",
+        "id": "store_5_link",
+        "label": "Store 5 Link"
+      },
+      {
+        "type": "textarea",
+        "id": "store_5_hours",
+        "label": "Store 5 Hours"
+      },
+      {
+        "type": "header",
+        "content": "Store 6"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_6_image",
+        "label": "Store 6 Image",
+        "info": "Dimensions 800 x 600"
+      },
+      {
+        "type": "text",
+        "id": "store_6_title",
+        "label": "Store 6 Title"
+      },
+      {
+        "type": "text",
+        "id": "store_6_address_line_1",
+        "label": "Store 6 Address Line 1"
+      },
+      {
+        "type": "text",
+        "id": "store_6_address_line_2",
+        "label": "Store 6 Address Line 2"
+      },
+      {
+        "type": "text",
+        "id": "store_6_city_state",
+        "label": "Store 6 City \/ State"
+      },
+      {
+        "type": "text",
+        "id": "store_6_zip",
+        "label": "Store 6 Zip"
+      },
+      {
+        "type": "text",
+        "id": "store_6_phone",
+        "label": "Store 6 Phone"
+      },
+      {
+        "type": "url",
+        "id": "store_6_link",
+        "label": "Store 6 Link"
+      },
+      {
+        "type": "textarea",
+        "id": "store_6_hours",
+        "label": "Store 6 Hours"
+      },
+      {
+        "type": "header",
+        "content": "Store 7"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_7_image",
+        "label": "Store 7 Image",
+        "info": "Dimensions 800 x 600"
+      },
+      {
+        "type": "text",
+        "id": "store_7_title",
+        "label": "Store 7 Title"
+      },
+      {
+        "type": "text",
+        "id": "store_7_address_line_1",
+        "label": "Store 7 Address Line 1"
+      },
+      {
+        "type": "text",
+        "id": "store_7_address_line_2",
+        "label": "Store 7 Address Line 2"
+      },
+      {
+        "type": "text",
+        "id": "store_7_city_state",
+        "label": "Store 7 City \/ State"
+      },
+      {
+        "type": "text",
+        "id": "store_7_zip",
+        "label": "Store 7 Zip"
+      },
+      {
+        "type": "text",
+        "id": "store_7_phone",
+        "label": "Store 7 Phone"
+      },
+      {
+        "type": "url",
+        "id": "store_7_link",
+        "label": "Store 7 Link"
+      },
+      {
+        "type": "textarea",
+        "id": "store_7_hours",
+        "label": "Store 7 Hours"
+      },
+      {
+        "type": "header",
+        "content": "Store 8"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_8_image",
+        "label": "Store 8 Image",
+        "info": "Dimensions 800 x 600"
+      },
+      {
+        "type": "text",
+        "id": "store_8_title",
+        "label": "Store 8 Title"
+      },
+      {
+        "type": "text",
+        "id": "store_8_address_line_1",
+        "label": "Store 8 Address Line 1"
+      },
+      {
+        "type": "text",
+        "id": "store_8_address_line_2",
+        "label": "Store 8 Address Line 2"
+      },
+      {
+        "type": "text",
+        "id": "store_8_city_state",
+        "label": "Store 8 City \/ State"
+      },
+      {
+        "type": "text",
+        "id": "store_8_zip",
+        "label": "Store 8 Zip"
+      },
+      {
+        "type": "text",
+        "id": "store_8_phone",
+        "label": "Store 8 Phone"
+      },
+      {
+        "type": "url",
+        "id": "store_8_link",
+        "label": "Store 8 Link"
+      },
+      {
+        "type": "textarea",
+        "id": "store_8_hours",
+        "label": "Store 8 Hours"
+      },
+      {
+        "type": "header",
+        "content": "Store 9"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_9_image",
+        "label": "Store 9 Image",
+        "info": "Dimensions 800 x 600"
+      },
+      {
+        "type": "text",
+        "id": "store_9_title",
+        "label": "Store 9 Title"
+      },
+      {
+        "type": "text",
+        "id": "store_9_address_line_1",
+        "label": "Store 9 Address Line 1"
+      },
+      {
+        "type": "text",
+        "id": "store_9_address_line_2",
+        "label": "Store 9 Address Line 2"
+      },
+      {
+        "type": "text",
+        "id": "store_9_city_state",
+        "label": "Store 9 City \/ State"
+      },
+      {
+        "type": "text",
+        "id": "store_9_zip",
+        "label": "Store 9 Zip"
+      },
+      {
+        "type": "text",
+        "id": "store_9_phone",
+        "label": "Store 9 Phone"
+      },
+      {
+        "type": "url",
+        "id": "store_9_link",
+        "label": "Store 9 Link"
+      },
+      {
+        "type": "textarea",
+        "id": "store_9_hours",
+        "label": "Store 9 Hours"
+      },
+      {
+        "type": "header",
+        "content": "Store 10"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_10_image",
+        "label": "Store 10 Image",
+        "info": "Dimensions 800 x 600"
+      },
+      {
+        "type": "text",
+        "id": "store_10_title",
+        "label": "Store 10 Title"
+      },
+      {
+        "type": "text",
+        "id": "store_10_address_line_1",
+        "label": "Store 10 Address Line 1"
+      },
+      {
+        "type": "text",
+        "id": "store_10_address_line_2",
+        "label": "Store 10 Address Line 2"
+      },
+      {
+        "type": "text",
+        "id": "store_10_city_state",
+        "label": "Store 10 City \/ State"
+      },
+      {
+        "type": "text",
+        "id": "store_10_zip",
+        "label": "Store 10 Zip"
+      },
+      {
+        "type": "text",
+        "id": "store_10_phone",
+        "label": "Store 10 Phone"
+      },
+      {
+        "type": "url",
+        "id": "store_10_link",
+        "label": "Store 10 Link"
+      },
+      {
+        "type": "textarea",
+        "id": "store_10_hours",
+        "label": "Store 10 Hours"
+      },
+      {
+        "type": "header",
+        "content": "Store 11"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_11_image",
+        "label": "Store 11 Image",
+        "info": "Dimensions 800 x 600"
+      },
+      {
+        "type": "text",
+        "id": "store_11_title",
+        "label": "Store 11 Title"
+      },
+      {
+        "type": "text",
+        "id": "store_11_address_line_1",
+        "label": "Store 11 Address Line 1"
+      },
+      {
+        "type": "text",
+        "id": "store_11_address_line_2",
+        "label": "Store 11 Address Line 2"
+      },
+      {
+        "type": "text",
+        "id": "store_11_city_state",
+        "label": "Store 11 City \/ State"
+      },
+      {
+        "type": "text",
+        "id": "store_11_zip",
+        "label": "Store 11 Zip"
+      },
+      {
+        "type": "text",
+        "id": "store_11_phone",
+        "label": "Store 11 Phone"
+      },
+      {
+        "type": "url",
+        "id": "store_11_link",
+        "label": "Store 11 Link"
+      },
+      {
+        "type": "textarea",
+        "id": "store_11_hours",
+        "label": "Store 11 Hours"
+      },
+      {
+        "type": "header",
+        "content": "Store 12"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_12_image",
+        "label": "Store 12 Image",
+        "info": "Dimensions 800 x 600"
+      },
+      {
+        "type": "text",
+        "id": "store_12_title",
+        "label": "Store 12 Title"
+      },
+      {
+        "type": "text",
+        "id": "store_12_address_line_1",
+        "label": "Store 12 Address Line 1"
+      },
+      {
+        "type": "text",
+        "id": "store_12_address_line_2",
+        "label": "Store 12 Address Line 2"
+      },
+      {
+        "type": "text",
+        "id": "store_12_city_state",
+        "label": "Store 12 City \/ State"
+      },
+      {
+        "type": "text",
+        "id": "store_12_zip",
+        "label": "Store 12 Zip"
+      },
+      {
+        "type": "text",
+        "id": "store_12_phone",
+        "label": "Store 12 Phone"
+      },
+      {
+        "type": "url",
+        "id": "store_12_link",
+        "label": "Store 12 Link"
+      },
+      {
+        "type": "textarea",
+        "id": "store_12_hours",
+        "label": "Store 12 Hours"
+      },
+      {
+        "type": "header",
+        "content": "Store 13"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_13_image",
+        "label": "Store 13 Image",
+        "info": "Dimensions 800 x 600"
+      },
+      {
+        "type": "text",
+        "id": "store_13_title",
+        "label": "Store 13 Title"
+      },
+      {
+        "type": "text",
+        "id": "store_13_address_line_1",
+        "label": "Store 13 Address Line 1"
+      },
+      {
+        "type": "text",
+        "id": "store_13_address_line_2",
+        "label": "Store 13 Address Line 2"
+      },
+      {
+        "type": "text",
+        "id": "store_13_city_state",
+        "label": "Store 13 City \/ State"
+      },
+      {
+        "type": "text",
+        "id": "store_13_zip",
+        "label": "Store 13 Zip"
+      },
+      {
+        "type": "text",
+        "id": "store_13_phone",
+        "label": "Store 13 Phone"
+      },
+      {
+        "type": "url",
+        "id": "store_13_link",
+        "label": "Store 13 Link"
+      },
+      {
+        "type": "textarea",
+        "id": "store_13_hours",
+        "label": "Store 13 Hours"
+      },
+      {
+        "type": "header",
+        "content": "Store 14"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_14_image",
+        "label": "Store 14 Image",
+        "info": "Dimensions 800 x 600"
+      },
+      {
+        "type": "text",
+        "id": "store_14_title",
+        "label": "Store 14 Title"
+      },
+      {
+        "type": "text",
+        "id": "store_14_address_line_1",
+        "label": "Store 14 Address Line 1"
+      },
+      {
+        "type": "text",
+        "id": "store_14_address_line_2",
+        "label": "Store 14 Address Line 2"
+      },
+      {
+        "type": "text",
+        "id": "store_14_city_state",
+        "label": "Store 14 City \/ State"
+      },
+      {
+        "type": "text",
+        "id": "store_14_zip",
+        "label": "Store 14 Zip"
+      },
+      {
+        "type": "text",
+        "id": "store_14_phone",
+        "label": "Store 14 Phone"
+      },
+      {
+        "type": "url",
+        "id": "store_14_link",
+        "label": "Store 14 Link"
+      },
+      {
+        "type": "textarea",
+        "id": "store_14_hours",
+        "label": "Store 14 Hours"
+      },
+      {
+        "type": "header",
+        "content": "Store 15"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_15_image",
+        "label": "Store 15 Image",
+        "info": "Dimensions 800 x 600"
+      },
+      {
+        "type": "text",
+        "id": "store_15_title",
+        "label": "Store 15 Title"
+      },
+      {
+        "type": "text",
+        "id": "store_15_address_line_1",
+        "label": "Store 15 Address Line 1"
+      },
+      {
+        "type": "text",
+        "id": "store_15_address_line_2",
+        "label": "Store 15 Address Line 2"
+      },
+      {
+        "type": "text",
+        "id": "store_15_city_state",
+        "label": "Store 15 City \/ State"
+      },
+      {
+        "type": "text",
+        "id": "store_15_zip",
+        "label": "Store 15 Zip"
+      },
+      {
+        "type": "text",
+        "id": "store_15_phone",
+        "label": "Store 15 Phone"
+      },
+      {
+        "type": "url",
+        "id": "store_15_link",
+        "label": "Store 15 Link"
+      },
+      {
+        "type": "textarea",
+        "id": "store_15_hours",
+        "label": "Store 15 Hours"
+      },
+      {
+        "type": "header",
+        "content": "Store 16"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_16_image",
+        "label": "Store 16 Image",
+        "info": "Dimensions 800 x 600"
+      },
+      {
+        "type": "text",
+        "id": "store_16_title",
+        "label": "Store 16 Title"
+      },
+      {
+        "type": "text",
+        "id": "store_16_address_line_1",
+        "label": "Store 16 Address Line 1"
+      },
+      {
+        "type": "text",
+        "id": "store_16_address_line_2",
+        "label": "Store 16 Address Line 2"
+      },
+      {
+        "type": "text",
+        "id": "store_16_city_state",
+        "label": "Store 16 City \/ State"
+      },
+      {
+        "type": "text",
+        "id": "store_16_zip",
+        "label": "Store 16 Zip"
+      },
+      {
+        "type": "text",
+        "id": "store_16_phone",
+        "label": "Store 16 Phone"
+      },
+      {
+        "type": "url",
+        "id": "store_16_link",
+        "label": "Store 16 Link"
+      },
+      {
+        "type": "textarea",
+        "id": "store_16_hours",
+        "label": "Store 16 Hours"
+      },
+      {
+        "type": "header",
+        "content": "Store 17"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_17_image",
+        "label": "Store 17 Image",
+        "info": "Dimensions 800 x 600"
+      },
+      {
+        "type": "text",
+        "id": "store_17_title",
+        "label": "Store 17 Title"
+      },
+      {
+        "type": "text",
+        "id": "store_17_address_line_1",
+        "label": "Store 17 Address Line 1"
+      },
+      {
+        "type": "text",
+        "id": "store_17_address_line_2",
+        "label": "Store 17 Address Line 2"
+      },
+      {
+        "type": "text",
+        "id": "store_17_city_state",
+        "label": "Store 17 City \/ State"
+      },
+      {
+        "type": "text",
+        "id": "store_17_zip",
+        "label": "Store 17 Zip"
+      },
+      {
+        "type": "text",
+        "id": "store_17_phone",
+        "label": "Store 17 Phone"
+      },
+      {
+        "type": "url",
+        "id": "store_17_link",
+        "label": "Store 17 Link"
+      },
+      {
+        "type": "textarea",
+        "id": "store_17_hours",
+        "label": "Store 17 Hours"
+      },
+      {
+        "type": "header",
+        "content": "Store 18"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_18_image",
+        "label": "Store 18 Image",
+        "info": "Dimensions 800 x 600"
+      },
+      {
+        "type": "text",
+        "id": "store_18_title",
+        "label": "Store 18 Title"
+      },
+      {
+        "type": "text",
+        "id": "store_18_address_line_1",
+        "label": "Store 18 Address Line 1"
+      },
+      {
+        "type": "text",
+        "id": "store_18_address_line_2",
+        "label": "Store 18 Address Line 2"
+      },
+      {
+        "type": "text",
+        "id": "store_18_city_state",
+        "label": "Store 18 City \/ State"
+      },
+      {
+        "type": "text",
+        "id": "store_18_zip",
+        "label": "Store 18 Zip"
+      },
+      {
+        "type": "text",
+        "id": "store_18_phone",
+        "label": "Store 18 Phone"
+      },
+      {
+        "type": "url",
+        "id": "store_18_link",
+        "label": "Store 18 Link"
+      },
+      {
+        "type": "textarea",
+        "id": "store_18_hours",
+        "label": "Store 18 Hours"
+      },
+      {
+        "type": "header",
+        "content": "Store 19"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_19_image",
+        "label": "Store 19 Image",
+        "info": "Dimensions 800 x 600"
+      },
+      {
+        "type": "text",
+        "id": "store_19_title",
+        "label": "Store 19 Title"
+      },
+      {
+        "type": "text",
+        "id": "store_19_address_line_1",
+        "label": "Store 19 Address Line 1"
+      },
+      {
+        "type": "text",
+        "id": "store_19_address_line_2",
+        "label": "Store 19 Address Line 2"
+      },
+      {
+        "type": "text",
+        "id": "store_19_city_state",
+        "label": "Store 19 City \/ State"
+      },
+      {
+        "type": "text",
+        "id": "store_19_zip",
+        "label": "Store 19 Zip"
+      },
+      {
+        "type": "text",
+        "id": "store_19_phone",
+        "label": "Store 19 Phone"
+      },
+      {
+        "type": "url",
+        "id": "store_19_link",
+        "label": "Store 19 Link"
+      },
+      {
+        "type": "textarea",
+        "id": "store_19_hours",
+        "label": "Store 19 Hours"
+      },
+      {
+        "type": "header",
+        "content": "Store 20"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_20_image",
+        "label": "Store 20 Image",
+        "info": "Dimensions 800 x 600"
+      },
+      {
+        "type": "text",
+        "id": "store_20_title",
+        "label": "Store 20 Title"
+      },
+      {
+        "type": "text",
+        "id": "store_20_address_line_1",
+        "label": "Store 20 Address Line 1"
+      },
+      {
+        "type": "text",
+        "id": "store_20_address_line_2",
+        "label": "Store 20 Address Line 2"
+      },
+      {
+        "type": "text",
+        "id": "store_20_city_state",
+        "label": "Store 20 City \/ State"
+      },
+      {
+        "type": "text",
+        "id": "store_20_zip",
+        "label": "Store 20 Zip"
+      },
+      {
+        "type": "text",
+        "id": "store_20_phone",
+        "label": "Store 20 Phone"
+      },
+      {
+        "type": "url",
+        "id": "store_20_link",
+        "label": "Store 20 Link"
+      },
+      {
+        "type": "textarea",
+        "id": "store_20_hours",
+        "label": "Store 20 Hours"
+      },
+      {
+        "type": "header",
+        "content": "Store 21"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_21_image",
+        "label": "Store 21 Image",
+        "info": "Dimensions 800 x 600"
+      },
+      {
+        "type": "text",
+        "id": "store_21_title",
+        "label": "Store 21 Title"
+      },
+      {
+        "type": "text",
+        "id": "store_21_address_line_1",
+        "label": "Store 21 Address Line 1"
+      },
+      {
+        "type": "text",
+        "id": "store_21_address_line_2",
+        "label": "Store 21 Address Line 2"
+      },
+      {
+        "type": "text",
+        "id": "store_21_city_state",
+        "label": "Store 21 City \/ State"
+      },
+      {
+        "type": "text",
+        "id": "store_21_zip",
+        "label": "Store 21 Zip"
+      },
+      {
+        "type": "text",
+        "id": "store_21_phone",
+        "label": "Store 21 Phone"
+      },
+      {
+        "type": "url",
+        "id": "store_21_link",
+        "label": "Store 21 Link"
+      },
+      {
+        "type": "textarea",
+        "id": "store_21_hours",
+        "label": "Store 21 Hours"
+      },
+      {
+        "type": "header",
+        "content": "Store 22"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_22_image",
+        "label": "Store 22 Image",
+        "info": "Dimensions 800 x 600"
+      },
+      {
+        "type": "text",
+        "id": "store_22_title",
+        "label": "Store 22 Title"
+      },
+      {
+        "type": "text",
+        "id": "store_22_address_line_1",
+        "label": "Store 22 Address Line 1"
+      },
+      {
+        "type": "text",
+        "id": "store_22_address_line_2",
+        "label": "Store 22 Address Line 2"
+      },
+      {
+        "type": "text",
+        "id": "store_22_city_state",
+        "label": "Store 22 City \/ State"
+      },
+      {
+        "type": "text",
+        "id": "store_22_zip",
+        "label": "Store 22 Zip"
+      },
+      {
+        "type": "text",
+        "id": "store_22_phone",
+        "label": "Store 22 Phone"
+      },
+      {
+        "type": "url",
+        "id": "store_22_link",
+        "label": "Store 22 Link"
+      },
+      {
+        "type": "textarea",
+        "id": "store_22_hours",
+        "label": "Store 22 Hours"
+      },
+      {
+        "type": "header",
+        "content": "Store 23"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_23_image",
+        "label": "Store 23 Image",
+        "info": "Dimensions 800 x 600"
+      },
+      {
+        "type": "text",
+        "id": "store_23_title",
+        "label": "Store 23 Title"
+      },
+      {
+        "type": "text",
+        "id": "store_23_address_line_1",
+        "label": "Store 23 Address Line 1"
+      },
+      {
+        "type": "text",
+        "id": "store_23_address_line_2",
+        "label": "Store 23 Address Line 2"
+      },
+      {
+        "type": "text",
+        "id": "store_23_city_state",
+        "label": "Store 23 City \/ State"
+      },
+      {
+        "type": "text",
+        "id": "store_23_zip",
+        "label": "Store 23 Zip"
+      },
+      {
+        "type": "text",
+        "id": "store_23_phone",
+        "label": "Store 23 Phone"
+      },
+      {
+        "type": "url",
+        "id": "store_23_link",
+        "label": "Store 23 Link"
+      },
+      {
+        "type": "textarea",
+        "id": "store_23_hours",
+        "label": "Store 23 Hours"
+      },
+      {
+        "type": "header",
+        "content": "Store 24"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_24_image",
+        "label": "Store 24 Image",
+        "info": "Dimensions 800 x 600"
+      },
+      {
+        "type": "text",
+        "id": "store_24_title",
+        "label": "Store 24 Title"
+      },
+      {
+        "type": "text",
+        "id": "store_24_address_line_1",
+        "label": "Store 24 Address Line 1"
+      },
+      {
+        "type": "text",
+        "id": "store_24_address_line_2",
+        "label": "Store 24 Address Line 2"
+      },
+      {
+        "type": "text",
+        "id": "store_24_city_state",
+        "label": "Store 24 City \/ State"
+      },
+      {
+        "type": "text",
+        "id": "store_24_zip",
+        "label": "Store 24 Zip"
+      },
+      {
+        "type": "text",
+        "id": "store_24_phone",
+        "label": "Store 24 Phone"
+      },
+      {
+        "type": "url",
+        "id": "store_24_link",
+        "label": "Store 24 Link"
+      },
+      {
+        "type": "textarea",
+        "id": "store_24_hours",
+        "label": "Store 24 Hours"
+      },
+      {
+        "type": "header",
+        "content": "Store 25"
+      },
+      {
+        "type": "image_picker",
+        "id": "store_25_image",
+        "label": "Store 25 Image",
+        "info": "Dimensions 800 x 600"
+      },
+      {
+        "type": "text",
+        "id": "store_25_title",
+        "label": "Store 25 Title"
+      },
+      {
+        "type": "text",
+        "id": "store_25_address_line_1",
+        "label": "Store 25 Address Line 1"
+      },
+      {
+        "type": "text",
+        "id": "store_25_address_line_2",
+        "label": "Store 25 Address Line 2"
+      },
+      {
+        "type": "text",
+        "id": "store_25_city_state",
+        "label": "Store 25 City \/ State"
+      },
+      {
+        "type": "text",
+        "id": "store_25_zip",
+        "label": "Store 25 Zip"
+      },
+      {
+        "type": "text",
+        "id": "store_25_phone",
+        "label": "Store 25 Phone"
+      },
+      {
+        "type": "url",
+        "id": "store_25_link",
+        "label": "Store 25 Link"
+      },
+      {
+        "type": "textarea",
+        "id": "store_25_hours",
+        "label": "Store 25 Hours"
+      }
+    ]
+  },
+  {
+    "name": "3rd Party Snippets",
+    "settings": [
+      {
+        "type": "header",
+        "content": "SlideRule"
+      },
+      {
+        "type": "header",
+        "content": "Share A Sale"
+      },
+      {
+        "id": "3pi_share_a_sale",
+        "type": "checkbox",
+        "label": "Share A Sale",
+        "info": "Enable Share A Sale snippet(s)",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "otRegion"
+      },
+      {
+        "id": "3pi_otRegion",
+        "type": "checkbox",
+        "label": "otRegion",
+        "info": "Enable otRegion snippet(s)",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Navistone"
+      },
+      {
+        "id": "3pi_navistone",
+        "type": "checkbox",
+        "label": "Navistone",
+        "info": "Enable Navistone snippet(s)",
+        "default": true
+      }
+    ]
+  }
+]

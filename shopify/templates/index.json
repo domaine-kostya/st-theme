@@ -1,0 +1,458 @@
+{
+  "sections": {
+    "banner_VT8wdG": {
+      "type": "banner",
+      "settings": {
+        "enable_full_width": true,
+        "background_image": "shopify://shop_images/240409-hero-banner-pickleball.jpg",
+        "mobile_background_image": "shopify://shop_images/240409-hero-banner-pickleball-mobile.jpg",
+        "background_color": "#f2f2f2",
+        "overlay_opacity": 3,
+        "overlay_color": "linear-gradient(90deg, rgba(49, 49, 51, 0), rgba(255, 255, 255, 0) 100%)",
+        "overlay_opacity_mobile": 4,
+        "overlay_color_mobile": "linear-gradient(0deg, rgba(65, 95, 114, 0), rgba(62, 103, 114, 1) 38%, rgba(255, 255, 255, 0) 68%)",
+        "mobile_headline": "Unmatched Performance",
+        "headline": "Unmatched Performance",
+        "headline_color": "#fff",
+        "mobile_content": "",
+        "content": "With premium performance features that support your strengths - stretch, UV protection, wicking - these styles have game on and off the court.",
+        "content_color": "#fff",
+        "cta_text": "Shop Pickleball Attire",
+        "cta_link": "https://southerntide.com/collections/tennis-and-pickleball-attire",
+        "cta_color": "#fff",
+        "cta_text_color": "#fff",
+        "cta_style": "outline",
+        "cta_2_text": "Shop Pickleball Gear",
+        "cta_2_link": "https://southerntide.com/collections/southern-tide-x-recess-pickleball",
+        "cta_2_color": "#fff",
+        "cta_2_text_color": "#fff",
+        "cta_2_style": "outline",
+        "cta_3_text": "",
+        "cta_3_link": "",
+        "cta_3_color": "#1C59A8",
+        "cta_3_text_color": "#1C59A8",
+        "show_buttons_on_separate_lines": false,
+        "cta_3_style": "outline",
+        "desktop_vertical_content_position": "middle",
+        "desktop_horizontal_content_position": "left",
+        "desktop_text_alignment": "left",
+        "mobile_vertical_content_position": "bottom",
+        "mobile_horizontal_content_position": "center",
+        "mobile_text_alignment": "center",
+        "content_width": 440,
+        "desktop_height": "natural",
+        "mobile_height": "large",
+        "margin_top": "default",
+        "margin_top_mobile": "102px",
+        "margin_bottom": "32px",
+        "margin_bottom_mobile": "32px"
+      }
+    },
+    "99399e75-09d5-499f-8055-b5b98eb28b80": {
+      "type": "hero",
+      "blocks": {
+        "hero_slide_banner_38wCTD": {
+          "type": "hero_slide_banner",
+          "settings": {
+            "enable_full_width": true,
+            "background_image": "shopify://shop_images/240409-hero-banner-pickleball.jpg",
+            "mobile_background_image": "shopify://shop_images/240409-hero-banner-pickleball-mobile.jpg",
+            "background_color": "#f2f2f2",
+            "overlay_opacity": 5,
+            "overlay_color": "linear-gradient(90deg, rgba(49, 49, 51, 0), rgba(255, 255, 255, 0) 100%)",
+            "overlay_opacity_mobile": 5,
+            "overlay_color_mobile": "linear-gradient(0deg, rgba(255, 255, 255, 0) 10%, rgba(59, 96, 106, 1) 38%, rgba(255, 255, 255, 0) 56%)",
+            "mobile_headline": "Unmatched Performance",
+            "headline": "Unmatched Performance",
+            "headline_color": "#ffffff",
+            "mobile_content": "",
+            "content": "With premium performance features that support your strengths - stretch, UV protection, wicking - these styles have game on and off the court.",
+            "content_color": "#ffffff",
+            "cta_text": "Shop Pickleball Attire",
+            "cta_link": "https://southerntide.com/collections/tennis-and-pickleball-attire",
+            "cta_color": "#ffffff",
+            "cta_text_color": "#ffffff",
+            "cta_style": "outline",
+            "cta_2_text": "Shop Pickleball Gear",
+            "cta_2_link": "https://southerntide.com/collections/southern-tide-x-recess-pickleball",
+            "cta_2_color": "#ffffff",
+            "cta_2_text_color": "#ffffff",
+            "cta_2_style": "outline",
+            "cta_3_text": "",
+            "cta_3_link": "",
+            "cta_3_color": "#1c59a8",
+            "cta_3_text_color": "#1c59a8",
+            "show_buttons_on_separate_lines": false,
+            "cta_3_style": "outline",
+            "desktop_vertical_content_position": "middle",
+            "desktop_horizontal_content_position": "left",
+            "desktop_text_alignment": "left",
+            "mobile_vertical_content_position": "bottom",
+            "mobile_horizontal_content_position": "center",
+            "mobile_text_alignment": "center",
+            "content_width": 450,
+            "desktop_height": "natural",
+            "mobile_height": "large"
+          }
+        }
+      },
+      "block_order": [
+        "hero_slide_banner_38wCTD"
+      ],
+      "disabled": true,
+      "settings": {
+        "margin_top": "default",
+        "margin_top_mobile": "32px",
+        "margin_bottom": "16px",
+        "margin_bottom_mobile": "8px",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "featured_collections_HYj7UG": {
+      "type": "featured-collections",
+      "blocks": {
+        "featured_collection_fCyhxt": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify://shop_images/240419-homepage-blocks-dresses.jpg",
+            "title": "Spring's Favorite Dresses",
+            "content": "",
+            "cta_text": "Shop Dresses",
+            "link": "shopify://collections/women-dresses"
+          }
+        },
+        "featured_collection_46pfcP": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify://shop_images/240419-homepage-blocks-SS-V2.jpg",
+            "title": "Confident & Comfortable",
+            "content": "",
+            "cta_text": "Shop Sport Shirts",
+            "link": "shopify://collections/men-sport-shirts"
+          }
+        },
+        "featured_collection_p7DUyn": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify://shop_images/240419-homepage-blocks-womens-tops-V2.jpg",
+            "title": "Trending Top Picks",
+            "content": "",
+            "cta_text": "Shop Women's Tops",
+            "link": "shopify://collections/womens-tops"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_fCyhxt",
+        "featured_collection_46pfcP",
+        "featured_collection_p7DUyn"
+      ],
+      "settings": {
+        "headline": "Your Social Calendar Styled for Spring",
+        "headline_size": "small",
+        "content": "",
+        "section_width": "container",
+        "button_style": "link",
+        "margin_top": "32px",
+        "margin_top_mobile": "32px",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "0",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "8px",
+        "padding_bottom_mobile": "0"
+      }
+    },
+    "hero_ALxf6r": {
+      "type": "hero",
+      "blocks": {
+        "hero_slide_banner_nrr3bf": {
+          "type": "hero_slide_banner",
+          "settings": {
+            "enable_full_width": true,
+            "background_image": "shopify://shop_images/240419-hero-banner-charleston.jpg",
+            "mobile_background_image": "shopify://shop_images/240419-hero-banner-charleston-mobile.jpg",
+            "background_color": "#f2f2f2",
+            "overlay_opacity": 0,
+            "overlay_color": "linear-gradient(90deg, rgba(49, 49, 51, 1), rgba(255, 255, 255, 0) 100%)",
+            "overlay_opacity_mobile": 0,
+            "overlay_color_mobile": "linear-gradient(90deg, rgba(49, 49, 51, 1), rgba(255, 255, 255, 0) 100%)",
+            "mobile_headline": "<br><br>Fuss-Free Formality",
+            "headline": "Fuss-Free Formality<br>at it's Finest",
+            "headline_color": "#ffffff",
+            "mobile_content": "",
+            "content": "Built with flexibility and comfort in mind, our Charleston Blazer is the obvious choice for all his big plans this spring.",
+            "content_color": "#ffffff",
+            "cta_text": "Shop Charleston Collection",
+            "cta_link": "shopify://collections/charleston-collection",
+            "cta_color": "#ffffff",
+            "cta_text_color": "#ffffff",
+            "cta_style": "outline",
+            "cta_2_text": "",
+            "cta_2_link": "",
+            "cta_2_color": "#1c59a8",
+            "cta_2_text_color": "#1c59a8",
+            "cta_2_style": "outline",
+            "cta_3_text": "",
+            "cta_3_link": "",
+            "cta_3_color": "#1c59a8",
+            "cta_3_text_color": "#1c59a8",
+            "show_buttons_on_separate_lines": false,
+            "cta_3_style": "outline",
+            "desktop_vertical_content_position": "middle",
+            "desktop_horizontal_content_position": "center",
+            "desktop_text_alignment": "center",
+            "mobile_vertical_content_position": "bottom",
+            "mobile_horizontal_content_position": "center",
+            "mobile_text_alignment": "center",
+            "content_width": 550,
+            "desktop_height": "natural",
+            "mobile_height": "large"
+          }
+        }
+      },
+      "block_order": [
+        "hero_slide_banner_nrr3bf"
+      ],
+      "settings": {
+        "margin_top": "32px",
+        "margin_top_mobile": "8px",
+        "margin_bottom": "16px",
+        "margin_bottom_mobile": "8px",
+        "padding_top": "8px",
+        "padding_top_mobile": "0",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "8px"
+      }
+    },
+    "featured_collections_QBLQn3": {
+      "type": "featured-collections",
+      "blocks": {
+        "featured_collection_tmEXXe": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify://shop_images/240419-mens-intercoastal-block.jpg",
+            "title": "",
+            "content": "",
+            "cta_text": "Shop Polished Performance",
+            "link": "shopify://collections/intercoastal-collection"
+          }
+        },
+        "featured_collection_wdhHdV": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify://shop_images/240419-mens-coastal-breeze-block.jpg",
+            "title": "",
+            "content": "",
+            "cta_text": "Shop Cooling Classics",
+            "link": "shopify://collections/coastal-breeze"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_tmEXXe",
+        "featured_collection_wdhHdV"
+      ],
+      "settings": {
+        "headline": "",
+        "headline_size": "small",
+        "content": "",
+        "section_width": "container",
+        "button_style": "link",
+        "margin_top": "default",
+        "margin_top_mobile": "0",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "0",
+        "padding_top": "0",
+        "padding_top_mobile": "48px",
+        "padding_bottom": "48px",
+        "padding_bottom_mobile": "0"
+      }
+    },
+    "1663097330509aad72": {
+      "type": "limespot",
+      "settings": {
+        "margin_top": "default",
+        "margin_top_mobile": "0",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "0",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "16px"
+      }
+    },
+    "16529687897e59bb5f": {
+      "type": "featured-articles",
+      "settings": {
+        "headline": "The Southern Edit",
+        "cta_text": "Go to the blog",
+        "cta_link": "shopify://blogs/the-southern-edit",
+        "article_limit": 2,
+        "featured_article": "the-southern-edit/the-ultimate-spring-break-packing-list",
+        "featured_article_image": "shopify://shop_images/Spring-Break-Blog-Cover-2.jpg",
+        "featured_article_overlay_opacity": 1,
+        "featured_blog": "the-southern-edit",
+        "margin_top": "16px",
+        "margin_top_mobile": "0",
+        "margin_bottom": "0",
+        "margin_bottom_mobile": "0",
+        "padding_top": "8px",
+        "padding_top_mobile": "16px",
+        "padding_bottom": "16px",
+        "padding_bottom_mobile": "16px"
+      }
+    },
+    "1652884234b2aad212": {
+      "type": "featured-brands",
+      "blocks": {
+        "6dc6f712-d109-4cab-b006-8f52bf48ceb5": {
+          "type": "brand",
+          "settings": {
+            "logo": "shopify://shop_images/southern-living.png",
+            "logo_max_width": 158,
+            "link": "#"
+          }
+        },
+        "3e56bb09-09f4-43b3-8d2c-9ab429cb4896": {
+          "type": "brand",
+          "settings": {
+            "logo": "shopify://shop_images/forbes.png",
+            "logo_max_width": 157,
+            "link": "#"
+          }
+        },
+        "68a5bdd7-5a31-46d5-9305-94b7ff91771b": {
+          "type": "brand",
+          "settings": {
+            "logo": "shopify://shop_images/travel-leisure.png",
+            "logo_max_width": 167,
+            "link": "#"
+          }
+        },
+        "528415ea-f55c-4e35-bf1a-13643bc01654": {
+          "type": "brand",
+          "settings": {
+            "logo": "shopify://shop_images/town-country.png",
+            "logo_max_width": 170,
+            "link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "6dc6f712-d109-4cab-b006-8f52bf48ceb5",
+        "3e56bb09-09f4-43b3-8d2c-9ab429cb4896",
+        "68a5bdd7-5a31-46d5-9305-94b7ff91771b",
+        "528415ea-f55c-4e35-bf1a-13643bc01654"
+      ],
+      "settings": {
+        "headline": "As Seen In",
+        "margin_top": "16px",
+        "margin_top_mobile": "16px",
+        "margin_bottom": "32px",
+        "margin_bottom_mobile": "32px",
+        "padding_top": "0",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "featured_blocks_XQkR9E": {
+      "type": "featured-blocks",
+      "settings": {
+        "headline": "#FOLLOWTHETIDE",
+        "headline_size": "small",
+        "content": "",
+        "section_width": "container",
+        "button_style": "link",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "0",
+        "margin_bottom_mobile": "0",
+        "padding_top": "32px",
+        "padding_top_mobile": "32px",
+        "padding_bottom": "0",
+        "padding_bottom_mobile": "0"
+      }
+    },
+    "2a83c77b-ff25-4b6b-b278-73cea28f8183": {
+      "type": "yotpo-homepage-gallery",
+      "settings": {
+      }
+    },
+    "1652982620f96659a7": {
+      "type": "trust-bar",
+      "blocks": {
+        "6683b5df-6115-4bb5-8d04-3388ce1ff463": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify://shop_images/220718-trust-bar-icons-contact-2.png",
+            "title": "Contact Us",
+            "content": "Drop us a line - we are here to help. Call or email us.",
+            "cta_text": "Chat Now",
+            "cta_link": "https://southerntide.gorgias.help/en-US"
+          }
+        },
+        "ef083b22-a5e3-43f1-a3d5-603b65320099": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify://shop_images/220718-trust-bar-icons-rewards-2.png",
+            "title": "ST Rewards",
+            "content": "Earn points with every purchase and get rewarded.",
+            "cta_text": "Get started",
+            "cta_link": "https://southerntide.com/pages/rewards"
+          }
+        },
+        "28521701-6a76-4d28-8e0f-5495bfa65b5a": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify://shop_images/220718-trust-bar-icons-egift-card-2.png",
+            "title": "Gift Cards",
+            "content": "Give them the perfect gift with endless options.",
+            "cta_text": "Shop now",
+            "cta_link": "https://southerntide.com/products/southern-tide-gift-card"
+          }
+        },
+        "d0efb94f-963b-4288-afbc-5d0a5de6c299": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify://shop_images/240307-special-discounts-homepage-icon.png",
+            "title": "Special Discounts",
+            "content": "Proudly offering a 20% discount to eligible ID.me members.",
+            "cta_text": "Learn More",
+            "cta_link": "shopify://pages/id-me-special-discount-programs"
+          }
+        }
+      },
+      "block_order": [
+        "6683b5df-6115-4bb5-8d04-3388ce1ff463",
+        "ef083b22-a5e3-43f1-a3d5-603b65320099",
+        "28521701-6a76-4d28-8e0f-5495bfa65b5a",
+        "d0efb94f-963b-4288-afbc-5d0a5de6c299"
+      ],
+      "settings": {
+        "background_color": "#ffffff",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "0",
+        "margin_bottom_mobile": "0"
+      }
+    }
+  },
+  "order": [
+    "banner_VT8wdG",
+    "99399e75-09d5-499f-8055-b5b98eb28b80",
+    "featured_collections_HYj7UG",
+    "hero_ALxf6r",
+    "featured_collections_QBLQn3",
+    "1663097330509aad72",
+    "16529687897e59bb5f",
+    "1652884234b2aad212",
+    "featured_blocks_XQkR9E",
+    "2a83c77b-ff25-4b6b-b278-73cea28f8183",
+    "1652982620f96659a7"
+  ]
+}

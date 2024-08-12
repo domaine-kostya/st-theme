@@ -1,0 +1,283 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "blocks": {
+        "b0b4a1cc-4073-4815-98ed-d75eeac46a2c": {
+          "type": "hero_slide",
+          "settings": {
+            "desktop_layout": "image_1_content",
+            "desktop_image_1": "shopify:\/\/shop_images\/230524-hero-banner-memorial-day-event-desktop.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/230524-hero-banner-memorial-day-event-mobile.jpg",
+            "title": "Memorial Day Event",
+            "title_size": "heading-2",
+            "content": "For a limited time, enjoy 25% OFF select swim, shorts, and tees.",
+            "title_color": "#bf3723",
+            "content_color": "#313133",
+            "background_color": "#e0e6ef",
+            "cta_1_text": "",
+            "cta_1_link": "",
+            "cta_1_color": "#1c59a8",
+            "cta_2_text": "",
+            "cta_2_link": "#",
+            "cta_2_color": "",
+            "cta_3_text": "",
+            "cta_3_link": "",
+            "cta_3_color": "",
+            "image_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "b0b4a1cc-4073-4815-98ed-d75eeac46a2c"
+      ],
+      "settings": {
+        "margin_top": "32px",
+        "margin_top_mobile": "32px",
+        "margin_bottom": "0",
+        "margin_bottom_mobile": "0",
+        "padding_top": "16px",
+        "padding_top_mobile": "16px",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+      }
+    },
+    "bdf80c61-3b3f-4b37-8ed3-114cedb438f5": {
+      "type": "banner",
+      "settings": {
+        "enable_full_width": true,
+        "background_image": "shopify:\/\/shop_images\/230524-collection-landing-memorial-day-event-men.jpg",
+        "mobile_background_image": "shopify:\/\/shop_images\/230524-collection-landing-memorial-day-event-men-mobile.jpg",
+        "background_color": "rgba(0,0,0,0)",
+        "overlay_opacity": 0,
+        "overlay_color": "#313133",
+        "mobile_headline": "Men's: Select Styles",
+        "headline": "Shop Men's Select Styles",
+        "headline_color": "#ffffff",
+        "mobile_content": "",
+        "content": "",
+        "content_color": "#313133",
+        "cta_text": "Swim",
+        "cta_link": "shopify:\/\/collections\/men-swim",
+        "cta_color": "#51acc6",
+        "cta_text_color": "#ffffff",
+        "cta_style": "solid",
+        "cta_2_text": "Shorts",
+        "cta_2_link": "shopify:\/\/collections\/men-shorts",
+        "cta_2_color": "#51acc6",
+        "cta_2_text_color": "#ffffff",
+        "cta_2_style": "solid",
+        "cta_3_text": "",
+        "cta_3_link": "",
+        "cta_3_color": "#1c59a8",
+        "cta_3_text_color": "#1c59a8",
+        "show_buttons_on_separate_lines": false,
+        "cta_3_style": "outline",
+        "desktop_vertical_content_position": "middle",
+        "desktop_horizontal_content_position": "left",
+        "desktop_text_alignment": "center",
+        "mobile_vertical_content_position": "middle",
+        "mobile_horizontal_content_position": "center",
+        "mobile_text_alignment": "center",
+        "desktop_height": "natural",
+        "mobile_height": "large",
+        "margin_top": "0",
+        "margin_top_mobile": "0",
+        "margin_bottom": "0",
+        "margin_bottom_mobile": "0"
+      }
+    },
+    "d98ed628-91d8-4ee7-815a-00f2702b1ef3": {
+      "type": "featured-products",
+      "blocks": {
+        "05ff419b-9804-4f82-94b8-d58535eeae81": {
+          "type": "collection",
+          "settings": {
+            "collection": "men-t-shirts",
+            "collection_title": "",
+            "enable_cta": true,
+            "cta_text": "Shop Mens Tees"
+          }
+        }
+      },
+      "block_order": [
+        "05ff419b-9804-4f82-94b8-d58535eeae81"
+      ],
+      "settings": {
+        "headline": "Men's T-shirts",
+        "headline_size": "small",
+        "margin_top": "32px",
+        "margin_top_mobile": "32px",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "0bc2c9cb-22f7-4f52-ba8f-25d40a78d781": {
+      "type": "banner",
+      "settings": {
+        "enable_full_width": true,
+        "background_image": "shopify:\/\/shop_images\/230524-collection-landing-memorial-day-event-women_5d4fc714-670d-421a-bab9-2f4f8ed282c1.jpg",
+        "mobile_background_image": "shopify:\/\/shop_images\/230524-collection-landing-memorial-day-event-women-mobile.jpg",
+        "background_color": "rgba(0,0,0,0)",
+        "overlay_opacity": 0,
+        "overlay_color": "#313133",
+        "mobile_headline": "Shop Women's  Select Styles",
+        "headline": "Shop Women's Select Styles",
+        "headline_color": "#ffffff",
+        "mobile_content": "",
+        "content": "",
+        "content_color": "#313133",
+        "cta_text": "Swim",
+        "cta_link": "shopify:\/\/collections\/women-swim",
+        "cta_color": "#475c7e",
+        "cta_text_color": "#ffffff",
+        "cta_style": "solid",
+        "cta_2_text": "Shorts",
+        "cta_2_link": "shopify:\/\/collections\/womens-shorts",
+        "cta_2_color": "#475c7e",
+        "cta_2_text_color": "#ffffff",
+        "cta_2_style": "solid",
+        "cta_3_text": "",
+        "cta_3_link": "",
+        "cta_3_color": "#51acc6",
+        "cta_3_text_color": "#1c59a8",
+        "show_buttons_on_separate_lines": false,
+        "cta_3_style": "solid",
+        "desktop_vertical_content_position": "middle",
+        "desktop_horizontal_content_position": "right",
+        "desktop_text_alignment": "center",
+        "mobile_vertical_content_position": "middle",
+        "mobile_horizontal_content_position": "center",
+        "mobile_text_alignment": "center",
+        "desktop_height": "natural",
+        "mobile_height": "large",
+        "margin_top": "0",
+        "margin_top_mobile": "0",
+        "margin_bottom": "0",
+        "margin_bottom_mobile": "0"
+      }
+    },
+    "9ac714c7-7b5b-4e8a-b0a6-3f46f39643b4": {
+      "type": "featured-products",
+      "blocks": {
+        "0cecf190-5ad3-451d-a3fa-22fa059b1a07": {
+          "type": "collection",
+          "settings": {
+            "collection": "womens-t-shirts",
+            "collection_title": "",
+            "enable_cta": true,
+            "cta_text": "Shop Womens Tees"
+          }
+        }
+      },
+      "block_order": [
+        "0cecf190-5ad3-451d-a3fa-22fa059b1a07"
+      ],
+      "settings": {
+        "headline": "Women's T-shirts",
+        "headline_size": "small",
+        "margin_top": "32px",
+        "margin_top_mobile": "32px",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "682656a7-40e1-4113-b12a-7c1ffe8a1b81": {
+      "type": "banner",
+      "settings": {
+        "enable_full_width": true,
+        "background_image": "shopify:\/\/shop_images\/230524-collection-landing-memorial-day-event-kids_cf6d38d3-b52b-4636-8d54-c516f07404cb.jpg",
+        "mobile_background_image": "shopify:\/\/shop_images\/230524-collection-landing-memorial-day-event-kids-mobile.jpg",
+        "background_color": "rgba(0,0,0,0)",
+        "overlay_opacity": 1,
+        "overlay_color": "#313133",
+        "mobile_headline": "Shop Kid's Select Styles",
+        "headline": "Shop Kid's Select Styles",
+        "headline_color": "#ffffff",
+        "mobile_content": "",
+        "content": "",
+        "content_color": "#313133",
+        "cta_text": "Swim",
+        "cta_link": "shopify:\/\/collections\/boys-swim",
+        "cta_color": "#006784",
+        "cta_text_color": "#ffffff",
+        "cta_style": "solid",
+        "cta_2_text": "Shorts",
+        "cta_2_link": "shopify:\/\/collections\/boys-shorts",
+        "cta_2_color": "#006784",
+        "cta_2_text_color": "#ffffff",
+        "cta_2_style": "solid",
+        "cta_3_text": "",
+        "cta_3_link": "",
+        "cta_3_color": "#51acc6",
+        "cta_3_text_color": "#1c59a8",
+        "show_buttons_on_separate_lines": false,
+        "cta_3_style": "solid",
+        "desktop_vertical_content_position": "middle",
+        "desktop_horizontal_content_position": "left",
+        "desktop_text_alignment": "center",
+        "mobile_vertical_content_position": "middle",
+        "mobile_horizontal_content_position": "center",
+        "mobile_text_alignment": "center",
+        "desktop_height": "natural",
+        "mobile_height": "large",
+        "margin_top": "0",
+        "margin_top_mobile": "0",
+        "margin_bottom": "0",
+        "margin_bottom_mobile": "0"
+      }
+    },
+    "98bd6c1e-8a3c-4f05-ba5d-676660dab4c3": {
+      "type": "featured-products",
+      "blocks": {
+        "1e565660-a753-414f-9605-6eca906e78dd": {
+          "type": "collection",
+          "settings": {
+            "collection": "kids-t-shirts",
+            "collection_title": "",
+            "enable_cta": true,
+            "cta_text": "Shop Kids Tees"
+          }
+        }
+      },
+      "block_order": [
+        "1e565660-a753-414f-9605-6eca906e78dd"
+      ],
+      "settings": {
+        "headline": "Kid's T-shirts",
+        "headline_size": "small",
+        "margin_top": "32px",
+        "margin_top_mobile": "32px",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "breadcrumbs",
+    "bdf80c61-3b3f-4b37-8ed3-114cedb438f5",
+    "d98ed628-91d8-4ee7-815a-00f2702b1ef3",
+    "0bc2c9cb-22f7-4f52-ba8f-25d40a78d781",
+    "9ac714c7-7b5b-4e8a-b0a6-3f46f39643b4",
+    "682656a7-40e1-4113-b12a-7c1ffe8a1b81",
+    "98bd6c1e-8a3c-4f05-ba5d-676660dab4c3"
+  ]
+}

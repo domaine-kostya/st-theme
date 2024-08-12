@@ -1,0 +1,61 @@
+/* Snippets */
+@import '@/styles/snippets/blog-article';
+
+/* ============================================================================
+  Related Articles
+============================================================================== */
+
+.related-articles {
+  margin-bottom: 46px;
+  overflow: hidden;
+
+  @include media-query($min, $large) {
+    margin-bottom: 70px;
+  }
+
+  .blog-article {
+    margin-bottom: 3px;
+  }
+
+  .swiper-container {
+    overflow: visible;
+  }
+
+  .swiper-slide {
+    width: 241px;
+
+    @include media-query($min, $medium) {
+      width: calc(33.33% - 16px);
+    }
+  }
+
+  .swiper-scrollbar {
+    position: relative !important;
+    height: 2px !important;
+    margin: 42px auto 0;
+    overflow: hidden;
+    border-radius: 0;
+    background-color: $color-light-blue;
+
+    .swiper-scrollbar-drag {
+      border-radius: 0;
+      background-color: $color-primary;
+    }
+  }
+}
+
+.related-articles__header {
+  margin-bottom: 15px;
+
+  @include media-query($min, $medium) {
+    text-align: center;
+  }
+
+  @include media-query($min, $large) {
+    margin-bottom: 49px;
+  }
+}
+
+.related-articles__back {
+  margin-bottom: 45px;
+}

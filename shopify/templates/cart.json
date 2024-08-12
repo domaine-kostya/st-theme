@@ -1,0 +1,26 @@
+{
+  "sections": {
+    "main": {
+      "type": "cart",
+      "settings": {
+      }
+    },
+    "1656950018c283dcd6": {
+      "type": "limespot",
+      "settings": {
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1656950018c283dcd6"
+  ]
+}

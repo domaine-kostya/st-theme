@@ -1,0 +1,37 @@
+<div class="article__sharing">
+  <div>
+    <strong>
+      {{ 'blogs.article.share_article' | t }}
+    </strong>
+
+    <ul>
+      <li>
+        <button data-link="//www.facebook.com/sharer.php?u={{ shop.url | append: article.url }}" aria-label="Share Article on Facebook" data-type="facebook" data-article-sharing-button>
+          {% render 'icon-facebook' %}
+        </button>
+      </li>
+
+      <li>
+        <button data-link="//twitter.com/share?text={{ article.title | url_param_escape }}&amp;url={{ shop.url | append: article.url }}" aria-label="Share Article on Twitter" data-type="twitter" data-article-sharing-button>
+          {% render 'icon-twitter' %}
+        </button>
+      </li>
+
+      <li>
+        <button data-link="//pinterest.com/pin/create/button/?url={{ shop.url | append: article.url }}&media={{ article.image | img_url: '1000x1000' }}" aria-label="Share Article on Pinterest" data-type="pinterest" data-article-sharing-button>
+          {% render 'icon-pinterest' %}
+        </button>
+      </li>
+
+      <li>
+        <button data-type="link" aria-label="Copy Article URL to Clipboard" data-article-sharing-button>
+          {% render 'icon-link' %}
+        </button>
+
+        <span class="article__sharing-success hide" data-article-sharing-success>{{ 'blogs.article.copied' | t }}</span>
+
+        <input class="hide" type="text" value="{{ shop.url | append: article.url }}" data-article-sharing-link>
+      </li>
+    </ul>
+  </div>
+</div>

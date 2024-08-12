@@ -1,0 +1,30 @@
+{% comment %}
+  # Support for SVG references within SCSS files
+  # Example Usage:
+
+  /_dropdown-select.scss
+
+  ...
+  .dropdown-select {
+    &[open] {
+      select {
+        background-image: var(--select-flipped-svg);
+      }
+    }
+  }
+  ...
+{% endcomment %}
+<style type="text/css">
+  :root {
+    --select-flipped-svg: url("{{ 'select-flipped.svg' | asset_url }}");
+    --warning-svg:        url("{{ 'warning.svg' | asset_url }}");
+    --search-svg:         url("{{ 'search.svg' | asset_url }}");
+    --chevron-down-svg:   url("{{ 'chevron-down.svg' | asset_url }}");
+    --privacyoptions-svg: url("{{ 'privacyoptions.svg' | asset_url }}");
+    --filter-minus-svg:   url("{{ 'filter-minus.svg' | asset_url }}");
+    --filter-plus-svg:    url("{{ 'filter-plus.svg' | asset_url }}");
+    --plus-small-svg:     url("{{ 'plus-small.svg' | asset_url }}");
+    --minus-small-svg:    url("{{ 'minus-small.svg' | asset_url }}");
+    --filter-close-svg:   url("{{ 'filter-close.svg' | asset_url }}");
+  }
+</style>

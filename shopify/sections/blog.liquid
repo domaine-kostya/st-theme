@@ -1,0 +1,196 @@
+{{ 'sections.blog.css' | asset_url | stylesheet_tag }}
+
+{% paginate blog.articles by 9 %}
+  <div class="container blog__grid" data-blog-grid>
+    {% if section.settings.featured_article != blank %}
+      {% unless current_tags or paginate.previous %}
+        {% assign featured_article = articles[section.settings.featured_article] %}
+
+        <div class="blog__featured-article">
+          {% render 'blog-article',
+            article: featured_article,
+            horizontal: true,
+            featured_article: true,
+            image: section.settings.featured_article_image,
+            excerpt: section.settings.featured_article_excerpt
+          %}
+        </div>
+      {% endunless %}
+    {% endif %}
+
+    <div class="row">
+      {% for article in blog.articles %}
+        {% unless featured_article and featured_article.handle == article.handle %}
+          <div class="col-md-6 col-lg-4">
+            {% render 'blog-article', article: article %}
+          </div>
+        {% endunless %}
+      {% endfor %}
+    </div>
+
+    {% if paginate.pages > 1 %}
+      {% render 'pagination', paginate: paginate %}
+    {% endif %}
+  </div>
+{% endpaginate %}
+
+{{ 'sections.blog.js' | asset_url | script_tag }}
+
+{% schema %}
+  {
+    "settings": [
+      {
+        "type": "article",
+        "id": "featured_article",
+        "label": "Featured Article"
+      },
+      {
+        "type": "image_picker",
+        "id": "featured_article_image",
+        "label": "Featured Article Image",
+        "info": "Dimensions 1236 x 926"
+      },
+      {
+        "type": "textarea",
+        "id": "featured_article_excerpt",
+        "label": "Featured Article Excerpt"
+      },
+      {
+        "type": "header",
+        "content": "Section Margin"
+      },
+      {
+        "type": "select",
+        "id": "margin_top",
+        "label": "Margin Top",
+        "default": "default",
+        "options": [
+          {"value": "default", "label": "Theme Default"},
+          {"value": "0", "label": "None"},
+          {"value": "8px", "label": "8px"},
+          {"value": "16px", "label": "16px"},
+          {"value": "32px", "label": "32px"},
+          {"value": "48px", "label": "48px"},
+          {"value": "64px", "label": "64px"},
+          {"value": "102px", "label": "102px"}
+        ]
+      },
+      {
+        "type": "select",
+        "id": "margin_top_mobile",
+        "label": "Margin Top Mobile",
+        "default": "default",
+        "options": [
+          {"value": "default", "label": "Theme Default"},
+          {"value": "0", "label": "None"},
+          {"value": "8px", "label": "8px"},
+          {"value": "16px", "label": "16px"},
+          {"value": "32px", "label": "32px"},
+          {"value": "48px", "label": "48px"},
+          {"value": "64px", "label": "64px"},
+          {"value": "102px", "label": "102px"}
+        ]
+      },
+      {
+        "type": "select",
+        "id": "margin_bottom",
+        "label": "Margin Bottom",
+        "default": "default",
+        "options": [
+          {"value": "default", "label": "Theme Default"},
+          {"value": "0", "label": "None"},
+          {"value": "8px", "label": "8px"},
+          {"value": "16px", "label": "16px"},
+          {"value": "32px", "label": "32px"},
+          {"value": "48px", "label": "48px"},
+          {"value": "64px", "label": "64px"},
+          {"value": "102px", "label": "102px"}
+        ]
+      },
+      {
+        "type": "select",
+        "id": "margin_bottom_mobile",
+        "label": "Margin Bottom Mobile",
+        "default": "default",
+        "options": [
+          {"value": "default", "label": "Theme Default"},
+          {"value": "0", "label": "None"},
+          {"value": "8px", "label": "8px"},
+          {"value": "16px", "label": "16px"},
+          {"value": "32px", "label": "32px"},
+          {"value": "48px", "label": "48px"},
+          {"value": "64px", "label": "64px"},
+          {"value": "102px", "label": "102px"}
+        ]
+      },
+      {
+        "type": "header",
+        "content": "Section Padding"
+      },
+      {
+        "type": "select",
+        "id": "padding_top",
+        "label": "Padding Top",
+        "default": "default",
+        "options": [
+          {"value": "default", "label": "Theme Default"},
+          {"value": "0", "label": "None"},
+          {"value": "8px", "label": "8px"},
+          {"value": "16px", "label": "16px"},
+          {"value": "32px", "label": "32px"},
+          {"value": "48px", "label": "48px"},
+          {"value": "64px", "label": "64px"},
+          {"value": "102px", "label": "102px"}
+        ]
+      },
+      {
+        "type": "select",
+        "id": "padding_top_mobile",
+        "label": "Padding Top Mobile",
+        "default": "default",
+        "options": [
+          {"value": "default", "label": "Theme Default"},
+          {"value": "0", "label": "None"},
+          {"value": "8px", "label": "8px"},
+          {"value": "16px", "label": "16px"},
+          {"value": "32px", "label": "32px"},
+          {"value": "48px", "label": "48px"},
+          {"value": "64px", "label": "64px"},
+          {"value": "102px", "label": "102px"}
+        ]
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom",
+        "label": "Padding Bottom",
+        "default": "default",
+        "options": [
+          {"value": "default", "label": "Theme Default"},
+          {"value": "0", "label": "None"},
+          {"value": "8px", "label": "8px"},
+          {"value": "16px", "label": "16px"},
+          {"value": "32px", "label": "32px"},
+          {"value": "48px", "label": "48px"},
+          {"value": "64px", "label": "64px"},
+          {"value": "102px", "label": "102px"}
+        ]
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom_mobile",
+        "label": "Padding Bottom Mobile",
+        "default": "default",
+        "options": [
+          {"value": "default", "label": "Theme Default"},
+          {"value": "0", "label": "None"},
+          {"value": "8px", "label": "8px"},
+          {"value": "16px", "label": "16px"},
+          {"value": "32px", "label": "32px"},
+          {"value": "48px", "label": "48px"},
+          {"value": "64px", "label": "64px"},
+          {"value": "102px", "label": "102px"}
+        ]
+      }
+    ]
+  }
+{% endschema %}

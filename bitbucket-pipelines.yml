@@ -1,0 +1,226 @@
+image: timbru31/ruby-node:latest
+
+set-variables: &set-variables
+  variables:
+    - name: VERSION
+      default:
+    - name: PULLCONFIG
+      default: false
+      allowed-values:
+        - true
+        - false
+    - name: PULLTEMPLATES
+      default: false
+      allowed-values:
+        - true
+        - false
+    - name: PULLGROUPS
+      default: false
+      allowed-values:
+        - true
+        - false
+    - name: PULLLOCALE
+      default: false
+      allowed-values:
+        - true
+        - false
+
+definitions:
+  steps:
+    - step: &setup-deps
+        name: Install Dependencies
+        caches:
+          - node
+        script:
+          - npm install
+    - step: &build-theme-qa
+        name: Build Theme
+        caches:
+          - node
+        script:
+          - npm run webpack:build:dev
+        artifacts:
+          - shopify/assets/**
+    - step: &build-theme-prod
+        name: Build Theme
+        caches:
+          - node
+        script:
+          - npm run webpack:build
+        artifacts:
+          - shopify/assets/**
+    - step: &deploy-to-qa
+        name: Deployment
+        deployment: QA
+        caches:
+          - node
+        script:
+          - |
+            if [ -n "$VERSION" ]; then
+              ./utils/CI/version.js --version="$VERSION"
+            else
+              echo "VERSION is empty. Skipping..."
+            fi
+          - |
+            if [ $PULLCONFIG == "true" ]; then
+              npx shopify theme pull --store $SHOPIFY_FLAG_STORE --password $SHOPIFY_CLI_THEME_TOKEN --nodelete -o shopify/config/settings_data.json --live --path=shopify
+            else
+              echo "PULLCONFIG is false. Skipping..."
+            fi
+          - |
+            if [ $PULLTEMPLATES == "true" ]; then
+              npx shopify theme pull --store $SHOPIFY_FLAG_STORE --password $SHOPIFY_CLI_THEME_TOKEN --nodelete -o shopify/templates/*.json --live --path=shopify
+            else
+              echo "PULLTEMPLATES is false. Skipping..."
+            fi
+          - |
+            if [ $PULLGROUPS == "true" ]; then
+              npx shopify theme pull --store $SHOPIFY_FLAG_STORE --password $SHOPIFY_CLI_THEME_TOKEN --nodelete -o shopify/sections/*.json --live --path=shopify
+            else
+              echo "PULLGROUPS is false. Skipping..."
+            fi
+          - |
+            if [ $PULLLOCALE == "true" ]; then
+              npx shopify theme pull --store $SHOPIFY_FLAG_STORE --password $SHOPIFY_CLI_THEME_TOKEN --nodelete -o shopify/locales/*.json --live --path=shopify
+            else
+              echo "PULLLOCALE is false. Skipping..."
+            fi
+          - |
+            if [ $DEPLOYNEW == "true" ] && [ -n "$THEME_ID" ]; then
+              npx shopify theme push --store $SHOPIFY_FLAG_STORE --password $SHOPIFY_CLI_THEME_TOKEN --theme="$THEME_ID" --nodelete --unpublished --path=shopify
+            else
+              if [ -n "$THEME_ID" ]; then
+                npx shopify theme push --store $SHOPIFY_FLAG_STORE --password $SHOPIFY_CLI_THEME_TOKEN --theme="$THEME_ID" --nodelete --path=shopify
+              else
+                if [ -n "$SHOPIFY_THEME_NAME" ]; then
+                  npx shopify theme push --store $SHOPIFY_FLAG_STORE --password $SHOPIFY_CLI_THEME_TOKEN --theme="$SHOPIFY_THEME_NAME" --nodelete --path=shopify
+                else
+                  npx shopify theme push --store $SHOPIFY_FLAG_STORE --password $SHOPIFY_CLI_THEME_TOKEN --theme="QA" --nodelete --path=shopify
+                fi
+              fi
+            fi
+
+pipelines:
+  custom:
+      deployment-to-qa:
+        - <<: *set-variables
+        - step: *setup-deps
+        - step: *build-theme-qa
+        - step:
+            <<: *deploy-to-qa
+            name: Deployment to QA
+
+      deployment-to-uat:
+        - <<: *set-variables
+        - step: *setup-deps
+        - step: *build-theme-prod
+        - step:
+            name: Deployment to UAT
+            deployment: UAT
+            caches:
+              - node
+            script:
+              - |
+                if [ -n "$VERSION" ]; then
+                  ./utils/CI/version.js --version="$VERSION"
+                else
+                  echo "VERSION is empty. Skipping..."
+                fi
+              - |
+                if [ $PULLCONFIG == "true" ]; then
+                  npx shopify theme pull --store $SHOPIFY_FLAG_STORE --password $SHOPIFY_CLI_THEME_TOKEN --nodelete -o shopify/config/settings_data.json --live --path=shopify
+                else
+                  echo "PULLCONFIG is false. Skipping..."
+                fi
+              - |
+                if [ $PULLTEMPLATES == "true" ]; then
+                  npx shopify theme pull --store $SHOPIFY_FLAG_STORE --password $SHOPIFY_CLI_THEME_TOKEN --nodelete -o shopify/templates/*.json --live --path=shopify
+                else
+                  echo "PULLTEMPLATES is false. Skipping..."
+                fi
+              - |
+                if [ $PULLGROUPS == "true" ]; then
+                  npx shopify theme pull --store $SHOPIFY_FLAG_STORE --password $SHOPIFY_CLI_THEME_TOKEN --nodelete -o shopify/sections/*.json --live --path=shopify
+                else
+                  echo "PULLGROUPS is false. Skipping..."
+                fi
+              - |
+                if [ $PULLLOCALE == "true" ]; then
+                  npx shopify theme pull --store $SHOPIFY_FLAG_STORE --password $SHOPIFY_CLI_THEME_TOKEN --nodelete -o shopify/locales/*.json --live --path=shopify
+                else
+                  echo "PULLLOCALE is false. Skipping..."
+                fi
+              - |
+                if [ -n "$SHOPIFY_THEME_NAME" ]; then
+                  npx shopify theme push --store $SHOPIFY_FLAG_STORE --password $SHOPIFY_CLI_THEME_TOKEN --theme="$SHOPIFY_THEME_NAME" --nodelete --path=shopify
+                else
+                  npx shopify theme push --store $SHOPIFY_FLAG_STORE --password $SHOPIFY_CLI_THEME_TOKEN --theme="UAT" --nodelete --path=shopify
+                fi
+
+      deployment-to-prod:
+        - step: *setup-deps
+        - step: *build-theme-prod
+        - step:
+            name: Deployment to Production
+            deployment: PROD
+            caches:
+              - node
+            script:
+              - npx shopify theme push --store $SHOPIFY_FLAG_STORE --password $SHOPIFY_CLI_THEME_TOKEN --live --nodelete --ignore shopify/**/*.json --allow-live --path=shopify
+
+      deployment:
+        - variables:
+            - name: DEPLOYNEW
+              default: false
+              allowed-values:
+                - true
+                - false
+            - name: THEME_ID
+              default:
+            - name: PULLCONFIG
+              default: false
+              allowed-values:
+                - true
+                - false
+            - name: PULLTEMPLATES
+              default: false
+              allowed-values:
+                - true
+                - false
+            - name: PULLGROUPS
+              default: false
+              allowed-values:
+                - true
+                - false
+            - name: PULLLOCALE
+              default: false
+              allowed-values:
+                - true
+                - false
+        - step: *setup-deps
+        - step: *build-theme-qa
+        - step:
+            <<: *deploy-to-qa
+            name: Deployment
+
+      scheduled-backup:
+        - step: *setup-deps
+        - step:
+            name: Scheduled Backup From Published Theme
+            deployment: PROD
+            caches:
+              - node
+            script:
+              - npx shopify theme pull --store $SHOPIFY_FLAG_STORE --password $SHOPIFY_CLI_THEME_TOKEN --nodelete -o shopify/**/*.json --live --path=shopify
+              - |
+                DIR_COUNT=$(find ./backups -type d -maxdepth 1 -mindepth 1 | wc -l)
+                if [ "$DIR_COUNT" -ge 3 ]; then
+                  DIR=$(ls -t1 backups | tail -n 1)
+                  rm -rf backups/$DIR
+                  echo "Removed $DIR Directory"
+                fi
+              - node utils/CI/backup.js -s ./shopify/ -d backups/`date +"%d-%m-%y"`
+              - git status
+              - git add backups/`date +"%d-%m-%y"`
+              - git commit -m "Updating changes.txt with ${BITBUCKET_BUILD_NUMBER} on date `date +"%d-%m-%y"`."
+              - git push origin ${BITBUCKET_BRANCH}:scheduled-backups --force

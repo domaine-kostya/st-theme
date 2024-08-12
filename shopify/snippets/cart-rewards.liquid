@@ -1,0 +1,50 @@
+{% if settings.enable_rewards and customer %}
+  <div class="hide" role="region" aria-label="Cart Loyalty Rewards" data-cart-rewards-wrapper>
+    <button class="cart__rewards-toggle hide" data-cart-rewards-threshold="{{ settings.rewards_threshold | times: 100.00 }}" data-cart-rewards-toggle>
+      <div>
+        {% render 'icon-shipjack-circle' %}
+
+        <span>
+          {{ settings.rewards_toggle_text }}
+        </span>
+      </div>
+
+      {% render 'icon-chevron-down' %}
+    </button>
+
+    <div class="cart__rewards-toggle-content hide" data-cart-rewards-toggle-content>
+      {% for i in (1..3) %}
+        {% if forloop.index == 1 %}
+          {% assign tier = 'Bronze' %}
+          {% assign tier_collection = collections[settings.rewards_bronze_collection] %}
+        {% elsif forloop.index == 2 %}
+          {% assign tier = 'Silver' %}
+          {% assign tier_collection = collections[settings.rewards_silver_collection] %}
+        {% else %}
+          {% assign tier = 'Gold' %}
+          {% assign tier_collection = collections[settings.rewards_gold_collection] %}
+        {% endif %}
+
+        <div class="hide" data-cart-rewards-collection="{{ tier }}">
+          <div class="swiper-button-prev" data-cart-rewards-prev>
+            {% render 'icon-chevron-left-large' %}
+          </div>
+
+          <div class="swiper-button-next" data-cart-rewards-next>
+            {% render 'icon-chevron-right-large' %}
+          </div>
+
+          <div class="swiper-container" data-cart-rewards-carousel>
+            <div class="swiper-wrapper">
+              {% for product in tier_collection.products limit: 8 %}
+                <div class="swiper-slide">
+                  {% render 'cart-reward-item', product: product %}
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}

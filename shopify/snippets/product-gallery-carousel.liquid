@@ -1,0 +1,56 @@
+{%- liquid
+  assign first_variant = product.selected_or_first_available_variant
+
+  ## GALLERY SETTINGS
+  # pagination_style : options: 'dots', 'thumbnails', 'thumbnail_carousel'
+  assign pagination_style = 'thumbnail_carousel'
+-%}
+
+<product-gallery-carousel
+  class="product-gallery-carousel"
+  data-filter-by-color="{{ filter_by_color | default: false }}"
+  data-color-option-index="{{ color_option_index }}"
+  data-pagination-style="{{ pagination_style | default: 'thumbnails' }}"
+>
+  <div class="product-gallery-carousel__slider swiper" data-product-gallery-carousel>
+    <div class="swiper-wrapper product-gallery-carousel__gallery">
+      {%- for media in product.media -%}
+        {%- liquid
+          assign image_loading = 'lazy'
+          if forloop.first
+            assign image_loading = 'eager'
+          endif
+        %}
+        <div
+          class="swiper-slide {% unless media.id == first_variant.featured_media.id %}hide{% endunless %}"
+          data-product-gallery-slide
+          data-media-id="{{ media.id }}"
+          {% if first_variant.image.src == media.src %}data-first-slide-index="{{ forloop.index0 }}"{% endif %}
+          data-alt-text="{{ media.alt | escape }}"
+          data-thumb-image='{{ media.preview_image | image_url: width: 200 | image_tag: alt: '', class: '', loading: 'lazy' }}'>
+          {%- render 'product-media-item' with media: media, product: product, image_loading: image_loading -%}
+        </div>
+      {%- endfor %}
+    </div>
+
+    {% if pagination_style == 'dots' or pagination_style == 'thumbnails' %}
+      <div class="swiper-pagination" data-product-gallery-pagination></div>
+    {% endif %}
+
+    <button class="product-gallery-carousel__nav-btn product-gallery-carousel__nav-btn--prev d-none d-lg-block"
+      data-product-gallery-nav="prev"
+      aria-label="Previous slide">{% render 'icon-chevron-left' %}</button>
+    <button class="product-gallery-carousel__nav-btn product-gallery-carousel__nav-btn--next d-none d-lg-block"
+      data-product-gallery-nav="next"
+      aria-label="Next slide">{% render 'icon-chevron-right' %}</button>
+  </div>
+
+  {% if pagination_style == 'thumbnail_carousel' %}
+    <div class="swiper product-gallery-carousel__thumb-slider"
+      data-product-gallery-thumbs-slider
+      aria-hidden="true"
+    >
+      <div class="swiper-wrapper"></div>
+    </div>
+  {% endif %}
+</product-gallery-carousel>

@@ -1,0 +1,38 @@
+<div class="cart__rewards-item" data-product="{{ product.handle }}">
+  {{ product.featured_image | image_url: width: 300 | image_tag: loading: 'lazy' }}
+
+  {% render 'product-options', product: product, is_select: true %}
+
+  <div class="d-none">
+    <select name="id" id="productSelect-{{ product.id }}" data-product-select>
+      {% for variant in product.variants %}
+        {% if variant.available %}
+          {% assign hash = '' %}
+          {% assign to = 'ouimepqvtwjybxndgrhcakfszl' | split: '' %}
+
+          {% assign from = variant.id | split: '' %}
+          {% for char in from %}
+            {% assign index = char | plus:0 %}
+            {% assign next_char = to[index] %}
+            {% assign hash = hash | append: next_char %}
+          {% endfor %}
+          <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} data-sku="{{ variant.sku }}" value="{{ variant.id }}" data-hash="{{ hash }}">
+            {{ variant.title }} - {{ variant.price | money_with_currency }}
+          </option>
+        {% else %}
+          <option disabled="disabled">
+            {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+          </option>
+        {% endif %}
+      {% endfor %}
+    </select>
+  </div>
+
+  <button class="btn btn--full" type="button" {% if free_gift %}data-cart-free-gift-submit{% else %}data-cart-rewards-submit{% endif %} data-product-submit>
+    {{ 'cart.general.add' | t }}
+  </button>
+
+  <strong>
+    {{ product.title }}
+  </strong>
+</div>

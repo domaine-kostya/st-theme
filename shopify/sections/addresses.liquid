@@ -1,0 +1,122 @@
+{{ 'sections.addresses.css' | asset_url | stylesheet_tag }}
+
+<section-addresses class="account">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2 d-none d-lg-block">
+        {% render 'account-sidebar' %}
+      </div>
+
+      <div class="col-lg-10">
+        <h1 class="account__headline heading-3 d-lg-none">
+          {{ 'customer.addresses.title' | t }}
+        </h1>
+
+        {% render 'account-page-selector' %}
+
+        <div class="account__addresses" data-account-dashboard-addresses>
+          <h2 class="account__headline heading-3 d-none d-lg-block">
+            {{ 'customer.addresses.title' | t }}
+          </h2>
+
+          <div class="account__addresses-list">
+            {% for address in customer.addresses %}
+              <div class="account__address{% if forloop.first %} active{% endif %}" data-address-container>
+                <button class="account__address-toggle d-md-none" data-address-container-toggle>
+                  <strong class="heading-5">
+                    {{- address.address1 -}}
+                    {%- if address == customer.default_address -%}
+                      &nbsp;({{- 'customer.addresses.default' | t -}})
+                    {%- endif -%}
+                  </strong>
+                  {%- render 'icon-plus-large' -%}
+                  {%- render 'icon-minus-large' -%}
+                </button>
+
+                <p class="account__address-title d-none d-md-block">
+                  <strong class="heading-5">
+                    {{- address.address1 -}}
+                    {%- if address == customer.default_address -%}
+                      &nbsp;({{- 'customer.addresses.default' | t -}})
+                    {%- endif -%}
+                  </strong>
+                </p>
+
+                <div class="account__address-info">
+                  <div>
+                    {{ address | format_address }}
+
+                    <button class="checkbox {% if address == customer.default_address %}active{% endif %}" data-default-checkbox-button="edit-address-{{ forloop.index }}">
+                      <input type="checkbox">
+                      <label for="address_default_address_{{ form.id }}">{{ 'customer.addresses.set_default' | t }}</label>
+                      <span class="checkmark"></span>
+                    </button>
+                  </div>
+
+                  <div class="account__address-actions" data-address-actions>
+                    <button class="ui-link" type="button" data-edit-address-toggle="edit-address-{{ forloop.index }}">
+                      <div class="d-md-none">
+                        {% render 'icon-edit' %}
+                      </div>
+
+                      <div class="d-none d-md-block">
+                        {{ 'customer.addresses.edit' | t }}
+                      </div>
+                    </button>
+
+                    <form data-address-delete-form method="post" action="{{ routes.account_addresses_url }}/{{ address.id }}" data-confirm-message="{{ 'customer.addresses.delete_confirm' | t }}">
+                      <input type="hidden" name="_method" value="delete"/>
+                      <button class="ui-link ui-link--last" type="submit">
+                        <div class="d-md-none">
+                          {% render 'icon-trash' %}
+                        </div>
+
+                        <div class="d-none d-md-block">
+                          {{ 'customer.addresses.delete' | t }}
+                        </div>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+
+          {% if customer.addresses.size == 0 %}
+            <div class="account__empty">
+              <p>{{ 'customer.addresses.none' | t }}</p>
+            </div>
+          {% endif %}
+
+          <div class="text-center">
+            <button type="button" class="btn d-none d-md-inline-block" data-edit-address-toggle="add-new-address">{{ 'customer.addresses.add_new' | t }}</button>
+
+            <button type="button" class="btn btn--full d-md-none" data-edit-address-toggle="add-new-address">{{ 'customer.addresses.add_new' | t }}</button>
+          </div>
+        </div>
+
+        {% for address in customer.addresses %}
+          {% capture id %}edit-address-{{ forloop.index }}{% endcapture %}
+
+          {% assign address_form_title = 'customer.addresses.edit_address' | t %}
+
+          {% render 'address-form',
+            id: id,
+            address: address,
+            title: address_form_title
+          %}
+        {% endfor %}
+
+        {% assign address_form_title = 'customer.addresses.add_new' | t %}
+
+        {% render 'address-form',
+          id: 'add-new-address',
+          address: customer.new_address,
+          title: address_form_title
+        %}
+      </div>
+    </div>
+  </div>
+</section-addresses>
+
+{{ 'sections.addresses.js' | asset_url | script_tag }}

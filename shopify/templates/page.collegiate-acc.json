@@ -1,0 +1,227 @@
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+      }
+    },
+    "4f40f39b-df1e-4be2-9736-794b2b9090e1": {
+      "type": "featured-collections",
+      "blocks": {
+        "2b2d6647-783c-42dd-b19d-87ebb8b73b3d": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Clemson-1280resize-07282023.png",
+            "title": "",
+            "content": "",
+            "cta_text": "Clemson University",
+            "link": "shopify:\/\/collections\/clemson-university"
+          }
+        },
+        "91ca1633-7af7-4828-bad2-ac100c191bf3": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/fsu-resize.png",
+            "title": "",
+            "content": "",
+            "cta_text": "Florida State University",
+            "link": "shopify:\/\/collections\/florida-state-university"
+          }
+        },
+        "80f72d66-203c-4f1b-a6b8-23df3f9ce995": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/georgia_tech-resize.png",
+            "title": "",
+            "content": "",
+            "cta_text": "Georgia Tech",
+            "link": "shopify:\/\/collections\/georgia-institute-of-technology"
+          }
+        }
+      },
+      "block_order": [
+        "2b2d6647-783c-42dd-b19d-87ebb8b73b3d",
+        "91ca1633-7af7-4828-bad2-ac100c191bf3",
+        "80f72d66-203c-4f1b-a6b8-23df3f9ce995"
+      ],
+      "settings": {
+        "headline": "ACC",
+        "headline_size": "large",
+        "content": "<hr>",
+        "section_width": "container",
+        "button_style": "link",
+        "margin_top": "16px",
+        "margin_top_mobile": "16px",
+        "margin_bottom": "32px",
+        "margin_bottom_mobile": "32px",
+        "padding_top": "32px",
+        "padding_top_mobile": "32px",
+        "padding_bottom": "32px",
+        "padding_bottom_mobile": "32px"
+      }
+    },
+    "80a69afe-f65e-4292-9d55-52a5d980e28d": {
+      "type": "featured-collections",
+      "blocks": {
+        "2ff4f40a-3185-4b3a-a00c-cba17c37749b": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/u-miami-resize.png",
+            "title": "",
+            "content": "",
+            "cta_text": "University of Miami",
+            "link": "shopify:\/\/collections\/university-of-miami"
+          }
+        },
+        "9859264d-40ca-4cd2-be03-f54e6c9e233d": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ns-state-resize.png",
+            "title": "",
+            "content": "",
+            "cta_text": "NC State",
+            "link": "shopify:\/\/collections\/north-carolina-state-university"
+          }
+        },
+        "f6d0d906-5fd9-4265-a42b-2bf4648071f3": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/unc-ch-resize.png",
+            "title": "",
+            "content": "",
+            "cta_text": "UNC",
+            "link": "shopify:\/\/collections\/university-of-north-carolina-at-chapel-hill"
+          }
+        }
+      },
+      "block_order": [
+        "2ff4f40a-3185-4b3a-a00c-cba17c37749b",
+        "9859264d-40ca-4cd2-be03-f54e6c9e233d",
+        "f6d0d906-5fd9-4265-a42b-2bf4648071f3"
+      ],
+      "settings": {
+        "headline": "",
+        "headline_size": "small",
+        "content": "",
+        "section_width": "container",
+        "button_style": "link",
+        "margin_top": "0",
+        "margin_top_mobile": "0",
+        "margin_bottom": "32px",
+        "margin_bottom_mobile": "32px",
+        "padding_top": "0",
+        "padding_top_mobile": "0",
+        "padding_bottom": "32px",
+        "padding_bottom_mobile": "32px"
+      }
+    },
+    "b80db12d-961b-42af-b6f4-60844ae0e87a": {
+      "type": "featured-collections",
+      "blocks": {
+        "4f7dc764-579a-4dc5-8923-e0c270162e2f": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/UVA-resize.png",
+            "title": "",
+            "content": "",
+            "cta_text": "UVA",
+            "link": "shopify:\/\/collections\/university-of-virginia"
+          }
+        },
+        "fe795ea7-16be-4d40-bc9a-8b50e9fe9dcd": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/VA_Tech-resize.png",
+            "title": "",
+            "content": "",
+            "cta_text": "Virginia Tech",
+            "link": "shopify:\/\/collections\/virginia-polytechnic-institute-state-university"
+          }
+        },
+        "4c5ce917-3b6d-419f-9c01-9f27a3d2a928": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Wake-resize.png",
+            "title": "",
+            "content": "",
+            "cta_text": "Wake Forest",
+            "link": "shopify:\/\/collections\/wake-forest-university"
+          }
+        }
+      },
+      "block_order": [
+        "4f7dc764-579a-4dc5-8923-e0c270162e2f",
+        "fe795ea7-16be-4d40-bc9a-8b50e9fe9dcd",
+        "4c5ce917-3b6d-419f-9c01-9f27a3d2a928"
+      ],
+      "settings": {
+        "headline": "",
+        "headline_size": "small",
+        "content": "",
+        "section_width": "container",
+        "button_style": "link",
+        "margin_top": "0",
+        "margin_top_mobile": "0",
+        "margin_bottom": "32px",
+        "margin_bottom_mobile": "32px",
+        "padding_top": "0",
+        "padding_top_mobile": "0",
+        "padding_bottom": "32px",
+        "padding_bottom_mobile": "32px"
+      }
+    },
+    "fe4e7299-252d-491a-b7a1-525aa0757e7c": {
+      "type": "content-blocks",
+      "blocks": {
+        "9bdc6d83-650b-434d-8774-153194b88f34": {
+          "type": "content_block",
+          "settings": {
+            "mobile_image": "shopify:\/\/shop_images\/230811-navigation-collegiate.jpg",
+            "image": "shopify:\/\/shop_images\/230811-navigation-collegiate.jpg",
+            "video_file_url": "",
+            "mobile_video_file_url": "",
+            "enable_full_width_video": false,
+            "video_embed": "",
+            "video_description": "",
+            "mobile_video_embed": "",
+            "background_color": "#CDE0F1",
+            "width": "full",
+            "content_position": "left",
+            "headline": "Don't See Your Team?",
+            "content": "",
+            "cta_1_text": "Explore All Schools",
+            "cta_1_link": "shopify:\/\/pages\/collegiate-conferences",
+            "cta_1_style": "solid",
+            "cta_2_text": "",
+            "cta_2_link": "",
+            "cta_2_style": "outline",
+            "feature_1_text": "",
+            "feature_2_text": "",
+            "feature_3_text": "",
+            "feature_4_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "9bdc6d83-650b-434d-8774-153194b88f34"
+      ],
+      "settings": {
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "4f40f39b-df1e-4be2-9736-794b2b9090e1",
+    "80a69afe-f65e-4292-9d55-52a5d980e28d",
+    "b80db12d-961b-42af-b6f4-60844ae0e87a",
+    "fe4e7299-252d-491a-b7a1-525aa0757e7c"
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "sections": {
+    "collection-hero": {
+      "type": "collection-hero",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+      }
+    },
+    "main": {
+      "type": "collection",
+      "settings": {
+      }
+    },
+    "f3658759-e599-4e25-80e3-a9b54d3f1056": {
+      "type": "featured-collections",
+      "blocks": {
+        "160b880a-1909-4b13-aecc-7982bdf287d5": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mensswim.jpg",
+            "title": "",
+            "content": "",
+            "cta_text": "Men's Swim",
+            "link": "shopify:\/\/collections\/men-swim"
+          }
+        },
+        "0fd6b74c-1204-49fa-8757-e19c274352c8": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/womensswim.jpg",
+            "title": "",
+            "content": "",
+            "cta_text": "Women's Swim",
+            "link": "shopify:\/\/collections\/women-swim"
+          }
+        },
+        "eb64a544-f91c-48b2-b36f-5ea4c265696e": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/fathersonmatching.jpg",
+            "title": "",
+            "content": "",
+            "cta_text": "Father & Son Matching",
+            "link": "shopify:\/\/collections\/family-matching"
+          }
+        },
+        "289f77db-6384-4b2c-8ba0-4df1f1ba553a": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/kidstees.jpg",
+            "title": "",
+            "content": "",
+            "cta_text": "Kid's Tees",
+            "link": "shopify:\/\/collections\/kids-t-shirts"
+          }
+        }
+      },
+      "block_order": [
+        "160b880a-1909-4b13-aecc-7982bdf287d5",
+        "0fd6b74c-1204-49fa-8757-e19c274352c8",
+        "eb64a544-f91c-48b2-b36f-5ea4c265696e",
+        "289f77db-6384-4b2c-8ba0-4df1f1ba553a"
+      ],
+      "disabled": true,
+      "settings": {
+        "headline": "Sun Soaked Collections",
+        "headline_size": "large",
+        "content": "",
+        "section_width": "full",
+        "button_style": "link",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    }
+  },
+  "order": [
+    "collection-hero",
+    "breadcrumbs",
+    "main",
+    "f3658759-e599-4e25-80e3-a9b54d3f1056"
+  ]
+}

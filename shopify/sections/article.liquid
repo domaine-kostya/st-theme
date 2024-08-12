@@ -1,0 +1,126 @@
+{{ 'sections.article.css' | asset_url | stylesheet_tag }}
+
+<article class="article">
+  <div class="article__hero">
+    {% unless article.image %}
+      <div class="container">
+    {% endunless %}
+
+    <div class="row no-gutters">
+      {% if article.image %}
+        {% style %}
+          .article__hero-image--{{ section.id }} {
+            background-image: url({{ article.image | image_url }});
+          }
+        {% endstyle %}
+        <div class="article__hero-image article__hero-image--{{ section.id }} col-12 lazyload" data-bgset="{% render 'responsive-bg-image', image: article.image %}">
+          <img class="lazyload" src="{{ 'article-image-spacer.png' | asset_url }}" alt="{{ article.title }}">
+        </div>
+      {% endif %}
+
+      <div class="article__hero-content {% unless article.image %}article__hero-content--no-image{% endunless %} col-12">
+        <div class="display-table">
+          <div class="display-table-cell">
+            {% if article.tags.size >= 1 %}
+              <div class="article__hero-badge-wrapper">
+                {% for tag in article.tags %}
+                  <div class="article__hero-badge">
+                    {{ tag }}
+                  </div>
+                {% endfor %}
+              </div>
+            {% endif %}
+
+            <h1 class="heading-2 heading-lg-1">
+              {{ article.title }}
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% unless article.image %}
+      </div>
+    {% endunless %}
+  </div>
+
+  <div class="article__content-wrapper">
+    {% if section.settings.enable_sharing %}
+      <div class="article__sharing-wrapper d-none d-lg-block">
+        <div class="article__sharing-sticky">
+          {% render 'article-sharing' %}
+        </div>
+      </div>
+    {% endif %}
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="article__content rte">
+            {{ article.content }}
+          </div>
+
+          {% if section.settings.enable_sharing %}
+            <div class="d-lg-none">
+              {% render 'article-sharing' %}
+            </div>
+          {% endif %}
+
+          {% if blog %}
+            <div class="article__nav">
+              {% if blog.previous_article %}
+                <a href="{{ blog.previous_article }}">
+                  <span>
+                    {% render 'icon-chevron-left-medium' %}
+
+                    <span>
+                      {{ 'blogs.article.previous_article' | t }}
+                    </span>
+                  </span>
+
+                  <p>
+                    {{ blog.previous_article.title }}
+                  </p>
+                </a>
+              {% endif %}
+
+              {% if blog.next_article %}
+                <a class="text-right" href="{{ blog.next_article }}">
+                  <span>
+                    <span>
+                      {{ 'blogs.article.next_article' | t }}
+                    </span>
+
+                    {% render 'icon-chevron-right-medium' %}
+                  </span>
+
+                  <p>
+                    {{ blog.next_article.title }}
+                  </p>
+                </a>
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+{% render 'schema-article' %}
+
+<script src="{{ 'sections.article.js' | asset_url }}" defer="defer"></script>
+
+{% schema %}
+  {
+    "name": "Article",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_sharing",
+        "label": "Enable Sharing",
+        "default": true
+      }
+    ]
+  }
+{% endschema %}

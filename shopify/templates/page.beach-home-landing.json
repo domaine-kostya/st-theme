@@ -1,0 +1,289 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "blocks": {
+        "b0b4a1cc-4073-4815-98ed-d75eeac46a2c": {
+          "type": "hero_slide",
+          "settings": {
+            "desktop_layout": "image_1_content",
+            "desktop_image_1": "shopify:\/\/shop_images\/231226-home-collection-landing-hero.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/231226-home-collection-landing-hero-mobile.jpg",
+            "title": "2024 Beach & Home Collection",
+            "mobile_title": "2024 Beach & Home Collection",
+            "title_size": "heading-2",
+            "content": "Bedding, bath & beach essentials - wherever your oasis, we have everything you need.",
+            "mobile_content": "Bedding, bath & beach essentials - wherever your oasis, we have everything you need.",
+            "title_color": "#525c68",
+            "content_color": "#313133",
+            "background_color": "#e5e1e0",
+            "cta_1_text": "",
+            "cta_1_link": "",
+            "cta_1_color": "#1c59a8",
+            "cta_2_text": "",
+            "cta_2_link": "#",
+            "cta_2_color": "",
+            "cta_3_text": "",
+            "cta_3_link": "",
+            "cta_3_color": "",
+            "image_link": "",
+            "btn_display": "d-flex"
+          }
+        }
+      },
+      "block_order": [
+        "b0b4a1cc-4073-4815-98ed-d75eeac46a2c"
+      ],
+      "settings": {
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "0",
+        "margin_bottom_mobile": "0",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+      }
+    },
+    "165367182201d0c501": {
+      "type": "featured-products",
+      "blocks": {
+        "3f0e30a4-55e0-4f1a-a967-a081cc1ad5b1": {
+          "type": "collection",
+          "settings": {
+            "collection": "bed-bath-sheets-pillowcases",
+            "collection_title": "Sheet Sets",
+            "enable_cta": false,
+            "cta_text": "Show more"
+          }
+        },
+        "bd93e0a1-1228-46b7-b04b-b17455eba361": {
+          "type": "collection",
+          "settings": {
+            "collection": "bed-bath-comforters-and-quilts",
+            "collection_title": "Comforter Sets",
+            "enable_cta": false,
+            "cta_text": "Show more"
+          }
+        },
+        "7b65b71d-beb1-4795-b0fe-21f24158050e": {
+          "type": "collection",
+          "settings": {
+            "collection": "bed-bath-decorative-pillows-shams",
+            "collection_title": "Pillows & Shams",
+            "enable_cta": false,
+            "cta_text": "Show more"
+          }
+        },
+        "6011fc1e-1f51-4e89-a344-27332d5978c7": {
+          "type": "collection",
+          "settings": {
+            "collection": "bed-bath-towels",
+            "collection_title": "Towels & Bath",
+            "enable_cta": false,
+            "cta_text": "Show more"
+          }
+        }
+      },
+      "block_order": [
+        "3f0e30a4-55e0-4f1a-a967-a081cc1ad5b1",
+        "bd93e0a1-1228-46b7-b04b-b17455eba361",
+        "7b65b71d-beb1-4795-b0fe-21f24158050e",
+        "6011fc1e-1f51-4e89-a344-27332d5978c7"
+      ],
+      "settings": {
+        "headline": "Featured Collections",
+        "headline_size": "small",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "1653674967db683e1c": {
+      "type": "featured-collections",
+      "blocks": {
+        "9d1a65d5-71f6-409c-b50f-a46e3bf51d71": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/new-arrivals.jpg",
+            "title": "New arrivals",
+            "content": "",
+            "cta_text": "Shop Now",
+            "link": ""
+          }
+        },
+        "94b80002-75c6-4257-a7a7-dcc7b92f83bc": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/best-sellers.jpg",
+            "title": "Best sellers",
+            "content": "",
+            "cta_text": "Shop Now",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "9d1a65d5-71f6-409c-b50f-a46e3bf51d71",
+        "94b80002-75c6-4257-a7a7-dcc7b92f83bc"
+      ],
+      "disabled": true,
+      "settings": {
+        "headline": "",
+        "headline_size": "small",
+        "content": "",
+        "section_width": "container",
+        "button_style": "button",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "1653672203298a707c": {
+      "type": "featured-collections",
+      "blocks": {
+        "d2dc9f57-ef37-49e2-afc5-ced11bc4ec21": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/tops_e5333434-ce05-46b7-ad45-a605a28646bc.jpg",
+            "title": "Tops",
+            "content": "",
+            "cta_text": "Shop now",
+            "link": "#"
+          }
+        },
+        "057fd528-8f4b-48ae-a30f-88f5aa81a1b3": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bottoms.jpg",
+            "title": "Bottoms",
+            "content": "",
+            "cta_text": "shop now",
+            "link": ""
+          }
+        },
+        "ced1378e-ce17-4bbf-83f1-0fc8a2a2196a": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/shoes.jpg",
+            "title": "Shoes",
+            "content": "",
+            "cta_text": "shop now",
+            "link": ""
+          }
+        },
+        "511f71e4-f5ff-43d8-9961-11ea7a3708ff": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/accessories.jpg",
+            "title": "Accessories",
+            "content": "",
+            "cta_text": "shop now",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "d2dc9f57-ef37-49e2-afc5-ced11bc4ec21",
+        "057fd528-8f4b-48ae-a30f-88f5aa81a1b3",
+        "ced1378e-ce17-4bbf-83f1-0fc8a2a2196a",
+        "511f71e4-f5ff-43d8-9961-11ea7a3708ff"
+      ],
+      "disabled": true,
+      "settings": {
+        "headline": "Complete Your Look",
+        "headline_size": "small",
+        "content": "",
+        "section_width": "full",
+        "button_style": "link",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "1653674977e47c94a1": {
+      "type": "featured-collections",
+      "blocks": {
+        "b861b4f2-9bb7-44b4-8e34-1a5a0837c36c": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brr-colab.jpg",
+            "title": "Brrr°",
+            "content": "Exclusive fabric technology proven to instantly and permanently keep you cooler.",
+            "cta_text": "Shop collection",
+            "link": ""
+          }
+        },
+        "38dda396-8d49-40ac-973b-c9f83d373202": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/beneath-the-waves.jpg",
+            "title": "Beneath the waves",
+            "content": "5% of net sales from this collection  will be donated to  support Beneath the Waves.",
+            "cta_text": "Shop collection",
+            "link": ""
+          }
+        },
+        "b4eabeb5-4d1f-48aa-bef7-74544b2da187": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/rheos-eyewear.jpg",
+            "title": "Rheos eyewear",
+            "content": "Shop our exclusive line of floating sunglasses built for life on the water.",
+            "cta_text": "Shop collection",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "b861b4f2-9bb7-44b4-8e34-1a5a0837c36c",
+        "38dda396-8d49-40ac-973b-c9f83d373202",
+        "b4eabeb5-4d1f-48aa-bef7-74544b2da187"
+      ],
+      "disabled": true,
+      "settings": {
+        "headline": "Collaborations",
+        "headline_size": "small",
+        "content": "",
+        "section_width": "container",
+        "button_style": "button",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "breadcrumbs",
+    "165367182201d0c501",
+    "1653674967db683e1c",
+    "1653672203298a707c",
+    "1653674977e47c94a1"
+  ]
+}

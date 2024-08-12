@@ -1,0 +1,230 @@
+<script src="{{ 'sections.related-articles.js' | asset_url }}" defer="defer"></script>
+{{ 'sections.related-articles.css' | asset_url | stylesheet_tag }}
+
+<div class="related-articles related-articles--{{ section.id }}" role="region" aria-label="Related Articles">
+  <div class="container">
+    <h2 class="related-articles__header heading-4">
+      {{ section.settings.headline }}
+    </h2>
+
+    <a class="related-articles__back ui-link d-md-none" href="{{ blog.url }}">
+      {{ 'blogs.article.back_to_the_blog' | t }}
+    </a>
+
+    <div class="swiper-container" data-related-articles-carousel>
+      <div class="swiper-wrapper">
+        {% if article.metafields.custom_fields['related_articles'] != blank %}
+          {% assign article_refs = article.metafields.custom_fields["related_articles"] | split: "|" %}
+
+          {% for article in article_refs %}
+            {% assign article_handle = article | replace: '.', '/' %}
+
+            <div class="swiper-slide">
+              {% render 'blog-article', article: articles[article_handle] %}
+            </div>
+          {% endfor %}
+        {% else %}
+          {% assign article_tag = blank %}
+
+          {% for tag in article.tags %}
+            {% assign article_tag = tag %}
+          {% endfor %}
+
+          {% if article_tag != blank %}
+            {% assign article_array = blank %}
+
+            {% for related_article in blog.articles %}
+              {% unless related_article.handle == article.handle %}
+                {% if related_article.tags contains article_tag %}
+                  {% assign article_array = article_array | append: related_article.handle | append: ',' %}
+                {% endif %}
+              {% endunless %}
+            {% endfor %}
+          {% endif %}
+
+          {% if article_array != blank %}
+            {% assign article_array_split = article_array | split: ',' %}
+
+            {% for related_article in article_array_split  %}
+              <div class="swiper-slide">
+                {% render 'blog-article', article: articles[related_article] %}
+              </div>
+            {% endfor %}
+          {% else %}
+            {% for block in section.blocks %}
+              <div class="swiper-slide">
+                {% render 'blog-article', article: articles[block.settings.article] %}
+              </div>
+            {% endfor %}
+          {% endif %}
+        {% endif %}
+      </div>
+
+      <div class="swiper-scrollbar d-lg-none" data-related-articles-scrollbar></div>
+    </div>
+  </div>
+</div>
+
+{% include 'section-spacing', section_name: 'related-articles' %}
+
+{% schema %}
+  {
+    "settings": [
+      {
+        "type": "text",
+        "id": "headline",
+        "label": "Headline"
+      },
+{
+  "type": "header",
+  "content": "Section Margin"
+},
+{
+  "type": "select",
+  "id": "margin_top",
+  "label": "Margin Top",
+  "default": "default",
+  "options": [
+    {"value": "default", "label": "Theme Default"},
+    {"value": "0", "label": "None"},
+    {"value": "8px", "label": "8px"},
+    {"value": "16px", "label": "16px"},
+    {"value": "32px", "label": "32px"},
+    {"value": "48px", "label": "48px"},
+    {"value": "64px", "label": "64px"},
+    {"value": "102px", "label": "102px"}
+  ]
+},
+{
+  "type": "select",
+  "id": "margin_top_mobile",
+  "label": "Margin Top Mobile",
+  "default": "default",
+  "options": [
+    {"value": "default", "label": "Theme Default"},
+    {"value": "0", "label": "None"},
+    {"value": "8px", "label": "8px"},
+    {"value": "16px", "label": "16px"},
+    {"value": "32px", "label": "32px"},
+    {"value": "48px", "label": "48px"},
+    {"value": "64px", "label": "64px"},
+    {"value": "102px", "label": "102px"}
+  ]
+},
+{
+  "type": "select",
+  "id": "margin_bottom",
+  "label": "Margin Bottom",
+  "default": "default",
+  "options": [
+    {"value": "default", "label": "Theme Default"},
+    {"value": "0", "label": "None"},
+    {"value": "8px", "label": "8px"},
+    {"value": "16px", "label": "16px"},
+    {"value": "32px", "label": "32px"},
+    {"value": "48px", "label": "48px"},
+    {"value": "64px", "label": "64px"},
+    {"value": "102px", "label": "102px"}
+  ]
+},
+{
+  "type": "select",
+  "id": "margin_bottom_mobile",
+  "label": "Margin Bottom Mobile",
+  "default": "default",
+  "options": [
+    {"value": "default", "label": "Theme Default"},
+    {"value": "0", "label": "None"},
+    {"value": "8px", "label": "8px"},
+    {"value": "16px", "label": "16px"},
+    {"value": "32px", "label": "32px"},
+    {"value": "48px", "label": "48px"},
+    {"value": "64px", "label": "64px"},
+    {"value": "102px", "label": "102px"}
+  ]
+},
+{
+  "type": "header",
+  "content": "Section Padding"
+},
+{
+  "type": "select",
+  "id": "padding_top",
+  "label": "Padding Top",
+  "default": "default",
+  "options": [
+    {"value": "default", "label": "Theme Default"},
+    {"value": "0", "label": "None"},
+    {"value": "8px", "label": "8px"},
+    {"value": "16px", "label": "16px"},
+    {"value": "32px", "label": "32px"},
+    {"value": "48px", "label": "48px"},
+    {"value": "64px", "label": "64px"},
+    {"value": "102px", "label": "102px"}
+  ]
+},
+{
+  "type": "select",
+  "id": "padding_top_mobile",
+  "label": "Padding Top Mobile",
+  "default": "default",
+  "options": [
+    {"value": "default", "label": "Theme Default"},
+    {"value": "0", "label": "None"},
+    {"value": "8px", "label": "8px"},
+    {"value": "16px", "label": "16px"},
+    {"value": "32px", "label": "32px"},
+    {"value": "48px", "label": "48px"},
+    {"value": "64px", "label": "64px"},
+    {"value": "102px", "label": "102px"}
+  ]
+},
+{
+  "type": "select",
+  "id": "padding_bottom",
+  "label": "Padding Bottom",
+  "default": "default",
+  "options": [
+    {"value": "default", "label": "Theme Default"},
+    {"value": "0", "label": "None"},
+    {"value": "8px", "label": "8px"},
+    {"value": "16px", "label": "16px"},
+    {"value": "32px", "label": "32px"},
+    {"value": "48px", "label": "48px"},
+    {"value": "64px", "label": "64px"},
+    {"value": "102px", "label": "102px"}
+  ]
+},
+{
+  "type": "select",
+  "id": "padding_bottom_mobile",
+  "label": "Padding Bottom Mobile",
+  "default": "default",
+  "options": [
+    {"value": "default", "label": "Theme Default"},
+    {"value": "0", "label": "None"},
+    {"value": "8px", "label": "8px"},
+    {"value": "16px", "label": "16px"},
+    {"value": "32px", "label": "32px"},
+    {"value": "48px", "label": "48px"},
+    {"value": "64px", "label": "64px"},
+    {"value": "102px", "label": "102px"}
+  ]
+}
+    ],
+    "blocks": [
+      {
+        "type": "article",
+        "name": "Article",
+        "limit": 3,
+        "settings": [
+          {
+            "type": "article",
+            "id": "article",
+            "label": "Article"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

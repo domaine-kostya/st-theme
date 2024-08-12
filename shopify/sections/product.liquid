@@ -1,0 +1,388 @@
+{%- liquid
+  if section.settings.product != blank
+    assign product = all_products[section.settings.product]
+  endif
+
+  ## PRODUCT VARIABLES
+  assign color_option = product.options_by_name['color']
+  assign color_option_handle = 'option' | append: color_option.position
+  assign current_variant = product.selected_or_first_available_variant
+  assign active_color = current_variant[color_option_handle]
+  assign featured_image = current_variant.featured_image | default: product.featured_image
+  assign filter_gallery_by_color = true
+-%}
+
+{% if product.type == 'Free gift' %}
+  {% layout none %}
+
+  <script>
+    window.location.href = '/';
+  </script>
+{% else %}
+  <script src="{{ 'sections.product.js' | asset_url }}" defer="defer"></script>
+  {{ 'sections.product.css' | asset_url | stylesheet_tag }}
+
+  <div class="container">
+    <div class="product {% if product.tags contains 'bundle-product' %}product--bundle{% endif %}" {% unless product.tags contains 'bundle-product' %}data-product{% endunless %}>
+      {% assign current_variant = product.selected_or_first_available_variant %}
+      {% assign featured_image = current_variant.featured_image | default: product.featured_image %}
+
+      <div class="row">
+        <div class="col-md-6 col-lg-7">
+          {% if product.images.size > 1 %}
+            {%- render 'product-gallery-carousel',
+              color_option_index: color_option.position,
+              filter_by_color: filter_gallery_by_color,
+              active_color: active_color,
+              pagination_style: section.settings.gallery_pagination_style,
+              product: product
+            -%}
+          {% else %}
+              {{ product.featured_image | image_url: width: 1000 | image_tag: class: '', loading: 'eager', preload: true }}
+          {% endif %}
+        </div>
+
+        <atc-form class="col-md-6 col-lg-5">
+          <div class="product__form-wrapper">
+            <form class="product__form"
+                  action="{{ routes.cart_add_url }}"
+                  method="post"
+                  enctype="multipart/form-data"
+                  data-product-form>
+
+              {% if product.type == 'Gift Cards' %}
+                <input class="hide" type="text" name="gift_card" value="true">
+              {% endif %}
+
+              {%- for block in section.blocks -%}
+                {%- case block.type -%}
+                  {%- when '@app' -%}
+                    {% render block %}
+                  {%- when 'title' -%}
+                    <h1 class="product__title heading-3">{{ product.title }}</h1>
+                  {%- when 'price' -%}
+                    {%- unless product.tags contains 'bundle-product' -%}
+                      <div class="product__meta">
+                        <span class="product__price {% if product.compare_at_price_max > product.price %}product__price--on-sale{% endif %} heading-5" data-product-price>
+                          {{ current_variant.price | money }}
+                        </span>
+      
+                        {% if product.compare_at_price_max > product.price %}
+                          <s class="product__price product__price--compare heading-5" data-product-compare-price>
+                            {{ current_variant.compare_at_price | money }}
+                          </s>
+                        {% endif %}
+      
+                        <div class="product__sale-message d-none" data-product-sale-message>
+                          {% render 'icon-tag' %}
+      
+                          <span data-product-sale-message-text></span>
+                        </div>
+                      </div>
+                    {%- endunless -%}
+                  {%- when 'options' -%}
+                    {% if product.tags contains 'bundle-product' %}
+                      {% render 'product-bundle' %}
+                    {% else %}
+                      {% render 'product-options' %}
+  
+                      <div class="d-none">
+                        <select name="id" id="productSelect-{{ product.id }}" data-product-select>
+                          {% for variant in product.variants %}
+                            {% if variant.available %}
+                              {% assign hash = '' %}
+                              {% assign to = 'ouimepqvtwjybxndgrhcakfszl' | split: '' %}
+
+                              {% assign from = variant.id | split: '' %}
+                              {% for char in from %}
+                                {% assign index = char | plus:0 %}
+                                {% assign next_char = to[index] %}
+                                {% assign hash = hash | append: next_char %}
+                              {% endfor %}
+                              <option {% if variant == current_variant %} selected="selected" {% endif %} data-sku="{{ variant.sku }}" value="{{ variant.id }}" data-hash="{{ hash }}">
+                                {{ variant.title }} - {{ variant.price | money_with_currency }}
+                              </option>
+                            {% else %}
+                              <option disabled="disabled">
+                                {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+                              </option>
+                            {% endif %}
+                          {% endfor %}
+                        </select>
+                      </div>
+                    {% endif %}
+                  {%- when 'add_to_cart' -%}
+                    {%- unless product.tags contains 'bundle-product' -%}
+                      <button type="submit" name="add" class="product__submit btn btn--full" data-product-submit>
+                        <span class="visually-hidden">{{ product.title }} - <span data-product-price></span></span>
+                        <span data-product-submit-text>{{ 'products.product.add_to_cart' | t }}</span>
+                      </button>
+                    {%- endunless -%}
+                  {%- when 'add_to_wishlist' -%}
+                    {%- unless product.tags contains 'bundle-product' -%}
+                      <button data-with-epi="true" class="swym-button ui-button swym-add-to-wishlist-view-product product_{{product.id}}" data-swaction="addToWishlist" data-product-id="{{product.id | json}}" data-variant-id="{{product.variants[0].id}}" data-product-url="{{ shop.url }}{{ product.url }}">
+                        {% render 'icon-heart' %}
+                        <span>
+                          {{ 'products.product.add_to_wishlist' | t }}
+                        </span>
+                      </button>
+                    {%- endunless -%}
+                  {%- when 'description' -%}
+                    {% if product.metafields.custom_fields['enable_details'] == 1 %}
+                      <div class="product__description rte">
+                        {% assign description_accordion_title = 'products.product.description' | t %}
+      
+                        {% render 'accordion',
+                          title: description_accordion_title,
+                          content: product.description,
+                          open: true
+                        %}
+      
+                        {% if product.metafields.custom_fields['model_measurements'] != blank
+                          or product.metafields.custom_fields['product_information'] != blank
+                          or product.metafields.custom_fields['fabric_information'] != blank
+                          or product.metafields.custom_fields['washing_instructions'] != blank
+                        %}
+                          {% capture details_content %}
+                            {% if product.metafields.custom_fields['model_measurements'] != blank %}
+                              <div class="product__description-block">
+                                {% render 'icon-ruler' %}
+      
+                                <p>
+                                  {{ product.metafields.custom_fields['model_measurements'] }}
+                                </p>
+                              </div>
+                            {% endif %}
+      
+                            {% if product.metafields.custom_fields['product_information'] != blank %}
+                              <div class="product__description-block product__description-block--align-top" data-product-description-block>
+                                {% render 'icon-info' %}
+      
+                                <ul>
+                                  {% for item in product.metafields.custom_fields["product_information"] %}
+                                    <li>
+                                      {{ item["product_information"] }}
+                                    </li>
+      
+                                    {% if forloop.index == 5 %}
+                                      {% assign show_more = true %}
+                                    {% endif %}
+                                  {% endfor %}
+      
+                                  {% if show_more %}
+                                    <li class="show-more">
+                                      <button class="ui-link-lowercase ui-link-lowercase--small" type="button" data-closed-text="{{ 'products.product.show_more' | t }}" data-open-text="{{ 'products.product.show_less' | t }}" aria-label="{{ 'products.product.show_more' | t }} features" data-product-info-show-more-toggle>
+                                        {{ 'products.product.show_more' | t }}
+                                      </button>
+                                    </li>
+                                  {% endif %}
+                                </ul>
+                              </div>
+                            {% endif %}
+      
+                            {% if product.metafields.custom_fields['fabric_information'] != blank %}
+                              <div class="product__description-block">
+                                {% render 'icon-shirt' %}
+      
+                                <p>
+                                  {{ product.metafields.custom_fields['fabric_information'] }}
+                                </p>
+                              </div>
+                            {% endif %}
+      
+                            {% if product.metafields.custom_fields['washing_instructions'] != blank %}
+                              <div class="product__description-block product__description-block--align-top">
+                                {% render 'icon-wash' %}
+      
+                                <p>
+                                  {{ product.metafields.custom_fields['washing_instructions'] }}
+                                </p>
+                              </div>
+                            {% endif %}
+                          {% endcapture %}
+      
+                          {% assign details_accordion_title = 'products.product.details' | t %}
+      
+                          {% render 'accordion',
+                            title: details_accordion_title,
+                            content: details_content
+                          %}
+                        {% endif %}
+      
+                        {% if product.metafields.custom_fields['features'] != blank %}
+                          {% assign features_accordion_title = 'products.product.features_benefits' | t %}
+      
+                          {% capture features_content %}
+                            <div class="product__description-features">
+                              {% for item in product.metafields.custom_fields['features'] %}
+                                <div class="product__description-feature">
+                                  {% if item['icon'] != blank %}
+                                    <img class="lazyload" src="{{ item['icon'] }}" alt="{{ item['text'] }}">
+                                  {% endif %}
+      
+                                  {% if item['text'] != blank %}
+                                    <strong>
+                                      {{ item['text'] }}
+                                    </strong>
+                                  {% endif %}
+                                </div>
+                              {% endfor %}
+                            </div>
+      
+                            {% if product.metafields.custom_fields['features_content'] != blank %}
+                              <p class="product__description-features-content">
+                                {{ product.metafields.custom_fields['features_content'] }}
+                              </p>
+                            {% endif %}
+                          {% endcapture %}
+      
+                          {% render 'accordion',
+                            title: features_accordion_title,
+                            content: features_content
+                          %}
+                        {% endif %}
+                      </div>
+                    {% else %}
+                      {% if product.description != blank %}
+                        <div class="product__description rte" data-legacy-product-description>
+                          {{ product.description }}
+                        </div>
+                      {% endif %}
+                    {% endif %}
+                {%- endcase -%}
+              {% endfor %}
+            </form>
+          </div>
+        </atc-form>
+      </div>
+    </div>
+  </div>
+
+  {% for tag in product.tags %}
+    {% if tag contains 'size-chart' %}
+      {% assign size_chart_type = tag | split: '-' | last %}
+    {% endif %}
+  {% endfor %}
+
+  {% if size_chart_type != blank %}
+    {% for block in section.blocks %}
+      {% if block.type == 'size_chart' %}
+        {% if block.settings.size_chart_tag_suffix == size_chart_type %}
+          {% capture modal_content %}
+            {{ pages[block.settings.size_chart].content }}
+          {% endcapture %}
+
+          {% render 'modal',
+            id: 'size-chart',
+            content: modal_content,
+            overlay_view: true,
+            overlay_view_title: pages[block.settings.size_chart].title
+          %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
+  {% render 'schema-product' %}
+
+  {% comment %} brontoBrowseObject:start {% endcomment %}
+  <script>
+    (function(window) {
+      var BROWSE_PRODUCT = "brontoBrowseObject";
+      window[BROWSE_PRODUCT] = {
+        product: {{ product | json }}
+      };
+    })(window);
+  </script>
+
+  {% comment %} Klaviyo tracking start {% endcomment %}
+  <script text="text/javascript">
+    var _learnq = _learnq || [];
+
+    var item = {
+      Name: {{ product.title|json }},
+      ProductID: {{ product.id|json }},
+      Categories: {{ product.collections|map:'title'|json }},
+      ImageURL: "https:{{ product.featured_image.src|img_url:'grande' }}",
+      URL: "{{ shop.secure_url }}{{ product.url }}",
+      Brand: {{ product.vendor|json }},
+      Price: {{ product.price|money|json }},
+      CompareAtPrice: {{ product.compare_at_price_max|money|json }}
+    };
+
+    // Viewed product
+    _learnq.push(['track', 'Viewed Product', item]);
+    _learnq.push(['trackViewedItem', {
+      Title: item.Name,
+      ItemId: item.ProductID,
+      Categories: item.Categories,
+      ImageUrl: item.ImageURL,
+      Url: item.URL,
+      Metadata: {
+        Brand: item.Brand,
+        Price: item.Price,
+        CompareAtPrice: item.CompareAtPrice
+      }
+    }]);
+
+    // Added to cart
+    const addToCartbtn = document.querySelector('[data-product-submit]');
+    if (addToCartbtn) {
+      addToCartbtn.addEventListener('click', function () {
+        _learnq.push(['track', 'Added to Cart', item]);
+      });
+    }
+  </script>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Product",
+    "blocks": [
+      {
+        "type": "@app"
+      },
+      {
+        "type": "title",
+        "name": "Title"
+      },
+      {
+        "type": "price",
+        "name": "Price"
+      },
+      {
+        "type": "options",
+        "name": "Options"
+      },
+      {
+        "type": "add_to_cart",
+        "name": "Add to cart"
+      },
+      {
+        "type": "add_to_wishlist",
+        "name": "Add to wishlist"
+      },
+      {
+        "type": "description",
+        "name": "Description"
+      },
+      {
+        "type": "size_chart",
+        "name": "Size Chart",
+        "settings": [
+          {
+            "type": "text",
+            "id": "size_chart_tag_suffix",
+            "label": "Size Chart Tag Suffix",
+            "info": "The suffix on your tag to identify which size guide it is. Ex. men if the tag was size-chart-men"
+          },
+          {
+            "type": "page",
+            "id": "size_chart",
+            "label": "Size Chart"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

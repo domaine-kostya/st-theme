@@ -1,0 +1,84 @@
+{% unless template.directory contains 'customers' %}
+  {{ 'sections.newsletter-signup.css' | asset_url | stylesheet_tag }}
+
+  <div class="newsletter-signup" role="region" aria-label="Newsletter Signup">
+    <div class="container">
+      <div class="row newsletter-signup__row">
+        <div class="col-12 col-md-6">
+          <div class="newsletter-signup__title">
+            <div class="newsletter-signup__image-wrapper">
+              {{ section.settings.image | image_url: width: 82 | image_tag: loading: 'lazy' }}
+            </div>
+
+            <strong class="heading-4">
+              {{ section.settings.title }}
+            </strong>
+          </div>
+          {% if section.settings.content != blank %}
+            <p class="d-none d-md-block p--small">
+              {{ section.settings.content }}
+            </p>
+          {% endif %}
+        </div>
+
+        <div class="col-12 col-md-6">
+          {% render 'newsletter-form',
+            list_id: section.settings.klaviyo_list_id,
+            bump_id: section.settings.sms_bump_id,
+            email_placeholder: section.settings.email_input_text,
+            submit_text: section.settings.cta_text
+          %}
+        </div>
+
+        <p class="d-md-none p--small">
+          {{ section.settings.content }}
+        </p>
+      </div>
+    </div>
+  </div>
+{% endunless %}
+
+{% schema %}
+  {
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image",
+        "info": "Dimensions 164 x 126"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "content",
+        "label": "Content"
+      },
+      {
+        "type": "text",
+        "id": "email_input_text",
+        "label": "Email Input Text",
+        "default": "Email address"
+      },
+      {
+        "type": "text",
+        "id": "cta_text",
+        "label": "CTA Text",
+        "default": "Sign up"
+      },
+      {
+        "type": "text",
+        "id": "klaviyo_list_id",
+        "label": "Klaviyo List ID"
+      },
+      {
+        "type": "text",
+        "id": "sms_bump_id",
+        "label": "SMS Bump ID"
+      }
+    ]
+  }
+{% endschema %}

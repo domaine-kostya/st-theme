@@ -1,0 +1,95 @@
+/* ============================================================================
+  Trust Bar
+============================================================================== */
+
+.trust-bar {
+  margin-bottom: 47px;
+  padding: 48px 0 52px;
+
+  @include media-query($min, $medium) {
+    margin-bottom: 60px;
+    padding: 74px 0;
+  }
+}
+
+.trust-bar__item {
+  &:nth-of-type(1),
+  &:nth-of-type(2) {
+    margin-bottom: 47px;
+
+    @include media-query($min, $medium) {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    &:hover,
+    &:focus {
+      @include media-query($min, $medium) {
+        .trust-bar__icon-wrapper {
+          background-color: $color-white;
+        }
+
+        .ui-link {
+          &::after {
+            margin-top: 2px;
+          }
+        }
+      }
+    }
+  }
+
+  .trust-bar__icon-wrapper {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 16px;
+    transition: background-color $transition-primary;
+    border: 2px solid $color-primary;
+    border-radius: 100%;
+  }
+
+  p {
+    color: $color-black;
+  }
+
+  .heading-4 {
+    margin-bottom: 14px;
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+
+    @include media-query($min, $small) {
+      font-size: 2.9rem;
+      line-height: 2.9rem;
+    }
+
+    @include media-query($min, $medium) {
+      margin-bottom: 15px;
+    }
+
+    @include media-query($min, $medium) {
+      margin-bottom: 15px;
+    }
+  }
+
+  .trust-bar__item-text {
+    max-width: 150px;
+    margin: 0 auto 12px;
+
+    @include media-query($min, $medium) {
+      max-width: none;
+    }
+
+    @include media-query($max, $pre-large) {
+      font-size: 1.4rem;
+      line-height: 2rem;
+    }
+  }
+
+  .ui-link {
+    margin-top: 10px;
+
+    @include media-query($min, $medium) {
+      margin-top: 20px;
+    }
+  }
+}

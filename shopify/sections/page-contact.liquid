@@ -1,0 +1,405 @@
+{{ 'sections.page-contact.css' | asset_url | stylesheet_tag }}
+
+<div class="page-contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2">
+        <form id="contact_form" class="form-vertical klaviyo_gdpr_embed_{{ section.settings.klaviyo_list_id_general }}"
+          action="//manage.kmail-lists.com/subscriptions/subscribe"
+          data-ajax-submit="//manage.kmail-lists.com/ajax/subscriptions/subscribe" method="GET" target="_blank"
+          
+          data-contact-form>
+          <input type="hidden" name="g" value="{{ section.settings.klaviyo_list_id_general }}" data-list-id-klaviyo>
+          <input type="hidden" name="$fields" value="$consent,$first_name,$last_name,address_line_1,address_line_2,city,state,zip,message" data-form-values-klaviyo>
+
+          <label for="ContactFormSubject" class="visually-hidden">{{ 'contact.form.subject' | t }}</label>
+          <select id="ContactFormSubject" class="field__input" name="contact_subject">
+            <option disabled selected>{{ 'contact.form.subject' | t }}</option>
+            <option value="Catalog Request" data-subject="catalog" data-list-id="{{ section.settings.klaviyo_list_id_request_catalog }}" data-form-values="$consent,$first_name,$last_name,$phone_number,address_line_1,address_line_2,city,state,zip">{{ 'contact.form.request_a_catalog' | t }}</option>
+            <option value="Product Question" data-subject="product-question" data-list-id="{{ section.settings.klaviyo_list_id_product_question }}" data-form-values="$consent,$first_name,$last_name,$phone_number,message">{{ 'contact.form.product_question' | t }}</option>
+            <option value="Order Help" data-subject="order-help" data-list-id="{{ section.settings.klaviyo_list_id_order_help }}" data-form-values="$consent,$first_name,$last_name,$phone_number,order_number,message">{{ 'contact.form.help_with_my_order' | t }}</option>
+            <option value="Returns and Exchange" data-subject="return-exchange" data-list-id="{{ section.settings.klaviyo_list_id_return_exchange }}" data-form-values="$consent,$first_name,$last_name,$phone_number,order_number,order_date,message">{{ 'contact.form.return_exchange' | t }}</option>
+            <option value="Become a Retailer" data-subject="retailer" data-list-id="{{ section.settings.klaviyo_list_id_become_retailer }}" data-form-values="$consent,$first_name,$last_name,$phone_number,retailer_store_name,retailer_website,address_line_1,address_line_2,city,state,zip,retailer_current_apparel,retailer_close_by,retailer_interested_lines">{{ 'contact.form.become_a_retailer' | t }}</option>
+            <option value="Charitable Contribution" data-subject="charitable" data-list-id="{{ section.settings.klaviyo_list_id_charitable_contribution }}" data-form-values="$consent,$first_name,$last_name,$phone_number,organization,donation_type,event_date,address_line_1,address_line_2,city,state,zip,message">{{ 'contact.form.charitable_contribution' | t }}</option>
+            <option value="Ambassador Application" data-subject="ambassador" data-list-id="{{ section.settings.klaviyo_list_id_ambassador_application }}" data-form-values="$consent,$first_name,$last_name,instagram_handle,follower_count,sport,description,college,age,ambassador_city,ambassador_state,college_ambassador,college_athlete_ambassador,lifestyle_ambassador,signature_store_ambassador">{{ 'contact.ambassador.title' | t }}</option>
+            <option value="Corporate Orders" data-subject="corporate" data-list-id="{{ section.settings.klaviyo_list_id_corporate_orders }}" data-form-values="$consent,$first_name,$last_name,$phone_number,company,purpose_of_purchase,polos_category,sports_shirt_category,pullovers_category,vests_category,womens_category,hats_and_visors_category,total_quantity_estimate,in_hand_date,additional_comments">{{ 'contact.corporate.corporate_orders' | t }}</option>
+            <option value="Other" data-subject="other" data-list-id="{{ section.settings.klaviyo_list_id_general }}" data-form-values="$consent,$first_name,$last_name,address_line_1,address_line_2,city,state,zip,message">{{ 'contact.form.other' | t }}</option>
+          </select>
+
+          <div class="row">
+            <div class="col-md-6">
+              <label for="firstName" class="visually-hidden">{{ 'contact.form.first_name' | t }}</label>
+              <input type="text" placeholder="{{ 'contact.form.first_name' | t }}" value="{% if customer %}{{ customer.first_name }}{% endif %}" name="$first_name" id="firstName" autocorrect="off" autocapitalize="off" required>
+            </div>
+
+            <div class="col-md-6">
+              <label for="lastName" class="visually-hidden">{{ 'contact.form.last_name' | t }}</label>
+              <input type="text" placeholder="{{ 'contact.form.last_name' | t }}" value="{% if customer %}{{ customer.last_name }}{% endif %}" name="$last_name" id="lastName" autocorrect="off" autocapitalize="off" required>
+            </div>
+          </div>
+
+          <label for="email" class="visually-hidden">{{ 'contact.form.email' | t }}</label>
+          <input type="email" placeholder="{{ 'contact.form.email' | t }}" value="{% if customer %}{{ customer.email }}{% endif %}" name="email" id="email" autocorrect="off" autocapitalize="off" required>
+
+          <div class="optional-fields optional-fields-catalog optional-fields-product-question optional-fields-order-help optional-fields-return-exchange optional-fields-retailer optional-fields-charitable optional-fields-corporate">
+            <label for="phone" class="visually-hidden">{{ 'contact.form.phone' | t }}</label>
+            <input type="text" placeholder="{{ 'contact.form.phone' | t }}" value="{% if customer %}{{ customer.phone }}{% endif %}" name="$phone_number" id="phone" autocorrect="off" autocapitalize="off" pattern="[0-9\-]*">
+          </div>
+
+          <div class="optional-fields optional-fields-order-help optional-fields-return-exchange visually-hidden">
+            <label for="orderNumber" class="visually-hidden">{{ 'contact.form.order_number' | t }}</label>
+            <input type="number" name="order_number" id="orderNumber" placeholder="{{ 'contact.form.order_number' | t }}" pattern="[0-9\-]*">
+          </div>
+
+          <div class="optional-fields optional-fields-retailer visually-hidden">
+            <label for="retailerStoreName" class="visually-hidden">{{ 'contact.form.name_of_store' | t }}</label>
+            <input type="text" name="retailer_store_name" id="retailerStoreName" placeholder="{{ 'contact.form.name_of_store' | t }}">
+          </div>
+
+          <div class="optional-fields optional-fields-retailer visually-hidden">
+            <label for="retailerWebsite" class="visually-hidden">{{ 'contact.form.your_website' | t }}</label>
+            <input type="url" name="retailer_website" id="retailerWebsite" placeholder="{{ 'contact.form.your_website' | t }}">
+          </div>
+
+          <div class="optional-fields optional-fields-return-exchange visually-hidden">
+            <label for="contactFormOrderDate" class="visually-hidden">{{ 'contact.form.order_date' | t }}</label>
+            <input type="date" name="order_date" id="contactFormOrderDate" placeholder="{{ 'contact.form.order_date' | t }}">
+          </div>
+
+          <div class="optional-fields optional-fields-charitable">
+            <label for="organization" class="visually-hidden">{{ 'contact.form.organization' | t }}</label>
+            <input type="text" name="organization" id="organization" placeholder="{{ 'contact.form.organization' | t }}">
+          </div>
+
+          <div class="optional-fields optional-fields-charitable">
+            <label for="donationType" class="visually-hidden">{{ 'contact.form.donation_type' | t }}</label>
+            <input type="text" name="donation_type" id="donationType" placeholder="{{ 'contact.form.donation_type' | t }}">
+          </div>
+
+          <div class="optional-fields optional-fields-charitable visually-hidden">
+            <label for="eventDate" class="visually-hidden">{{ 'contact.form.event_date' | t }}</label>
+            <input type="date" class="" name="event_date" id="eventDate" placeholder="{{ 'contact.form.event_date' | t }}">
+          </div>
+
+          <div class="optional-fields optional-fields-catalog optional-fields-retailer optional-fields-other optional-fields-charitable optional-fields-other visually-hidden">
+            <label for="addressLine1" class="visually-hidden">{{ 'contact.form.address_line_1' | t }}</label>
+            <input type="text" placeholder="{{ 'contact.form.address_line_1' | t }}" name="address_line_1" id="addressLine1" autocorrect="off" autocapitalize="off">
+
+            <label for="addressLine2" class="visually-hidden">{{ 'contact.form.address_line_2' | t }}</label>
+            <input type="text" placeholder="{{ 'contact.form.address_line_2' | t }}" name="address_line_2" id="addressLine2" autocorrect="off" autocapitalize="off">
+
+            <label for="city" class="visually-hidden">{{ 'contact.form.city' | t }}</label>
+            <input type="text" placeholder="{{ 'contact.form.city' | t }}" name="city" id="city" autocorrect="off" autocapitalize="off">
+
+            <label for="state" class="visually-hidden">{{ 'contact.form.state' | t }}</label>
+            <input type="text" placeholder="{{ 'contact.form.state' | t }}" name="state" id="state" autocorrect="off" autocapitalize="off">
+
+            <label for="zip" class="visually-hidden">{{ 'contact.form.zip' | t }}</label>
+            <input type="text" placeholder="{{ 'contact.form.zip' | t }}" name="zip" id="zip" autocorrect="off" autocapitalize="off">
+
+            <div class="optional-fields optional-fields-retailer visually-hidden">
+              <label for="retailerCurrentApparel" class="visually-hidden">{{ 'contact.form.other_apparel' | t }}</label>
+              <textarea name="retailer_current_apparel" id="retailerCurrentApparel" rows="5" placeholder="{{ 'contact.form.other_apparel' | t }}"></textarea>
+            </div>
+
+            <div class="optional-fields optional-fields-retailer visually-hidden">
+              <label for="retailerCloseBy" class="visually-hidden">{{ 'contact.form.retail_close_by' | t }}</label>
+              <textarea name="retailer_close_by" id="retailerCloseBy" rows="5" placeholder="{{ 'contact.form.retail_close_by' | t }}"></textarea>
+            </div>
+
+            <div class="optional-fields optional-fields-retailer visually-hidden">
+              <label for="retailerInterestedLines" class="visually-hidden">{{ 'contact.form.interested_lines' | t }}</label>
+              <textarea name="retailer_interested_lines" id="retailerInterestedLines" rows="5" placeholder="{{ 'contact.form.interested_lines' | t }}"></textarea>
+            </div>
+          </div>
+
+          <div class="optional-fields optional-fields-ambassador visually-hidden">
+            <label for="instagramHandle" class="visually-hidden">{{ 'contact.ambassador.instagram_handle' | t }}</label>
+            <input type="text" name="instagram_handle" id="instagramHandle" placeholder="{{ 'contact.ambassador.instagram_handle' | t }}">
+            <small>
+              <strong>
+                {{ 'contact.ambassador.instagram_disclaimer' | t }}
+              </strong>
+            </small>
+          </div>
+
+          <div class="optional-fields optional-fields-ambassador visually-hidden">
+            <label for="followersCount" class="visually-hidden">{{ 'contact.ambassador.follower_count' | t }}</label>
+            <input type="text" name="follower_count" id="followersCount" placeholder="{{ 'contact.ambassador.follower_count' | t }}">
+          </div>
+
+          <div class="optional-fields optional-fields-ambassador visually-hidden">
+            <label for="sport" class="visually-hidden">{{ 'contact.ambassador.sport' | t }}</label>
+            <input type="text" name="sport" id="sport" placeholder="{{ 'contact.ambassador.sport' | t }}">
+            <small>
+              <strong>
+                {{ 'contact.ambassador.sport_disclaimer' | t }}
+              </strong>
+            </small>
+          </div>
+
+          <div class="optional-fields optional-fields-ambassador visually-hidden">
+            <label for="description" class="visually-hidden">{{ 'contact.ambassador.description' | t }}</label>
+            <textarea rows="3" name="description" id="description" placeholder="{{ 'contact.ambassador.description' | t }}"></textarea>
+          </div>
+
+          <div class="optional-fields optional-fields-ambassador visually-hidden">
+            <label for="instagramHandle" class="visually-hidden">{{ 'contact.ambassador.college' | t }}</label>
+            <input type="text" name="college" id="college" placeholder="{{ 'contact.ambassador.college' | t }}">
+          </div>
+
+          <div class="optional-fields optional-fields-ambassador visually-hidden">
+            <label for="age" class="visually-hidden">{{ 'contact.ambassador.age' | t }}</label>
+            <input type="text" name="age" id="age" placeholder="{{ 'contact.ambassador.age' | t }}">
+          </div>
+
+          <div class="optional-fields optional-fields-ambassador visually-hidden">
+            <label for="ambassadorCity" class="visually-hidden">{{ 'contact.ambassador.city' | t }}</label>
+            <input type="text" name="ambassador_city" id="ambassadorCity" placeholder="{{ 'contact.ambassador.city' | t }}">
+          </div>
+
+          <div class="optional-fields optional-fields-ambassador visually-hidden">
+            <label for="ambassadorState" class="visually-hidden">{{ 'contact.ambassador.state' | t }}</label>
+            <input type="text" class="field__input" placeholder="{{ 'contact.ambassador.state' | t }}" name="ambassador_state" id="ambassadorState" autocorrect="off" autocapitalize="off">
+          </div>
+
+          <div class="optional-fields optional-fields-ambassador visually-hidden">
+            <label class="heading-5">{{ 'contact.ambassador.brand_title' | t }}</label>
+
+            <div class="checkbox">
+              <input type="checkbox" name="college_ambassador" id="collegeAmbassador" value="Yes">
+              <label for="collegeAmbassador">{{ 'contact.ambassador.college_ambassador' | t }}</label>
+              <span class="checkmark"></span>
+            </div>
+
+            <div class="checkbox">
+              <input type="checkbox" name="college_athlete_ambassador" id="collegeAthleteAmbassador" value="Yes">
+              <label for="collegeAthleteAmbassador">{{ 'contact.ambassador.college_athlete_ambassador' | t }}</label>
+              <span class="checkmark"></span>
+            </div>
+
+            <div class="checkbox">
+              <input type="checkbox" name="lifestyle_ambassador" id="lifestyleAmbassador" value="Yes">
+              <label for="lifestyleAmbassador">{{ 'contact.ambassador.lifestyle_ambassador' | t }}</label>
+              <span class="checkmark"></span>
+            </div>
+
+            <div class="checkbox">
+              <input type="checkbox" name="signature_store_ambassador" id="signatureStoreAmbassador" value="Yes">
+              <label for="signatureStoreAmbassador">{{ 'contact.ambassador.store_ambassador' | t }}</label>
+              <span class="checkmark"></span>
+            </div>
+
+            <br>
+          </div>
+
+          <div class="optional-fields optional-fields-corporate">
+            <label for="company" class="visually-hidden">{{ 'contact.corporate.company' | t }}</label>
+            <input type="text" name="company" id="company" placeholder="{{ 'contact.corporate.company' | t }}">
+          </div>
+
+          <div class="optional-fields-corporate visually-hidden">
+            <label for="purposeOfPurchase" class="visually-hidden">{{ 'contact.corporate.purpose_of_order' | t }}</label>
+            <textarea name="purpose_of_purchase" id="purposeOfPurchase" rows="1" placeholder="{{ 'contact.corporate.purpose_of_order' | t }}"></textarea>
+          </div>
+
+          <div class="optional-fields optional-fields-corporate visually-hidden">
+            <label class="heading-5">{{ 'contact.corporate.categories_of_interest' | t }}</label>
+
+            <div class="checkbox">
+              <input type="checkbox" name="polos_category" id="polosCategory" value="Yes">
+              <label for="polosCategory">{{ 'contact.corporate.polos' | t }}</label>
+              <span class="checkmark"></span>
+            </div>
+
+            <div class="checkbox">
+              <input type="checkbox" name="sports_shirt_category" id="sportsShirtCategory" value="Yes">
+              <label for="sportsShirtCategory">{{ 'contact.corporate.sport_shirts' | t }}</label>
+              <span class="checkmark"></span>
+            </div>
+
+            <div class="checkbox">
+              <input type="checkbox" name="pullovers_category" id="pulloversCategory" value="Yes">
+              <label for="pulloversCategory">{{ 'contact.corporate.pullovers' | t }}</label>
+              <span class="checkmark"></span>
+            </div>
+
+            <div class="checkbox">
+              <input type="checkbox" name="vests_category" id="vestsCategory" value="Yes">
+              <label for="vestsCategory">{{ 'contact.corporate.vests' | t }}</label>
+              <span class="checkmark"></span>
+            </div>
+
+            <div class="checkbox">
+              <input type="checkbox" name="womens_category" id="womensCategory" value="Yes">
+              <label for="womensCategory">{{ 'contact.corporate.womens' | t }}</label>
+              <span class="checkmark"></span>
+            </div>
+
+            <div class="checkbox">
+              <input type="checkbox" name="hats_and_visors_category" id="hatsAndVisorsCategory" value="Yes">
+              <label for="hatsAndVisorsCategory">{{ 'contact.corporate.hats_visors' | t }}</label>
+              <span class="checkmark"></span>
+            </div>
+
+            <br>
+          </div>
+
+          <div class="optional-fields optional-fields-corporate">
+            <label for="totalQuantityEstimate" class="visually-hidden">{{ 'contact.corporate.total_quantity_estimate' | t }}</label>
+            <input type="text" name="total_quantity_estimate" id="totalQuantityEstimate" placeholder="{{ 'contact.corporate.total_quantity_estimate' | t }}">
+          </div>
+
+          <div class="optional-fields-corporate visually-hidden">
+            <label for="inHandDate" class="visually-hidden">{{ 'contact.corporate.in_hand_date' | t }}</label>
+            <input type="date" name="in_hand_date" id="inHandDate" placeholder="{{ 'contact.corporate.in_hand_date' | t }}">
+          </div>
+
+          <div class="optional-fields-corporate visually-hidden">
+            <label for="additionalComments" class="visually-hidden">{{ 'contact.corporate.additional_comments' | t }}</label>
+            <textarea name="additional_comments" id="additionalComments" rows="10" placeholder="{{ 'contact.corporate.additional_comments' | t }}"></textarea>
+          </div>
+
+          <div class="optional-fields optional-fields-product-question optional-fields-order-help optional-fields-return-exchange optional-fields-other optional-fields-charitable visually-hidden">
+            <label for="message" class="visually-hidden">{{ 'contact.form.message' | t }}</label>
+            <textarea name="message" id="message" rows="10" placeholder="{{ 'contact.form.message' | t }}"></textarea>
+          </div>
+
+          <div class="klaviyo_messages">
+            <div class="success_message form-success" style="display:none;" data-klaviyo-success-message></div>
+            <div class="error_message form-errors" style="display:none;" data-klaviyo-error-message></div>
+          </div>
+
+          <input type="submit" class="btn" value="{{ 'contact.form.send' | t }}">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="//www.klaviyo.com/media/js/public/klaviyo_subscribe.js"></script>
+<script type="text/javascript">
+  KlaviyoSubscribe.attachToForms('#contact_form', {
+    hide_form_on_success: true,
+    success_message: "Thank you for contacting us!",
+    extra_properties: {}
+  });
+</script>
+
+<script>
+  const dropDown = document.getElementById('ContactFormSubject');
+  const contactForm = document.querySelector('[data-contact-form]');
+  const klaviyoListID = document.querySelector('[data-list-id-klaviyo]');
+  const formValuesKlaviyo = document.querySelector('[data-form-values-klaviyo]');
+  const klaviyoSuccess = document.querySelector('[data-klaviyo-success-message]');
+  const klaviyoError = document.querySelector('[data-klaviyo-error-message]');
+
+  function formOption() {
+    const formType = dropDown.options[dropDown.selectedIndex].dataset.subject;
+    const optionalFields = document.querySelectorAll('.optional-fields');
+
+    formValuesKlaviyo.value = dropDown.options[dropDown.selectedIndex].getAttribute('data-form-values');
+
+    let listID = dropDown.options[dropDown.selectedIndex].getAttribute('data-list-id');
+    klaviyoListID.value = listID;
+
+    let regx = new RegExp('\\b' + 'klaviyo_gdpr_embed_' + '.*?\\b', 'g');
+    contactForm.className = contactForm.className.replace(regx, `klaviyo_gdpr_embed_${listID}`);
+
+    optionalFields.forEach(function (optionalField) {
+      if (optionalField.classList.contains('optional-fields-' + formType)) {
+        optionalField.classList.remove('visually-hidden');
+      } else {
+        optionalField.classList.add('visually-hidden');
+      }
+    });
+
+    klaviyoSuccess.innerHTML = '';
+    klaviyoSuccess.style.display = 'none';
+    klaviyoError.innerHTML = '';
+    klaviyoError.style.display = 'none';
+  }
+
+  dropDown.addEventListener('change', formOption);
+
+  // Capture subject in local storage for post-submission use
+  document.querySelector('#ContactFormSubject').addEventListener('change', function() {
+    localStorage.setItem('contactFormSubject', document.querySelector('#ContactFormSubject').value);
+  });
+
+  // Update form if url contains #ambassador
+  if(window.location.href.includes('#ambassador')) {
+    var event = new Event('change');
+    document.querySelector('#ContactFormSubject').value = 'Ambassador Application';
+    document.querySelector('#ContactFormSubject').dispatchEvent(event);
+  }
+
+  // Update form if url contains #corporate
+  if(window.location.href.includes('#corporate')) {
+    var event = new Event('change');
+    document.querySelector('#ContactFormSubject').value = 'Corporate Orders';
+    document.querySelector('#ContactFormSubject').dispatchEvent(event);
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Contact Us Page",
+  "settings": [
+    {
+      "type": "text",
+      "id": "klaviyo_list_id_request_catalog",
+      "label": "Kalviyo List ID - Request Catalog",
+      "default": "SC8nBe"
+    },
+    {
+      "type": "text",
+      "id": "klaviyo_list_id_product_question",
+      "label": "Kalviyo List ID - Product Question",
+      "default": "WiUE3L"
+    },
+    {
+      "type": "text",
+      "id": "klaviyo_list_id_order_help",
+      "label": "Kalviyo List ID - Order Help",
+      "default": "TxDGqp"
+    },
+    {
+      "type": "text",
+      "id": "klaviyo_list_id_return_exchange",
+      "label": "Kalviyo List ID - Returns/Exchange",
+      "default": "Ur3g5z"
+    },
+    {
+      "type": "text",
+      "id": "klaviyo_list_id_become_retailer",
+      "label": "Kalviyo List ID - Become Retailer",
+      "default": "UXiyiP"
+    },
+    {
+      "type": "text",
+      "id": "klaviyo_list_id_charitable_contribution",
+      "label": "Kalviyo List ID - Charitable Contribution",
+      "default": "Wt7Uyg"
+    },
+    {
+      "type": "text",
+      "id": "klaviyo_list_id_ambassador_application",
+      "label": "Kalviyo List ID - Ambassador Application",
+      "default": "XuVuQr"
+    },
+    {
+      "type": "text",
+      "id": "klaviyo_list_id_corporate_orders",
+      "label": "Kalviyo List ID - Corporate Orders",
+      "default": "UzAwAY"
+    },
+    {
+      "type": "text",
+      "id": "klaviyo_list_id_general",
+      "label": "Kalviyo List ID - General (Other)",
+      "default": "Sxx45E"
+    }
+  ]
+}
+{% endschema %}

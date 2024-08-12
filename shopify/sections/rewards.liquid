@@ -1,0 +1,21 @@
+<script src="https://cdn-widgetsrepository.yotpo.com/v1/loader/sVbu3vt-5gD6aNK67ci-ig" async></script>
+
+{{ 'sections.rewards.css' | asset_url | stylesheet_tag }}
+
+<div class="rewards rewards--{{ template.name }}">
+  <div class="yotpo-widget-instance" data-yotpo-instance-id="{{ section.settings.yotpo_instance_id }}"></div>
+</div>
+
+{% schema %}
+  {
+    "name": "Rewards",
+    "settings": [
+      {
+        "type": "text",
+        "id": "yotpo_instance_id",
+        "label": "Yotpo Instance ID",
+        "default": "40083"
+      }
+    ]
+  }
+{% endschema %}

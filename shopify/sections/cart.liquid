@@ -1,0 +1,172 @@
+{{ 'sections.cart.css' | asset_url | stylesheet_tag }}
+
+<custom-cart class="cart" role="region" aria-label="{{ 'cart.general.title' | t }}"
+  data-spend-x-get-y-or-z-gift-promo-active="{{ settings.enable_spend_x_get_y_or_z }}"
+  data-spend-threshold-gifts-promo-active="{{ settings.enable_spend_x_get_y }}"
+  data-giftcard-promo-active="{{ settings.enable_spend_x_get_y_gift_card }}"
+  data-spending-tiers-promo-active="{{ settings.enable_spend_x_get_y_off }}"
+>
+  <div class="container">
+    <hide-if-cart-empty>
+      <div class="row">
+        <div class="col-md-6 col-lg-8">
+          <div class="cart__title-wrapper">
+            <h1 class="cart__title heading-5 heading-lg-4">
+              {{ 'cart.general.title' | t }}
+
+              <hide-if-cart-empty>
+                <span>
+                (<cart-count>{{ cart.item_count }}</cart-count>)
+                </span>
+              </hide-if-cart-empty>
+            </h1>
+
+            <div class="d-md-none">
+              {% render 'ajaxcart-fsb' %}
+            </div>
+          </div>
+
+          {% if settings.enable_cpb_page and settings.cpb_page_location == 'top' %}
+            {% render 'cart-promo-banner' with key: 'page' %}
+          {% endif %}
+
+          {% render 'cart-rewards' %}
+          {% render 'cart-free-gift' %}
+
+          <cart-items class="cart__items ajaxcart__items">
+            {% comment %}
+              Cart Items Generated From src/scripts/cart/components/cart-items.js
+            {% endcomment %}
+            <div class="cart-loading" data-cart-loading>Loading..</div>
+          </cart-items>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <h2 class="heading-4 d-none d-md-block">
+            {{ 'cart.general.order_summary' | t }}
+          </h2>
+
+          <div class="cart__sidebar">
+            <div class="d-none d-md-block">
+              {% render 'ajaxcart-fsb' %}
+            </div>
+
+            {% if settings.free_shipping_enable == true %}
+              <show-if-cart-over data-threshold="{{ settings.free_shipping_threshold }}" class="ajaxcart__summary-item hide">
+                <strong>{{ 'cart.general.shipping' | t }}</strong>
+                <span>{{ settings.free_shipping_text | default: 'Free' }}</span>
+              </show-if-cart-over>
+            {% endif %}
+
+            <p class="ajaxcart__summary-item">
+              <strong>{{ 'cart.general.subtotal' | t }}</strong>
+              <span><cart-total>{{ cart.total_price | money }}</cart-total></span>
+            </p>
+
+            <p class="ajaxcart__summary-item">
+              <strong>{{ 'cart.general.tax' | t }}</strong>
+              <span>{{ 'cart.general.calculated_at_checkout' | t }}</span>
+            </p>
+
+            <button class="ajaxcart__summary-item cart__shipping-estimate-toggle" type="button" aria-label="Toggle shipping calculator" data-cart-shipping-estimate-toggle>
+              <strong>{{ 'cart.general.shipping_estimate' | t }}</strong>
+              <span>
+                {% render 'icon-chevron-down' %}
+              </span>
+            </button>
+
+            <div class="cart__shipping-estimate hide" data-cart-shipping-estimate>
+              <form class="cart__shipping-estimate-form" data-cart-shipping-estimate-form>
+                <div class="hide">
+                  <select name="country" aria-label="Select Your Country"></select>
+                </div>
+
+                <select name="province" aria-label="Select Your State / Province"></select>
+
+                <div>
+                  <input type="text" name="zip" placeholder="Zip Code" aria-label="Your Zipcode">
+
+                  <button class="btn btn--outline" type="submit">
+                    {{ 'cart.general.calculate' | t }}
+                  </button>
+                </div>
+              </form>
+
+              <ul class="cart__shipping-estimate-results" data-cart-shipping-estimate-results></ul>
+            </div>
+
+            <div class="cart__sidebar-summary">
+              <show-if-cart-discounts class="cart__sidebar-summary-item">
+                <strong>{{ 'cart.general.discounts' | t }}</strong>
+                <strong>-<cart-discounts>{{ cart.total_discount | money }}</cart-discounts></strong>
+              </show-if-cart-discounts>
+
+              <p class="cart__sidebar-summary-item cart__sidebar-summary-item--total">
+                <strong>{{ 'cart.general.order_total' | t }}</strong>
+                <strong><cart-total>{{ cart.total_price | money }}</cart-total></strong>
+              </p>
+            </div>
+
+            <p class="p--small">{{ settings.cart_disclaimer }}</p>
+
+            <p class="cart__sidebar-dislcaimer text-center p--small">
+              {{ 'cart.general.cart_disclaimer' | t }}
+            </p>
+
+            <a class="btn btn--primary btn--full cart_checkout" href="/checkout" class="btn btn--primary" data-checkout-link>
+              {{ 'cart.general.proceed_to_checkout' | t }}
+            </a>
+
+            <div class="text-center">
+              <a class="cart__sidebar-cta ui-link" href="{{ settings.empty_cta_url }}">
+                {{ settings.empty_cta_text }}
+              </a>
+            </div>
+          </div>
+
+          {% if settings.enable_cpb_page and settings.cpb_page_location == 'side' %}
+            {% render 'cart-promo-banner' with key: 'page' %}
+          {% endif %}
+        </div>
+      </div>
+    </hide-if-cart-empty>
+
+    {% render 'ajaxcart-empty' %}
+  </div>
+</custom-cart>
+
+{% comment %}Start Afterpay{% endcomment %}
+<script type="text/javascript" src="https://static-us.afterpay.com/javascript/present-afterpay.js"></script>
+
+<script type="text/javascript">
+  const customCartEl = document.querySelector('custom-cart')
+
+  customCartEl.addEventListener('cartUpdate', ({ detail: { cartData } }) => {
+    const oldAfterPayWidget = document.querySelector('.afterpay-paragraph')
+
+    if (oldAfterPayWidget) {
+      oldAfterPayWidget.remove();
+    }
+
+    const isGiftCard = (item) => item.product_type === "Gift Card";
+    const hasGiftCardItem = cartData.items.some(isGiftCard);
+
+    const apConfig = {
+      priceSelector: '.cart__sidebar-summary-item--total',
+      amount: cartData.total_price,
+      locale: 'en_US',
+      currency: 'USD',
+      giftCard: hasGiftCardItem,
+      showUpperLimit: false,
+      afterpayLogoColor: 'black',
+      minMaxThreshold: {
+        min: 5000,
+        max: 100000,
+      },
+    };
+
+    new presentAfterpay(apConfig).init();
+  })
+</script>
+
+{{ 'sections.cart.js' | asset_url | script_tag }}

@@ -1,0 +1,164 @@
+<script src="{{ 'sections.limespot.js' | asset_url }}" defer="defer"></script>
+{{ 'sections.limespot.css' | asset_url | stylesheet_tag }}
+
+{% if template == 'cart' %}
+  <hide-if-cart-empty>
+{% endif %}
+
+<div class="limespot limespot--{{ section.id }}">
+  <limespot></limespot>
+</div>
+
+{% if template == 'cart' %}
+  </hide-if-cart-empty>
+{% endif %}
+
+{% render 'section-spacing', section_name: 'limespot' %}
+
+{% schema %}
+  {
+    "settings": [
+      {
+        "type": "header",
+        "content": "Section Margin"
+      },
+      {
+        "type": "select",
+        "id": "margin_top",
+        "label": "Margin Top",
+        "default": "default",
+        "options": [
+          {"value": "default", "label": "Theme Default"},
+          {"value": "0", "label": "None"},
+          {"value": "8px", "label": "8px"},
+          {"value": "16px", "label": "16px"},
+          {"value": "32px", "label": "32px"},
+          {"value": "48px", "label": "48px"},
+          {"value": "64px", "label": "64px"},
+          {"value": "102px", "label": "102px"}
+        ]
+      },
+      {
+        "type": "select",
+        "id": "margin_top_mobile",
+        "label": "Margin Top Mobile",
+        "default": "default",
+        "options": [
+          {"value": "default", "label": "Theme Default"},
+          {"value": "0", "label": "None"},
+          {"value": "8px", "label": "8px"},
+          {"value": "16px", "label": "16px"},
+          {"value": "32px", "label": "32px"},
+          {"value": "48px", "label": "48px"},
+          {"value": "64px", "label": "64px"},
+          {"value": "102px", "label": "102px"}
+        ]
+      },
+      {
+        "type": "select",
+        "id": "margin_bottom",
+        "label": "Margin Bottom",
+        "default": "default",
+        "options": [
+          {"value": "default", "label": "Theme Default"},
+          {"value": "0", "label": "None"},
+          {"value": "8px", "label": "8px"},
+          {"value": "16px", "label": "16px"},
+          {"value": "32px", "label": "32px"},
+          {"value": "48px", "label": "48px"},
+          {"value": "64px", "label": "64px"},
+          {"value": "102px", "label": "102px"}
+        ]
+      },
+      {
+        "type": "select",
+        "id": "margin_bottom_mobile",
+        "label": "Margin Bottom Mobile",
+        "default": "default",
+        "options": [
+          {"value": "default", "label": "Theme Default"},
+          {"value": "0", "label": "None"},
+          {"value": "8px", "label": "8px"},
+          {"value": "16px", "label": "16px"},
+          {"value": "32px", "label": "32px"},
+          {"value": "48px", "label": "48px"},
+          {"value": "64px", "label": "64px"},
+          {"value": "102px", "label": "102px"}
+        ]
+      },
+      {
+        "type": "header",
+        "content": "Section Padding"
+      },
+      {
+        "type": "select",
+        "id": "padding_top",
+        "label": "Padding Top",
+        "default": "default",
+        "options": [
+          {"value": "default", "label": "Theme Default"},
+          {"value": "0", "label": "None"},
+          {"value": "8px", "label": "8px"},
+          {"value": "16px", "label": "16px"},
+          {"value": "32px", "label": "32px"},
+          {"value": "48px", "label": "48px"},
+          {"value": "64px", "label": "64px"},
+          {"value": "102px", "label": "102px"}
+        ]
+      },
+      {
+        "type": "select",
+        "id": "padding_top_mobile",
+        "label": "Padding Top Mobile",
+        "default": "default",
+        "options": [
+          {"value": "default", "label": "Theme Default"},
+          {"value": "0", "label": "None"},
+          {"value": "8px", "label": "8px"},
+          {"value": "16px", "label": "16px"},
+          {"value": "32px", "label": "32px"},
+          {"value": "48px", "label": "48px"},
+          {"value": "64px", "label": "64px"},
+          {"value": "102px", "label": "102px"}
+        ]
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom",
+        "label": "Padding Bottom",
+        "default": "default",
+        "options": [
+          {"value": "default", "label": "Theme Default"},
+          {"value": "0", "label": "None"},
+          {"value": "8px", "label": "8px"},
+          {"value": "16px", "label": "16px"},
+          {"value": "32px", "label": "32px"},
+          {"value": "48px", "label": "48px"},
+          {"value": "64px", "label": "64px"},
+          {"value": "102px", "label": "102px"}
+        ]
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom_mobile",
+        "label": "Padding Bottom Mobile",
+        "default": "default",
+        "options": [
+          {"value": "default", "label": "Theme Default"},
+          {"value": "0", "label": "None"},
+          {"value": "8px", "label": "8px"},
+          {"value": "16px", "label": "16px"},
+          {"value": "32px", "label": "32px"},
+          {"value": "48px", "label": "48px"},
+          {"value": "64px", "label": "64px"},
+          {"value": "102px", "label": "102px"}
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Limespot"
+      }
+    ]
+  }
+{% endschema %}

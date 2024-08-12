@@ -1,0 +1,300 @@
+<script src="{{ 'sections.featured-articles.js' | asset_url }}" defer="defer"></script>
+{{ 'sections.featured-articles.css' | asset_url | stylesheet_tag }}
+
+<div class="featured-articles featured-articles--{{ section.id }}" role="region" aria-label="Featured Articles">
+  <div class="container">
+    <div class="featured-articles__header">
+      <h2 class="heading-3 heading-lg-2">
+        {{ section.settings.headline }}
+      </h2>
+
+      <a class="ui-link" href="{{ section.settings.cta_link }}" title="{{ section.settings.cta_text }}">
+        {{ section.settings.cta_text }}
+      </a>
+    </div>
+
+    <div class="swiper-container d-lg-none" data-featured-articles-carousel>
+      <div class="swiper-wrapper">
+        {% if section.settings.featured_article != blank %}
+          {% assign article = articles[section.settings.featured_article] %}
+
+          <div class="swiper-slide">
+            {% render 'blog-article', article: article %}
+          </div>
+        {% endif %}
+
+        {% assign article_count = 0 %}
+
+        {% for article in blogs[section.settings.featured_blog].articles %}
+          {% unless article.handle == articles[section.settings.featured_article].handle %}
+            {% assign article_count = article_count | plus: 1 %}
+
+            {% if article_count > section.settings.article_limit %}
+              {% break %}
+            {% else %}
+              <div class="swiper-slide">
+                {% render 'blog-article', article: article %}
+              </div>
+            {% endif %}
+          {% endunless %}
+        {% endfor %}
+      </div>
+
+      <div class="swiper-scrollbar" data-featured-articles-scrollbar></div>
+    </div>
+
+    <div class="row d-none d-lg-flex">
+      {% if section.settings.featured_article != blank %}
+        {% assign article = articles[section.settings.featured_article] %}
+
+        <div class="col-7">
+          <a class="featured-article image-link" href="{{ article.url }}" title="{{ article.title }}">
+            <div class="featured-article__image img-cover">
+              {{ section.settings.featured_article_image | image_url: width: 600 | image_tag: loading: 'lazy' }}
+            </div>
+
+            {% if section.settings.featured_article_overlay_opacity >= 1 %}
+              <div class="featured-article__overlay"></div>
+
+              <style>
+                .featured-articles--{{ section.id }} .featured-article__overlay {
+                  opacity: {{ section.settings.featured_article_overlay_opacity | times: 10 }}%;
+                }
+              </style>
+            {% endif %}
+
+            <div class="featured-article__content">
+              <span class="featured-article__title heading-3">
+                {{ article.title }}
+              </span>
+
+              {% if article.metafields.custom_fields['read_time'] != blank %}
+                <span class="ui-link">
+                  {{ article.metafields.custom_fields['read_time'] }} {{ 'blogs.article.min_read' | t }}
+                </span>
+              {% endif %}
+            </div>
+          </a>
+        </div>
+
+        <div class="col-5">
+          {% assign article_count = 0 %}
+
+          {% for article in blogs[section.settings.featured_blog].articles %}
+            {% unless article.handle == articles[section.settings.featured_article].handle %}
+              {% assign article_count = article_count | plus: 1 %}
+
+              {% if article_count > section.settings.article_limit %}
+                {% break %}
+              {% else %}
+                {% render 'blog-article', article: article, horizontal: true %}
+              {% endif %}
+            {% endunless %}
+          {% endfor %}
+        </div>
+      {% else %}
+        {% for article in blogs[section.settings.featured_blog].articles limit: section.settings.article_limit %}
+          <div class="col-4">
+            {% render 'blog-article', article: article %}
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% include 'section-spacing', section_name: 'featured-articles' %}
+
+{% schema %}
+  {
+    "settings": [
+      {
+        "type": "text",
+        "id": "headline",
+        "label": "Headline"
+      },
+      {
+        "type": "text",
+        "id": "cta_text",
+        "label": "CTA Text"
+      },
+      {
+        "type": "url",
+        "id": "cta_link",
+        "label": "CTA Link"
+      },
+      {
+        "type": "number",
+        "id": "article_limit",
+        "label": "Article Limit",
+        "default": 3
+      },
+      {
+        "type": "article",
+        "id": "featured_article",
+        "label": "Featured Article"
+      },
+      {
+        "type": "image_picker",
+        "id": "featured_article_image",
+        "label": "Featured Article Image",
+        "info": "Dimensions 1450 x 916"
+      },
+      {
+        "type": "range",
+        "id": "featured_article_overlay_opacity",
+        "label": "Featured Article Overlay Opacity",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "default": 0
+      },
+      {
+        "type": "blog",
+        "id": "featured_blog",
+        "label": "Blog"
+      },
+      {
+        "type": "header",
+        "content": "Section Margin"
+      },
+      {
+        "type": "select",
+        "id": "margin_top",
+        "label": "Margin Top",
+        "default": "default",
+        "options": [
+          {"value": "default", "label": "Theme Default"},
+          {"value": "0", "label": "None"},
+          {"value": "8px", "label": "8px"},
+          {"value": "16px", "label": "16px"},
+          {"value": "32px", "label": "32px"},
+          {"value": "48px", "label": "48px"},
+          {"value": "64px", "label": "64px"},
+          {"value": "102px", "label": "102px"}
+        ]
+      },
+      {
+        "type": "select",
+        "id": "margin_top_mobile",
+        "label": "Margin Top Mobile",
+        "default": "default",
+        "options": [
+          {"value": "default", "label": "Theme Default"},
+          {"value": "0", "label": "None"},
+          {"value": "8px", "label": "8px"},
+          {"value": "16px", "label": "16px"},
+          {"value": "32px", "label": "32px"},
+          {"value": "48px", "label": "48px"},
+          {"value": "64px", "label": "64px"},
+          {"value": "102px", "label": "102px"}
+        ]
+      },
+      {
+        "type": "select",
+        "id": "margin_bottom",
+        "label": "Margin Bottom",
+        "default": "default",
+        "options": [
+          {"value": "default", "label": "Theme Default"},
+          {"value": "0", "label": "None"},
+          {"value": "8px", "label": "8px"},
+          {"value": "16px", "label": "16px"},
+          {"value": "32px", "label": "32px"},
+          {"value": "48px", "label": "48px"},
+          {"value": "64px", "label": "64px"},
+          {"value": "102px", "label": "102px"}
+        ]
+      },
+      {
+        "type": "select",
+        "id": "margin_bottom_mobile",
+        "label": "Margin Bottom Mobile",
+        "default": "default",
+        "options": [
+          {"value": "default", "label": "Theme Default"},
+          {"value": "0", "label": "None"},
+          {"value": "8px", "label": "8px"},
+          {"value": "16px", "label": "16px"},
+          {"value": "32px", "label": "32px"},
+          {"value": "48px", "label": "48px"},
+          {"value": "64px", "label": "64px"},
+          {"value": "102px", "label": "102px"}
+        ]
+      },
+      {
+        "type": "header",
+        "content": "Section Padding"
+      },
+      {
+        "type": "select",
+        "id": "padding_top",
+        "label": "Padding Top",
+        "default": "default",
+        "options": [
+          {"value": "default", "label": "Theme Default"},
+          {"value": "0", "label": "None"},
+          {"value": "8px", "label": "8px"},
+          {"value": "16px", "label": "16px"},
+          {"value": "32px", "label": "32px"},
+          {"value": "48px", "label": "48px"},
+          {"value": "64px", "label": "64px"},
+          {"value": "102px", "label": "102px"}
+        ]
+      },
+      {
+        "type": "select",
+        "id": "padding_top_mobile",
+        "label": "Padding Top Mobile",
+        "default": "default",
+        "options": [
+          {"value": "default", "label": "Theme Default"},
+          {"value": "0", "label": "None"},
+          {"value": "8px", "label": "8px"},
+          {"value": "16px", "label": "16px"},
+          {"value": "32px", "label": "32px"},
+          {"value": "48px", "label": "48px"},
+          {"value": "64px", "label": "64px"},
+          {"value": "102px", "label": "102px"}
+        ]
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom",
+        "label": "Padding Bottom",
+        "default": "default",
+        "options": [
+          {"value": "default", "label": "Theme Default"},
+          {"value": "0", "label": "None"},
+          {"value": "8px", "label": "8px"},
+          {"value": "16px", "label": "16px"},
+          {"value": "32px", "label": "32px"},
+          {"value": "48px", "label": "48px"},
+          {"value": "64px", "label": "64px"},
+          {"value": "102px", "label": "102px"}
+        ]
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom_mobile",
+        "label": "Padding Bottom Mobile",
+        "default": "default",
+        "options": [
+          {"value": "default", "label": "Theme Default"},
+          {"value": "0", "label": "None"},
+          {"value": "8px", "label": "8px"},
+          {"value": "16px", "label": "16px"},
+          {"value": "32px", "label": "32px"},
+          {"value": "48px", "label": "48px"},
+          {"value": "64px", "label": "64px"},
+          {"value": "102px", "label": "102px"}
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Featured Articles"
+      }
+    ]
+  }
+{% endschema %}

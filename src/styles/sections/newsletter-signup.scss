@@ -1,0 +1,77 @@
+/* ============================================================================
+  Newsletter Signup
+============================================================================== */
+
+.newsletter-signup {
+  padding: 48px 0;
+  background-color: $color-light-blue;
+  text-align: center;
+
+  @include media-query($min, $medium) {
+    padding: 32px 0;
+    text-align: left;
+  }
+
+  strong,
+  p {
+    color: $color-primary;
+  }
+
+  p {
+    max-width: 564px;
+    margin: 0 auto;
+
+    @include media-query($min, $medium) {
+      margin: 0;
+    }
+
+    br {
+      display: none;
+
+      @include media-query($min, $site-width) {
+        display: block;
+      }
+    }
+  }
+}
+
+.newsletter-signup__row {
+  align-items: center;
+}
+
+.newsletter-signup__title {
+  margin-bottom: 31px;
+
+  @include media-query($min, $medium) {
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+  }
+
+  .newsletter-signup__image-wrapper {
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: fit-content;
+    width: fit-content;
+    height: fit-content;
+
+    @include media-query($min, $medium) {
+      margin: 0;
+    }
+
+    img {
+      display: block;
+      width: 82px;
+      height: 63px;
+    }
+  }
+
+  strong {
+    @include media-query($min, $medium) {
+      max-width: 410px;
+      margin-left: 20px;
+      margin-bottom: 0;
+    }
+  }
+}

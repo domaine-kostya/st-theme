@@ -1,0 +1,302 @@
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "hero": {
+      "type": "hero",
+      "blocks": {
+        "6150ca78-c0ea-4249-8222-3b21e02e7434": {
+          "type": "hero_slide_banner",
+          "settings": {
+            "enable_full_width": true,
+            "background_image": "shopify:\/\/shop_images\/231118-hero-banner-bfcm_1_20e18f05-00e9-4539-b462-224387e03be3.jpg",
+            "mobile_background_image": "shopify:\/\/shop_images\/231118-hero-banner-bfcm-mobile_b59fa258-03d5-448f-b0fe-f4b1613bde2c.jpg",
+            "background_color": "#f2f2f2",
+            "overlay_opacity": 1,
+            "overlay_color": "linear-gradient(90deg, rgba(25, 38, 54, 1) 27%, rgba(255, 255, 255, 0) 62%)",
+            "overlay_opacity_mobile": 8,
+            "overlay_color_mobile": "linear-gradient(0deg, rgba(25, 38, 54, 1), rgba(255, 255, 255, 0) 53%)",
+            "mobile_headline": "Cyber Monday Is Here",
+            "headline": "Cyber Monday is Here",
+            "headline_color": "#ffffff",
+            "mobile_content": "Enjoy up to 65% total savings.",
+            "content": "Enjoy up to 65% total savings.",
+            "content_color": "#ffffff",
+            "cta_text": "",
+            "cta_link": "",
+            "cta_color": "#1c59a8",
+            "cta_text_color": "#1c59a8",
+            "cta_style": "outline",
+            "cta_2_text": "",
+            "cta_2_link": "",
+            "cta_2_color": "#1c59a8",
+            "cta_2_text_color": "#1c59a8",
+            "cta_2_style": "outline",
+            "cta_3_text": "",
+            "cta_3_link": "",
+            "cta_3_color": "#1c59a8",
+            "cta_3_text_color": "#1c59a8",
+            "show_buttons_on_separate_lines": false,
+            "cta_3_style": "outline",
+            "desktop_vertical_content_position": "middle",
+            "desktop_horizontal_content_position": "left",
+            "desktop_text_alignment": "left",
+            "mobile_vertical_content_position": "bottom",
+            "mobile_horizontal_content_position": "center",
+            "mobile_text_alignment": "center",
+            "desktop_height": "natural",
+            "mobile_height": "large"
+          }
+        }
+      },
+      "block_order": [
+        "6150ca78-c0ea-4249-8222-3b21e02e7434"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "margin_top": "0",
+        "margin_top_mobile": "0",
+        "margin_bottom": "0",
+        "margin_bottom_mobile": "0",
+        "padding_top": "0",
+        "padding_top_mobile": "0",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "bdf80c61-3b3f-4b37-8ed3-114cedb438f5": {
+      "type": "banner",
+      "custom_css": [
+        ".btn {text-wrap: wrap; text-decoration: underline; line-height: 1.2;}"
+      ],
+      "settings": {
+        "enable_full_width": false,
+        "background_color": "#192636",
+        "overlay_opacity": 0,
+        "overlay_color": "#313133",
+        "overlay_opacity_mobile": 0,
+        "overlay_color_mobile": "linear-gradient(90deg, rgba(49, 49, 51, 1), rgba(255, 255, 255, 0) 100%)",
+        "mobile_headline": "",
+        "headline": "",
+        "headline_color": "#ffffff",
+        "mobile_content": "Enjoy an Extra <b>35% OFF <\/b>  Sitewide + Free Ground Shipping. <i>Sitewide offer excludes Cyber Deals, Yeti, & Recess Products.<\/i>",
+        "content": "Enjoy an Extra <b>35% OFF <\/b>  Sitewide + Free Ground Shipping. <i>Sitewide offer excludes Cyber Deals Collection, E-Gift Cards, Yeti, & Recess Products.<\/i>",
+        "content_color": "#ffffff",
+        "cta_text": "See full terms",
+        "cta_link": "shopify:\/\/pages\/legal",
+        "cta_color": "rgba(0,0,0,0)",
+        "cta_text_color": "#ffffff",
+        "cta_style": "solid",
+        "cta_2_text": "",
+        "cta_2_link": "",
+        "cta_2_color": "#95ceeb",
+        "cta_2_text_color": "#ffffff",
+        "cta_2_style": "solid",
+        "cta_3_text": "",
+        "cta_3_link": "",
+        "cta_3_color": "#1c59a8",
+        "cta_3_text_color": "#1c59a8",
+        "show_buttons_on_separate_lines": true,
+        "cta_3_style": "outline",
+        "desktop_vertical_content_position": "middle",
+        "desktop_horizontal_content_position": "center",
+        "desktop_text_alignment": "center",
+        "mobile_vertical_content_position": "middle",
+        "mobile_horizontal_content_position": "center",
+        "mobile_text_alignment": "center",
+        "desktop_height": "natural",
+        "mobile_height": "small",
+        "margin_top": "16px",
+        "margin_top_mobile": "16px",
+        "margin_bottom": "16px",
+        "margin_bottom_mobile": "16px"
+      }
+    },
+    "06fcb7a8-3d46-402f-88fb-cfa07799ac6f": {
+      "type": "featured-collections",
+      "blocks": {
+        "3ed5abe1-64eb-40e1-a198-dd12abf3aa0a": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/231118-featured-collection-bf-savings.jpg",
+            "title": "",
+            "content": "",
+            "cta_text": "25% OFF Styles",
+            "link": "shopify:\/\/collections\/black-friday-savings"
+          }
+        },
+        "addc8adb-caf2-497e-b772-2bbe96f32c10": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/231118-featured-collection-mens-sail.jpg",
+            "title": "",
+            "content": "",
+            "cta_text": "Men's Sail Shop",
+            "link": "shopify:\/\/collections\/mens-sail-shop"
+          }
+        }
+      },
+      "block_order": [
+        "3ed5abe1-64eb-40e1-a198-dd12abf3aa0a",
+        "addc8adb-caf2-497e-b772-2bbe96f32c10"
+      ],
+      "settings": {
+        "headline": "Stack the Savings",
+        "headline_size": "small",
+        "content": "",
+        "section_width": "container",
+        "button_style": "link",
+        "margin_top": "16px",
+        "margin_top_mobile": "16px",
+        "margin_bottom": "16px",
+        "margin_bottom_mobile": "16px",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "6a36141f-0c75-4a3f-abf9-d31614552a30": {
+      "type": "featured-collections",
+      "blocks": {
+        "8b9c72fd-eb7f-4ba4-ba9c-94e730b15637": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/231118-featured-collection-womens-sail.jpg",
+            "title": "",
+            "content": "",
+            "cta_text": "Women's Sail Shop",
+            "link": "shopify:\/\/collections\/womens-sail-shop"
+          }
+        },
+        "32e7b27d-1c5a-4fdd-a061-10dca65ad033": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/231118-featured-collection-kids-sail.jpg",
+            "title": "",
+            "content": "",
+            "cta_text": "Kids' Sail Shop",
+            "link": "shopify:\/\/collections\/kids-sail-shop"
+          }
+        }
+      },
+      "block_order": [
+        "8b9c72fd-eb7f-4ba4-ba9c-94e730b15637",
+        "32e7b27d-1c5a-4fdd-a061-10dca65ad033"
+      ],
+      "settings": {
+        "headline": "",
+        "headline_size": "small",
+        "content": "",
+        "section_width": "container",
+        "button_style": "link",
+        "margin_top": "32px",
+        "margin_top_mobile": "32px",
+        "margin_bottom": "8px",
+        "margin_bottom_mobile": "8px",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "16px",
+        "padding_bottom_mobile": "16px"
+      }
+    },
+    "33ccea8e-538f-49bb-bd27-42d73c029633": {
+      "type": "featured-products",
+      "blocks": {
+        "e2334a4f-5b0b-47a6-950d-c20546a0fdeb": {
+          "type": "collection",
+          "settings": {
+            "collection": "cyber-deals",
+            "collection_title": "",
+            "enable_cta": true,
+            "cta_text": "Shop Now"
+          }
+        }
+      },
+      "block_order": [
+        "e2334a4f-5b0b-47a6-950d-c20546a0fdeb"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "headline": "Exclusive Cyber Deals",
+        "headline_size": "small",
+        "margin_top": "16px",
+        "margin_top_mobile": "16px",
+        "margin_bottom": "16px",
+        "margin_bottom_mobile": "16px",
+        "padding_top": "16px",
+        "padding_top_mobile": "0",
+        "padding_bottom": "0",
+        "padding_bottom_mobile": "0"
+      }
+    },
+    "5de8c4e0-cc08-4d0c-82c7-88c0ad4648d4": {
+      "type": "banner",
+      "custom_css": [
+
+      ],
+      "settings": {
+        "enable_full_width": true,
+        "background_image": "shopify:\/\/shop_images\/231118-banner-stores.jpg",
+        "mobile_background_image": "shopify:\/\/shop_images\/231118-banner-stores-mobile.jpg",
+        "background_color": "#f2f2f2",
+        "overlay_opacity": 1,
+        "overlay_color": "radial-gradient(rgba(25, 38, 54, 1), rgba(255, 255, 255, 0) 100%)",
+        "overlay_opacity_mobile": 6,
+        "overlay_color_mobile": "radial-gradient(rgba(25, 38, 54, 1), rgba(25, 38, 54, 0) 100%)",
+        "mobile_headline": "Shop In Store",
+        "headline": "Shop In Store",
+        "headline_color": "#ffffff",
+        "mobile_content": "",
+        "content": "",
+        "content_color": "#ffffff",
+        "cta_text": "Find Your Nearest Location",
+        "cta_link": "https:\/\/southerntide.com\/apps\/store-locator",
+        "cta_color": "#ffffff",
+        "cta_text_color": "#ffffff",
+        "cta_style": "outline",
+        "cta_2_text": "",
+        "cta_2_link": "",
+        "cta_2_color": "#1c59a8",
+        "cta_2_text_color": "#1c59a8",
+        "cta_2_style": "outline",
+        "cta_3_text": "",
+        "cta_3_link": "",
+        "cta_3_color": "#1c59a8",
+        "cta_3_text_color": "#1c59a8",
+        "show_buttons_on_separate_lines": false,
+        "cta_3_style": "outline",
+        "desktop_vertical_content_position": "middle",
+        "desktop_horizontal_content_position": "center",
+        "desktop_text_alignment": "center",
+        "mobile_vertical_content_position": "middle",
+        "mobile_horizontal_content_position": "center",
+        "mobile_text_alignment": "center",
+        "content_width": 450,
+        "desktop_height": "natural",
+        "mobile_height": "large",
+        "margin_top": "0",
+        "margin_top_mobile": "0",
+        "margin_bottom": "8px",
+        "margin_bottom_mobile": "8px"
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "hero",
+    "bdf80c61-3b3f-4b37-8ed3-114cedb438f5",
+    "06fcb7a8-3d46-402f-88fb-cfa07799ac6f",
+    "6a36141f-0c75-4a3f-abf9-d31614552a30",
+    "33ccea8e-538f-49bb-bd27-42d73c029633",
+    "5de8c4e0-cc08-4d0c-82c7-88c0ad4648d4"
+  ]
+}

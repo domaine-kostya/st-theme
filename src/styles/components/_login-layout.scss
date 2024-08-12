@@ -1,0 +1,157 @@
+/* ============================================================================
+  Layout - Account Login
+============================================================================== */
+
+.account-form__content {
+  height: 100%;
+  padding: 49px $gutter;
+  background-color: $color-light-blue;
+
+  @include media-query($min, $large) {
+    padding: 105px $gutter;
+  }
+
+  &.account-form__content--alt {
+    background-color: $color-grey;
+  }
+
+  h1,
+  h2,
+  .heading-3 {
+    margin-bottom: 24px;
+    color: $color-primary;
+
+    @include media-query($min, $large) {
+      margin-bottom: 40px;
+    }
+  }
+
+  input {
+    margin-bottom: 16px;
+    padding: 17px 30px;
+    border: none;
+    font-size: 1.4rem;
+  }
+
+  .input-error {
+    border: none !important;
+    color: $color-red;
+
+    &::placeholder {
+      color: $color-red;
+    }
+
+    svg path {
+      stroke: $color-red;
+    }
+  }
+
+  .btn {
+    width: 100%;
+    margin: 9px 0 17px;
+    font-size: 1.6rem;
+
+    @include media-query($min, $large) {
+      width: auto;
+      margin: 25px 0 35px;
+    }
+  }
+
+  form,
+  p {
+    width: 100%;
+    max-width: 564px;
+    margin: 0 auto;
+  }
+
+  p {
+    margin-bottom: 17px;
+
+    @include media-query($min, $large) {
+      margin-bottom: 35px;
+    }
+  }
+
+  a {
+    display: inline-block;
+  }
+
+  .validation-error {
+    display: none !important;
+  }
+
+  .form-errors {
+    margin: 0;
+
+    ul {
+      margin: -4px 0 4px;
+    }
+
+    li {
+      color: $color-black;
+      font-family: $font-gotham-narrow-bold;
+      font-size: 1.4rem;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 18px;
+        height: 16px;
+        margin-right: 5px;
+        background-image: var(--warning-svg);
+        background-position: center center;
+        background-size: cover;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .form-input-group {
+    position: relative;
+  }
+}
+
+.account-form__password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 27px;
+  margin-top: -3px;
+  transform: translateY(-50%);
+
+  &.active {
+    .icon-hide-password {
+      display: none;
+    }
+
+    .icon-show-password {
+      display: block;
+    }
+  }
+
+  .icon-show-password {
+    display: none;
+    margin-top: -7px;
+  }
+}
+
+.account-form__member-content {
+  margin-bottom: 17px;
+
+  @include media-query($min, $large) {
+    margin-bottom: 35px;
+  }
+}
+
+.account-form__reset-password {
+  h2 {
+    margin-bottom: 26px;
+  }
+
+  p {
+    margin-bottom: 32px;
+  }
+}
+
+.account-form__create-button {
+  margin-bottom: 18px;
+}

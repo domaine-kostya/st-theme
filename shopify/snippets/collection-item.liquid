@@ -1,0 +1,150 @@
+{%- liquid
+  assign hover_image = blank 
+  assign first_variant = product.selected_or_first_available_variant 
+  assign product_image = first_variant.image | default: product.featured_image
+  assign color_option = product.options_by_name['color']
+  assign color_option_handle = 'option' | append: color_option.position
+-%}
+
+{% for image in product.images %}
+  {% if image.alt contains 'hover' %}
+    {% assign hover_image = image %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+{% if product.metafields.custom_fields['hidden_variants'] != blank %}
+  {% assign hidden_variants = product.metafields.custom_fields['hidden_variants'] | replace: ', ', ',' | split: ',' %}
+{% endif %}
+
+<collection-item class="collection-item {{ class }}" data-collection-item data-handle="{{ product.handle }}">
+  <div data-collection-item-image-wrapper>
+    <a class="collection-item__image-wrapper {% if hover_image != blank %}collection-item__image-wrapper--has-hover{% endif %} image-link"
+      href="{{ product.url | within: collection }}"
+      title="{{ product.title }} - {{ product.price | money }}"
+      style="--collection-item-image-ratio: {{ product_image.aspect_ratio }}"
+    >
+      <div class="collection-item__standard-image" data-collection-item-image>
+        {{ product_image | image_url: width: 600 | image_tag: sizes: '(max-width: 750px) 48vw, (max-width: 1025px) 35vw, 24vw', loading: 'lazy' }}
+      </div>
+      {% if hover_image != blank %}
+        <div class="collection-item__hover-image">
+          {{ hover_image | image_url: width: 600 | image_tag: sizes: '(max-width: 750px) 48vw, (max-width: 1025px) 35vw, 24vw', loading: 'lazy' }}
+        </div>
+      {% endif %}
+
+      {% if product.compare_at_price > product.price %}
+        <div class="collection-item__badge{% if first_variant.compare_at_price > first_variant.price %} d-block{% else %} d-none{% endif %}" data-collection-item-sale-badge>
+          {{ 'products.product.on_sale' | t }}
+        </div>
+      {% elsif product.tags contains 'bestseller' %}
+        <div class="collection-item__badge collection-item__badge--bestseller">
+          {{ 'products.product.on_sale' | t }}
+        </div>
+      {% endif %}
+    </a>
+  </div>
+
+  {% if color_option != blank %}
+    {% assign color_option_index = 'option' | append: color_option.position %}
+    {% assign featured_image_file = product.featured_image | remove: '.jpg' %}
+    {% assign found_items = 0 %}
+
+    <div data-collection-item-swatches-wrapper>
+      <div class="collection-item__swatches" data-collection-item-swatches>
+        {% for value in color_option.values %}
+          {% if hidden_variants contains value %}
+            {% continue %}
+          {% endif %}
+
+          {%- assign swatch = product.handle | strip | append: '-' | append: value | handleize | append: '.jpg' -%}
+
+          {% if found_items < 4 %}
+            {%- liquid
+	            assign variant_image = '' 
+              assign variant_on_sale = false 
+              assign compare_at_price = blank 
+              assign regular_price = blank 
+
+              assign value_variants = product.variants | where: color_option_index, value 
+              assign variant = value_variants[0] 
+              assign value_variants_available_map = value_variants | map: 'available' | join: ','
+              assign some_value_variants_availalbe = true 
+              unless value_variants_available_map contains 'true'
+                assign some_value_variants_availalbe = false 
+              endunless 
+            -%}
+
+            {% capture variant_title %}{{ variant.title }}{% endcapture %}
+            {% capture variant_id %}{{ variant.id }}{% endcapture %}
+            {% capture variant_image %}{{ variant.image | img_url: '400x400' }}{% endcapture %}
+            {% assign regular_price = variant.price | money %}
+
+            {% if variant.compare_at_price > variant.price %}
+              {% assign variant_on_sale = true %}
+              {% assign compare_at_price = variant.compare_at_price | money %}
+            {% endif %}
+
+            <button title="Show {{ product.title }} - {{ variant_title }} image"
+              class="{% if variant_on_sale %}on-sale{% endif %}
+              {% if variant[color_option_handle] == first_variant[color_option_handle] %}active{% endif %}
+              "
+              data-collection-item-swatch
+              data-available="{{ some_value_variants_availalbe }}"
+              data-regular-price="{{ regular_price }}"
+              {% if variant_on_sale %}
+                data-compare-price="{{ compare_at_price }}"
+              {% endif %}
+              {% if variant_image != blank %}
+                data-variant-image="{{ variant_image }}"
+              {% endif %}
+            >
+              <img src="{{ swatch | file_img_url: '40x' }}" alt="{{ variant_title }} Color Swatch" loading="lazy">
+            </button>
+            {% assign found_items = found_items | plus: 1 %}
+          {% else %}
+            <span class="collection-item__swatches-more">
+              +{{ color_option.values.size | minus: found_items }}
+              <span class="d-none d-md-inline-block">
+                {{ 'products.product.more' | t }}
+              </span>
+            </span>
+            {% break %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+
+  <div class="collection-item__title">
+    <a href="{{ product.url | within: collection }}" title="{{ product.title }} - {{ product.price | money }}">
+      {{ product.title }}
+    </a>
+
+    <p class="collection-item__price {% unless first_variant.available %}d-none{% endunless %}" data-collection-item-price>
+      <span {% if first_variant.compare_at_price > first_variant.price %}class="sale-price"{% endif %} data-collection-item-sale-price>
+        {{ first_variant.price | money }}
+      </span>
+
+      <s {% unless first_variant.compare_at_price > first_variant.price %}class="d-none"{% endunless %} data-collection-item-compare-price>
+        {{ first_variant.compare_at_price | money }}
+      </s>
+    </p>
+
+    <p class="collection-item__price collection-item__price--sold-out {% if first_variant.available %}d-none{% endif %}" data-collection-item-sold-out>
+      {{ 'products.product.sold_out' | t }}
+    </p>
+  </div>
+
+  <!-- Yotpo Star Rating | Snippets > collection-item.liquid -->
+  <div class="yotpo-widget-instance" data-yotpo-instance-id="389466"
+    data-yotpo-product-id="{{product.id}}"
+    data-yotpo-name="{{ product.title | escape }}"
+    data-yotpo-url="{{ shop.url }}{{ product.url }}"
+    data-yotpo-image-url="{{ product.featured_image | product_img_url: "large" | prepend: "https:" | replace: '?', '%3F' | replace: '&','%26'}}" 
+    data-yotpo-price="{{ product.price | money_without_currency }}"
+    data-yotpo-currency="{{ shop.currency }}"
+    data-yotpo-description="{{ product.description | escape }}">
+  </div>
+  <!-- End of Yotpo -->
+</collection-item>

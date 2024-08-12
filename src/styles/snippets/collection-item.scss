@@ -1,0 +1,230 @@
+/* ============================================================================
+  Collection item
+============================================================================== */
+
+.collection-item {
+  display: block;
+  margin-bottom: 30px;
+
+  @include media-query($min, $large) {
+    margin-bottom: 51px;
+  }
+
+  &.collection-item--loading {
+    opacity: 0;
+  }
+
+  &.collection-item--has-hover {
+    @include media-query($min, $large) {
+      .image-link:hover,
+      .image-link:focus {
+        .collection-item__hover-image {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  a {
+    color: $color-black;
+  }
+
+  .yotpo.bottomLine.yotpo-small {
+    margin-bottom: 0 !important;
+  }
+}
+
+.collection-item__image-wrapper {
+  position: relative;
+  margin-bottom: 16px;
+  background: #f9f9f9;
+  aspect-ratio: var(--collection-item-image-ratio, 600 / 750);
+
+  &.collection-item__image-wrapper--has-hover {
+    @include media-query($min, $large) {
+      &:hover,
+      &:focus {
+        .collection-item__hover-image {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .collection-item__standard-image {
+    margin-bottom: 16px;
+  }
+
+  .collection-item__hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.25s ease-in-out;
+    opacity: 0;
+    will-change: opacity;
+  }
+}
+
+.collection-item__badge {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  padding: 6px 9px;
+  background-color: $color-coral;
+  font-size: 1.4rem;
+  line-height: 1;
+  text-transform: uppercase;
+
+  &.collection-item__badge--bestseller {
+    background-color: $color-teal;
+  }
+}
+
+.collection-item__title {
+  margin: 0;
+
+  @include media-query($min, $large) {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  a {
+    color: $color-black;
+    font-family: $font-gotham-narrow-bold;
+    line-height: 1.8rem;
+
+    @include media-query($min, $large) {
+      flex: 1;
+    }
+  }
+}
+
+.collection-item__price {
+  display: block;
+  position: relative;
+  margin: 5px 0 0;
+  font-size: 1.6rem;
+  line-height: 2rem;
+
+  @include media-query($min, $large) {
+    margin-top: 0;
+    padding-left: 20px;
+  }
+
+  .sale-price {
+    color: $color-red;
+    font-family: $font-gotham-narrow-bold;
+  }
+
+  s {
+    margin-left: 5px;
+    color: $color-sand-grey;
+  }
+}
+
+.collection-item__swatches {
+  display: flex;
+  align-items: center;
+  height: 24px;
+  margin-bottom: 9px;
+
+  button {
+    display: inline-block;
+    position: relative;
+    margin-right: 7px;
+    border: 1px solid $color-black;
+    border-radius: 100%;
+    line-height: 0;
+
+    &.active {
+      border: 2px solid $color-black;
+
+      img {
+        width: 20px;
+        min-width: 20px;
+        height: 20px;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        border: 3px solid $color-white;
+        border-radius: 100%;
+      }
+
+      &.on-sale {
+        &::before {
+          top: -4px;
+          right: -4px;
+        }
+      }
+    }
+
+    &.on-sale {
+      &::before {
+        content: '';
+        position: absolute;
+        top: -3px;
+        right: -3px;
+        width: 4px;
+        height: 4px;
+        border-radius: 100%;
+        background-color: $color-red;
+      }
+    }
+
+    img {
+      width: 22px;
+      min-width: 22px;
+      height: 22px;
+      border-radius: 100%;
+    }
+  }
+}
+
+.loading-swatch {
+  display: inline-block;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  margin-right: 7px;
+  border-radius: 100%;
+  background-color: $color-grey;
+  line-height: 0;
+}
+
+.collection-item__swatches-more {
+  color: $color-sand-grey;
+  font-size: 1.4rem;
+  white-space: nowrap;
+}
+
+.loading-anim {
+  animation: gradient 1s linear infinite;
+  background: linear-gradient(
+      90deg,
+      $color-grey 0%,
+      $color-off-white 25%,
+      $color-grey 50%,
+      $color-off-white 75%,
+      $color-grey 100%
+    ),
+    $color-grey;
+  background-size: 200% 100%;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: -100% 50%;
+  }
+}

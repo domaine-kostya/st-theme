@@ -1,0 +1,44 @@
+/* ============================================================================
+  Breadcrumbs
+============================================================================== */
+
+.breadcrumbs {
+  margin-bottom: 25px;
+  padding: 13px 0;
+  border-bottom: 2px solid $color-grey;
+  font-size: 1.4rem;
+
+  @include media-query($min, $medium) {
+    margin-bottom: 45px;
+    padding: 21px 0;
+  }
+
+  &.breadcrumbs--product {
+    margin-bottom: 22px;
+    padding-bottom: 0;
+    border-bottom: none;
+
+    @include media-query($min, $medium) {
+      padding: 21px 0 0;
+    }
+  }
+
+  a {
+    color: $color-sand-grey;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.breadcrumbs__divider {
+  margin: 0 2px;
+}
+
+.breadcrumbs__count {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  vertical-align: middle;
+}

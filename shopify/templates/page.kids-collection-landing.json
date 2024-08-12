@@ -1,0 +1,163 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "blocks": {
+        "b0b4a1cc-4073-4815-98ed-d75eeac46a2c": {
+          "type": "hero_slide",
+          "settings": {
+            "desktop_layout": "image_1_content",
+            "desktop_image_1": "shopify:\/\/shop_images\/240202-kids-collection-landing-hero.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/240202-kids-collection-landing-hero-mobile.jpg",
+            "title": "Kids' Spring 2024",
+            "mobile_title": "Kids' Spring 2024",
+            "title_size": "heading-2",
+            "content": "Brand new styles and can't-live-without classics for the season.",
+            "mobile_content": "Brand new styles and can't-live-without classics for the season.",
+            "title_color": "#1e2535",
+            "content_color": "#313133",
+            "background_color": "#d3c3b4",
+            "cta_1_text": "",
+            "cta_1_link": "",
+            "cta_1_color": "#1c59a8",
+            "cta_2_text": "",
+            "cta_2_link": "#",
+            "cta_2_color": "",
+            "cta_3_text": "",
+            "cta_3_link": "",
+            "cta_3_color": "",
+            "image_link": "",
+            "btn_display": "d-flex"
+          }
+        }
+      },
+      "block_order": [
+        "b0b4a1cc-4073-4815-98ed-d75eeac46a2c"
+      ],
+      "settings": {
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "0",
+        "margin_bottom_mobile": "0",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+      }
+    },
+    "165367182201d0c501": {
+      "type": "featured-products",
+      "blocks": {
+        "6011fc1e-1f51-4e89-a344-27332d5978c7": {
+          "type": "collection",
+          "settings": {
+            "collection": "boys-sport-shirts",
+            "collection_title": "Button Downs",
+            "enable_cta": false,
+            "cta_text": "Show more"
+          }
+        },
+        "3f0e30a4-55e0-4f1a-a967-a081cc1ad5b1": {
+          "type": "collection",
+          "settings": {
+            "collection": "boys-pants",
+            "collection_title": "Pants",
+            "enable_cta": false,
+            "cta_text": "Show more"
+          }
+        },
+        "bd93e0a1-1228-46b7-b04b-b17455eba361": {
+          "type": "collection",
+          "settings": {
+            "collection": "kids-t-shirts",
+            "collection_title": "T-Shirts",
+            "enable_cta": false,
+            "cta_text": ""
+          }
+        },
+        "7b65b71d-beb1-4795-b0fe-21f24158050e": {
+          "type": "collection",
+          "settings": {
+            "collection": "boys-polos",
+            "collection_title": "Polos",
+            "enable_cta": false,
+            "cta_text": "Show more"
+          }
+        }
+      },
+      "block_order": [
+        "6011fc1e-1f51-4e89-a344-27332d5978c7",
+        "3f0e30a4-55e0-4f1a-a967-a081cc1ad5b1",
+        "bd93e0a1-1228-46b7-b04b-b17455eba361",
+        "7b65b71d-beb1-4795-b0fe-21f24158050e"
+      ],
+      "settings": {
+        "headline": "Featured Collections",
+        "headline_size": "small",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "1653674967db683e1c": {
+      "type": "featured-collections",
+      "blocks": {
+        "94b80002-75c6-4257-a7a7-dcc7b92f83bc": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/240202-kids-featured-collection-new.jpg",
+            "title": "New Arrivals",
+            "content": "",
+            "cta_text": "Shop Now",
+            "link": "https:\/\/southerntide.com\/collections\/kids-new-arrivals"
+          }
+        },
+        "9d1a65d5-71f6-409c-b50f-a46e3bf51d71": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/240202-kids-featured-collection-best.jpg",
+            "title": "Best Sellers",
+            "content": "",
+            "cta_text": "Shop Now",
+            "link": "https:\/\/southerntide.com\/collections\/kids-best-sellers"
+          }
+        }
+      },
+      "block_order": [
+        "94b80002-75c6-4257-a7a7-dcc7b92f83bc",
+        "9d1a65d5-71f6-409c-b50f-a46e3bf51d71"
+      ],
+      "settings": {
+        "headline": "",
+        "headline_size": "small",
+        "content": "",
+        "section_width": "container",
+        "button_style": "button",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "breadcrumbs",
+    "165367182201d0c501",
+    "1653674967db683e1c"
+  ]
+}

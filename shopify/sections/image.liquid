@@ -1,0 +1,24 @@
+<div class="image image--{{ section.id }} " role="region" aria-label="Image">
+  <div class="container">
+    {{ section.settings.image | image_url: width: 2000 | image_tag: loading: 'lazy' }}
+  </div>
+</div>
+
+{% render 'section-spacing', section_name: 'image' %}
+
+{% schema %}
+  {
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image"
+      }
+    ]
+  }
+{% endschema %}

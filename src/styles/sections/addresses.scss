@@ -1,0 +1,149 @@
+@import '@/styles/components/account-layout';
+
+/* ============================================================================
+  Account Addresses
+============================================================================== */
+
+.account__address {
+  position: relative;
+  padding: 21px 0 44px;
+  border-bottom: 2px solid $color-grey;
+
+  @include media-query($min, $medium) {
+    padding: 29px 0 24px;
+  }
+
+  &.active {
+    @include media-query($max, $pre-medium) {
+      padding-top: 23px;
+      padding-bottom: 16px;
+    }
+
+    .account__address-info {
+      display: flex;
+    }
+
+    .icon-plus-large {
+      display: none;
+    }
+
+    .icon-minus-large {
+      display: block;
+    }
+  }
+
+  &:first-of-type {
+    @include media-query($max, $pre-medium) {
+      margin-top: 32px;
+      border-top: 2px solid $color-grey;
+    }
+  }
+
+  &:last-of-type {
+    margin-bottom: 32px;
+  }
+
+  .account__address-toggle {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    .icon-minus-large {
+      display: none;
+    }
+
+    strong {
+      margin: 0;
+    }
+  }
+
+  .account__address-info {
+    display: none;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 40px;
+
+    @include media-query($min, $medium) {
+      display: flex;
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .checkbox {
+      margin-top: 17px;
+    }
+  }
+}
+
+.account__address-form {
+  margin-top: 32px;
+
+  @include media-query($min, $large) {
+    margin-top: 0;
+  }
+
+  input,
+  select {
+    margin-bottom: 16px;
+    padding: 17px 28px;
+    border: none;
+    background-color: $color-grey;
+    font-size: 1.4rem;
+  }
+
+  .btn,
+  .ui-link {
+    width: auto;
+    margin: 0 auto;
+  }
+
+  .btn {
+    width: 100%;
+    margin-bottom: 16px;
+
+    @include media-query($min, $medium) {
+      width: auto;
+      margin-bottom: 32px;
+    }
+  }
+
+  .checkbox {
+    margin: 13px 0 20px;
+  }
+
+  .account__headline {
+    margin-bottom: 0;
+  }
+}
+
+.account__address-actions {
+  display: flex;
+  align-items: center;
+  margin-bottom: 7px;
+
+  @include media-query($min, $medium) {
+    margin-bottom: 15px;
+  }
+
+  button {
+    &.ui-link {
+      margin-left: 25px;
+    }
+  }
+
+  .ui-link {
+    @include media-query($max, $pre-medium) {
+      display: inline-block;
+      vertical-align: middle;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+}

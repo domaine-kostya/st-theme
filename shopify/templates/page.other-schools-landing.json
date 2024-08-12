@@ -1,0 +1,256 @@
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+      }
+    },
+    "b78422b2-89bf-40af-a791-d5ecc9f73ec4": {
+      "type": "featured-collections",
+      "settings": {
+        "headline": "Explore Additional Teams",
+        "headline_size": "large",
+        "content": "",
+        "section_width": "full",
+        "button_style": "link",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "32px",
+        "margin_bottom_mobile": "32px",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "d32eee3f-dd86-4b54-80ce-028480470ee0": {
+      "type": "featured-collections",
+      "blocks": {
+        "45696c44-b911-488e-bfd9-28314e2ac960": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/AprApp_State_1280_x_1280_09082023.png",
+            "title": "",
+            "content": "",
+            "cta_text": "Appalachian State",
+            "link": "https:\/\/southerntide.com\/collections\/appalachian-state-university"
+          }
+        },
+        "3a4ac9fb-6ada-4495-af2e-a071b4956c8b": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Coastal_Carolina_1280_x_1280_09082023.png",
+            "title": "",
+            "content": "",
+            "cta_text": "Coastal Carolina University",
+            "link": "https:\/\/southerntide.com\/collections\/coastal-carolina-university"
+          }
+        },
+        "c0af52b4-5d89-48eb-ac71-e9b423dbd298": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/GSU_1280_x_1280_09082023.png",
+            "title": "",
+            "content": "",
+            "cta_text": "Georgia Southern",
+            "link": "https:\/\/southerntide.com\/collections\/georgia-southern-university"
+          }
+        }
+      },
+      "block_order": [
+        "45696c44-b911-488e-bfd9-28314e2ac960",
+        "3a4ac9fb-6ada-4495-af2e-a071b4956c8b",
+        "c0af52b4-5d89-48eb-ac71-e9b423dbd298"
+      ],
+      "settings": {
+        "headline": "Sun Belt<hr>",
+        "headline_size": "small",
+        "content": "",
+        "section_width": "full",
+        "button_style": "link",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "d45a5bd3-a2fc-4705-8238-782686df55e6": {
+      "type": "featured-collections",
+      "blocks": {
+        "40b95f31-4b52-4fd8-8f2f-d3733d258e38": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Blank-1280x1280-09082023_bfff9145-9752-4c2a-947b-5c7d94c995f8.png",
+            "title": "",
+            "content": "",
+            "cta_text": "",
+            "link": ""
+          }
+        },
+        "036e0e7a-e162-4887-b702-389699bc45e9": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Citadel_1280_x_1280_09082023.png",
+            "title": "",
+            "content": "",
+            "cta_text": "The Citadel",
+            "link": "https:\/\/southerntide.com\/collections\/the-citadel"
+          }
+        },
+        "c0ac0632-8cb8-4b06-98b8-93c9e7e6f982": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Furman_1280_x_1280_09082023.png",
+            "title": "",
+            "content": "",
+            "cta_text": "Furman",
+            "link": "https:\/\/southerntide.com\/collections\/furman-university"
+          }
+        },
+        "026430da-a421-4a93-9e40-3525bdf51751": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Blank-1280x1280-09082023_ef2b472b-a656-4433-ac21-704c259a7083.png",
+            "title": "",
+            "content": "",
+            "cta_text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "40b95f31-4b52-4fd8-8f2f-d3733d258e38",
+        "036e0e7a-e162-4887-b702-389699bc45e9",
+        "c0ac0632-8cb8-4b06-98b8-93c9e7e6f982",
+        "026430da-a421-4a93-9e40-3525bdf51751"
+      ],
+      "settings": {
+        "headline": "Southern Conference<hr>",
+        "headline_size": "small",
+        "content": "",
+        "section_width": "full",
+        "button_style": "link",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "3eb0a222-7fb6-492c-bf05-3dedd2a0b657": {
+      "type": "featured-collections",
+      "blocks": {
+        "6328a9a1-bd41-42f6-9218-e03d9a92b7c8": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Notre-Dame-1280resize-07282023.png",
+            "title": "",
+            "content": "",
+            "cta_text": "Notre Dame",
+            "link": "shopify:\/\/collections\/notre-dame-fighting-irish-apparel"
+          }
+        },
+        "0db60117-c689-447c-b5a9-f60a8ceac712": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/College_of_Charleston_1280_x_1280_09082023.png",
+            "title": "",
+            "content": "",
+            "cta_text": "College Of Charleston",
+            "link": "https:\/\/southerntide.com\/collections\/college-of-charleston"
+          }
+        },
+        "795f045a-b574-4df6-95e5-58bb5d813d85": {
+          "type": "featured_collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ECU_1280_x_1280_09082023.png",
+            "title": "",
+            "content": "",
+            "cta_text": "ECU",
+            "link": "https:\/\/southerntide.com\/collections\/east-carolina-university"
+          }
+        }
+      },
+      "block_order": [
+        "6328a9a1-bd41-42f6-9218-e03d9a92b7c8",
+        "0db60117-c689-447c-b5a9-f60a8ceac712",
+        "795f045a-b574-4df6-95e5-58bb5d813d85"
+      ],
+      "settings": {
+        "headline": "Other Schools <hr>",
+        "headline_size": "small",
+        "content": "",
+        "section_width": "full",
+        "button_style": "link",
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    },
+    "ee750434-c2bf-4666-bc59-b4704d154eca": {
+      "type": "content-blocks",
+      "blocks": {
+        "ec8a8bc0-bd18-4ced-bbf1-7f6f95a96ba1": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/230811-navigation-collegiate.jpg",
+            "video_file_url": "",
+            "mobile_video_file_url": "",
+            "enable_full_width_video": false,
+            "video_embed": "",
+            "video_description": "",
+            "mobile_video_embed": "",
+            "background_color": "#CDE0F1",
+            "width": "full",
+            "content_position": "right",
+            "headline": "Don't See Your Team?",
+            "content": "",
+            "cta_1_text": "Explore All Schools",
+            "cta_1_link": "shopify:\/\/pages\/collegiate-conferences",
+            "cta_1_style": "solid",
+            "cta_2_text": "",
+            "cta_2_link": "",
+            "cta_2_style": "outline",
+            "feature_1_text": "",
+            "feature_2_text": "",
+            "feature_3_text": "",
+            "feature_4_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "ec8a8bc0-bd18-4ced-bbf1-7f6f95a96ba1"
+      ],
+      "settings": {
+        "margin_top": "default",
+        "margin_top_mobile": "default",
+        "margin_bottom": "default",
+        "margin_bottom_mobile": "default",
+        "padding_top": "default",
+        "padding_top_mobile": "default",
+        "padding_bottom": "default",
+        "padding_bottom_mobile": "default"
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "b78422b2-89bf-40af-a791-d5ecc9f73ec4",
+    "d32eee3f-dd86-4b54-80ce-028480470ee0",
+    "d45a5bd3-a2fc-4705-8238-782686df55e6",
+    "3eb0a222-7fb6-492c-bf05-3dedd2a0b657",
+    "ee750434-c2bf-4666-bc59-b4704d154eca"
+  ]
+}

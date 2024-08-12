@@ -1,0 +1,63 @@
+/* ============================================================================
+  Accordion
+============================================================================== */
+
+.accordion {
+  display: block;
+  box-sizing: content-box;
+  padding: 0;
+  border-bottom: 2px solid $color-grey;
+  color: $color-sand-grey;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+
+  &.animating {
+    overflow: hidden;
+    transition: height $transition-primary;
+
+    @media (prefers-reduced-motion: reduce) {
+      transition: height 0.01s linear;
+    }
+  }
+
+  &__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 0;
+    cursor: pointer;
+
+    svg {
+      width: 22px;
+      height: 22px;
+      float: right;
+    }
+
+    [open] & {
+      svg:first-of-type {
+        display: none;
+      }
+
+      svg:last-of-type {
+        display: block;
+      }
+    }
+
+    svg:first-of-type {
+      display: block;
+    }
+
+    svg:last-of-type {
+      display: none;
+    }
+  }
+
+  &__content {
+    padding-bottom: 16px;
+
+    *:last-child {
+      margin: 0;
+    }
+  }
+}

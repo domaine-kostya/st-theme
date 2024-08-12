@@ -1,0 +1,11 @@
+<div class="d-lg-none">
+  <label class="visually-hidden" for="account-page-selector">Account page selector</label>
+  <dropdown-select>
+    <select id="account-page-selector" aria-label="Account Page Selector" data-account-page-selector>
+      <option value="{{ routes.account_url }}" {% if request.path == routes.account_url or request.path contains 'orders' %}selected{% endif %}>{{ 'customer.orders.title' | t }}</option>
+      <option value="{{ routes.account_addresses_url }}" {% if request.path == routes.account_addresses_url %}selected{% endif %}>{{ 'customer.addresses.title' | t }} ({{ customer.addresses_count }})</option>
+      <option value="/account?view=rewards">{{ 'customer.account.rewards' | t }}</option>
+      <option value="{{ routes.account_logout_url }}">{{ 'layout.customer.log_out' | t }}</option>
+    </select>
+  </dropdown-select>
+</div>

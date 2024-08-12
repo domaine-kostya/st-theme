@@ -1,0 +1,96 @@
+{% if settings.enable_spend_x_get_y %}
+  <cart-reward-thresholds
+    class="cart-reward-thresholds"
+    data-title-met="{{ settings.spend_x_get_y_free_gift_title_met }}"
+    data-title-not-met="{{ settings.spend_x_get_y_free_gift_title_not_met }}"
+  >
+    <custom-accordion
+      class="accordion cart-reward-thresholds__accordion"
+      data-accordion
+    >
+      <details>
+        <summary class="accordion__toggle ui-button {{ toggle_class }}">
+          <div class="d-flex align-items-center" role="none">
+            <div class="cart-reward-thresholds__count" aria-hidden="true">
+              <lottie-player class="cart-reward-thresholds-count__animation"
+                src="{{ 'unlock.json' | asset_url }}"
+                loop
+                autoplay
+                mode="PlayMode.Bounce"
+              >
+              </lottie-player>
+              <span data-available-gift-count>0</span>
+            </div>
+            <span data-accordion-title>
+              {{ settings.spend_x_get_y_free_gift_title_not_met }}
+            </span>
+          </div>
+          {% render 'icon-gift-chevron-down' %}
+          {% render 'icon-chevron-up' %}
+        </summary>
+
+        <div class="accordion__content">
+          <div class="cart-reward-thresholds__swiper swiper-container" data-gifts-wrapper>
+            <button class="cart-reward-thresholds__swiper-control cart-reward-thresholds__swiper-control--prev" type="button" aria-label="Previous Slide" data-gifts-prev>
+              {% render 'icon-chevron-left' %}
+            </button>
+            <button class="cart-reward-thresholds__swiper-control cart-reward-thresholds__swiper-control--next" type="button" aria-label="Next Slide" data-gifts-next>
+              {% render 'icon-chevron-right' %}
+            </button>
+            <div class="swiper-wrapper">
+              {% for i in (1..3) %}
+                {% capture free_gift_product_setting %}spend_x_get_y_free_gift_{{ i }}{% endcapture %}
+                {% capture free_gift_threshold_setting %}spend_x_get_y_free_gift_{{ i }}_threshold{% endcapture %}
+                {% capture free_gift_message_setting %}spend_x_get_y_free_gift_{{ i }}_message{% endcapture %}
+
+                {% assign free_gift_product = settings[free_gift_product_setting] %}
+                {% if free_gift_product == blank or free_gift_product.available == false %}
+                  {% continue %}
+                {% endif %}
+
+                {% assign has_default_only = free_gift_product.has_only_default_variant %}
+                {% if free_gift_product.variants.size == 1 %}
+                  {% assign has_default_only = true %}
+                {% endif %}
+
+                <div class="swiper-slide">
+                  <button
+                    data-cart-gift
+                    data-product-id="{{ free_gift_product.id }}"
+                    data-variant-id="{{ free_gift_product.first_available_variant.id }}"
+                    data-threshold-required="{{ settings[free_gift_threshold_setting] }}"
+                    data-message="{{ settings[free_gift_message_setting] }}"
+                    {% if has_default_only == false %}
+                      data-selection-required
+                      data-open-modal="{{ free_gift_product.id }}-gift"
+                    {% endif %}
+                    class="cart-gift locked d-flex align-items-center"
+                  >
+                    <div class="cart-gift__lock">
+                      <lottie-player
+                        src="{{ 'blue-lock.json' | asset_url }}"
+                      >
+                      </lottie-player>
+                    </div>
+                    <div class="cart-gift__image img-cover">
+                      {{ free_gift_product.featured_image | image_url: width: 140 | image_tag: loading: 'lazy' }}
+                      <span class="cart-gift__image-label">{{ 'cart.general.free_gift' | t }}</span>
+                    </div>
+                    <div class="cart-gift__content">
+                      <p class="cart-gift__message">{{ settings[free_gift_message_setting] }}</p>
+                      <span class="cart-gift__title">{{ free_gift_product.title }}</span>
+                      {% if has_default_only == false %}
+                        <span class="cart-gift__select-size">{{ 'cart.general.gift_select_variant' | t }}</span>
+                      {% endif %}
+                    </div>
+                  </button>
+                </div>
+              {% endfor %}
+            </div>
+            <div class="cart-reward-thresholds__scrollbar" data-gifts-scrollbar></div>
+          </div>
+        </div>
+      </details>
+    </custom-accordion>
+  </cart-reward-thresholds>
+{% endif %}

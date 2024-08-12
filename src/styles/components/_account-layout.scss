@@ -1,0 +1,355 @@
+/* ============================================================================
+  Layout - Account
+============================================================================== */
+
+.account {
+  display: block;
+  padding: 43px 0 48px;
+
+  @include media-query($min, $large) {
+    padding: 106px 0 60px;
+  }
+
+  dropdown-select {
+    width: 100%;
+
+    li {
+      padding: 10px 20px;
+      font-size: 1.4rem;
+    }
+
+    select {
+      padding: 11px 20px;
+    }
+  }
+}
+
+.account__headline {
+  margin-bottom: 23px;
+  text-align: center;
+
+  @include media-query($min, $large) {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+
+  &.account__headline--order {
+    @include media-query($min, $large) {
+      margin-bottom: 39px;
+    }
+  }
+}
+
+.account__orders {
+  @include media-query($max, $pre-medium) {
+    margin-top: 36px;
+    border-top: 2px solid $color-grey;
+  }
+}
+
+.account__sidebar {
+  margin-top: 8px;
+
+  .heading-5 {
+    margin-bottom: 27px;
+  }
+
+  a {
+    margin-bottom: 23px;
+
+    &.active,
+    &:hover,
+    &:focus {
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    &::after {
+      opacity: 0;
+    }
+  }
+}
+
+.account__order {
+  position: relative;
+  padding: 20px 0;
+  border-bottom: 2px solid $color-grey;
+
+  @include media-query($min, $medium) {
+    padding: 32px 0;
+  }
+
+  &:last-of-type {
+    @include media-query($min, $medium) {
+      border-bottom: none;
+    }
+  }
+
+  &.active {
+    .account__order-info {
+      display: block;
+
+      @include media-query($min, $medium) {
+        display: flex;
+      }
+    }
+
+    .icon-plus-large {
+      display: none;
+    }
+
+    .icon-minus-large {
+      display: block;
+    }
+  }
+
+  .account__order-info-inner {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .heading-5 {
+    margin-bottom: 12px;
+  }
+}
+
+.account__order-details-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 19px;
+}
+
+.account__order-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  &.heading-5 {
+    margin: 0;
+  }
+
+  .icon-minus-large {
+    display: none;
+  }
+}
+
+.account__order-info {
+  display: none;
+  margin: 20px 0 0;
+
+  @include media-query($min, $medium) {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+
+  .btn {
+    @include media-query($max, $pre-medium) {
+      width: 100%;
+    }
+  }
+}
+
+.account__order-image {
+  flex-shrink: 0;
+  width: 98px;
+  margin-right: 16px;
+  background: $color-grey;
+
+  @include media-query($min, $medium) {
+    width: 190px;
+  }
+}
+
+.account__order-details {
+  flex-grow: 1;
+
+  p:not(.heading-5) {
+    margin-bottom: 3px;
+    font-size: 1.6rem;
+
+    @include media-query($min, $medium) {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.account__order-actions {
+  text-align: right;
+
+  .account__order-total {
+    margin-bottom: 43px;
+  }
+}
+
+.account__details {
+  padding: 24px;
+  border-radius: $border-radius;
+
+  a {
+    display: block;
+  }
+}
+
+.account__order-table {
+  border-radius: $border-radius;
+  font-size: 1.8rem;
+
+  table {
+    margin: 8px 0 32px;
+    table-layout: fixed;
+
+    span {
+      display: block;
+
+      span {
+        display: inline-block;
+      }
+    }
+
+    th,
+    td,
+    tr {
+      border: 1px solid $color-grey;
+
+      @include media-query($min, $medium) {
+        border: 2px solid $color-grey;
+      }
+    }
+
+    th {
+      font-family: $font-gotham-narrow-bold;
+    }
+
+    td,
+    th {
+      padding: 8px 12px 7px;
+
+      @include media-query($max, $pre-medium) {
+        padding: 12px 0;
+        border-right: none;
+        border-left: none;
+      }
+
+      &:first-of-type {
+        padding-left: 0;
+        border-left: none;
+      }
+
+      &:last-of-type {
+        padding-right: 0;
+        border-right: none;
+      }
+
+      &.no-left-border {
+        @include media-query($min, $medium) {
+          padding-left: 0;
+          border-left: none;
+        }
+      }
+
+      &.no-border {
+        @include media-query($min, $medium) {
+          padding-right: 0;
+          padding-left: 0;
+          border-right: none;
+          border-left: none;
+        }
+      }
+    }
+
+    tr {
+      border-right: none;
+      border-left: none;
+
+      &.account__order-addresses {
+        border-top: none;
+
+        @include media-query($max, $pre-medium) {
+          border-bottom: none;
+        }
+
+        td {
+          border-bottom: 2px solid $color-grey;
+          text-align: left;
+
+          @include media-query($min, $medium) {
+            width: 50%;
+          }
+
+          &::after {
+            display: none;
+          }
+
+          p {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .line-item__vendor {
+    margin-bottom: 6px;
+  }
+
+  tfoot {
+    tr,
+    td {
+      @include media-query($max, $pre-medium) {
+        border: none;
+      }
+
+      &:first-of-type {
+        border: none;
+      }
+    }
+
+    td:last-of-type {
+      position: relative;
+
+      &::after {
+        @include media-query($max, $pre-medium) {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 50%;
+          width: 2px;
+          height: 100%;
+          transform: translateX(-50%);
+          background-color: $color-grey;
+        }
+      }
+    }
+
+    tr {
+      @include media-query($max, $pre-medium) {
+        border-top: 2px solid $color-grey;
+        border-bottom: 2px solid $color-grey;
+      }
+    }
+  }
+}
+
+.account__order-track {
+  margin-top: 20px;
+
+  @include media-query($min, $medium) {
+    margin: 0;
+  }
+}
+
+.account__back-link-wrapper {
+  margin: 30px 0 21px;
+  text-align: center;
+
+  @include media-query($min, $large) {
+    margin: 0 0 32px;
+    text-align: left;
+  }
+}

@@ -1,0 +1,47 @@
+<div class="blog-article {% if horizontal %}blog-article--horizontal{% endif %}">
+  <a class="image-link" href="{{ article.url }}" title="{{ article.title }}">
+    {% if article.image %}
+      {% assign article_image = image | default: article.image %}
+      {% assign article_image_alt = article.metafields.custom_fields['image_alt_text'] | default: article.image.alt %}
+      <div class="blog-article__image img-cover">
+        {{ article_image | image_url: width: 1024 | image_tag: loading: 'lazy', alt: article_image_alt }}
+      </div>
+    {% endif %}
+
+    <div class="blog-article__content">
+      {% if article.tags.size >= 1 %}
+        <div class="blog-article__badges-wrapper">
+          {% for tag in article.tags %}
+            <div class="blog-article__badge">
+              {{ tag }}
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      <span class="blog-article__title {% if featured_article %}heading-3{% else %}heading-4{% endif %}">
+        {{ article.title }}
+      </span>
+
+      {% if featured_article %}
+        <span class="blog-article__excerpt">
+          <span class="d-none d-lg-block">
+            {{ excerpt | default: article.excerpt }}
+          </span>
+
+          <span class="d-lg-none">
+            {{ excerpt | default: article.excerpt | truncate: 100 }}
+          </span>
+        </span>
+
+        <br>
+      {% endif %}
+
+      {% if article.metafields.custom_fields['read_time'] != blank %}
+        <span class="ui-link">
+          {{ article.metafields.custom_fields['read_time'] }} {{ 'blogs.article.min_read' | t }}
+        </span>
+      {% endif %}
+    </div>
+  </a>
+</div>

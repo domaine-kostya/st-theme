@@ -1,0 +1,238 @@
+<script src="{{ 'sections.search.js' | asset_url }}" defer="defer"></script>
+{{ 'sections.search.css' | asset_url | stylesheet_tag }}
+
+{%- comment -%} VERSION: 1.0.0 Please do not delete this line. {%- endcomment -%}
+{%- liquid
+  assign filter_tree_vertical_style = shop.metafields.bc-sf-filter.settings | split: 'general":' | last | split: 'filterTreeVerticalStyle":"' | last | split: '","' | first | strip | escape
+
+  if shop.metafields.bc-sf-filter.settings contains 'filterTreeHorizontalStyle'
+  	assign filter_tree_horizontal_style = shop.metafields.bc-sf-filter.settings | split: 'general":' | last | split: 'filterTreeHorizontalStyle":"' | last | split: '","' | first | strip | escape
+  else
+   assign filter_tree_horizontal_style = 'style1'
+  endif
+
+  if shop.metafields.bc-sf-filter.settings contains 'stickyFilterOnDesktop'
+  	assign enable_filter_sticky_d = shop.metafields.bc-sf-filter.settings | split: 'general":' | last | split: 'stickyFilterOnDesktop":' | last | split: ',' | first | strip | escape
+  else
+   assign enable_filter_sticky_d = false
+  endif
+
+  assign enable_filter_sticky_m = shop.metafields.bc-sf-filter.settings | split: 'general":' | last | split: 'stickyFilterOnMobile":' | last | split: ',' | first |  split: '}}' | first | strip | escape
+
+  assign switch_layout_filter = 'switch_layout_filter_vertical'
+
+  assign verticalStyleOffCanvas = false
+  if switch_layout_filter == 'switch_layout_filter_vertical' and filter_tree_vertical_style == 'style-off-canvas'
+  assign verticalStyleOffCanvas = true
+  endif
+
+  assign verticalStyleExpand = false
+  if switch_layout_filter == 'switch_layout_filter_vertical' and filter_tree_vertical_style == 'style-expand'
+    assign verticalStyleExpand = true
+  endif
+
+  assign horizontalStyleExpand = false
+  if switch_layout_filter == 'switch_layout_filter_horizontal' and filter_tree_horizontal_style == 'style-expand'
+    assign horizontalStyleExpand = true
+  endif
+
+  assign enable_filter_tree_button_desktop = false
+  if verticalStyleOffCanvas == true or verticalStyleExpand == true or horizontalStyleExpand == true
+    assign enable_filter_tree_button_desktop = true
+  endif
+
+  assign boost_translations = shop.metafields.boostpfs-settings.labelTranslations
+	assign current_locale = request.locale.iso_code
+	assign primary_locale = current_locale
+	for locale in shop.published_locales
+		if locale.primary
+			assign primary_locale = locale.iso_code
+			break
+		endif
+	endfor
+	assign label_toolbar_viewas = boost_translations[current_locale].defaultTheme.toolbarViewAs | default:  boost_translations[primary_locale].defaultTheme.toolbarViewAs | escape
+	assign label_items_with_count_one = boost_translations[current_locale].defaultTheme.toolbarProduct | default:  boost_translations[primary_locale].defaultTheme.toolbarProduct | escape
+	assign label_items_with_count_other = boost_translations[current_locale].defaultTheme.toolbarProducts | default:  boost_translations[primary_locale].defaultTheme.toolbarProducts | escape
+	assign label_sale = boost_translations[current_locale].defaultTheme.productItemSale | default:  boost_translations[primary_locale].defaultTheme.productItemSale | escape
+	assign label_soldout = boost_translations[current_locale].defaultTheme.productItemSoldOut | default:  boost_translations[primary_locale].defaultTheme.productItemSoldOut | escape
+	assign label_from = boost_translations[current_locale].defaultTheme.productItemFrom | default:  boost_translations[primary_locale].defaultTheme.productItemFrom | escape
+  assign label_sale_percent = 'percent' | escape
+
+	assign layout_type = shop.metafields.pfs-default-theme.layout_type | default: 'box'
+  assign show_collection_image = shop.metafields.pfs-default-theme.show_collection_image
+  assign show_collection_des = shop.metafields.pfs-default-theme.show_collection_des
+  assign collection_header_bg = shop.metafields.pfs-default-theme.collection_header_bg | default: ''
+  assign collection_header_text = shop.metafields.pfs-default-theme.collection_header_text | default: ''
+
+	assign show_view_as = shop.metafields.pfs-default-theme.show_view_as
+	assign show_product_count = shop.metafields.pfs-default-theme.show_product_count
+	assign show_sort_by = shop.metafields.pfs-default-theme.show_sort_by
+	assign show_view_as_m = shop.metafields.pfs-default-theme.show_view_as_m
+	assign show_product_count_m = shop.metafields.pfs-default-theme.show_product_count_m
+	assign show_sort_by_m = shop.metafields.pfs-default-theme.show_sort_by_m
+	assign view_as_type = shop.metafields.pfs-default-theme.view_as_type | default: 'view_as_type_list_grid_multi_col'
+
+  assign product_item_type = shop.metafields.pfs-default-theme.product_item_type | default: 'grid'
+  assign product_item_layout = shop.metafields.pfs-default-theme.product_item_layout | default: 'no-border'
+  assign text_alignment = shop.metafields.pfs-default-theme.text_alignment | default: 'left'
+	assign show_vendor = shop.metafields.pfs-default-theme.show_vendor
+	assign show_price = shop.metafields.pfs-default-theme.show_price
+  assign show_product_review = shop.metafields.pfs-default-theme.show_product_review | default: false
+  assign show_detail_when_hover = shop.metafields.pfs-default-theme.show_detail_when_hover | default: false
+  assign active_image_swap = shop.metafields.pfs-default-theme.active_image_swap
+
+  assign aspect_ratio = shop.metafields.pfs-default-theme.aspect_ratio | default: 'auto'
+	assign aspect_ratio_other = shop.metafields.pfs-default-theme.aspect_ratio_other | default: ''
+	assign product_img_crop = shop.metafields.pfs-default-theme.product_img_crop | default: 'none'
+
+  assign products_per_page = shop.metafields.pfs-default-theme.products_per_page | default: 15
+  assign products_per_row = shop.metafields.pfs-default-theme.products_per_row | default: 3
+	assign products_per_row_m = shop.metafields.pfs-default-theme.products_per_row_m | default: 2
+
+  assign product_title_color = shop.metafields.pfs-default-theme.product_title_color
+  assign product_title_font = shop.metafields.pfs-default-theme.product_title_font
+  assign product_title_size = shop.metafields.pfs-default-theme.product_title_size
+  assign product_title_transform = shop.metafields.pfs-default-theme.product_title_transform
+
+  assign product_vendor_color = shop.metafields.pfs-default-theme.product_vendor_color
+  assign product_vendor_font = shop.metafields.pfs-default-theme.product_vendor_font
+  assign product_vendor_size = shop.metafields.pfs-default-theme.product_vendor_size
+  assign product_vendor_transform = shop.metafields.pfs-default-theme.product_vendor_transform
+
+  assign product_price_color = shop.metafields.pfs-default-theme.product_price_color
+  assign product_old_price_color = shop.metafields.pfs-default-theme.product_old_price_color
+  assign product_sale_price_color = shop.metafields.pfs-default-theme.product_sale_price_color
+  assign product_price_font = shop.metafields.pfs-default-theme.product_price_font
+  assign product_price_size = shop.metafields.pfs-default-theme.product_price_size
+
+  assign product_des_color = shop.metafields.pfs-default-theme.product_des_color
+  assign product_des_font = shop.metafields.pfs-default-theme.product_des_font
+  assign product_des_size = shop.metafields.pfs-default-theme.product_des_size
+
+  assign swatch_enable = shop.metafields.pfs-default-theme.swatch_enable
+  assign show_swatch_tooltip = shop.metafields.pfs-default-theme.show_swatch_tooltip
+  assign swatch_change_img = shop.metafields.pfs-default-theme.swatch_change_img | default: 'hover'
+  assign swatch_by_color_apply = shop.metafields.pfs-default-theme.swatch_by_color_apply
+  assign swatch_by_color_apply_name = shop.metafields.pfs-default-theme.swatch_by_color_apply_name
+  assign swatch_by_color_shape = shop.metafields.pfs-default-theme.swatch_by_color_shape | default: 'circle'
+  assign swatch_by_img_apply = shop.metafields.pfs-default-theme.swatch_by_img_apply
+  assign swatch_by_img_apply_name = shop.metafields.pfs-default-theme.swatch_by_img_apply_name
+  assign swatch_by_img_shape = shop.metafields.pfs-default-theme.swatch_by_img_shape | default: 'circle'
+  assign swatch_by_pro_img_apply = shop.metafields.pfs-default-theme.swatch_by_pro_img_apply
+  assign swatch_by_pro_img_apply_name = shop.metafields.pfs-default-theme.swatch_by_pro_img_apply_name
+  assign swatch_by_pro_img_shape = shop.metafields.pfs-default-theme.swatch_by_pro_img_shape | default: 'circle'
+  assign swatch_by_text_apply = shop.metafields.pfs-default-theme.swatch_by_text_apply
+  assign swatch_by_text_apply_name = shop.metafields.pfs-default-theme.swatch_by_text_apply_name
+  assign swatch_by_text_shape = shop.metafields.pfs-default-theme.swatch_by_text_shape | default: 'square'
+  assign swatch_by_text_bg = shop.metafields.pfs-default-theme.swatch_by_text_bg
+  assign swatch_by_text_color = shop.metafields.pfs-default-theme.swatch_by_text_color
+  assign swatch_by_text_border = shop.metafields.pfs-default-theme.swatch_by_text_border
+
+  assign label_position = shop.metafields.pfs-default-theme.label_position | default: 'top_left'
+  assign label_type = shop.metafields.pfs-default-theme.label_type | default: 'rectangle'
+  assign sale_label_enable = shop.metafields.pfs-default-theme.sale_label_enable
+  assign sale_label_display = shop.metafields.pfs-default-theme.sale_label_display | default: 'text'
+  assign sale_label_bg = shop.metafields.pfs-default-theme.sale_label_bg
+  assign sale_label_text = shop.metafields.pfs-default-theme.sale_label_text
+  assign sale_label_img = shop.metafields.pfs-default-theme.sale_label_img
+
+	assign sold_out_enable = shop.metafields.pfs-default-theme.sold_out_enable
+  assign sold_out_display = shop.metafields.pfs-default-theme.sold_out_display | default: 'text'
+  assign sold_out_bg = shop.metafields.pfs-default-theme.sold_out_bg
+  assign sold_out_text = shop.metafields.pfs-default-theme.sold_out_text
+  assign sold_out_img = shop.metafields.pfs-default-theme.sold_out_img
+
+  assign tag_label_enable = shop.metafields.pfs-default-theme.tag_label_enable | default: false
+  assign tag_label_bg = shop.metafields.pfs-default-theme.tag_label_bg
+  assign tag_label_text = shop.metafields.pfs-default-theme.tag_label_text
+-%}
+
+{%- render 'boost-pfs-theme-config',
+	layout_type: layout_type,
+	enable_filter_sticky_d: enable_filter_sticky_d,
+	view_as_type: view_as_type,
+	products_per_page: products_per_page,
+	products_per_row: products_per_row,
+	products_per_row_m: products_per_row_m,
+	show_detail_when_hover: show_detail_when_hover,
+	show_vendor: show_vendor,
+	show_price: show_price,
+	active_image_swap: active_image_swap,
+	show_product_review: show_product_review,
+
+	swatch_enable: swatch_enable,
+  show_swatch_tooltip: show_swatch_tooltip,
+	swatch_change_img: swatch_change_img,
+  swatch_by_color_apply: swatch_by_color_apply,
+  swatch_by_color_shape: swatch_by_color_shape,
+  swatch_by_img_apply: swatch_by_img_apply,
+  swatch_by_img_shape: swatch_by_img_shape,
+  swatch_by_pro_img_apply: swatch_by_pro_img_apply,
+  swatch_by_pro_img_shape: swatch_by_pro_img_shape,
+  swatch_by_text_apply: swatch_by_text_apply,
+  swatch_by_text_shape: swatch_by_text_shape,
+
+	aspect_ratio: aspect_ratio,
+	aspect_ratio_other: aspect_ratio_other,
+	product_img_crop: product_img_crop,
+	tag_label_enable: tag_label_enable,
+
+  label_type: label_type,
+	sale_label_enable: sale_label_enable,
+  sale_label_display: sale_label_display,
+  sale_label_img: sale_label_img,
+
+  sold_out_enable: sold_out_enable,
+  sold_out_display: sold_out_display,
+	sold_out_img: sold_out_img,
+
+	product_item_type: product_item_type,
+
+	label_soldout: label_soldout,
+	label_sale: label_sale,
+	label_from: label_from,
+	label_toolbar_viewas: label_toolbar_viewas,
+	label_items_with_count_one: label_items_with_count_one,
+	label_items_with_count_other: label_items_with_count_other,
+  label_sale_percent: label_sale_percent,
+  filter_tree_horizontal_style: filter_tree_horizontal_style
+-%}
+
+
+{% paginate search.results by 64 %}
+  <div class="container">
+    <div class="row search__header">
+      <div class="col-lg-8 offset-lg-2">
+        {% if search.performed %}
+          <h1 class="text-center heading-3">{{ 'general.search.results_with_count' | t: terms: search.terms, count: search.results_count }}</h1>
+        {% else %}
+          <h1 class="text-center heading-3">{{ 'general.search.title' | t }}</h1>
+        {% endif %}
+
+        <br>
+
+        {% render 'search-bar' %}
+      </div>
+    </div>
+
+    {% if search.performed %}
+      {% if search.results_count == 0 %}
+        <p class="text-center">{{ 'general.search.no_results_html' | t: terms: search.terms }}</p>
+      {% else %}
+        <div class="row boost-pfs-filter-products">
+          {% for product in search.results %}
+            {% unless product.type == 'Free gift' %}
+              <div class="col-6 col-md-4">
+                {% render 'collection-item' with product: product %}
+              </div>
+            {% endunless %}
+          {% endfor %}
+        </div>
+
+        {% if paginate.pages > 1 %}
+          {% render 'pagination', paginate: paginate %}
+        {% endif %}
+      {% endif %}
+    {% endif %}
+  </div>
+{% endpaginate %}

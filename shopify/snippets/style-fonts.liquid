@@ -1,0 +1,42 @@
+{{ 'GothamXNarrSSm-Bold_Web.woff' | asset_url | preload_tag: as: 'font' }}
+{{ 'GothamNarrSSm-Bold_Web.woff' | asset_url | preload_tag: as: 'font' }}
+{{ 'GothamNarrSSm-Book_Web.woff' | asset_url | preload_tag: as: 'font' }}
+{{ 'GothamNarrSSm-BookItalic_Web.woff' | asset_url | preload_tag: as: 'font' }}
+
+<style>
+  /* ============================================================================
+    Fonts
+  ============================================================================== */
+
+  @font-face {
+    font-family: 'Gotham Extra Narrow Bold';
+    src: url({{ 'GothamXNarrSSm-Bold_Web.woff' | asset_url }}) format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Gotham Narrow Bold';
+    src: url({{ 'GothamNarrSSm-Bold_Web.woff' | asset_url }}) format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Gotham Narrow Book';
+    src: url({{ 'GothamNarrSSm-Book_Web.woff' | asset_url }}) format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Gotham Narrow Book Italic';
+    src: url({{ 'GothamNarrSSm-BookItalic_Web.woff' | asset_url }}) format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+</style>

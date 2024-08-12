@@ -1,0 +1,48 @@
+/* ============================================================================
+  Product Image + Content
+============================================================================== */
+
+.product-image-content {
+  margin: 20px 0 50px;
+  padding: 32px 0;
+  background-color: $color-grey;
+
+  @include media-query($min, $medium) {
+    margin: 32px 0 90px;
+    padding: 48px 0;
+  }
+
+  img {
+    display: block;
+    margin-bottom: 24px;
+
+    @include media-query($min, $medium) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.product-image-content__image,
+.product-image-content__copy {
+  @include media-query($min, $site-width) {
+    padding-left: 108px;
+  }
+}
+
+.product-image-content__copy {
+  @include media-query($min, $site-width) {
+    max-width: 403px;
+  }
+
+  .heading-3 {
+    margin-bottom: 16px;
+
+    @include media-query($min, $site-width) {
+      margin-bottom: 23px;
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+}

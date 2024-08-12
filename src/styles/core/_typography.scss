@@ -1,0 +1,406 @@
+/* ============================================================================
+  Typography
+============================================================================== */
+
+body,
+input,
+textarea,
+button,
+select,
+label {
+  color: $color-body-text;
+  font-family: $font-body;
+  font-size: 1.6rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: $weight-normal;
+  line-height: 1.6;
+  text-size-adjust: 100%;
+}
+
+h1,
+.heading-1,
+h2,
+.heading-2,
+h3,
+.heading-3,
+h4,
+.heading-4,
+h5,
+.heading-5,
+h6,
+.heading-6 {
+  display: block;
+  margin: 0 0 8px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-family: $font-heading;
+  font-weight: $weight-bold;
+  line-height: 1.4;
+
+  a {
+    font-weight: inherit;
+    text-decoration: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+small,
+span {
+  &::selection {
+    background: $color-selection;
+    color: $color-white;
+  }
+}
+
+p {
+  margin: 0 0 calc(#{$gutter} / 2) 0;
+}
+
+em {
+  font-family: $font-gotham-narrow-book-italic;
+  font-style: italic;
+}
+
+b,
+strong {
+  font-family: $font-gotham-narrow-bold;
+  font-weight: 600;
+}
+
+sup,
+sub {
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* ============================================================================
+  Heading Sizes
+============================================================================== */
+
+/* H1 */
+@mixin h1 {
+  @include typography(56, 44.8, $weight-bold, -1.68);
+}
+
+@mixin h1-md {
+  @include typography(56, 44.8, $weight-bold, -1.68);
+}
+
+@mixin h1-lg {
+  @include typography(88, 70.4, $weight-bold, -2.64);
+}
+
+/* H2 */
+@mixin h2 {
+  @include typography(48, 43.2, $weight-bold, -1.44);
+}
+
+@mixin h2-md {
+  @include typography(48, 43.2, $weight-bold, -1.44);
+}
+
+@mixin h2-lg {
+  @include typography(64, 57.6, $weight-bold, -1.92);
+}
+
+/* H3 */
+@mixin h3 {
+  @include typography(32, 28.8, $weight-bold, -0.96);
+}
+
+@mixin h3-lg {
+  @include typography(48, 43.2, $weight-bold, -1.44);
+}
+
+/* H4 */
+@mixin h4 {
+  @include typography(29, 29, $weight-bold, -0.87);
+}
+
+@mixin h4-lg {
+  @include typography(32, 32, $weight-bold, -0.96);
+}
+
+/* H5 */
+@mixin h5 {
+  @include typography(20, 20, $weight-bold, -0.6);
+}
+
+@mixin h5-lg {
+  @include typography(24, 24, $weight-bold, -0.72);
+}
+
+/* ============================================================================
+  Headings
+============================================================================== */
+
+/* H1 */
+.heading-1,
+h1 {
+  @include h1;
+
+  @include media-query($min, $medium) {
+    @include h1-md;
+  }
+
+  @include media-query($min, $site-width) {
+    @include h1-lg;
+  }
+}
+
+/* H2 */
+.heading-2,
+h2 {
+  @include h2;
+
+  @include media-query($min, $medium) {
+    @include h2-md;
+  }
+
+  @include media-query($min, $site-width) {
+    @include h2-lg;
+  }
+}
+
+/* H3 */
+.heading-3,
+h3 {
+  @include h3;
+
+  @include media-query($min, $site-width) {
+    @include h3-lg;
+  }
+}
+
+/* H4 */
+.heading-4,
+h4 {
+  @include h4;
+
+  @include media-query($min, $site-width) {
+    @include h4-lg;
+  }
+}
+
+/* H5 */
+.heading-5,
+h5 {
+  @include h5;
+
+  @include media-query($min, $site-width) {
+    @include h5-lg;
+  }
+}
+
+/* ============================================================================
+  Tablet Headings
+============================================================================== */
+
+/* H1 */
+.heading-md-1 {
+  @include media-query($min, $medium) {
+    @include h1-md;
+  }
+
+  @include media-query($min, $site-width) {
+    @include h1-lg;
+  }
+}
+
+/* H2 */
+.heading-md-2 {
+  @include media-query($min, $medium) {
+    @include h2-md;
+  }
+
+  @include media-query($min, $site-width) {
+    @include h2-lg;
+  }
+}
+
+/* H5 */
+.heading-md-5 {
+  @include media-query($min, $medium) {
+    @include h5-lg;
+  }
+}
+
+/* ============================================================================
+  Desktop Headings
+============================================================================== */
+
+/* H1 */
+.heading-lg-1 {
+  @include media-query($min, $site-width) {
+    @include h1-lg;
+  }
+}
+
+/* H2 */
+.heading-lg-2 {
+  @include media-query($min, $site-width) {
+    @include h2-lg;
+  }
+}
+
+/* H3 */
+.heading-lg-3 {
+  @include media-query($min, $site-width) {
+    @include h3-lg;
+  }
+}
+
+/* H4 */
+.heading-lg-4 {
+  @include media-query($min, $site-width) {
+    @include h4-lg;
+  }
+}
+
+/* H5 */
+.heading-lg-5 {
+  @include media-query($min, $site-width) {
+    @include h5-lg;
+  }
+}
+
+/* ============================================================================
+  Body
+============================================================================== */
+@mixin body {
+  @include typography(18, 27);
+}
+
+.p,
+p {
+  @include body;
+}
+
+/* ============================================================================
+  Body Small
+============================================================================== */
+@mixin body-small {
+  @include typography(14, 20);
+}
+
+.p--small,
+small {
+  @include body-small;
+}
+
+/* ============================================================================
+  Body Large
+============================================================================== */
+@mixin body-large {
+  @include typography(20, 28);
+}
+
+.p--large {
+  @include media-query($min, $large) {
+    @include body-large;
+  }
+}
+
+/* ============================================================================
+  UI
+============================================================================== */
+.p--bold {
+  font-weight: $weight-bold;
+}
+
+.ui-link {
+  display: inline-block;
+  position: relative;
+  color: $color-primary;
+  font-family: $font-gotham-extra-narrow-bold;
+  font-size: 1.4rem;
+  letter-spacing: 0.112rem;
+  line-height: 1.4rem;
+  text-transform: uppercase;
+
+  @include media-query($min, $medium) {
+    font-size: 1.6rem;
+    letter-spacing: 0.128rem;
+    line-height: 1.6rem;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-primary;
+
+    @include media-query($min, $medium) {
+      &::after {
+        margin-top: 2px;
+      }
+    }
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    margin-top: 6px;
+    transition: margin-top $transition-primary;
+    background-color: $color-primary;
+    pointer-events: none;
+  }
+}
+
+.ui-link-lowercase {
+  display: inline-block;
+  position: relative;
+  color: $color-primary;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $color-primary;
+
+    @include media-query($min, $medium) {
+      &::after {
+        margin-top: -4px;
+      }
+    }
+  }
+
+  &.ui-link-lowercase--small {
+    font-size: 1.4rem;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    margin-top: -2px;
+    transition: margin-top $transition-primary;
+    background-color: $color-primary;
+  }
+}
+
+.ui-button {
+  display: inline-block;
+  position: relative;
+  color: $color-primary;
+  font-family: $font-gotham-extra-narrow-bold;
+  font-size: 1.4rem;
+  letter-spacing: 0.112rem;
+  line-height: 1.4rem;
+  text-transform: uppercase;
+
+  @include media-query($min, $medium) {
+    font-size: 1.6rem;
+    letter-spacing: 0.128rem;
+    line-height: 1.6rem;
+  }
+}

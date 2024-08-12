@@ -1,0 +1,353 @@
+/* ============================================================================
+  Store Locator
+============================================================================== */
+
+// stylelint-disable
+#col-main {
+  display: none;
+
+  &.container {
+    display: block;
+  }
+}
+
+.store-locator {
+  padding: 65px 0 48px;
+  background: $color-grey;
+
+  #store-locator-title {
+    margin-bottom: 37px;
+    text-align: center;
+    @include h3;
+
+    @include media-query($min, $site-width) {
+      @include h3-lg;
+    }
+  }
+
+  .main_search_label {
+    display: none;
+  }
+
+  .search_bar {
+    position: relative;
+    margin-bottom: 20px;
+    padding: 0 0 137px;
+    border: none;
+    background: none;
+
+    @include media-query($min, $small-medium) {
+      padding: 0 0 110px;
+    }
+
+    @include media-query($min, $large) {
+      padding: 0 0 68px;
+    }
+
+    select {
+      width: 100%;
+    }
+
+    .search_limit {
+      min-width: 0;
+    }
+  }
+
+  .main_search_bar {
+    width: 100% !important;
+    margin-bottom: 24px;
+
+    @include media-query($min, $large) {
+      width: 50% !important;
+      margin-bottom: 0;
+    }
+
+    input {
+      width: 100%;
+      height: 48px;
+      border: none;
+      font-size: 1.4rem;
+
+      @include media-query($min, $large) {
+        width: calc(100% - 9px);
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  .distance_label,
+  .search_limit_label {
+    display: block;
+    font-family: $font-gotham-narrow-bold;
+    font-size: 1.8rem;
+
+    @include media-query($min, $large) {
+      display: inline-block;
+    }
+  }
+
+  .search_within_distance,
+  .search_limit {
+    display: block;
+    width: calc(50% - 8px);
+    text-align: left !important;
+
+    @include media-query($min, $large) {
+      display: flex;
+      align-items: center;
+      width: 24%;
+      padding-left: 16px;
+    }
+
+    select {
+      height: 32px;
+      padding: 4px 20px;
+      border: none;
+      font-size: 1.4rem;
+      text-transform: lowercase !important;
+
+      @include media-query($min, $large) {
+        height: 48px;
+        margin-left: 16px;
+        padding: 9px 20px;
+      }
+    }
+  }
+
+  .search_within_distance {
+    margin-right: 16px !important;
+  }
+
+  .search_limit {
+    margin: 0 !important;
+  }
+
+  #submitBtn {
+    display: inline-block;
+    position: absolute;
+    top: auto !important;
+    bottom: 75px;
+    left: 0;
+    width: 100%;
+    height: 50px !important;
+    margin: 0;
+    padding: 15px 21px !important;
+    border: 2px solid transparent;
+    border-radius: $border-radius;
+    background: none;
+    background-color: $color-btn-primary;
+    box-shadow: none !important;
+    color: $color-btn-primary-text;
+    font-family: $font-gotham-extra-narrow-bold;
+    font-size: 1.4rem !important;
+    letter-spacing: 0.128rem;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    vertical-align: middle;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    text-shadow: none !important;
+
+    @include media-query($min, $small-medium) {
+      bottom: 54px;
+    }
+
+    @include media-query($min, $large) {
+      bottom: 0;
+      width: auto;
+      padding: 15px 30px !important;
+      font-size: 1.6rem !important;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: darken($color-btn-primary, 15%);
+      color: $color-btn-primary-text;
+    }
+  }
+
+  .search_filters {
+    border: none;
+
+    .search_filter {
+      display: inline-block;
+      float: none;
+    }
+  }
+
+  .filter-group {
+    margin-bottom: 7px;
+
+    @include media-query($min, $large) {
+      display: flex;
+      align-items: center;
+    }
+
+    &.filter-group--categories {
+      margin-top: 12px;
+    }
+
+    &.filter-group--types {
+      margin-top: 12px;
+
+      .search_filter {
+        display: block;
+        margin-bottom: 16px !important;
+
+        @include media-query($min, $large) {
+          display: inline-block;
+          margin-bottom: 0 !important;
+        }
+      }
+    }
+
+    strong {
+      display: block;
+      margin-right: 24px;
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+
+      @include media-query($min, $large) {
+        display: inline-block;
+        margin-bottom: 0;
+      }
+    }
+
+    label {
+      font-size: 1.4rem;
+    }
+
+    .search_filter {
+      width: auto;
+      height: 18px;
+      margin-right: 20px !important;
+
+      label {
+        margin: -12px 0 0 0;
+        padding-left: 24px;
+        z-index: 2;
+        position: relative;
+      }
+
+      label,
+      input {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 0;
+      }
+
+      svg,
+      span {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .no_stores_found {
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    margin: -2px 0 0 40px;
+  }
+
+  #store_map {
+    @include media-query($max, $pre-large) {
+      width: 100%;
+    }
+  }
+
+  .addresses {
+    width: 100%;
+    padding: 0;
+    margin-top: 32px;
+
+    @include media-query($min, $large) {
+      margin-top: 0;
+      width: 32%;
+      padding-right: 10px;
+    }
+
+    li {
+      margin-bottom: 0;
+      padding: 24px 22px;
+      border: none;
+      background-position: 34px 23px;
+      font-size: 1.4rem;
+      line-height: 2rem;
+
+      &:nth-child(odd) {
+        background-color: $color-light-blue;
+      }
+
+      &:nth-child(even) {
+        background-color: $color-white;
+      }
+
+      .distance {
+        color: $color-sand-grey;
+        font-size: 1.4rem;
+        text-transform: lowercase;
+      }
+
+      a {
+        padding-left: 22px;
+
+        @include media-query($max, $pre-large) {
+          width: calc(100% - 80px);
+        }
+      }
+
+      .name {
+        display: block;
+        margin-bottom: -11px;
+        color: $color-black;
+        font-family: $font-gotham-narrow-bold;
+        font-size: 1.8rem;
+        line-height: 2.7rem;
+      }
+
+      .directions {
+        padding-top: 0;
+
+        a {
+          width: auto;
+          margin-left: 22px;
+          padding-left: 0;
+          border-bottom: 1px solid $color-primary;
+        }
+      }
+
+      .store_website {
+        display: none;
+      }
+    }
+  }
+
+  .search-message {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 1.4rem;
+    line-height: 2rem;
+
+    @include media-query($min, $large) {
+      bottom: 13px;
+      left: 140px;
+      margin-bottom: 0;
+    }
+  }
+
+  #address_search {
+    padding-left: 46px;
+    background-image: var(--warning-svg);
+    background-size: 22px 22px;
+    background-position: 15px center;
+    background-repeat: no-repeat;
+    font-size: 1.4rem;
+  }
+}

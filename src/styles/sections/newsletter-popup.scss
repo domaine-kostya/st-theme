@@ -1,0 +1,72 @@
+/* ============================================================================
+  Newsletter Popup
+============================================================================== */
+
+.newsletter-popup {
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 16px;
+  background-color: $color-site-overlay;
+}
+
+.newsletter-popup__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  max-width: 404px;
+  padding: 24px;
+  transform: translate(-50%, -50%);
+  background-color: $color-light-blue;
+  text-align: center;
+
+  @include media-query($min, $medium) {
+    padding: 56px 40px 60px;
+  }
+
+  strong {
+    display: block;
+    margin: 20px 0;
+    color: $color-primary;
+  }
+
+  p {
+    margin-top: 20px;
+    color: $color-primary;
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+
+  .newsletter-form__cta-wrapper {
+    display: block;
+
+    input {
+      margin-bottom: 16px;
+    }
+
+    .btn {
+      @include media-query($min, $medium) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.newsletter-popup__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  svg path {
+    fill: $color-primary;
+  }
+}
+
+.newsletter-popup__image-wrapper img {
+  width: 82px;
+  height: 63px;
+}

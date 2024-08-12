@@ -1,0 +1,257 @@
+{{ 'sections.featured-products.css' | asset_url | stylesheet_tag }}
+
+<featured-products class="featured-products featured-products--{{ section.id }}" role="region" aria-label="Featured Products" data-featured-products>
+  <div class="container">
+    <div class="featured-products__header">
+      <h2 class="{% if section.settings.headline_size == 'small' %}heading-3{% else %}heading-3 heading-lg-2{% endif %}">
+        {{ section.settings.headline }}
+      </h2>
+
+      {% if section.blocks.size >= 2 %}
+        <ul class="featured-products__nav inline-list">
+          {% for block in section.blocks %}
+            {%- capture collection_title -%}
+              {{ block.settings.collection_title | default: collections[block.settings.collection].title }}
+            {%- endcapture -%}
+
+            <li>
+              <button class="ui-link {% if forloop.first %}active{% endif %}" type="button" aria-label="Show {{ collection_title }} Products" data-featured-products-collection-toggle="{{ block.settings.collection }}">
+                {{ collection_title }}
+              </button>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+
+    {% for block in section.blocks %}
+      <div class="featured-products__collection {% unless forloop.first %}hide{% endunless %}" data-featured-products-collection="{{ block.settings.collection }}" tabindex="0" role="region" aria-label="{{ block.settings.collection_title | default: collections[block.settings.collection].title }} Featured Products">
+        <div class="swiper-button-prev d-none d-lg-block" data-featured-products-prev>
+          {% render 'icon-chevron-left-large' %}
+        </div>
+
+        <div class="swiper-button-next d-none d-lg-block" data-featured-products-next>
+          {% render 'icon-chevron-right-large' %}
+        </div>
+
+        <div class="swiper-container" data-featured-products-carousel>
+          <div class="swiper-wrapper">
+            {% for product in collections[block.settings.collection].products limit: 12 %}
+              <div class="swiper-slide">
+                {% render 'collection-item', product: product %}
+              </div>
+            {% endfor %}
+          </div>
+
+          <div class="swiper-scrollbar d-lg-none" data-featured-products-scrollbar></div>
+        </div>
+
+        {% if block.settings.enable_cta %}
+          <div class="text-center">
+            <a class="btn btn--outline" href="{{ collections[block.settings.collection].url }}" title="{{ block.settings.collection_title | default: collections[block.settings.collection].title }} - {{ block.settings.cta_text }}">
+              {{ block.settings.cta_text }}
+            </a>
+          </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</featured-products>
+
+{% render 'section-spacing', section_name: 'featured-products' %}
+
+{{ 'sections.featured-products.js' | asset_url | script_tag }}
+
+{% schema %}
+  {
+    "settings": [
+      {
+        "type": "text",
+        "id": "headline",
+        "label": "Headline"
+      },
+      {
+        "type": "select",
+        "id": "headline_size",
+        "label": "Headline Size",
+        "default": "large",
+        "options": [
+          {"value": "small", "label": "Small"},
+          {"value": "large", "label": "Large"}
+        ]
+      },
+      {
+        "type": "header",
+        "content": "Section Margin"
+      },
+      {
+        "type": "select",
+        "id": "margin_top",
+        "label": "Margin Top",
+        "default": "default",
+        "options": [
+          {"value": "default", "label": "Theme Default"},
+          {"value": "0", "label": "None"},
+          {"value": "8px", "label": "8px"},
+          {"value": "16px", "label": "16px"},
+          {"value": "32px", "label": "32px"},
+          {"value": "48px", "label": "48px"},
+          {"value": "64px", "label": "64px"},
+          {"value": "102px", "label": "102px"}
+        ]
+      },
+      {
+        "type": "select",
+        "id": "margin_top_mobile",
+        "label": "Margin Top Mobile",
+        "default": "default",
+        "options": [
+          {"value": "default", "label": "Theme Default"},
+          {"value": "0", "label": "None"},
+          {"value": "8px", "label": "8px"},
+          {"value": "16px", "label": "16px"},
+          {"value": "32px", "label": "32px"},
+          {"value": "48px", "label": "48px"},
+          {"value": "64px", "label": "64px"},
+          {"value": "102px", "label": "102px"}
+        ]
+      },
+      {
+        "type": "select",
+        "id": "margin_bottom",
+        "label": "Margin Bottom",
+        "default": "default",
+        "options": [
+          {"value": "default", "label": "Theme Default"},
+          {"value": "0", "label": "None"},
+          {"value": "8px", "label": "8px"},
+          {"value": "16px", "label": "16px"},
+          {"value": "32px", "label": "32px"},
+          {"value": "48px", "label": "48px"},
+          {"value": "64px", "label": "64px"},
+          {"value": "102px", "label": "102px"}
+        ]
+      },
+      {
+        "type": "select",
+        "id": "margin_bottom_mobile",
+        "label": "Margin Bottom Mobile",
+        "default": "default",
+        "options": [
+          {"value": "default", "label": "Theme Default"},
+          {"value": "0", "label": "None"},
+          {"value": "8px", "label": "8px"},
+          {"value": "16px", "label": "16px"},
+          {"value": "32px", "label": "32px"},
+          {"value": "48px", "label": "48px"},
+          {"value": "64px", "label": "64px"},
+          {"value": "102px", "label": "102px"}
+        ]
+      },
+      {
+        "type": "header",
+        "content": "Section Padding"
+      },
+      {
+        "type": "select",
+        "id": "padding_top",
+        "label": "Padding Top",
+        "default": "default",
+        "options": [
+          {"value": "default", "label": "Theme Default"},
+          {"value": "0", "label": "None"},
+          {"value": "8px", "label": "8px"},
+          {"value": "16px", "label": "16px"},
+          {"value": "32px", "label": "32px"},
+          {"value": "48px", "label": "48px"},
+          {"value": "64px", "label": "64px"},
+          {"value": "102px", "label": "102px"}
+        ]
+      },
+      {
+        "type": "select",
+        "id": "padding_top_mobile",
+        "label": "Padding Top Mobile",
+        "default": "default",
+        "options": [
+          {"value": "default", "label": "Theme Default"},
+          {"value": "0", "label": "None"},
+          {"value": "8px", "label": "8px"},
+          {"value": "16px", "label": "16px"},
+          {"value": "32px", "label": "32px"},
+          {"value": "48px", "label": "48px"},
+          {"value": "64px", "label": "64px"},
+          {"value": "102px", "label": "102px"}
+        ]
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom",
+        "label": "Padding Bottom",
+        "default": "default",
+        "options": [
+          {"value": "default", "label": "Theme Default"},
+          {"value": "0", "label": "None"},
+          {"value": "8px", "label": "8px"},
+          {"value": "16px", "label": "16px"},
+          {"value": "32px", "label": "32px"},
+          {"value": "48px", "label": "48px"},
+          {"value": "64px", "label": "64px"},
+          {"value": "102px", "label": "102px"}
+        ]
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom_mobile",
+        "label": "Padding Bottom Mobile",
+        "default": "default",
+        "options": [
+          {"value": "default", "label": "Theme Default"},
+          {"value": "0", "label": "None"},
+          {"value": "8px", "label": "8px"},
+          {"value": "16px", "label": "16px"},
+          {"value": "32px", "label": "32px"},
+          {"value": "48px", "label": "48px"},
+          {"value": "64px", "label": "64px"},
+          {"value": "102px", "label": "102px"}
+        ]
+      }
+    ],
+    "blocks": [
+      {
+        "type": "collection",
+        "name": "Collection",
+        "limit": 4,
+        "settings": [
+          {
+            "type": "collection",
+            "id": "collection",
+            "label": "Collection"
+          },
+          {
+            "type": "text",
+            "id": "collection_title",
+            "label": "Collection Title",
+            "info": "Override the default collection title"
+          },
+          {
+            "type": "checkbox",
+            "id": "enable_cta",
+            "label": "Enable CTA"
+          },
+          {
+            "type": "text",
+            "id": "cta_text",
+            "label": "CTA Text",
+            "default": "Show more"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Featured Products"
+      }
+    ]
+  }
+{% endschema %}

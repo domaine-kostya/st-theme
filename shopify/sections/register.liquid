@@ -1,0 +1,74 @@
+<script src="{{ 'sections.register.js' | asset_url }}" defer="defer"></script>
+{{ 'sections.register.css' | asset_url | stylesheet_tag }}
+
+<div class="account-form">
+  <div class="account-form__content text-center">
+    {% form 'create_customer', data-validation-required: '' %}
+      <h1 class="heading-2">{{ 'customer.register.title' | t }}</h1>
+
+      <div class="form-input-group" data-form-input-group>
+        <label for="firstName" class="visually-hidden">{{ 'customer.register.first_name' | t }}</label>
+        <input type="text"
+          name="customer[first_name]"
+          id="firstName"
+          placeholder="{{ 'customer.register.first_name' | t }}"
+          required
+          data-form-input
+          {% if form.first_name %}value="{{ form.first_name }}"{% endif %}>
+      </div>
+
+      <div class="form-input-group">
+        <label for="lastName" class="visually-hidden">{{ 'customer.register.last_name' | t }}</label>
+        <input type="text"
+          name="customer[last_name]"
+          id="lastName"
+          placeholder="{{ 'customer.register.last_name' | t }}"
+          required
+          {% if form.last_name %}value="{{ form.last_name }}"{% endif %}>
+      </div>
+
+      <div class="form-input-group">
+        <label for="email" class="visually-hidden">{{ 'customer.register.email' | t }}</label>
+        <input type="email"
+          name="customer[email]"
+          id="email"
+          class="{% if form.errors contains 'email' %}input-error{% endif %}"
+          data-form-input
+          value="{% if form.email %}{{ form.email }}{% endif %}"
+          spellcheck="false"
+          autocomplete="off"
+          autocapitalize="off"
+          placeholder="{{ 'customer.register.email' | t }}"
+          required>
+      </div>
+
+      <div class="form-input-group" data-account-form-password-wrapper>
+        <label for="createPassword" class="visually-hidden">{{ 'customer.register.password' | t }}</label>
+        <input type="password"
+          name="customer[password]"
+          id="createPassword"
+          class="{% if form.errors contains 'password' %}input-error{% endif %}"
+          placeholder="{{ 'customer.register.password' | t }}">
+
+        <button class="account-form__password-toggle" type="button" aria-label="Toggle password text visbility" data-account-form-password-toggle>
+          {% render 'icon-show-password' %}
+          {% render 'icon-hide-password' %}
+        </button>
+      </div>
+
+      {% if form.errors %}
+        <div class="form-errors">
+          {{ form.errors | default_errors }}
+        </div>
+      {% endif %}
+
+      <button type="submit" class="btn btn--full">{{ 'customer.register.submit' | t }}</button>
+
+      <div class="account-form__actions">
+        <a class="ui-link" href="{{ routes.account_login_url }}" title="{{ 'customer.register.sign_in' | t }}">
+          {{ 'customer.register.sign_in' | t }}
+        </a>
+      </div>
+    {% endform %}
+  </div>
+</div>

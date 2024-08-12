@@ -1,0 +1,24 @@
+{
+  "sections": {
+    "collection-hero": {
+      "type": "collection-hero",
+      "settings": {
+      }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+      }
+    },
+    "main": {
+      "type": "collection",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "collection-hero",
+    "breadcrumbs",
+    "main"
+  ]
+}
