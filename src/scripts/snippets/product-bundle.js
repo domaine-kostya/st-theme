@@ -71,7 +71,7 @@ function productBundleFormInit() {
       }
     });
 
-    window.cartAPI.cartAdd(lineItems);
+    window.cartAPI.cartAdd(lineItems, true);
   });
 }
 
