@@ -52,11 +52,22 @@
                 {% if free_gift_product.variants.size == 1 %}
                   {% assign has_default_only = true %}
                 {% endif %}
+                {% liquid
+                  assign hash = ''
+                  assign to = 'ouimepqvtwjybxndgrhcakfszl' | split: ''
 
+                  assign from = free_gift_product.first_available_variant.id | split: ''
+                  for char in from
+                    assign index = char | plus:0
+                    assign next_char = to[index]
+                    assign hash = hash | append: next_char
+                  endfor
+                %}
                 <div class="swiper-slide">
                   <button
                     data-cart-gift
                     data-product-id="{{ free_gift_product.id }}"
+                    data-uid="{{ hash }}"
                     data-variant-id="{{ free_gift_product.first_available_variant.id }}"
                     data-threshold-required="{{ settings[free_gift_threshold_setting] }}"
                     data-message="{{ settings[free_gift_message_setting] }}"

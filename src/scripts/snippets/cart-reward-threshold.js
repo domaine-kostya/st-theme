@@ -84,7 +84,7 @@ import { closeModals } from '@/scripts/snippets/modal';
 
       addGiftToCart(giftEl) {
         const id = Number(giftEl.dataset.variantId);
-        const { message } = giftEl.dataset;
+        const { message, uid } = giftEl.dataset;
         const threshold = Number(giftEl.dataset.thresholdRequired) * 100;
 
         const lineItem = {
@@ -93,6 +93,7 @@ import { closeModals } from '@/scripts/snippets/modal';
           properties: {
             _type: 'chooseFreeGift',
             _promo_type: 'threshold',
+            _hash: uid,
             _free_gift: true,
             _free_gift_message: message,
             _free_gift_threshold: threshold,
