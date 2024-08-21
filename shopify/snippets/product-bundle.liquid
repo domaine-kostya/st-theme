@@ -134,7 +134,7 @@
                       {% assign next_char = to[index] %}
                       {% assign hash = hash | append: next_char %}
                     {% endfor %}
-                    <option {% if variant == bundle_product.selected_or_first_available_variant %} selected="selected" {% endif %} data-sku="{{ variant.sku }}" value="{{ variant.id }}" data-hash="{{ hash }}>
+                    <option {% if variant == bundle_product.selected_or_first_available_variant %} selected="selected" {% endif %} data-sku="{{ variant.sku }}" value="{{ variant.id }}" data-hash="{{ hash }}">
                       {{ variant.title }} - {{ variant.price | money_with_currency }}
                     </option>
                   {% else %}
