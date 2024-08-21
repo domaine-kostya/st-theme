@@ -8,7 +8,12 @@
 
 <product-gallery-carousel
   class="product-gallery-carousel"
-  data-filter-by-color="{{ filter_by_color | default: false }}"
+  {% if product.tags contains 'bundle-product' %}
+    data-bundle="true"
+    data-filter-by-color="false"
+  {% else %}
+    data-filter-by-color="{{ filter_by_color | default: false }}"
+  {% endif %}
   data-color-option-index="{{ color_option_index }}"
   data-pagination-style="{{ pagination_style | default: 'thumbnails' }}"
 >

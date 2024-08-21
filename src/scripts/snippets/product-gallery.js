@@ -21,6 +21,10 @@ newCustomElement(
       this.swiper = null;
       this.thumbSwiper = null;
       this.variantData = {};
+      this.isBundle = this.getAttribute('data-bundle');
+      if (this.isBundle) {
+        this.initCarouselGallery();
+      }
     }
 
     initCarouselGallery() {
